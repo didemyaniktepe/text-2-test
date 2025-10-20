@@ -1,0 +1,52 @@
+[
+  {
+  "scenario": "Login with username 'standard_user' and password 'secret_sauce'. From Products, add 'Sauce Labs Backpack' to cart. Open the cart and verify the item name and price are shown as $29.99.",
+  "url": "https://www.saucedemo.com/",
+  "folder_name": "add-backpack-and-verify-in-cart"
+  },
+  {
+  "scenario": "Login with 'standard_user' / 'secret_sauce'. On Products, add 'Sauce Labs Bike Light' and 'Sauce Labs Fleece Jacket'. Click the REMOVE button on the Backpack tile if present so only 2 items remain. Open the cart and verify Bike Light and Fleece Jacket are listed.",
+  "url": "https://www.saucedemo.com/",
+  "folder_name": "add-two-items-remove-backpack"
+  },
+  {
+  "scenario": "Login with 'standard_user' / 'secret_sauce'. Add 'Sauce Labs Backpack' to cart, open the cart, then click CONTINUE SHOPPING. Verify you return to the Products page and the cart badge still shows 1.",
+  "url": "https://www.saucedemo.com/",
+  "folder_name": "continue-shopping-returns-to-products"
+  },
+  {
+  "scenario": "Login with 'standard_user' / 'secret_sauce'. Add 'Sauce Labs Backpack' to cart and go to Checkout. Fill First Name 'Jane', Last Name 'Doe', Zip '80331', continue to Overview, verify Item total is $29.99, Tax is $2.40, and Total is $32.39, then click FINISH and verify the completion page loads.",
+  "url": "https://www.saucedemo.com/",
+  "folder_name": "full-checkout-verify-totals-finish"
+  },
+  {
+  "scenario": "Login with 'standard_user' / 'secret_sauce'. Add 'Sauce Labs Onesie' to cart from Products, open the cart, click REMOVE, and verify the cart is empty and the badge disappears.",
+  "url": "https://www.saucedemo.com/",
+  "folder_name": "remove-item-from-cart-and-clear-badge"
+  },
+  {
+  "scenario": "Login with 'standard_user' / 'secret_sauce'. From Products, change the sort dropdown to 'Price (low to high)'. Verify 'Sauce Labs Onesie' ($7.99) appears before higher-priced items. Add it to cart and verify the cart badge shows 1.",
+  "url": "https://www.saucedemo.com/",
+  "folder_name": "sort-low-to-high-and-add-onesie"
+  },
+  {
+  "scenario": "Login with 'standard_user' / 'secret_sauce'. Add 'Sauce Labs Bolt T-Shirt' then open the cart and proceed to Checkout. On 'Your Information', click CANCEL and verify you are returned to the cart without losing the item.",
+  "url": "https://www.saucedemo.com/",
+  "folder_name": "checkout-cancel-returns-to-cart"
+  },
+  {
+  "scenario": "Login with 'standard_user' / 'secret_sauce'. Add 'Sauce Labs Backpack' from Products. Verify the button label toggles from 'ADD TO CART' to 'REMOVE'. Click 'REMOVE' and confirm the button returns to 'ADD TO CART' and the cart badge decrements.",
+  "url": "https://www.saucedemo.com/",
+  "folder_name": "toggle-add-remove-on-product-card"
+  },
+  {
+  "scenario": "Login with 'standard_user' / 'secret_sauce'. Add 'Sauce Labs Backpack' and navigate to the cart. Click CHECKOUT, fill First Name 'March', Last Name 'April', Zip '10115', continue to Overview, then click CANCEL and verify you return to the Products page.",
+  "url": "https://www.saucedemo.com/",
+  "folder_name": "checkout-cancel-from-overview-to-products"
+  },
+  {
+  "scenario": "Login with 'standard_user' / 'secret_sauce'. From Products, add 'Sauce Labs Bike Light', open the cart and verify quantity shows '1'. Proceed through Checkout with First Name 'Test', Last Name 'User', Zip '52200', finish the order, then navigate back Home and confirm the cart badge is cleared.",
+  "url": "https://www.saucedemo.com/",
+  "folder_name": "bike-light-complete-checkout-and-clear-badge"
+  }
+  ]

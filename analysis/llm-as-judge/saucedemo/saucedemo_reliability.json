@@ -1,0 +1,23 @@
+{
+  "icc2": 0.1711409395973151,
+  "icc2_ci_low": -0.09,
+  "icc2_ci_high": 0.51,
+  "icc2_pval": 0.01806829526736745,
+  "icc3": 0.45945945945945793,
+  "icc3_ci_low": 0.03,
+  "icc3_ci_high": 0.74,
+  "icc3_pval": 0.01806829526736745,
+  "n_units": 20.0,
+  "pearson_r": 0.46710426433389873,
+  "n_pairs": 20.0,
+  "mean_deepseek": 3.35,
+  "mean_openai": 4.35,
+  "sd_deepseek": 0.48936048492959294,
+  "sd_openai": 0.5871429486123998,
+  "mean_diff_openai-deepseek": 1.0,
+  "icc2_z": 0.47989085381300445,
+  "icc2_z_ci_low": 0.05,
+  "icc2_z_ci_high": 0.76,
+  "icc2_z_pval": 0.016385064490068026,
+  "kappa_is_well_aligned": 0.17355371900826455
+}

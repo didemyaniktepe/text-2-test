@@ -1,0 +1,9 @@
+﻿Application,Model,Step Match Mean,Step Match Min,Step Match Max,Step Match Std,Execution Mean,Execution Min,Execution Max,Execution Std
+BLUDIT,DeepSeek,0.9792,0.8333,1.0,0.0569,0.8967,0.2,1.0,0.2146
+BLUDIT,OpenAi,0.9521,0.5,1.0,0.1294,0.9271,0.2667,1.0,0.1884
+Checkturio,DeepSeek,0.9707,0.7857,1.0,0.0722,0.8477,0.25,1.0,0.2233
+Checkturio,OpenAi,0.993,0.9091,1.0,0.0252,0.9808,0.8333,1.0,0.0499
+SauceDemo,DeepSeek,0.9194,0.75,1.0,0.0993,1.0,1.0,1.0,0.0
+SauceDemo,OpenAi,0.9639,0.75,1.0,0.0829,1.0,1.0,1.0,0.0
+ToDo,DeepSeek,0.95,0.5,1.0,0.1446,0.9444,0.5,1.0,0.1479
+ToDo,OpenAi,0.8361,0.0,1.0,0.3083,0.9,0.5,1.0,0.1859

@@ -1,0 +1,3153 @@
+{
+  "evaluation_metadata": {
+    "timestamp": "2025-10-18 18:10:55",
+    "total_tests": 20,
+    "evaluation_models": [
+      "deepseek",
+      "openai"
+    ],
+    "criteria": [
+      "scenario_code_alignment",
+      "code_structure",
+      "selector_quality",
+      "best_practices"
+    ]
+  },
+  "test_evaluations": [
+    {
+      "test_info": {
+        "app_name": "SauceDemo",
+        "model": "deepseek",
+        "test_name": "toggle-add-remove-on-product-card",
+        "scenario": "Login with 'standard_user' / 'secret_sauce'. Add 'Sauce Labs Backpack' from Products. Verify the button label toggles from 'ADD TO CART' to 'REMOVE'. Click 'REMOVE' and confirm the button returns to 'ADD TO CART' and the cart badge decrements.",
+        "log_file_path": "SauceDemo/deepseek/toggle-add-remove-on-product-card/test_execution.log"
+      },
+      "evaluations": {
+        "deepseek": {
+          "success": true,
+          "test_info": {
+            "app_name": "SauceDemo",
+            "model": "deepseek",
+            "test_name": "toggle-add-remove-on-product-card",
+            "scenario": "Login with 'standard_user' / 'secret_sauce'. Add 'Sauce Labs Backpack' from Products. Verify the button label toggles from 'ADD TO CART' to 'REMOVE'. Click 'REMOVE' and confirm the button returns to 'ADD TO CART' and the cart badge decrements.",
+            "log_file_path": "SauceDemo/deepseek/toggle-add-remove-on-product-card/test_execution.log"
+          },
+          "overall_score": 3,
+          "criteria_scores": {
+            "scenario_code_alignment": 3,
+            "code_structure": 4,
+            "selector_quality": 2,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 7,
+              "implemented_steps": 5,
+              "missing_steps": [
+                "Verify cart badge decrements after remove click"
+              ],
+              "incorrect_steps": [
+                "Button text verification uses 'Add to cart' instead of 'ADD TO CART' (case mismatch)"
+              ]
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "data-test",
+                "css"
+              ],
+              "robustness_score": 2,
+              "specific_issues": [
+                "Uses fragile CSS ID selectors (#add-to-cart-sauce-labs-backpack, #remove-sauce-labs-backpack) for critical product buttons",
+                "Uses CSS class selector (.shopping_cart_badge) for cart badge"
+              ],
+              "recommendations": [
+                "Replace CSS ID selectors with data-test attributes or role-based selectors",
+                "Use data-test attributes for cart badge if available"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "good",
+              "best_practices_followed": [
+                "Proper awaits on interactions and assertions",
+                "Visibility checks before actions",
+                "URL verification after login",
+                "Logical test flow"
+              ],
+              "best_practices_missing": [
+                "Missing verification of cart badge decrement behavior"
+              ]
+            }
+          },
+          "strengths": [
+            "Complete login flow implementation",
+            "Proper button toggle verification",
+            "Good async/await usage",
+            "Logical test organization",
+            "Visibility and enabled state checks before interactions"
+          ],
+          "weaknesses": [
+            "Fragile CSS ID selectors for critical elements",
+            "Missing cart badge decrement verification",
+            "Case mismatch in button text assertion",
+            "Relies on CSS class selectors for cart badge"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": false,
+            "alignment_percentage": 71,
+            "main_alignment_issues": [
+              "Missing cart badge decrement verification after remove",
+              "Fragile selectors that may break with UI changes",
+              "Case-sensitive text assertion mismatch"
+            ]
+          },
+          "error": null
+        },
+        "openai": {
+          "success": true,
+          "test_info": {
+            "app_name": "SauceDemo",
+            "model": "deepseek",
+            "test_name": "toggle-add-remove-on-product-card",
+            "scenario": "Login with 'standard_user' / 'secret_sauce'. Add 'Sauce Labs Backpack' from Products. Verify the button label toggles from 'ADD TO CART' to 'REMOVE'. Click 'REMOVE' and confirm the button returns to 'ADD TO CART' and the cart badge decrements.",
+            "log_file_path": "SauceDemo/deepseek/toggle-add-remove-on-product-card/test_execution.log"
+          },
+          "overall_score": 5,
+          "criteria_scores": {
+            "scenario_code_alignment": 5,
+            "code_structure": 5,
+            "selector_quality": 5,
+            "best_practices": 5
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 5,
+              "implemented_steps": 5,
+              "missing_steps": [],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "data-test",
+                "css"
+              ],
+              "robustness_score": 5,
+              "specific_issues": [],
+              "recommendations": []
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "excellent",
+              "best_practices_followed": [
+                "Visibility check before actions",
+                "Proper waits",
+                "Verifying dynamic changes after actions"
+              ],
+              "best_practices_missing": []
+            }
+          },
+          "strengths": [
+            "Excellent scenario-code alignment",
+            "Robust selector usage",
+            "Good use of async/await",
+            "Follows best practices"
+          ],
+          "weaknesses": [],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 100,
+            "main_alignment_issues": []
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "test_info": {
+        "app_name": "SauceDemo",
+        "model": "deepseek",
+        "test_name": "full-checkout-verify-totals-finish",
+        "scenario": "Login with 'standard_user' / 'secret_sauce'. Add 'Sauce Labs Backpack' to cart and go to Checkout. Fill First Name 'Jane', Last Name 'Doe', Zip '80331', continue to Overview, verify Item total is $29.99, Tax is $2.40, and Total is $32.39, then click FINISH and verify the completion page loads.",
+        "log_file_path": "SauceDemo/deepseek/full-checkout-verify-totals-finish/test_execution.log"
+      },
+      "evaluations": {
+        "deepseek": {
+          "success": true,
+          "test_info": {
+            "app_name": "SauceDemo",
+            "model": "deepseek",
+            "test_name": "full-checkout-verify-totals-finish",
+            "scenario": "Login with 'standard_user' / 'secret_sauce'. Add 'Sauce Labs Backpack' to cart and go to Checkout. Fill First Name 'Jane', Last Name 'Doe', Zip '80331', continue to Overview, verify Item total is $29.99, Tax is $2.40, and Total is $32.39, then click FINISH and verify the completion page loads.",
+            "log_file_path": "SauceDemo/deepseek/full-checkout-verify-totals-finish/test_execution.log"
+          },
+          "overall_score": 4,
+          "criteria_scores": {
+            "scenario_code_alignment": 4,
+            "code_structure": 5,
+            "selector_quality": 4,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 12,
+              "implemented_steps": 11,
+              "missing_steps": [
+                "Verify cart badge shows '1' after adding item (code clicks the badge instead of verifying)"
+              ],
+              "incorrect_steps": [
+                "Clicking cart badge instead of cart icon/link for navigation"
+              ]
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "data-test",
+                "css",
+                "text"
+              ],
+              "robustness_score": 4,
+              "specific_issues": [
+                "Uses CSS ID selectors for critical elements (#add-to-cart-sauce-labs-backpack, #continue)",
+                "Uses fragile CSS class selectors (.summary_subtotal_label, .summary_tax_label, .summary_total_label, .complete-header)",
+                "Uses text-based selector for cart badge which could be brittle"
+              ],
+              "recommendations": [
+                "Replace CSS ID selectors with data-test attributes where available",
+                "Use data-test attributes for summary labels if available",
+                "Use getByTestId for elements with data-test attributes"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "excellent",
+              "best_practices_followed": [
+                "Visibility checks before interactions",
+                "URL verification after navigation",
+                "Proper await usage",
+                "Logical step-by-step flow"
+              ],
+              "best_practices_missing": [
+                "Missing verification of cart item count before proceeding",
+                "No verification that correct product was added to cart"
+              ]
+            }
+          },
+          "strengths": [
+            "Excellent step-by-step flow matching scenario order",
+            "Proper visibility checks before interactions",
+            "Good URL verification after key navigation steps",
+            "Correct implementation of price assertions",
+            "Complete checkout flow implementation"
+          ],
+          "weaknesses": [
+            "Cart navigation method differs from typical user behavior (clicks badge instead of cart icon)",
+            "Missing verification of cart badge count after adding item",
+            "Some fragile CSS selectors used instead of more robust options",
+            "No verification that correct product appears in cart"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 92,
+            "main_alignment_issues": [
+              "Cart navigation method differs from scenario intent",
+              "Missing cart badge count verification after adding item"
+            ]
+          },
+          "error": null
+        },
+        "openai": {
+          "success": true,
+          "test_info": {
+            "app_name": "SauceDemo",
+            "model": "deepseek",
+            "test_name": "full-checkout-verify-totals-finish",
+            "scenario": "Login with 'standard_user' / 'secret_sauce'. Add 'Sauce Labs Backpack' to cart and go to Checkout. Fill First Name 'Jane', Last Name 'Doe', Zip '80331', continue to Overview, verify Item total is $29.99, Tax is $2.40, and Total is $32.39, then click FINISH and verify the completion page loads.",
+            "log_file_path": "SauceDemo/deepseek/full-checkout-verify-totals-finish/test_execution.log"
+          },
+          "overall_score": 5,
+          "criteria_scores": {
+            "scenario_code_alignment": 5,
+            "code_structure": 5,
+            "selector_quality": 5,
+            "best_practices": 5
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 14,
+              "implemented_steps": 14,
+              "missing_steps": [],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "data-test",
+                "text"
+              ],
+              "robustness_score": 5,
+              "specific_issues": [],
+              "recommendations": []
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "excellent",
+              "best_practices_followed": [
+                "visibility checks before actions",
+                "proper waits",
+                "verify dynamic changes after actions"
+              ],
+              "best_practices_missing": []
+            }
+          },
+          "strengths": [
+            "All scenario steps are implemented and in correct order",
+            "Robust selectors used",
+            "Best practices followed",
+            "Correct async/await usage"
+          ],
+          "weaknesses": [],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 100,
+            "main_alignment_issues": []
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "test_info": {
+        "app_name": "SauceDemo",
+        "model": "deepseek",
+        "test_name": "add-backpack-and-verify-in-cart",
+        "scenario": "Login with username 'standard_user' and password 'secret_sauce'. From Products, add 'Sauce Labs Backpack' to cart. Open the cart and verify the item name and price are shown as $29.99.",
+        "log_file_path": "SauceDemo/deepseek/add-backpack-and-verify-in-cart/test_execution.log"
+      },
+      "evaluations": {
+        "deepseek": {
+          "success": true,
+          "test_info": {
+            "app_name": "SauceDemo",
+            "model": "deepseek",
+            "test_name": "add-backpack-and-verify-in-cart",
+            "scenario": "Login with username 'standard_user' and password 'secret_sauce'. From Products, add 'Sauce Labs Backpack' to cart. Open the cart and verify the item name and price are shown as $29.99.",
+            "log_file_path": "SauceDemo/deepseek/add-backpack-and-verify-in-cart/test_execution.log"
+          },
+          "overall_score": 4,
+          "criteria_scores": {
+            "scenario_code_alignment": 4,
+            "code_structure": 5,
+            "selector_quality": 4,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 4,
+              "implemented_steps": 4,
+              "missing_steps": [],
+              "incorrect_steps": [
+                "Cart badge verification uses 'getByText('1').first()' which may be fragile"
+              ]
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "data-test",
+                "css",
+                "text"
+              ],
+              "robustness_score": 4,
+              "specific_issues": [
+                "Uses CSS ID selector '#add-to-cart-sauce-labs-backpack' which is brittle",
+                "Uses CSS class selector '.inventory_item_price' which may change",
+                "Cart badge selector 'getByText('1').first()' is fragile and not role-based"
+              ],
+              "recommendations": [
+                "Use data-test attributes for product buttons if available",
+                "Use role-based selectors for cart badge verification",
+                "Consider using data-test attributes for price elements"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "excellent",
+              "best_practices_followed": [
+                "Proper awaits on all interactions",
+                "Verifies element visibility before actions",
+                "Verifies URL changes after navigation",
+                "Checks element enabled state before clicking"
+              ],
+              "best_practices_missing": [
+                "No verification of button label change after adding to cart",
+                "No explicit verification that cart contains exactly one item"
+              ]
+            }
+          },
+          "strengths": [
+            "Excellent async/await usage and flow",
+            "Proper visibility and enabled state checks before interactions",
+            "Correct URL verification after navigation",
+            "All scenario steps implemented in correct order",
+            "Good use of role-based selectors for form fields"
+          ],
+          "weaknesses": [
+            "Some CSS-based selectors are brittle",
+            "Cart badge verification uses fragile text-based selector",
+            "Missing verification of button state change after adding to cart",
+            "Price verification doesn't ensure it's for the correct item"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 90,
+            "main_alignment_issues": [
+              "Fragile cart badge selector",
+              "CSS-based product button selector",
+              "No verification of ADD TO CART → REMOVE button state change"
+            ]
+          },
+          "error": null
+        },
+        "openai": {
+          "success": true,
+          "test_info": {
+            "app_name": "SauceDemo",
+            "model": "deepseek",
+            "test_name": "add-backpack-and-verify-in-cart",
+            "scenario": "Login with username 'standard_user' and password 'secret_sauce'. From Products, add 'Sauce Labs Backpack' to cart. Open the cart and verify the item name and price are shown as $29.99.",
+            "log_file_path": "SauceDemo/deepseek/add-backpack-and-verify-in-cart/test_execution.log"
+          },
+          "overall_score": 4,
+          "criteria_scores": {
+            "scenario_code_alignment": 4,
+            "code_structure": 5,
+            "selector_quality": 4,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 4,
+              "implemented_steps": 4,
+              "missing_steps": [],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "data-test",
+                "text",
+                "css"
+              ],
+              "robustness_score": 4,
+              "specific_issues": [
+                "Usage of CSS selectors can be fragile"
+              ],
+              "recommendations": [
+                "Prefer role/data-test/data-testid over CSS classes/IDs"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "excellent",
+              "best_practices_followed": [
+                "Clean async/await usage",
+                "Logical flow",
+                "Visibility checks before actions"
+              ],
+              "best_practices_missing": [
+                "None"
+              ]
+            }
+          },
+          "strengths": [
+            "Good alignment with the scenario",
+            "Excellent async usage",
+            "Logical code structure"
+          ],
+          "weaknesses": [
+            "Usage of CSS selectors"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 100,
+            "main_alignment_issues": [
+              "None"
+            ]
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "test_info": {
+        "app_name": "SauceDemo",
+        "model": "deepseek",
+        "test_name": "remove-item-from-cart-and-clear-badge",
+        "scenario": "Login with 'standard_user' / 'secret_sauce'. Add 'Sauce Labs Onesie' to cart from Products, open the cart, click REMOVE, and verify the cart is empty and the badge disappears.",
+        "log_file_path": "SauceDemo/deepseek/remove-item-from-cart-and-clear-badge/test_execution.log"
+      },
+      "evaluations": {
+        "deepseek": {
+          "success": true,
+          "test_info": {
+            "app_name": "SauceDemo",
+            "model": "deepseek",
+            "test_name": "remove-item-from-cart-and-clear-badge",
+            "scenario": "Login with 'standard_user' / 'secret_sauce'. Add 'Sauce Labs Onesie' to cart from Products, open the cart, click REMOVE, and verify the cart is empty and the badge disappears.",
+            "log_file_path": "SauceDemo/deepseek/remove-item-from-cart-and-clear-badge/test_execution.log"
+          },
+          "overall_score": 3,
+          "criteria_scores": {
+            "scenario_code_alignment": 3,
+            "code_structure": 4,
+            "selector_quality": 2,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 6,
+              "implemented_steps": 5,
+              "missing_steps": [
+                "Verify cart badge disappears after removal"
+              ],
+              "incorrect_steps": [
+                "Cart navigation uses text '1' click instead of cart icon/link"
+              ]
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "data-test",
+                "text",
+                "css"
+              ],
+              "robustness_score": 2,
+              "specific_issues": [
+                "Uses fragile CSS ID selector '#add-to-cart-sauce-labs-onesie' for critical product action",
+                "Uses text selector '1' for cart navigation which is brittle",
+                "Uses CSS class selector '.cart_item' and '.shopping_cart_badge' which are implementation details"
+              ],
+              "recommendations": [
+                "Use data-test attributes or role-based selectors for product actions",
+                "Use cart icon/link with role/text instead of badge text for navigation",
+                "Use data-test attributes for cart items and badge verification"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "good",
+              "organization": "good",
+              "best_practices_followed": [
+                "Proper awaits on interactions and assertions",
+                "Verifies element visibility before actions",
+                "URL assertions after navigation",
+                "Verifies element enabled state for login button"
+              ],
+              "best_practices_missing": [
+                "Missing verification of badge disappearance after removal",
+                "No verification of product name in cart before removal"
+              ]
+            }
+          },
+          "strengths": [
+            "Good async/await usage and logical flow",
+            "Proper visibility and enabled state checks before interactions",
+            "Correct URL assertions for navigation verification",
+            "Complete login process with correct credentials"
+          ],
+          "weaknesses": [
+            "Fragile selectors for critical product and cart elements",
+            "Incorrect cart navigation method (clicking badge text instead of cart icon)",
+            "Missing explicit verification of badge disappearance",
+            "No verification of product presence in cart before removal"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": false,
+            "alignment_percentage": 67,
+            "main_alignment_issues": [
+              "Cart navigation method doesn't match real user behavior",
+              "Missing verification of badge disappearance after removal",
+              "Brittle selectors that may break with UI changes"
+            ]
+          },
+          "error": null
+        },
+        "openai": {
+          "success": true,
+          "test_info": {
+            "app_name": "SauceDemo",
+            "model": "deepseek",
+            "test_name": "remove-item-from-cart-and-clear-badge",
+            "scenario": "Login with 'standard_user' / 'secret_sauce'. Add 'Sauce Labs Onesie' to cart from Products, open the cart, click REMOVE, and verify the cart is empty and the badge disappears.",
+            "log_file_path": "SauceDemo/deepseek/remove-item-from-cart-and-clear-badge/test_execution.log"
+          },
+          "overall_score": 4,
+          "criteria_scores": {
+            "scenario_code_alignment": 4,
+            "code_structure": 5,
+            "selector_quality": 4,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 7,
+              "implemented_steps": 7,
+              "missing_steps": [],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "data-test",
+                "text",
+                "css"
+              ],
+              "robustness_score": 4,
+              "specific_issues": [
+                "Use of CSS class selector for cart item and badge count"
+              ],
+              "recommendations": [
+                "Prefer role/data-test/data-testid over CSS classes"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "excellent",
+              "best_practices_followed": [
+                "Visibility checks before actions",
+                "Proper waits",
+                "Dynamic changes verification"
+              ],
+              "best_practices_missing": [
+                "Avoid hard-coded timing"
+              ]
+            }
+          },
+          "strengths": [
+            "Full scenario coverage",
+            "Clean async/await usage",
+            "Logical flow",
+            "Robust selectors for most elements"
+          ],
+          "weaknesses": [
+            "Use of CSS class selector for cart item and badge count"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 100,
+            "main_alignment_issues": []
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "test_info": {
+        "app_name": "SauceDemo",
+        "model": "deepseek",
+        "test_name": "sort-low-to-high-and-add-onesie",
+        "scenario": "Login with 'standard_user' / 'secret_sauce'. From Products, change the sort dropdown to 'Price (low to high)'. Verify 'Sauce Labs Onesie' ($7.99) appears before higher-priced items. Add it to cart and verify the cart badge shows 1.",
+        "log_file_path": "SauceDemo/deepseek/sort-low-to-high-and-add-onesie/test_execution.log"
+      },
+      "evaluations": {
+        "deepseek": {
+          "success": true,
+          "test_info": {
+            "app_name": "SauceDemo",
+            "model": "deepseek",
+            "test_name": "sort-low-to-high-and-add-onesie",
+            "scenario": "Login with 'standard_user' / 'secret_sauce'. From Products, change the sort dropdown to 'Price (low to high)'. Verify 'Sauce Labs Onesie' ($7.99) appears before higher-priced items. Add it to cart and verify the cart badge shows 1.",
+            "log_file_path": "SauceDemo/deepseek/sort-low-to-high-and-add-onesie/test_execution.log"
+          },
+          "overall_score": 3,
+          "criteria_scores": {
+            "scenario_code_alignment": 3,
+            "code_structure": 4,
+            "selector_quality": 3,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 6,
+              "implemented_steps": 5,
+              "missing_steps": [
+                "Verify 'Sauce Labs Onesie' ($7.99) appears before higher-priced items"
+              ],
+              "incorrect_steps": [
+                "Price verification uses incorrect assertion - checks text content rather than actual price ordering"
+              ]
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "data-test",
+                "css",
+                "text"
+              ],
+              "robustness_score": 3,
+              "specific_issues": [
+                "Uses fragile CSS selectors (.inventory_item, .shopping_cart_badge) instead of data-test attributes",
+                "Uses :has-text() pseudo-class which may be less reliable",
+                "Uses ID selector (#add-to-cart-sauce-labs-onesie) which is implementation-dependent"
+              ],
+              "recommendations": [
+                "Use data-test attributes like [data-test='inventory-item']",
+                "Use [data-test='shopping-cart-badge'] instead of CSS class",
+                "Prefer getByRole and getByTestId over CSS selectors"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "good",
+              "organization": "good",
+              "best_practices_followed": [
+                "Proper awaits on interactions and assertions",
+                "Verifies element visibility before actions",
+                "Uses URL verification after login",
+                "Checks element enabled state"
+              ],
+              "best_practices_missing": [
+                "Missing proper price sorting verification",
+                "No verification that Onesie appears before higher-priced items as specified"
+              ]
+            }
+          },
+          "strengths": [
+            "Good login flow with proper credential usage",
+            "Correct sort option selection ('lohi' for Price low to high)",
+            "Proper cart badge verification",
+            "Good use of visibility and enabled checks before interactions",
+            "Clean async/await usage"
+          ],
+          "weaknesses": [
+            "Fails to properly verify price sorting order as specified in scenario",
+            "Uses fragile CSS selectors instead of robust data-test attributes",
+            "Missing explicit price comparison verification",
+            "Relies on text content rather than actual price values for verification"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": false,
+            "alignment_percentage": 67,
+            "main_alignment_issues": [
+              "Critical scenario requirement to verify Onesie appears before higher-priced items is not properly implemented",
+              "Price verification is incomplete - only checks text content, not actual price ordering"
+            ]
+          },
+          "error": null
+        },
+        "openai": {
+          "success": true,
+          "test_info": {
+            "app_name": "SauceDemo",
+            "model": "deepseek",
+            "test_name": "sort-low-to-high-and-add-onesie",
+            "scenario": "Login with 'standard_user' / 'secret_sauce'. From Products, change the sort dropdown to 'Price (low to high)'. Verify 'Sauce Labs Onesie' ($7.99) appears before higher-priced items. Add it to cart and verify the cart badge shows 1.",
+            "log_file_path": "SauceDemo/deepseek/sort-low-to-high-and-add-onesie/test_execution.log"
+          },
+          "overall_score": 4,
+          "criteria_scores": {
+            "scenario_code_alignment": 4,
+            "code_structure": 5,
+            "selector_quality": 4,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 6,
+              "implemented_steps": 6,
+              "missing_steps": [],
+              "incorrect_steps": [
+                "The verification of 'Sauce Labs Onesie' price is missing"
+              ]
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "data-test",
+                "text",
+                "css"
+              ],
+              "robustness_score": 4,
+              "specific_issues": [
+                "The price of 'Sauce Labs Onesie' is not verified"
+              ],
+              "recommendations": [
+                "Add an assertion to verify the price of 'Sauce Labs Onesie'"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "excellent",
+              "best_practices_followed": [
+                "Visibility checks before actions",
+                "Proper waits",
+                "Verifying dynamic changes after actions"
+              ],
+              "best_practices_missing": [
+                "Exact price assertions"
+              ]
+            }
+          },
+          "strengths": [
+            "All scenario steps are implemented",
+            "Clean async/await usage",
+            "Logical flow",
+            "Robust selectors"
+          ],
+          "weaknesses": [
+            "The price of 'Sauce Labs Onesie' is not verified"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 83,
+            "main_alignment_issues": [
+              "The price of 'Sauce Labs Onesie' is not verified"
+            ]
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "test_info": {
+        "app_name": "SauceDemo",
+        "model": "deepseek",
+        "test_name": "checkout-cancel-returns-to-cart",
+        "scenario": "Login with 'standard_user' / 'secret_sauce'. Add 'Sauce Labs Bolt T-Shirt' then open the cart and proceed to Checkout. On 'Your Information', click CANCEL and verify you are returned to the cart without losing the item.",
+        "log_file_path": "SauceDemo/deepseek/checkout-cancel-returns-to-cart/test_execution.log"
+      },
+      "evaluations": {
+        "deepseek": {
+          "success": true,
+          "test_info": {
+            "app_name": "SauceDemo",
+            "model": "deepseek",
+            "test_name": "checkout-cancel-returns-to-cart",
+            "scenario": "Login with 'standard_user' / 'secret_sauce'. Add 'Sauce Labs Bolt T-Shirt' then open the cart and proceed to Checkout. On 'Your Information', click CANCEL and verify you are returned to the cart without losing the item.",
+            "log_file_path": "SauceDemo/deepseek/checkout-cancel-returns-to-cart/test_execution.log"
+          },
+          "overall_score": 3,
+          "criteria_scores": {
+            "scenario_code_alignment": 3,
+            "code_structure": 4,
+            "selector_quality": 3,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 7,
+              "implemented_steps": 6,
+              "missing_steps": [
+                "Verify cart badge shows '1' after adding item"
+              ],
+              "incorrect_steps": [
+                "Clicking cart badge instead of cart icon/link"
+              ]
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "data-test",
+                "text",
+                "css"
+              ],
+              "robustness_score": 3,
+              "specific_issues": [
+                "Uses fragile CSS ID selector for add-to-cart button",
+                "Uses text selector for cart badge which could match multiple elements",
+                "Uses CSS class selector for cart quantity verification"
+              ],
+              "recommendations": [
+                "Use data-test attributes where available (data-test='add-to-cart-sauce-labs-bolt-t-shirt')",
+                "Use role-based selectors for cart icon instead of text",
+                "Use data-test selectors for cart quantity verification"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "good",
+              "organization": "good",
+              "best_practices_followed": [
+                "Proper awaits on interactions",
+                "URL verification after navigation",
+                "Visibility checks before actions",
+                "Logical test flow"
+              ],
+              "best_practices_missing": [
+                "Missing verification of cart badge after item addition",
+                "Using first() with text selector which is fragile"
+              ]
+            }
+          },
+          "strengths": [
+            "Good URL verification after each navigation step",
+            "Proper visibility checks before interactions",
+            "Correct login credentials and product targeting",
+            "Clear logical flow matching scenario steps",
+            "Good use of role-based selectors for form elements"
+          ],
+          "weaknesses": [
+            "Missing verification of cart badge count after adding item",
+            "Uses fragile CSS ID selector for add-to-cart button",
+            "Clicks cart badge text instead of cart icon/link",
+            "Uses first() with text selector which could break",
+            "No verification of button state changes (ADD TO CART → REMOVE)"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": false,
+            "alignment_percentage": 71,
+            "main_alignment_issues": [
+              "Missing cart badge verification after item addition",
+              "Incorrect cart navigation method (clicks badge instead of cart icon)",
+              "Uses fragile selectors that may break with UI changes"
+            ]
+          },
+          "error": null
+        },
+        "openai": {
+          "success": true,
+          "test_info": {
+            "app_name": "SauceDemo",
+            "model": "deepseek",
+            "test_name": "checkout-cancel-returns-to-cart",
+            "scenario": "Login with 'standard_user' / 'secret_sauce'. Add 'Sauce Labs Bolt T-Shirt' then open the cart and proceed to Checkout. On 'Your Information', click CANCEL and verify you are returned to the cart without losing the item.",
+            "log_file_path": "SauceDemo/deepseek/checkout-cancel-returns-to-cart/test_execution.log"
+          },
+          "overall_score": 5,
+          "criteria_scores": {
+            "scenario_code_alignment": 5,
+            "code_structure": 5,
+            "selector_quality": 5,
+            "best_practices": 5
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 9,
+              "implemented_steps": 9,
+              "missing_steps": [],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "data-test",
+                "text"
+              ],
+              "robustness_score": 5,
+              "specific_issues": [],
+              "recommendations": []
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "excellent",
+              "best_practices_followed": [
+                "Check visibility before actions",
+                "Proper waits",
+                "Verify dynamic changes after actions"
+              ],
+              "best_practices_missing": []
+            }
+          },
+          "strengths": [
+            "Excellent alignment with the scenario",
+            "Robust and specific selectors",
+            "Follows best practices",
+            "Clean and organized code structure"
+          ],
+          "weaknesses": [],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 100,
+            "main_alignment_issues": []
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "test_info": {
+        "app_name": "SauceDemo",
+        "model": "deepseek",
+        "test_name": "bike-light-complete-checkout-and-clear-badge",
+        "scenario": "Login with 'standard_user' / 'secret_sauce'. From Products, add 'Sauce Labs Bike Light', open the cart and verify quantity shows '1'. Proceed through Checkout with First Name 'Test', Last Name 'User', Zip '52200', finish the order, then navigate back Home and confirm the cart badge is cleared.",
+        "log_file_path": "SauceDemo/deepseek/bike-light-complete-checkout-and-clear-badge/test_execution.log"
+      },
+      "evaluations": {
+        "deepseek": {
+          "success": true,
+          "test_info": {
+            "app_name": "SauceDemo",
+            "model": "deepseek",
+            "test_name": "bike-light-complete-checkout-and-clear-badge",
+            "scenario": "Login with 'standard_user' / 'secret_sauce'. From Products, add 'Sauce Labs Bike Light', open the cart and verify quantity shows '1'. Proceed through Checkout with First Name 'Test', Last Name 'User', Zip '52200', finish the order, then navigate back Home and confirm the cart badge is cleared.",
+            "log_file_path": "SauceDemo/deepseek/bike-light-complete-checkout-and-clear-badge/test_execution.log"
+          },
+          "overall_score": 4,
+          "criteria_scores": {
+            "scenario_code_alignment": 4,
+            "code_structure": 5,
+            "selector_quality": 4,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 8,
+              "implemented_steps": 8,
+              "missing_steps": [],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "data-test",
+                "css"
+              ],
+              "robustness_score": 4,
+              "specific_issues": [
+                "Uses CSS ID selector '#add-to-cart-sauce-labs-bike-light' which could be brittle",
+                "Uses CSS class selector '.cart_quantity' which could be brittle",
+                "Uses CSS class selector '.shopping_cart_badge' which could be brittle"
+              ],
+              "recommendations": [
+                "Replace CSS ID selectors with data-test attributes where available",
+                "Replace CSS class selectors with role-based or data-test selectors"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "excellent",
+              "best_practices_followed": [
+                "Proper awaits on all interactions and assertions",
+                "URL verification after navigation steps",
+                "Visibility checks before interactions",
+                "Logical flow matching scenario steps"
+              ],
+              "best_practices_missing": [
+                "No verification of product name in cart",
+                "No verification of checkout information before finalizing"
+              ]
+            }
+          },
+          "strengths": [
+            "All scenario steps implemented in correct order",
+            "Excellent async/await usage and code organization",
+            "Good mix of role-based and data-test selectors",
+            "Proper visibility checks before interactions",
+            "URL verification after key navigation steps"
+          ],
+          "weaknesses": [
+            "Some brittle CSS selectors used instead of more robust alternatives",
+            "No verification of product name 'Sauce Labs Bike Light' in cart page",
+            "No verification that checkout information is correctly displayed before finalizing order"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 95,
+            "main_alignment_issues": [
+              "Missing product name verification in cart",
+              "Uses some brittle CSS selectors"
+            ]
+          },
+          "error": null
+        },
+        "openai": {
+          "success": true,
+          "test_info": {
+            "app_name": "SauceDemo",
+            "model": "deepseek",
+            "test_name": "bike-light-complete-checkout-and-clear-badge",
+            "scenario": "Login with 'standard_user' / 'secret_sauce'. From Products, add 'Sauce Labs Bike Light', open the cart and verify quantity shows '1'. Proceed through Checkout with First Name 'Test', Last Name 'User', Zip '52200', finish the order, then navigate back Home and confirm the cart badge is cleared.",
+            "log_file_path": "SauceDemo/deepseek/bike-light-complete-checkout-and-clear-badge/test_execution.log"
+          },
+          "overall_score": 5,
+          "criteria_scores": {
+            "scenario_code_alignment": 5,
+            "code_structure": 5,
+            "selector_quality": 5,
+            "best_practices": 5
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 14,
+              "implemented_steps": 14,
+              "missing_steps": [],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "data-test",
+                "css"
+              ],
+              "robustness_score": 5,
+              "specific_issues": [],
+              "recommendations": []
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "excellent",
+              "best_practices_followed": [
+                "Clean async/await usage",
+                "Logical flow",
+                "Check visibility before actions",
+                "Proper waits",
+                "Verify dynamic changes after actions"
+              ],
+              "best_practices_missing": []
+            }
+          },
+          "strengths": [
+            "All scenario steps are implemented and in correct order",
+            "Robust selectors are used",
+            "Best practices are followed",
+            "Assertions verify intended outcomes"
+          ],
+          "weaknesses": [],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 100,
+            "main_alignment_issues": []
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "test_info": {
+        "app_name": "SauceDemo",
+        "model": "deepseek",
+        "test_name": "add-two-items-remove-backpack",
+        "scenario": "Login with 'standard_user' / 'secret_sauce'. On Products, add 'Sauce Labs Bike Light' and 'Sauce Labs Fleece Jacket'. Click the REMOVE button on the Backpack tile if present so only 2 items remain. Open the cart and verify Bike Light and Fleece Jacket are listed.",
+        "log_file_path": "SauceDemo/deepseek/add-two-items-remove-backpack/test_execution.log"
+      },
+      "evaluations": {
+        "deepseek": {
+          "success": true,
+          "test_info": {
+            "app_name": "SauceDemo",
+            "model": "deepseek",
+            "test_name": "add-two-items-remove-backpack",
+            "scenario": "Login with 'standard_user' / 'secret_sauce'. On Products, add 'Sauce Labs Bike Light' and 'Sauce Labs Fleece Jacket'. Click the REMOVE button on the Backpack tile if present so only 2 items remain. Open the cart and verify Bike Light and Fleece Jacket are listed.",
+            "log_file_path": "SauceDemo/deepseek/add-two-items-remove-backpack/test_execution.log"
+          },
+          "overall_score": 3,
+          "criteria_scores": {
+            "scenario_code_alignment": 3,
+            "code_structure": 4,
+            "selector_quality": 3,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 5,
+              "implemented_steps": 4,
+              "missing_steps": [
+                "Click the REMOVE button on the Backpack tile if present so only 2 items remain"
+              ],
+              "incorrect_steps": [
+                "Cart navigation uses badge click instead of cart icon/link"
+              ]
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "data-test",
+                "css",
+                "text"
+              ],
+              "robustness_score": 3,
+              "specific_issues": [
+                "Uses brittle CSS IDs for product buttons (#add-to-cart-sauce-labs-bike-light)",
+                "Uses text-based selector for cart badge ('2') which is fragile",
+                "Uses CSS class selector for cart items ('.cart_item')"
+              ],
+              "recommendations": [
+                "Use data-test attributes consistently for all elements",
+                "Replace CSS ID selectors with data-test selectors",
+                "Use cart icon/link navigation instead of badge text click"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "good",
+              "organization": "good",
+              "best_practices_followed": [
+                "Visibility checks before interactions",
+                "URL verification after navigation",
+                "Proper await usage",
+                "Conditional logic for remove button"
+              ],
+              "best_practices_missing": [
+                "No verification of button state changes (ADD/REMOVE)",
+                "No explicit cart icon/link navigation"
+              ]
+            }
+          },
+          "strengths": [
+            "Proper login flow with credential verification",
+            "Good use of visibility checks before interactions",
+            "Correct product selection by name",
+            "Proper cart item count verification",
+            "Conditional logic for remove button presence"
+          ],
+          "weaknesses": [
+            "Incomplete scenario implementation (missing backpack removal verification)",
+            "Fragile selectors (CSS IDs, text-based)",
+            "Incorrect cart navigation method",
+            "No verification of button state changes"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": false,
+            "alignment_percentage": 60,
+            "main_alignment_issues": [
+              "Backpack removal step not properly implemented - code removes backpack but doesn't verify only 2 items remain before cart navigation",
+              "Cart navigation uses badge click instead of cart icon/link",
+              "Missing verification that only specified items are in cart"
+            ]
+          },
+          "error": null
+        },
+        "openai": {
+          "success": true,
+          "test_info": {
+            "app_name": "SauceDemo",
+            "model": "deepseek",
+            "test_name": "add-two-items-remove-backpack",
+            "scenario": "Login with 'standard_user' / 'secret_sauce'. On Products, add 'Sauce Labs Bike Light' and 'Sauce Labs Fleece Jacket'. Click the REMOVE button on the Backpack tile if present so only 2 items remain. Open the cart and verify Bike Light and Fleece Jacket are listed.",
+            "log_file_path": "SauceDemo/deepseek/add-two-items-remove-backpack/test_execution.log"
+          },
+          "overall_score": 5,
+          "criteria_scores": {
+            "scenario_code_alignment": 5,
+            "code_structure": 5,
+            "selector_quality": 5,
+            "best_practices": 5
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 7,
+              "implemented_steps": 7,
+              "missing_steps": [],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "data-test",
+                "text"
+              ],
+              "robustness_score": 5,
+              "specific_issues": [],
+              "recommendations": []
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "excellent",
+              "best_practices_followed": [
+                "visibility check before actions",
+                "proper waits",
+                "dynamic changes verification"
+              ],
+              "best_practices_missing": []
+            }
+          },
+          "strengths": [
+            "All scenario steps are implemented",
+            "Robust selectors used",
+            "Best practices followed",
+            "Excellent async usage and code organization"
+          ],
+          "weaknesses": [],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 100,
+            "main_alignment_issues": []
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "test_info": {
+        "app_name": "SauceDemo",
+        "model": "deepseek",
+        "test_name": "checkout-cancel-from-overview-to-products",
+        "scenario": "Login with 'standard_user' / 'secret_sauce'. Add 'Sauce Labs Backpack' and navigate to the cart. Click CHECKOUT, fill First Name 'March', Last Name 'April', Zip '10115', continue to Overview, then click CANCEL and verify you return to the Products page.",
+        "log_file_path": "SauceDemo/deepseek/checkout-cancel-from-overview-to-products/test_execution.log"
+      },
+      "evaluations": {
+        "deepseek": {
+          "success": true,
+          "test_info": {
+            "app_name": "SauceDemo",
+            "model": "deepseek",
+            "test_name": "checkout-cancel-from-overview-to-products",
+            "scenario": "Login with 'standard_user' / 'secret_sauce'. Add 'Sauce Labs Backpack' and navigate to the cart. Click CHECKOUT, fill First Name 'March', Last Name 'April', Zip '10115', continue to Overview, then click CANCEL and verify you return to the Products page.",
+            "log_file_path": "SauceDemo/deepseek/checkout-cancel-from-overview-to-products/test_execution.log"
+          },
+          "overall_score": 3,
+          "criteria_scores": {
+            "scenario_code_alignment": 3,
+            "code_structure": 4,
+            "selector_quality": 3,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 9,
+              "implemented_steps": 8,
+              "missing_steps": [
+                "Verify cart badge shows '1' after adding product"
+              ],
+              "incorrect_steps": [
+                "Clicking cart badge instead of cart icon/link",
+                "Extra verification of remove button and cart badge at end not in scenario"
+              ]
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "data-test",
+                "css",
+                "text"
+              ],
+              "robustness_score": 3,
+              "specific_issues": [
+                "Uses CSS ID selector '#add-to-cart-sauce-labs-backpack' instead of role/data-test",
+                "Uses text selector for cart badge '1' which is fragile",
+                "Uses CSS ID for login button instead of role"
+              ],
+              "recommendations": [
+                "Use data-test='add-to-cart-sauce-labs-backpack' instead of CSS ID",
+                "Use data-test='shopping-cart-link' for cart navigation",
+                "Use role-based selectors consistently"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "good",
+              "organization": "good",
+              "best_practices_followed": [
+                "Visibility checks before interactions",
+                "URL verification after navigation",
+                "Proper async/await usage"
+              ],
+              "best_practices_missing": [
+                "Missing verification of cart badge count after adding item",
+                "No verification of product name in cart"
+              ]
+            }
+          },
+          "strengths": [
+            "Good use of visibility checks before interactions",
+            "Proper URL verification after key navigation steps",
+            "Clear step-by-step flow with proper awaits",
+            "Correct credentials and form data entry"
+          ],
+          "weaknesses": [
+            "Incorrect cart navigation method (clicking badge instead of cart icon)",
+            "Missing verification of cart badge count after adding product",
+            "Uses fragile CSS ID and text selectors",
+            "Extra assertions at end not specified in scenario"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": false,
+            "alignment_percentage": 78,
+            "main_alignment_issues": [
+              "Cart navigation method incorrect",
+              "Missing cart badge verification after product addition",
+              "Uses fragile selectors instead of robust alternatives"
+            ]
+          },
+          "error": null
+        },
+        "openai": {
+          "success": true,
+          "test_info": {
+            "app_name": "SauceDemo",
+            "model": "deepseek",
+            "test_name": "checkout-cancel-from-overview-to-products",
+            "scenario": "Login with 'standard_user' / 'secret_sauce'. Add 'Sauce Labs Backpack' and navigate to the cart. Click CHECKOUT, fill First Name 'March', Last Name 'April', Zip '10115', continue to Overview, then click CANCEL and verify you return to the Products page.",
+            "log_file_path": "SauceDemo/deepseek/checkout-cancel-from-overview-to-products/test_execution.log"
+          },
+          "overall_score": 4,
+          "criteria_scores": {
+            "scenario_code_alignment": 4,
+            "code_structure": 5,
+            "selector_quality": 4,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 11,
+              "implemented_steps": 11,
+              "missing_steps": [],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "data-test",
+                "text"
+              ],
+              "robustness_score": 4,
+              "specific_issues": [],
+              "recommendations": [
+                "Consider using 'data-testid' for more robust selectors."
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "excellent",
+              "best_practices_followed": [
+                "Visibility checks before actions",
+                "Proper waits",
+                "Verifying dynamic changes after actions"
+              ],
+              "best_practices_missing": [
+                "Avoid hard-coded timing"
+              ]
+            }
+          },
+          "strengths": [
+            "Excellent async usage and code organization",
+            "Visibility checks before actions",
+            "Proper waits",
+            "Verifying dynamic changes after actions"
+          ],
+          "weaknesses": [
+            "Hard-coded timing"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 100,
+            "main_alignment_issues": []
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "test_info": {
+        "app_name": "SauceDemo",
+        "model": "deepseek",
+        "test_name": "continue-shopping-returns-to-products",
+        "scenario": "Login with 'standard_user' / 'secret_sauce'. Add 'Sauce Labs Backpack' to cart, open the cart, then click CONTINUE SHOPPING. Verify you return to the Products page and the cart badge still shows 1.",
+        "log_file_path": "SauceDemo/deepseek/continue-shopping-returns-to-products/test_execution.log"
+      },
+      "evaluations": {
+        "deepseek": {
+          "success": true,
+          "test_info": {
+            "app_name": "SauceDemo",
+            "model": "deepseek",
+            "test_name": "continue-shopping-returns-to-products",
+            "scenario": "Login with 'standard_user' / 'secret_sauce'. Add 'Sauce Labs Backpack' to cart, open the cart, then click CONTINUE SHOPPING. Verify you return to the Products page and the cart badge still shows 1.",
+            "log_file_path": "SauceDemo/deepseek/continue-shopping-returns-to-products/test_execution.log"
+          },
+          "overall_score": 3,
+          "criteria_scores": {
+            "scenario_code_alignment": 3,
+            "code_structure": 4,
+            "selector_quality": 3,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 6,
+              "implemented_steps": 5,
+              "missing_steps": [
+                "Verify cart badge shows 1 after adding item (before opening cart)"
+              ],
+              "incorrect_steps": [
+                "Using page.getByText('1').first().click() to open cart instead of cart icon/link"
+              ]
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "data-test",
+                "text",
+                "css"
+              ],
+              "robustness_score": 3,
+              "specific_issues": [
+                "Using page.getByText('1').first() for cart badge and cart navigation is fragile",
+                "CSS selector [data-test=\"login-button\"] should use getByTestId"
+              ],
+              "recommendations": [
+                "Use getByTestId for data-test attributes",
+                "Use specific cart icon/link selector instead of text-based '1'",
+                "Consider using getByRole for cart icon if available"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "good",
+              "organization": "good",
+              "best_practices_followed": [
+                "Visibility checks before interactions",
+                "URL assertions after navigation",
+                "Proper await usage"
+              ],
+              "best_practices_missing": [
+                "Missing verification of cart badge after initial item addition",
+                "Fragile cart navigation selector"
+              ]
+            }
+          },
+          "strengths": [
+            "Correct login implementation with proper credentials",
+            "Proper URL verification after navigation",
+            "Good use of visibility checks before interactions",
+            "Correct product targeting by name using data-test attribute",
+            "Clear step-by-step flow"
+          ],
+          "weaknesses": [
+            "Fragile cart navigation using page.getByText('1').first().click()",
+            "Missing verification of cart badge immediately after adding item",
+            "Using CSS selector instead of getByTestId for login button"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": false,
+            "alignment_percentage": 70,
+            "main_alignment_issues": [
+              "Cart navigation method doesn't match real user behavior (clicking cart icon, not badge number)",
+              "Missing verification step for cart badge after initial item addition"
+            ]
+          },
+          "error": null
+        },
+        "openai": {
+          "success": true,
+          "test_info": {
+            "app_name": "SauceDemo",
+            "model": "deepseek",
+            "test_name": "continue-shopping-returns-to-products",
+            "scenario": "Login with 'standard_user' / 'secret_sauce'. Add 'Sauce Labs Backpack' to cart, open the cart, then click CONTINUE SHOPPING. Verify you return to the Products page and the cart badge still shows 1.",
+            "log_file_path": "SauceDemo/deepseek/continue-shopping-returns-to-products/test_execution.log"
+          },
+          "overall_score": 4,
+          "criteria_scores": {
+            "scenario_code_alignment": 4,
+            "code_structure": 5,
+            "selector_quality": 4,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 6,
+              "implemented_steps": 6,
+              "missing_steps": [],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "data-test",
+                "text"
+              ],
+              "robustness_score": 4,
+              "specific_issues": [
+                "Usage of 'getByText' for cart badge verification"
+              ],
+              "recommendations": [
+                "Use more specific selectors for cart badge verification"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "excellent",
+              "best_practices_followed": [
+                "Visibility checks before interactions",
+                "Proper use of async/await",
+                "Assertions after interactions"
+              ],
+              "best_practices_missing": [
+                "Specific verification of cart badge"
+              ]
+            }
+          },
+          "strengths": [
+            "Proper use of async/await",
+            "Visibility checks before interactions",
+            "Assertions after interactions"
+          ],
+          "weaknesses": [
+            "Usage of 'getByText' for cart badge verification"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 100,
+            "main_alignment_issues": [
+              "Usage of 'getByText' for cart badge verification"
+            ]
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "test_info": {
+        "app_name": "SauceDemo",
+        "model": "openai",
+        "test_name": "toggle-add-remove-on-product-card",
+        "scenario": "Login with 'standard_user' / 'secret_sauce'. Add 'Sauce Labs Backpack' from Products. Verify the button label toggles from 'ADD TO CART' to 'REMOVE'. Click 'REMOVE' and confirm the button returns to 'ADD TO CART' and the cart badge decrements.",
+        "log_file_path": "SauceDemo/openai/toggle-add-remove-on-product-card/test_execution.log"
+      },
+      "evaluations": {
+        "deepseek": {
+          "success": true,
+          "test_info": {
+            "app_name": "SauceDemo",
+            "model": "openai",
+            "test_name": "toggle-add-remove-on-product-card",
+            "scenario": "Login with 'standard_user' / 'secret_sauce'. Add 'Sauce Labs Backpack' from Products. Verify the button label toggles from 'ADD TO CART' to 'REMOVE'. Click 'REMOVE' and confirm the button returns to 'ADD TO CART' and the cart badge decrements.",
+            "log_file_path": "SauceDemo/openai/toggle-add-remove-on-product-card/test_execution.log"
+          },
+          "overall_score": 3,
+          "criteria_scores": {
+            "scenario_code_alignment": 3,
+            "code_structure": 4,
+            "selector_quality": 2,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 6,
+              "implemented_steps": 4,
+              "missing_steps": [
+                "Verify button label toggles from 'ADD TO CART' to 'REMOVE' after initial add",
+                "Verify cart badge decrements after remove"
+              ],
+              "incorrect_steps": [
+                "Using nth(0) instead of targeting 'Sauce Labs Backpack' by name"
+              ]
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "css"
+              ],
+              "robustness_score": 2,
+              "specific_issues": [
+                "Used nth(0) for product targeting instead of by name",
+                "Used CSS class selector (.shopping_cart_badge) which is brittle"
+              ],
+              "recommendations": [
+                "Use getByRole('button', { name: 'Add to cart' }).filter({ hasText: 'Sauce Labs Backpack' }) or similar name-based targeting",
+                "Use data-test attributes if available, otherwise prefer text-based selectors over CSS classes"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "good",
+              "organization": "good",
+              "best_practices_followed": [
+                "Proper awaits on interactions",
+                "Visibility checks before actions",
+                "URL verification after login"
+              ],
+              "best_practices_missing": [
+                "Missing explicit button label verification",
+                "Missing cart badge count verification"
+              ]
+            }
+          },
+          "strengths": [
+            "Good login flow implementation",
+            "Proper async/await usage",
+            "Visibility checks before interactions",
+            "URL verification after navigation"
+          ],
+          "weaknesses": [
+            "Missing explicit button label toggle verification",
+            "Missing cart badge decrement verification",
+            "Fragile nth-based product selection",
+            "No explicit text/content assertions for button labels"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": false,
+            "alignment_percentage": 67,
+            "main_alignment_issues": [
+              "Does not verify button label changes from ADD TO CART to REMOVE",
+              "Does not verify cart badge decrements after remove",
+              "Uses nth(0) instead of targeting product by name"
+            ]
+          },
+          "error": null
+        },
+        "openai": {
+          "success": true,
+          "test_info": {
+            "app_name": "SauceDemo",
+            "model": "openai",
+            "test_name": "toggle-add-remove-on-product-card",
+            "scenario": "Login with 'standard_user' / 'secret_sauce'. Add 'Sauce Labs Backpack' from Products. Verify the button label toggles from 'ADD TO CART' to 'REMOVE'. Click 'REMOVE' and confirm the button returns to 'ADD TO CART' and the cart badge decrements.",
+            "log_file_path": "SauceDemo/openai/toggle-add-remove-on-product-card/test_execution.log"
+          },
+          "overall_score": 3,
+          "criteria_scores": {
+            "scenario_code_alignment": 3,
+            "code_structure": 4,
+            "selector_quality": 3,
+            "best_practices": 3
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 5,
+              "implemented_steps": 4,
+              "missing_steps": [
+                "Verify the button label toggles from 'ADD TO CART' to 'REMOVE'"
+              ],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "css"
+              ],
+              "robustness_score": 3,
+              "specific_issues": [
+                "Use of nth() selector"
+              ],
+              "recommendations": [
+                "Avoid using nth() and use more specific selectors"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "good",
+              "best_practices_followed": [
+                "Visibility check before actions",
+                "Proper waits"
+              ],
+              "best_practices_missing": [
+                "Verify dynamic changes after actions"
+              ]
+            }
+          },
+          "strengths": [
+            "Clean async/await usage",
+            "Logical flow of the code",
+            "Visibility checks before actions"
+          ],
+          "weaknesses": [
+            "Missing verification of button label toggle",
+            "Use of nth() selector",
+            "No verification of dynamic changes after actions"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": false,
+            "alignment_percentage": 80,
+            "main_alignment_issues": [
+              "Missing verification of button label toggle",
+              "Use of nth() selector"
+            ]
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "test_info": {
+        "app_name": "SauceDemo",
+        "model": "openai",
+        "test_name": "full-checkout-verify-totals-finish",
+        "scenario": "Login with 'standard_user' / 'secret_sauce'. Add 'Sauce Labs Backpack' to cart and go to Checkout. Fill First Name 'Jane', Last Name 'Doe', Zip '80331', continue to Overview, verify Item total is $29.99, Tax is $2.40, and Total is $32.39, then click FINISH and verify the completion page loads.",
+        "log_file_path": "SauceDemo/openai/full-checkout-verify-totals-finish/test_execution.log"
+      },
+      "evaluations": {
+        "deepseek": {
+          "success": true,
+          "test_info": {
+            "app_name": "SauceDemo",
+            "model": "openai",
+            "test_name": "full-checkout-verify-totals-finish",
+            "scenario": "Login with 'standard_user' / 'secret_sauce'. Add 'Sauce Labs Backpack' to cart and go to Checkout. Fill First Name 'Jane', Last Name 'Doe', Zip '80331', continue to Overview, verify Item total is $29.99, Tax is $2.40, and Total is $32.39, then click FINISH and verify the completion page loads.",
+            "log_file_path": "SauceDemo/openai/full-checkout-verify-totals-finish/test_execution.log"
+          },
+          "overall_score": 4,
+          "criteria_scores": {
+            "scenario_code_alignment": 4,
+            "code_structure": 5,
+            "selector_quality": 4,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 9,
+              "implemented_steps": 8,
+              "missing_steps": [
+                "Verify completion page loads (only verifies Back Home button visibility, not completion message)"
+              ],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "data-test",
+                "css"
+              ],
+              "robustness_score": 4,
+              "specific_issues": [
+                "Uses CSS selectors (#add-to-cart-sauce-labs-backpack, .summary_subtotal_label) instead of role/data-test",
+                "Uses CSS ID selector for continue button (#continue)"
+              ],
+              "recommendations": [
+                "Use data-test attributes where available (e.g., data-test='add-to-cart-sauce-labs-backpack')",
+                "Prefer role-based selectors over CSS classes for summary labels"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "excellent",
+              "best_practices_followed": [
+                "Proper awaits on all interactions",
+                "Visibility checks before actions",
+                "URL verification after navigation",
+                "Logical step-by-step flow"
+              ],
+              "best_practices_missing": [
+                "No verification of cart badge count after adding item",
+                "Missing explicit completion page verification"
+              ]
+            }
+          },
+          "strengths": [
+            "Correct implementation of all core checkout flow steps",
+            "Proper credential usage (standard_user/secret_sauce)",
+            "Accurate price assertions ($29.99, $2.40, $32.39)",
+            "Good URL navigation verification",
+            "Clean async/await usage throughout"
+          ],
+          "weaknesses": [
+            "Incomplete completion page verification (missing completion message check)",
+            "Some CSS selectors instead of preferred role/data-test selectors",
+            "No cart badge verification after adding item"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 89,
+            "main_alignment_issues": [
+              "Missing explicit completion page message verification",
+              "Some selector choices could be more robust"
+            ]
+          },
+          "error": null
+        },
+        "openai": {
+          "success": true,
+          "test_info": {
+            "app_name": "SauceDemo",
+            "model": "openai",
+            "test_name": "full-checkout-verify-totals-finish",
+            "scenario": "Login with 'standard_user' / 'secret_sauce'. Add 'Sauce Labs Backpack' to cart and go to Checkout. Fill First Name 'Jane', Last Name 'Doe', Zip '80331', continue to Overview, verify Item total is $29.99, Tax is $2.40, and Total is $32.39, then click FINISH and verify the completion page loads.",
+            "log_file_path": "SauceDemo/openai/full-checkout-verify-totals-finish/test_execution.log"
+          },
+          "overall_score": 5,
+          "criteria_scores": {
+            "scenario_code_alignment": 5,
+            "code_structure": 5,
+            "selector_quality": 5,
+            "best_practices": 5
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 12,
+              "implemented_steps": 12,
+              "missing_steps": [],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "data-test",
+                "css"
+              ],
+              "robustness_score": 5,
+              "specific_issues": [],
+              "recommendations": []
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "excellent",
+              "best_practices_followed": [
+                "Visibility checks before actions",
+                "Proper waits",
+                "Verifying dynamic changes after actions"
+              ],
+              "best_practices_missing": []
+            }
+          },
+          "strengths": [
+            "Well aligned with the scenario",
+            "Robust selectors",
+            "Excellent async usage",
+            "Follows best practices"
+          ],
+          "weaknesses": [],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 100,
+            "main_alignment_issues": []
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "test_info": {
+        "app_name": "SauceDemo",
+        "model": "openai",
+        "test_name": "add-backpack-and-verify-in-cart",
+        "scenario": "Login with username 'standard_user' and password 'secret_sauce'. From Products, add 'Sauce Labs Backpack' to cart. Open the cart and verify the item name and price are shown as $29.99.",
+        "log_file_path": "SauceDemo/openai/add-backpack-and-verify-in-cart/test_execution.log"
+      },
+      "evaluations": {
+        "deepseek": {
+          "success": true,
+          "test_info": {
+            "app_name": "SauceDemo",
+            "model": "openai",
+            "test_name": "add-backpack-and-verify-in-cart",
+            "scenario": "Login with username 'standard_user' and password 'secret_sauce'. From Products, add 'Sauce Labs Backpack' to cart. Open the cart and verify the item name and price are shown as $29.99.",
+            "log_file_path": "SauceDemo/openai/add-backpack-and-verify-in-cart/test_execution.log"
+          },
+          "overall_score": 3,
+          "criteria_scores": {
+            "scenario_code_alignment": 3,
+            "code_structure": 4,
+            "selector_quality": 2,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 4,
+              "implemented_steps": 3,
+              "missing_steps": [
+                "Verify cart badge shows '1' before clicking cart icon"
+              ],
+              "incorrect_steps": [
+                "Using nth(0) to target 'Sauce Labs Backpack' instead of by name"
+              ]
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "text",
+                "css"
+              ],
+              "robustness_score": 2,
+              "specific_issues": [
+                "Used nth(0) for Add to Cart button instead of targeting by product name",
+                "Used CSS class selector '.inventory_item_price' which is fragile",
+                "Cart navigation uses text-based selector '1' which is brittle"
+              ],
+              "recommendations": [
+                "Use getByRole('button', { name: 'Add to cart' }) with more specific targeting",
+                "Use data-testid selectors if available in SauceDemo",
+                "Target cart icon by role rather than text content"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "good",
+              "organization": "good",
+              "best_practices_followed": [
+                "Proper awaits on interactions",
+                "Visibility checks before actions",
+                "URL verification after navigation",
+                "Logical test flow"
+              ],
+              "best_practices_missing": [
+                "Missing verification of cart badge count before navigation",
+                "No verification of button state change after adding to cart"
+              ]
+            }
+          },
+          "strengths": [
+            "Good login implementation with proper credential handling",
+            "Clear URL verification after navigation",
+            "Proper visibility checks before interactions",
+            "Logical test flow organization"
+          ],
+          "weaknesses": [
+            "Fragile nth(0) selector for product targeting",
+            "Missing cart badge verification step",
+            "CSS class selector for price verification",
+            "Text-based cart icon selector"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": false,
+            "alignment_percentage": 75,
+            "main_alignment_issues": [
+              "Product targeting uses nth(0) instead of name-based selection",
+              "Missing verification of cart badge count before navigation"
+            ]
+          },
+          "error": null
+        },
+        "openai": {
+          "success": true,
+          "test_info": {
+            "app_name": "SauceDemo",
+            "model": "openai",
+            "test_name": "add-backpack-and-verify-in-cart",
+            "scenario": "Login with username 'standard_user' and password 'secret_sauce'. From Products, add 'Sauce Labs Backpack' to cart. Open the cart and verify the item name and price are shown as $29.99.",
+            "log_file_path": "SauceDemo/openai/add-backpack-and-verify-in-cart/test_execution.log"
+          },
+          "overall_score": 4,
+          "criteria_scores": {
+            "scenario_code_alignment": 4,
+            "code_structure": 5,
+            "selector_quality": 4,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 6,
+              "implemented_steps": 6,
+              "missing_steps": [],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "text",
+                "css"
+              ],
+              "robustness_score": 4,
+              "specific_issues": [
+                "Use of nth() selector for 'Add to cart' button"
+              ],
+              "recommendations": [
+                "Avoid nth() selector, use more specific selectors"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "excellent",
+              "best_practices_followed": [
+                "Visibility checks before actions",
+                "Proper waits",
+                "Verifying dynamic changes after actions"
+              ],
+              "best_practices_missing": [
+                "Avoid hard-coded timing"
+              ]
+            }
+          },
+          "strengths": [
+            "Good async/await usage",
+            "Logical flow",
+            "Proper waits",
+            "Verification of dynamic changes"
+          ],
+          "weaknesses": [
+            "Use of nth() selector",
+            "Hard-coded timing"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 100,
+            "main_alignment_issues": [
+              "Use of nth() selector for 'Add to cart' button"
+            ]
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "test_info": {
+        "app_name": "SauceDemo",
+        "model": "openai",
+        "test_name": "remove-item-from-cart-and-clear-badge",
+        "scenario": "Login with 'standard_user' / 'secret_sauce'. Add 'Sauce Labs Onesie' to cart from Products, open the cart, click REMOVE, and verify the cart is empty and the badge disappears.",
+        "log_file_path": "SauceDemo/openai/remove-item-from-cart-and-clear-badge/test_execution.log"
+      },
+      "evaluations": {
+        "deepseek": {
+          "success": true,
+          "test_info": {
+            "app_name": "SauceDemo",
+            "model": "openai",
+            "test_name": "remove-item-from-cart-and-clear-badge",
+            "scenario": "Login with 'standard_user' / 'secret_sauce'. Add 'Sauce Labs Onesie' to cart from Products, open the cart, click REMOVE, and verify the cart is empty and the badge disappears.",
+            "log_file_path": "SauceDemo/openai/remove-item-from-cart-and-clear-badge/test_execution.log"
+          },
+          "overall_score": 4,
+          "criteria_scores": {
+            "scenario_code_alignment": 4,
+            "code_structure": 5,
+            "selector_quality": 3,
+            "best_practices": 5
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 6,
+              "implemented_steps": 6,
+              "missing_steps": [],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "css"
+              ],
+              "robustness_score": 3,
+              "specific_issues": [
+                "Uses fragile CSS selectors (#add-to-cart-sauce-labs-onesie, .cart_item, .shopping_cart_badge)",
+                "Uses ID-based selector which may be brittle",
+                "Uses class-based selectors which may change"
+              ],
+              "recommendations": [
+                "Use data-test attributes if available (e.g., data-test='add-to-cart-sauce-labs-onesie')",
+                "Prefer getByRole or getByTestId over CSS selectors",
+                "Use more semantic selectors for cart items and badge"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "excellent",
+              "best_practices_followed": [
+                "Proper async/await usage",
+                "Verifies element visibility before interaction",
+                "Verifies element enabled state before clicking",
+                "Uses URL assertions for navigation verification",
+                "Uses proper count assertions for cart items",
+                "Uses proper visibility assertions for badge"
+              ],
+              "best_practices_missing": []
+            }
+          },
+          "strengths": [
+            "All scenario steps implemented in correct order",
+            "Excellent async/await usage and code organization",
+            "Comprehensive pre-action verifications (visibility, enabled state)",
+            "Proper navigation verification via URL assertions",
+            "Correct credential usage and product targeting",
+            "Complete verification of cart emptiness and badge disappearance"
+          ],
+          "weaknesses": [
+            "Over-reliance on fragile CSS selectors instead of role/data-test attributes",
+            "ID-based selector for add-to-cart button may be brittle",
+            "Class-based selectors for cart items and badge may break with UI changes"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 95,
+            "main_alignment_issues": [
+              "Selector robustness could be improved with more semantic locators"
+            ]
+          },
+          "error": null
+        },
+        "openai": {
+          "success": true,
+          "test_info": {
+            "app_name": "SauceDemo",
+            "model": "openai",
+            "test_name": "remove-item-from-cart-and-clear-badge",
+            "scenario": "Login with 'standard_user' / 'secret_sauce'. Add 'Sauce Labs Onesie' to cart from Products, open the cart, click REMOVE, and verify the cart is empty and the badge disappears.",
+            "log_file_path": "SauceDemo/openai/remove-item-from-cart-and-clear-badge/test_execution.log"
+          },
+          "overall_score": 4,
+          "criteria_scores": {
+            "scenario_code_alignment": 4,
+            "code_structure": 5,
+            "selector_quality": 4,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 6,
+              "implemented_steps": 6,
+              "missing_steps": [],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "data-test",
+                "css"
+              ],
+              "robustness_score": 4,
+              "specific_issues": [],
+              "recommendations": [
+                "Use data-testid for more robust selectors"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "excellent",
+              "best_practices_followed": [
+                "Visibility checks before actions",
+                "Enabled checks before actions",
+                "Proper waits"
+              ],
+              "best_practices_missing": [
+                "Use data-testid for more robust selectors"
+              ]
+            }
+          },
+          "strengths": [
+            "All scenario steps implemented and in correct order",
+            "Clean async/await usage",
+            "Proper waits",
+            "Visibility and enabled checks before actions"
+          ],
+          "weaknesses": [
+            "Use of CSS selectors which can be brittle"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 100,
+            "main_alignment_issues": []
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "test_info": {
+        "app_name": "SauceDemo",
+        "model": "openai",
+        "test_name": "sort-low-to-high-and-add-onesie",
+        "scenario": "Login with 'standard_user' / 'secret_sauce'. From Products, change the sort dropdown to 'Price (low to high)'. Verify 'Sauce Labs Onesie' ($7.99) appears before higher-priced items. Add it to cart and verify the cart badge shows 1.",
+        "log_file_path": "SauceDemo/openai/sort-low-to-high-and-add-onesie/test_execution.log"
+      },
+      "evaluations": {
+        "deepseek": {
+          "success": true,
+          "test_info": {
+            "app_name": "SauceDemo",
+            "model": "openai",
+            "test_name": "sort-low-to-high-and-add-onesie",
+            "scenario": "Login with 'standard_user' / 'secret_sauce'. From Products, change the sort dropdown to 'Price (low to high)'. Verify 'Sauce Labs Onesie' ($7.99) appears before higher-priced items. Add it to cart and verify the cart badge shows 1.",
+            "log_file_path": "SauceDemo/openai/sort-low-to-high-and-add-onesie/test_execution.log"
+          },
+          "overall_score": 3,
+          "criteria_scores": {
+            "scenario_code_alignment": 3,
+            "code_structure": 4,
+            "selector_quality": 3,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 6,
+              "implemented_steps": 5,
+              "missing_steps": [
+                "Verify 'Sauce Labs Onesie' appears before higher-priced items"
+              ],
+              "incorrect_steps": [
+                "Using .first() on Add to cart button instead of targeting specific product"
+              ]
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "text",
+                "css"
+              ],
+              "robustness_score": 3,
+              "specific_issues": [
+                "Using .first() on Add to cart button is fragile",
+                "CSS class selector for cart badge (.shopping_cart_badge) is brittle",
+                "Price verification uses text locator that could match multiple items"
+              ],
+              "recommendations": [
+                "Use data-testid attributes if available",
+                "Target specific product's Add to cart button using product context",
+                "Use more specific selectors for price verification"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "good",
+              "organization": "good",
+              "best_practices_followed": [
+                "Proper awaits on interactions",
+                "Visibility checks before actions",
+                "URL verification after login",
+                "Text assertions for cart badge"
+              ],
+              "best_practices_missing": [
+                "No verification of sort order",
+                "No verification that correct product was added"
+              ]
+            }
+          },
+          "strengths": [
+            "Proper login flow with credential verification",
+            "Good use of role-based selectors for form elements",
+            "Correct URL verification after login",
+            "Proper cart badge verification"
+          ],
+          "weaknesses": [
+            "Missing critical verification of sort order (low-to-high)",
+            "Fragile Add to cart button selection using .first()",
+            "Price verification could match multiple products",
+            "No verification that the correct product (Onesie) was actually added to cart"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": false,
+            "alignment_percentage": 67,
+            "main_alignment_issues": [
+              "Missing verification that Onesie appears before higher-priced items after sorting",
+              "Using .first() instead of targeting specific product's Add to cart button",
+              "Incomplete price verification that doesn't ensure it's associated with the correct product"
+            ]
+          },
+          "error": null
+        },
+        "openai": {
+          "success": true,
+          "test_info": {
+            "app_name": "SauceDemo",
+            "model": "openai",
+            "test_name": "sort-low-to-high-and-add-onesie",
+            "scenario": "Login with 'standard_user' / 'secret_sauce'. From Products, change the sort dropdown to 'Price (low to high)'. Verify 'Sauce Labs Onesie' ($7.99) appears before higher-priced items. Add it to cart and verify the cart badge shows 1.",
+            "log_file_path": "SauceDemo/openai/sort-low-to-high-and-add-onesie/test_execution.log"
+          },
+          "overall_score": 4,
+          "criteria_scores": {
+            "scenario_code_alignment": 4,
+            "code_structure": 5,
+            "selector_quality": 4,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 6,
+              "implemented_steps": 6,
+              "missing_steps": [],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "text",
+                "css"
+              ],
+              "robustness_score": 4,
+              "specific_issues": [
+                "The 'Add to cart' button selector might not always select the correct button for the 'Sauce Labs Onesie' item"
+              ],
+              "recommendations": [
+                "Use more specific selectors for the 'Add to cart' button"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "excellent",
+              "best_practices_followed": [
+                "Visibility checks before actions",
+                "Proper waits",
+                "Verifying dynamic changes after actions"
+              ],
+              "best_practices_missing": [
+                "Checking if elements are enabled before actions"
+              ]
+            }
+          },
+          "strengths": [
+            "Good async/await usage",
+            "Logical flow",
+            "Assertions verify intended outcomes"
+          ],
+          "weaknesses": [
+            "Selector for 'Add to cart' button might not always be accurate"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 100,
+            "main_alignment_issues": [
+              "Potential issue with 'Add to cart' button selector"
+            ]
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "test_info": {
+        "app_name": "SauceDemo",
+        "model": "openai",
+        "test_name": "checkout-cancel-returns-to-cart",
+        "scenario": "Login with 'standard_user' / 'secret_sauce'. Add 'Sauce Labs Bolt T-Shirt' then open the cart and proceed to Checkout. On 'Your Information', click CANCEL and verify you are returned to the cart without losing the item.",
+        "log_file_path": "SauceDemo/openai/checkout-cancel-returns-to-cart/test_execution.log"
+      },
+      "evaluations": {
+        "deepseek": {
+          "success": true,
+          "test_info": {
+            "app_name": "SauceDemo",
+            "model": "openai",
+            "test_name": "checkout-cancel-returns-to-cart",
+            "scenario": "Login with 'standard_user' / 'secret_sauce'. Add 'Sauce Labs Bolt T-Shirt' then open the cart and proceed to Checkout. On 'Your Information', click CANCEL and verify you are returned to the cart without losing the item.",
+            "log_file_path": "SauceDemo/openai/checkout-cancel-returns-to-cart/test_execution.log"
+          },
+          "overall_score": 3,
+          "criteria_scores": {
+            "scenario_code_alignment": 3,
+            "code_structure": 4,
+            "selector_quality": 2,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 6,
+              "implemented_steps": 5,
+              "missing_steps": [
+                "Verify cart badge count after adding item"
+              ],
+              "incorrect_steps": [
+                "Using nth(2) for 'Sauce Labs Bolt T-Shirt' instead of targeting by name"
+              ]
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "css"
+              ],
+              "robustness_score": 2,
+              "specific_issues": [
+                "Used nth(2) for product selection - fragile and not name-based",
+                "Used CSS selector '[data-test=\"shopping-cart-link\"]' instead of getByTestId",
+                "Did not verify button label changes (ADD TO CART → REMOVE)"
+              ],
+              "recommendations": [
+                "Use getByRole('link', { name: 'Sauce Labs Bolt T-Shirt' }) for product selection",
+                "Use getByTestId('shopping-cart-link') for cart icon",
+                "Verify button text changes after adding to cart"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "good",
+              "organization": "good",
+              "best_practices_followed": [
+                "Proper awaits on interactions",
+                "URL verification after navigation",
+                "Visibility/enabled checks before actions",
+                "Logical flow"
+              ],
+              "best_practices_missing": [
+                "No cart badge verification",
+                "No button state verification after add to cart"
+              ]
+            }
+          },
+          "strengths": [
+            "Good URL verification at key navigation points",
+            "Proper visibility and enabled state checks before interactions",
+            "Clear logical flow matching scenario steps",
+            "Good use of role-based selectors for form elements"
+          ],
+          "weaknesses": [
+            "Fragile nth(2) selector for product instead of name-based targeting",
+            "Missing cart badge count verification after adding item",
+            "No verification of button text change (ADD TO CART → REMOVE)",
+            "Used CSS selector for cart icon instead of getByTestId"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": false,
+            "alignment_percentage": 70,
+            "main_alignment_issues": [
+              "Product selection uses fragile nth(2) instead of targeting 'Sauce Labs Bolt T-Shirt' by name",
+              "Missing verification of cart badge count after adding item",
+              "No verification that item remains in cart after cancel operation"
+            ]
+          },
+          "error": null
+        },
+        "openai": {
+          "success": true,
+          "test_info": {
+            "app_name": "SauceDemo",
+            "model": "openai",
+            "test_name": "checkout-cancel-returns-to-cart",
+            "scenario": "Login with 'standard_user' / 'secret_sauce'. Add 'Sauce Labs Bolt T-Shirt' then open the cart and proceed to Checkout. On 'Your Information', click CANCEL and verify you are returned to the cart without losing the item.",
+            "log_file_path": "SauceDemo/openai/checkout-cancel-returns-to-cart/test_execution.log"
+          },
+          "overall_score": 4,
+          "criteria_scores": {
+            "scenario_code_alignment": 4,
+            "code_structure": 5,
+            "selector_quality": 4,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 8,
+              "implemented_steps": 8,
+              "missing_steps": [],
+              "incorrect_steps": [
+                "The product 'Sauce Labs Bolt T-Shirt' is not specifically targeted by name, instead the nth() method is used."
+              ]
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "data-test"
+              ],
+              "robustness_score": 4,
+              "specific_issues": [
+                "The product 'Sauce Labs Bolt T-Shirt' is not specifically targeted by name, instead the nth() method is used."
+              ],
+              "recommendations": [
+                "Use specific product name instead of nth() method for better robustness."
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "excellent",
+              "best_practices_followed": [
+                "Visibility and enabled state checked before actions",
+                "Correct URL assertions after navigation",
+                "Proper use of async/await"
+              ],
+              "best_practices_missing": [
+                "Specific product targeting by name"
+              ]
+            }
+          },
+          "strengths": [
+            "Clean and organized code structure",
+            "Proper use of async/await",
+            "Good use of Playwright's expect assertions",
+            "Correct URL assertions after navigation"
+          ],
+          "weaknesses": [
+            "The product 'Sauce Labs Bolt T-Shirt' is not specifically targeted by name, instead the nth() method is used."
+          ],
+          "alignment_summary": {
+            "is_well_aligned": false,
+            "alignment_percentage": 87.5,
+            "main_alignment_issues": [
+              "The product 'Sauce Labs Bolt T-Shirt' is not specifically targeted by name, instead the nth() method is used."
+            ]
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "test_info": {
+        "app_name": "SauceDemo",
+        "model": "openai",
+        "test_name": "bike-light-complete-checkout-and-clear-badge",
+        "scenario": "Login with 'standard_user' / 'secret_sauce'. From Products, add 'Sauce Labs Bike Light', open the cart and verify quantity shows '1'. Proceed through Checkout with First Name 'Test', Last Name 'User', Zip '52200', finish the order, then navigate back Home and confirm the cart badge is cleared.",
+        "log_file_path": "SauceDemo/openai/bike-light-complete-checkout-and-clear-badge/test_execution.log"
+      },
+      "evaluations": {
+        "deepseek": {
+          "success": true,
+          "test_info": {
+            "app_name": "SauceDemo",
+            "model": "openai",
+            "test_name": "bike-light-complete-checkout-and-clear-badge",
+            "scenario": "Login with 'standard_user' / 'secret_sauce'. From Products, add 'Sauce Labs Bike Light', open the cart and verify quantity shows '1'. Proceed through Checkout with First Name 'Test', Last Name 'User', Zip '52200', finish the order, then navigate back Home and confirm the cart badge is cleared.",
+            "log_file_path": "SauceDemo/openai/bike-light-complete-checkout-and-clear-badge/test_execution.log"
+          },
+          "overall_score": 4,
+          "criteria_scores": {
+            "scenario_code_alignment": 4,
+            "code_structure": 5,
+            "selector_quality": 4,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 8,
+              "implemented_steps": 8,
+              "missing_steps": [],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "data-test",
+                "css"
+              ],
+              "robustness_score": 4,
+              "specific_issues": [
+                "Uses CSS selectors (#add-to-cart-sauce-labs-bike-light, .cart_quantity, .shopping_cart_link) instead of more robust role or data-test selectors",
+                "CSS class selectors (.shopping_cart_badge) may be brittle if UI changes"
+              ],
+              "recommendations": [
+                "Use data-test attributes consistently when available",
+                "Replace CSS selectors with role-based selectors where possible",
+                "Use data-testid for cart badge verification"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "excellent",
+              "best_practices_followed": [
+                "Proper awaits on all interactions and assertions",
+                "URL verification after navigation steps",
+                "Visibility checks before interactions",
+                "Logical flow matching scenario steps"
+              ],
+              "best_practices_missing": [
+                "No explicit verification of product name in cart",
+                "No verification of checkout completion success message"
+              ]
+            }
+          },
+          "strengths": [
+            "All scenario steps implemented in correct order",
+            "Proper async/await usage throughout",
+            "Good URL verification after navigation",
+            "Correct credentials and product targeting",
+            "Comprehensive cart badge verification at the end"
+          ],
+          "weaknesses": [
+            "Reliance on CSS selectors instead of more robust alternatives",
+            "Missing explicit verification of product name in shopping cart",
+            "No verification of checkout completion success message",
+            "Could use more data-test attributes for better selector robustness"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 95,
+            "main_alignment_issues": [
+              "Minor selector robustness concerns",
+              "Missing explicit product name verification in cart"
+            ]
+          },
+          "error": null
+        },
+        "openai": {
+          "success": true,
+          "test_info": {
+            "app_name": "SauceDemo",
+            "model": "openai",
+            "test_name": "bike-light-complete-checkout-and-clear-badge",
+            "scenario": "Login with 'standard_user' / 'secret_sauce'. From Products, add 'Sauce Labs Bike Light', open the cart and verify quantity shows '1'. Proceed through Checkout with First Name 'Test', Last Name 'User', Zip '52200', finish the order, then navigate back Home and confirm the cart badge is cleared.",
+            "log_file_path": "SauceDemo/openai/bike-light-complete-checkout-and-clear-badge/test_execution.log"
+          },
+          "overall_score": 5,
+          "criteria_scores": {
+            "scenario_code_alignment": 5,
+            "code_structure": 5,
+            "selector_quality": 5,
+            "best_practices": 5
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 8,
+              "implemented_steps": 8,
+              "missing_steps": [],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "data-test",
+                "css"
+              ],
+              "robustness_score": 5,
+              "specific_issues": [],
+              "recommendations": []
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "excellent",
+              "best_practices_followed": [
+                "visibility checks before actions",
+                "correct waits",
+                "dynamic changes verification"
+              ],
+              "best_practices_missing": []
+            }
+          },
+          "strengths": [
+            "All scenario steps are implemented correctly and in order",
+            "Robust selectors are used",
+            "Best practices are followed",
+            "Code is well-structured and organized"
+          ],
+          "weaknesses": [],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 100,
+            "main_alignment_issues": []
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "test_info": {
+        "app_name": "SauceDemo",
+        "model": "openai",
+        "test_name": "add-two-items-remove-backpack",
+        "scenario": "Login with 'standard_user' / 'secret_sauce'. On Products, add 'Sauce Labs Bike Light' and 'Sauce Labs Fleece Jacket'. Click the REMOVE button on the Backpack tile if present so only 2 items remain. Open the cart and verify Bike Light and Fleece Jacket are listed.",
+        "log_file_path": "SauceDemo/openai/add-two-items-remove-backpack/test_execution.log"
+      },
+      "evaluations": {
+        "deepseek": {
+          "success": true,
+          "test_info": {
+            "app_name": "SauceDemo",
+            "model": "openai",
+            "test_name": "add-two-items-remove-backpack",
+            "scenario": "Login with 'standard_user' / 'secret_sauce'. On Products, add 'Sauce Labs Bike Light' and 'Sauce Labs Fleece Jacket'. Click the REMOVE button on the Backpack tile if present so only 2 items remain. Open the cart and verify Bike Light and Fleece Jacket are listed.",
+            "log_file_path": "SauceDemo/openai/add-two-items-remove-backpack/test_execution.log"
+          },
+          "overall_score": 3,
+          "criteria_scores": {
+            "scenario_code_alignment": 3,
+            "code_structure": 4,
+            "selector_quality": 3,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 6,
+              "implemented_steps": 5,
+              "missing_steps": [
+                "Verify only 2 items remain in cart (count verification)"
+              ],
+              "incorrect_steps": [
+                "Used nth(0) for Fleece Jacket instead of targeting by name"
+              ]
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "data-test",
+                "css",
+                "text"
+              ],
+              "robustness_score": 3,
+              "specific_issues": [
+                "Used nth(0) for Fleece Jacket - fragile and incorrect",
+                "Used CSS ID selector for backpack remove button - brittle",
+                "Fleece Jacket selector may target wrong item due to nth(0)"
+              ],
+              "recommendations": [
+                "Use data-test attributes consistently: data-test='add-to-cart-sauce-labs-fleece-jacket'",
+                "Replace nth(0) with explicit product targeting",
+                "Use data-test selectors instead of CSS IDs"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "good",
+              "organization": "good",
+              "best_practices_followed": [
+                "Proper awaits on interactions",
+                "Visibility checks before actions",
+                "URL verification after navigation",
+                "Conditional logic for remove button"
+              ],
+              "best_practices_missing": [
+                "Missing cart item count verification",
+                "No verification of remove button state change"
+              ]
+            }
+          },
+          "strengths": [
+            "Good login flow with proper assertions",
+            "Correct conditional logic for backpack removal",
+            "Proper navigation to cart and URL verification",
+            "Good use of data-test attributes for some elements"
+          ],
+          "weaknesses": [
+            "Fragile nth(0) selector for Fleece Jacket",
+            "Missing cart item count verification",
+            "Potential incorrect product targeting",
+            "Uses brittle CSS ID selectors"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": false,
+            "alignment_percentage": 70,
+            "main_alignment_issues": [
+              "Fleece Jacket may not be correctly targeted due to nth(0)",
+              "Missing verification that only 2 items remain in cart",
+              "Potential for incorrect product selection"
+            ]
+          },
+          "error": null
+        },
+        "openai": {
+          "success": true,
+          "test_info": {
+            "app_name": "SauceDemo",
+            "model": "openai",
+            "test_name": "add-two-items-remove-backpack",
+            "scenario": "Login with 'standard_user' / 'secret_sauce'. On Products, add 'Sauce Labs Bike Light' and 'Sauce Labs Fleece Jacket'. Click the REMOVE button on the Backpack tile if present so only 2 items remain. Open the cart and verify Bike Light and Fleece Jacket are listed.",
+            "log_file_path": "SauceDemo/openai/add-two-items-remove-backpack/test_execution.log"
+          },
+          "overall_score": 4,
+          "criteria_scores": {
+            "scenario_code_alignment": 4,
+            "code_structure": 5,
+            "selector_quality": 4,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 7,
+              "implemented_steps": 7,
+              "missing_steps": [],
+              "incorrect_steps": [
+                "Fleece Jacket is added using nth(0) which might not always target the correct product"
+              ]
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "data-test",
+                "id"
+              ],
+              "robustness_score": 4,
+              "specific_issues": [
+                "Fleece Jacket is added using nth(0) which might not always target the correct product"
+              ],
+              "recommendations": [
+                "Use specific selectors for adding the Fleece Jacket to the cart"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "excellent",
+              "best_practices_followed": [
+                "Visibility checks before actions",
+                "Proper use of async/await",
+                "Usage of locators"
+              ],
+              "best_practices_missing": [
+                "Specific selectors for all products"
+              ]
+            }
+          },
+          "strengths": [
+            "Good use of async/await",
+            "Visibility checks before actions",
+            "Proper use of locators"
+          ],
+          "weaknesses": [
+            "Fleece Jacket is added using nth(0) which might not always target the correct product"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 85,
+            "main_alignment_issues": [
+              "Fleece Jacket is added using nth(0) which might not always target the correct product"
+            ]
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "test_info": {
+        "app_name": "SauceDemo",
+        "model": "openai",
+        "test_name": "checkout-cancel-from-overview-to-products",
+        "scenario": "Login with 'standard_user' / 'secret_sauce'. Add 'Sauce Labs Backpack' and navigate to the cart. Click CHECKOUT, fill First Name 'March', Last Name 'April', Zip '10115', continue to Overview, then click CANCEL and verify you return to the Products page.",
+        "log_file_path": "SauceDemo/openai/checkout-cancel-from-overview-to-products/test_execution.log"
+      },
+      "evaluations": {
+        "deepseek": {
+          "success": true,
+          "test_info": {
+            "app_name": "SauceDemo",
+            "model": "openai",
+            "test_name": "checkout-cancel-from-overview-to-products",
+            "scenario": "Login with 'standard_user' / 'secret_sauce'. Add 'Sauce Labs Backpack' and navigate to the cart. Click CHECKOUT, fill First Name 'March', Last Name 'April', Zip '10115', continue to Overview, then click CANCEL and verify you return to the Products page.",
+            "log_file_path": "SauceDemo/openai/checkout-cancel-from-overview-to-products/test_execution.log"
+          },
+          "overall_score": 4,
+          "criteria_scores": {
+            "scenario_code_alignment": 4,
+            "code_structure": 5,
+            "selector_quality": 4,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 12,
+              "implemented_steps": 11,
+              "missing_steps": [
+                "Verify cart contains 'Sauce Labs Backpack' before checkout"
+              ],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "data-test",
+                "css"
+              ],
+              "robustness_score": 4,
+              "specific_issues": [
+                "Uses CSS ID selector for login button (#login-button)",
+                "Uses CSS ID selector for add to cart button (#add-to-cart-sauce-labs-backpack)",
+                "Uses CSS ID selector for continue button (#continue)"
+              ],
+              "recommendations": [
+                "Replace CSS ID selectors with role-based or data-test selectors where possible",
+                "Consider using data-test attributes for checkout flow elements"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "excellent",
+              "best_practices_followed": [
+                "Proper awaits on all interactions",
+                "URL assertions after navigation",
+                "Visibility checks before actions",
+                "Logical step-by-step flow"
+              ],
+              "best_practices_missing": [
+                "Missing verification of cart contents before proceeding to checkout"
+              ]
+            }
+          },
+          "strengths": [
+            "Excellent step-by-step flow following scenario order",
+            "Good use of role-based selectors for form fields",
+            "Proper URL verification after each navigation",
+            "Clear visibility checks before interactions",
+            "Well-structured async/await usage"
+          ],
+          "weaknesses": [
+            "Missing verification that 'Sauce Labs Backpack' is actually in cart before checkout",
+            "Some reliance on CSS ID selectors instead of more robust alternatives",
+            "No verification of checkout information before proceeding"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 92,
+            "main_alignment_issues": [
+              "Missing cart content verification step"
+            ]
+          },
+          "error": null
+        },
+        "openai": {
+          "success": true,
+          "test_info": {
+            "app_name": "SauceDemo",
+            "model": "openai",
+            "test_name": "checkout-cancel-from-overview-to-products",
+            "scenario": "Login with 'standard_user' / 'secret_sauce'. Add 'Sauce Labs Backpack' and navigate to the cart. Click CHECKOUT, fill First Name 'March', Last Name 'April', Zip '10115', continue to Overview, then click CANCEL and verify you return to the Products page.",
+            "log_file_path": "SauceDemo/openai/checkout-cancel-from-overview-to-products/test_execution.log"
+          },
+          "overall_score": 5,
+          "criteria_scores": {
+            "scenario_code_alignment": 5,
+            "code_structure": 5,
+            "selector_quality": 5,
+            "best_practices": 5
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 12,
+              "implemented_steps": 12,
+              "missing_steps": [],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "data-test",
+                "css"
+              ],
+              "robustness_score": 5,
+              "specific_issues": [],
+              "recommendations": []
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "excellent",
+              "best_practices_followed": [
+                "Check visibility/enabled before actions",
+                "Proper waits",
+                "Verify dynamic changes after actions"
+              ],
+              "best_practices_missing": []
+            }
+          },
+          "strengths": [
+            "All scenario steps are implemented in correct order",
+            "Robust selectors used",
+            "Best practices followed",
+            "Assertions are solid"
+          ],
+          "weaknesses": [],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 100,
+            "main_alignment_issues": []
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "test_info": {
+        "app_name": "SauceDemo",
+        "model": "openai",
+        "test_name": "continue-shopping-returns-to-products",
+        "scenario": "Login with 'standard_user' / 'secret_sauce'. Add 'Sauce Labs Backpack' to cart, open the cart, then click CONTINUE SHOPPING. Verify you return to the Products page and the cart badge still shows 1.",
+        "log_file_path": "SauceDemo/openai/continue-shopping-returns-to-products/test_execution.log"
+      },
+      "evaluations": {
+        "deepseek": {
+          "success": true,
+          "test_info": {
+            "app_name": "SauceDemo",
+            "model": "openai",
+            "test_name": "continue-shopping-returns-to-products",
+            "scenario": "Login with 'standard_user' / 'secret_sauce'. Add 'Sauce Labs Backpack' to cart, open the cart, then click CONTINUE SHOPPING. Verify you return to the Products page and the cart badge still shows 1.",
+            "log_file_path": "SauceDemo/openai/continue-shopping-returns-to-products/test_execution.log"
+          },
+          "overall_score": 3,
+          "criteria_scores": {
+            "scenario_code_alignment": 3,
+            "code_structure": 4,
+            "selector_quality": 3,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 6,
+              "implemented_steps": 5,
+              "missing_steps": [
+                "Verify cart badge shows 1 BEFORE opening cart"
+              ],
+              "incorrect_steps": [
+                "Using nth(0) instead of targeting 'Sauce Labs Backpack' by name"
+              ]
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "css",
+                "text"
+              ],
+              "robustness_score": 3,
+              "specific_issues": [
+                "Used nth(0) for product selection instead of targeting by name",
+                "Mixed robust role-based selectors with fragile CSS class selectors",
+                "Used '.shopping_cart_badge' CSS class which may be brittle"
+              ],
+              "recommendations": [
+                "Use page.getByRole('button', { name: 'Add to cart' }).filter({ hasText: 'Sauce Labs Backpack' })",
+                "Use data-test attributes if available: page.getByTestId('add-to-cart-sauce-labs-backpack')",
+                "Use consistent selector strategy throughout"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "good",
+              "organization": "good",
+              "best_practices_followed": [
+                "Proper awaits on interactions",
+                "Visibility/enabled checks before actions",
+                "URL verification after navigation",
+                "Logical test flow"
+              ],
+              "best_practices_missing": [
+                "Missing cart badge verification after initial add to cart",
+                "No verification of product name when adding to cart"
+              ]
+            }
+          },
+          "strengths": [
+            "Good use of role-based selectors for form elements",
+            "Proper visibility and enabled state checks",
+            "Clear URL verification after navigation",
+            "Logical step-by-step flow",
+            "Good async/await usage"
+          ],
+          "weaknesses": [
+            "Critical scenario step missing: cart badge verification after adding item",
+            "Used nth(0) instead of targeting specific product by name",
+            "Mixed selector strategies (robust role-based vs fragile CSS)",
+            "No verification that correct product was added to cart"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": false,
+            "alignment_percentage": 67,
+            "main_alignment_issues": [
+              "Missing cart badge verification after adding item (scenario explicitly states 'cart badge still shows 1')",
+              "Product selection uses nth(0) instead of targeting 'Sauce Labs Backpack' by name",
+              "Incomplete verification of scenario requirements"
+            ]
+          },
+          "error": null
+        },
+        "openai": {
+          "success": true,
+          "test_info": {
+            "app_name": "SauceDemo",
+            "model": "openai",
+            "test_name": "continue-shopping-returns-to-products",
+            "scenario": "Login with 'standard_user' / 'secret_sauce'. Add 'Sauce Labs Backpack' to cart, open the cart, then click CONTINUE SHOPPING. Verify you return to the Products page and the cart badge still shows 1.",
+            "log_file_path": "SauceDemo/openai/continue-shopping-returns-to-products/test_execution.log"
+          },
+          "overall_score": 4,
+          "criteria_scores": {
+            "scenario_code_alignment": 4,
+            "code_structure": 5,
+            "selector_quality": 4,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 7,
+              "implemented_steps": 7,
+              "missing_steps": [],
+              "incorrect_steps": [
+                "Add 'Sauce Labs Backpack' to cart"
+              ]
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "data-test",
+                "css"
+              ],
+              "robustness_score": 4,
+              "specific_issues": [
+                "Add to cart button is selected using nth()"
+              ],
+              "recommendations": [
+                "Use specific selectors for the 'Add to cart' button of 'Sauce Labs Backpack'"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "excellent",
+              "best_practices_followed": [
+                "Visibility checks before actions",
+                "Enabled checks before actions",
+                "Correct usage of async/await",
+                "Proper waits"
+              ],
+              "best_practices_missing": [
+                "Specific product targeting"
+              ]
+            }
+          },
+          "strengths": [
+            "Well-structured code",
+            "Proper usage of async/await",
+            "Good usage of visibility and enabled checks before actions"
+          ],
+          "weaknesses": [
+            "Use of nth() selector for 'Add to cart' button",
+            "Lack of specific product targeting"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": false,
+            "alignment_percentage": 85,
+            "main_alignment_issues": [
+              "Add 'Sauce Labs Backpack' to cart step is not correctly implemented"
+            ]
+          },
+          "error": null
+        }
+      }
+    }
+  ]
+}

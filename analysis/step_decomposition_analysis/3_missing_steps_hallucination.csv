@@ -1,0 +1,9 @@
+﻿Application,Model,Total Missing Steps,Total Hallucinations,Total GT Steps,Total LLM Steps,Avg Missing Rate,Avg Hallucination Rate,Missing Steps %,Hallucination %
+BLUDIT,DeepSeek,4,3,102,111,0.0,0.0,3.92,2.7
+BLUDIT,OpenAi,5,2,102,110,0.0464,0.025,4.9,1.82
+Checkturio,DeepSeek,1,1,113,155,0.0128,0.0051,0.88,0.65
+Checkturio,OpenAi,3,11,113,138,0.0173,0.0423,2.65,7.97
+SauceDemo,DeepSeek,9,2,82,74,0.1091,0.0292,10.98,2.7
+SauceDemo,OpenAi,6,1,82,76,0.0821,0.0111,7.32,1.32
+ToDo,DeepSeek,3,0,63,63,0.0604,0.0,4.76,0.0
+ToDo,OpenAi,9,1,63,64,0.1257,0.0139,14.29,1.56

@@ -1,0 +1,4908 @@
+{
+  "evaluation_metadata": {
+    "timestamp": "2025-10-17 02:06:08",
+    "total_tests": 32,
+    "evaluation_models": [
+      "deepseek",
+      "openai"
+    ],
+    "criteria": [
+      "scenario_code_alignment",
+      "code_structure",
+      "selector_quality",
+      "best_practices"
+    ]
+  },
+  "test_evaluations": [
+    {
+      "test_info": {
+        "app_name": "BLUEDT",
+        "model": "deepseek",
+        "test_name": "change_language",
+        "scenario": "Login app with username admin password admin1 then login Go to general and then go to language tab and change language as Turkish",
+        "log_file_path": "BLUEDT/deep_seek/change_language/test_execution.log"
+      },
+      "evaluations": {
+        "deepseek": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "deepseek",
+            "test_name": "change_language",
+            "scenario": "Login app with username admin password admin1 then login Go to general and then go to language tab and change language as Turkish",
+            "log_file_path": "BLUEDT/deep_seek/change_language/test_execution.log"
+          },
+          "overall_score": 4.2,
+          "criteria_scores": {
+            "scenario_code_alignment": 5,
+            "code_structure": 4,
+            "selector_quality": 4,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 5,
+              "implemented_steps": 5,
+              "missing_steps": [],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "text",
+                "css"
+              ],
+              "robustness_score": 4,
+              "specific_issues": [
+                "Mixed selector strategies - uses both robust role selectors and fragile CSS class selector for login button"
+              ],
+              "recommendations": [
+                "Replace CSS class selector for login button with role-based selector",
+                "Consider adding data-testid attributes for critical elements",
+                "Use consistent selector strategy throughout"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "good",
+              "best_practices_followed": [
+                "Proper async/await usage",
+                "Visibility and enabled state assertions",
+                "URL validation after actions",
+                "Logical step sequencing"
+              ],
+              "best_practices_missing": [
+                "Missing explicit wait for navigation after login",
+                "No error handling for failed operations",
+                "Could benefit from page object model for maintainability"
+              ]
+            }
+          },
+          "strengths": [
+            "Perfect scenario implementation - all steps from login to language change are correctly implemented",
+            "Excellent use of role-based selectors for most elements, improving test robustness",
+            "Proper async/await usage and logical flow that matches the scenario exactly",
+            "Good assertions for element visibility and enabled states before interactions"
+          ],
+          "weaknesses": [
+            "Mixed selector strategy - uses fragile CSS class selector for login button instead of consistent role-based approach",
+            "Generic URL validation (/.+/) could be more specific to verify actual page transitions",
+            "No explicit wait for navigation after login, relying on implicit waits",
+            "Missing verification that language change was actually successful"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 100,
+            "main_alignment_issues": [
+              "None - code perfectly implements the described scenario"
+            ]
+          },
+          "error": null
+        },
+        "openai": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "deepseek",
+            "test_name": "change_language",
+            "scenario": "Login app with username admin password admin1 then login Go to general and then go to language tab and change language as Turkish",
+            "log_file_path": "BLUEDT/deep_seek/change_language/test_execution.log"
+          },
+          "overall_score": 4.5,
+          "criteria_scores": {
+            "scenario_code_alignment": 5,
+            "code_structure": 4.5,
+            "selector_quality": 4,
+            "best_practices": 4.5
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 7,
+              "implemented_steps": 7,
+              "missing_steps": [],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role"
+              ],
+              "robustness_score": 4,
+              "specific_issues": [],
+              "recommendations": [
+                "Consider using data-testid selectors for more robustness"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "excellent",
+              "best_practices_followed": [
+                "Proper usage of async/await",
+                "Proper usage of expect assertions",
+                "Proper usage of page object model"
+              ],
+              "best_practices_missing": [
+                "Usage of data-testid selectors"
+              ]
+            }
+          },
+          "strengths": [
+            "Test scenario is fully implemented and in correct order",
+            "Excellent usage of async/await and expect assertions",
+            "Good usage of role selectors"
+          ],
+          "weaknesses": [
+            "Could use more robust selectors such as data-testid"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 100,
+            "main_alignment_issues": []
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "test_info": {
+        "app_name": "BLUEDT",
+        "model": "deepseek",
+        "test_name": "change_role",
+        "scenario": "Login app with username admin password admin1 then login then go to users click on new_editor user and change it role Editor to Admin",
+        "log_file_path": "BLUEDT/deep_seek/change_role/test_execution.log"
+      },
+      "evaluations": {
+        "deepseek": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "deepseek",
+            "test_name": "change_role",
+            "scenario": "Login app with username admin password admin1 then login then go to users click on new_editor user and change it role Editor to Admin",
+            "log_file_path": "BLUEDT/deep_seek/change_role/test_execution.log"
+          },
+          "overall_score": 3.5,
+          "criteria_scores": {
+            "scenario_code_alignment": 4,
+            "code_structure": 4,
+            "selector_quality": 3,
+            "best_practices": 3
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 6,
+              "implemented_steps": 6,
+              "missing_steps": [],
+              "incorrect_steps": [
+                "Username selector assumes exact label 'Username'",
+                "User lookup assumes exact name 'neweditor'"
+              ]
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "text",
+                "css"
+              ],
+              "robustness_score": 3,
+              "specific_issues": [
+                "Mixed selector strategies (role vs CSS)",
+                "Assumes exact text matches ('neweditor' vs 'new_editor')",
+                "Fragile CSS selector for login button"
+              ],
+              "recommendations": [
+                "Use data-testid attributes for critical elements",
+                "Verify exact user display names match test data",
+                "Consider more specific role selectors or test IDs"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "good",
+              "organization": "good",
+              "best_practices_followed": [
+                "Proper async/await usage",
+                "URL navigation verification",
+                "Element visibility checks before interaction"
+              ],
+              "best_practices_missing": [
+                "No explicit wait conditions for state changes",
+                "No verification of role change success",
+                "Generic URL matching instead of specific patterns"
+              ]
+            }
+          },
+          "strengths": [
+            "Complete scenario coverage with all major steps implemented",
+            "Good async/await usage and proper element interaction patterns",
+            "Reasonable navigation flow and URL verification",
+            "Clear step-by-step organization matching the scenario"
+          ],
+          "weaknesses": [
+            "Selector fragility - relies on exact text matches that may not match test data",
+            "No verification that the role change was actually saved successfully",
+            "Generic URL assertions instead of specific expected URLs",
+            "Mixed selector strategies reduce maintainability"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 85,
+            "main_alignment_issues": [
+              "Potential mismatch between 'new_editor' user name in scenario vs 'neweditor' in code",
+              "No success verification for the role change operation"
+            ]
+          },
+          "error": null
+        },
+        "openai": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "deepseek",
+            "test_name": "change_role",
+            "scenario": "Login app with username admin password admin1 then login then go to users click on new_editor user and change it role Editor to Admin",
+            "log_file_path": "BLUEDT/deep_seek/change_role/test_execution.log"
+          },
+          "overall_score": 4.5,
+          "criteria_scores": {
+            "scenario_code_alignment": 5,
+            "code_structure": 4,
+            "selector_quality": 5,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 8,
+              "implemented_steps": 8,
+              "missing_steps": [],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role"
+              ],
+              "robustness_score": 5,
+              "specific_issues": [],
+              "recommendations": [
+                "Consider using data-testid selectors for more robustness"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "good",
+              "best_practices_followed": [
+                "Proper use of async/await",
+                "Good use of expect for assertions",
+                "Proper use of role selectors"
+              ],
+              "best_practices_missing": [
+                "Could use more data-testid selectors"
+              ]
+            }
+          },
+          "strengths": [
+            "Excellent scenario-code alignment",
+            "Good use of async/await",
+            "Excellent use of role selectors"
+          ],
+          "weaknesses": [
+            "Could use more data-testid selectors",
+            "Code could be more organized"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 100,
+            "main_alignment_issues": []
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "test_info": {
+        "app_name": "BLUEDT",
+        "model": "deepseek",
+        "test_name": "navigate",
+        "scenario": "Navigate to http://localhost:8001/admin",
+        "log_file_path": "BLUEDT/deep_seek/navigate/test_execution.log"
+      },
+      "evaluations": {
+        "deepseek": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "deepseek",
+            "test_name": "navigate",
+            "scenario": "Navigate to http://localhost:8001/admin",
+            "log_file_path": "BLUEDT/deep_seek/navigate/test_execution.log"
+          },
+          "overall_score": 5,
+          "criteria_scores": {
+            "scenario_code_alignment": 5,
+            "code_structure": 5,
+            "selector_quality": 5,
+            "best_practices": 5
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 1,
+              "implemented_steps": 1,
+              "missing_steps": [],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "url"
+              ],
+              "robustness_score": 5,
+              "specific_issues": [],
+              "recommendations": [
+                "No selector improvements needed for this simple navigation test"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "excellent",
+              "best_practices_followed": [
+                "Proper async/await usage",
+                "Clear test description",
+                "URL verification after navigation",
+                "Proper Playwright test structure"
+              ],
+              "best_practices_missing": []
+            }
+          },
+          "strengths": [
+            "Perfect scenario-code alignment - test exactly matches the navigation requirement",
+            "Excellent code structure with proper async/await usage",
+            "Follows Playwright best practices including URL verification",
+            "Clean and minimal implementation without unnecessary complexity"
+          ],
+          "weaknesses": [
+            "No weaknesses identified for this simple navigation scenario",
+            "Test is very basic but appropriately so for the given scenario"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 100,
+            "main_alignment_issues": []
+          },
+          "error": null
+        },
+        "openai": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "deepseek",
+            "test_name": "navigate",
+            "scenario": "Navigate to http://localhost:8001/admin",
+            "log_file_path": "BLUEDT/deep_seek/navigate/test_execution.log"
+          },
+          "overall_score": 5,
+          "criteria_scores": {
+            "scenario_code_alignment": 5,
+            "code_structure": 5,
+            "selector_quality": 5,
+            "best_practices": 5
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 1,
+              "implemented_steps": 1,
+              "missing_steps": [],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [],
+              "robustness_score": 5,
+              "specific_issues": [],
+              "recommendations": []
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "excellent",
+              "best_practices_followed": [
+                "Proper use of async/await",
+                "Correct usage of expect for assertions"
+              ],
+              "best_practices_missing": []
+            }
+          },
+          "strengths": [
+            "Scenario steps are fully implemented",
+            "Code structure is excellent",
+            "Async usage is excellent",
+            "Follows Playwright best practices"
+          ],
+          "weaknesses": [],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 100,
+            "main_alignment_issues": []
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "test_info": {
+        "app_name": "BLUEDT",
+        "model": "deepseek",
+        "test_name": "delete_category",
+        "scenario": "Login app with username admin password admin1 then login then navigate to http://localhost:8001/admin/categories the go to Didem and delete it",
+        "log_file_path": "BLUEDT/deep_seek/delete_category/test_execution.log"
+      },
+      "evaluations": {
+        "deepseek": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "deepseek",
+            "test_name": "delete_category",
+            "scenario": "Login app with username admin password admin1 then login then navigate to http://localhost:8001/admin/categories the go to Didem and delete it",
+            "log_file_path": "BLUEDT/deep_seek/delete_category/test_execution.log"
+          },
+          "overall_score": 3.2,
+          "criteria_scores": {
+            "scenario_code_alignment": 3,
+            "code_structure": 4,
+            "selector_quality": 3,
+            "best_practices": 3
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 4,
+              "implemented_steps": 3,
+              "missing_steps": [
+                "Confirmation of delete action (modal or confirmation dialog)"
+              ],
+              "incorrect_steps": [
+                "Navigation flow: Code navigates to admin page then categories via link click, but scenario suggests direct navigation to categories URL after login"
+              ]
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "css",
+                "text"
+              ],
+              "robustness_score": 3,
+              "specific_issues": [
+                "Uses fragile CSS selector for login button: 'form button.btn'",
+                "Uses nth(0) for delete button which may be unstable",
+                "Assumes 'Didem' category is always first row"
+              ],
+              "recommendations": [
+                "Add data-testid attributes to critical elements",
+                "Use more specific selectors for 'Didem' category (e.g., by text content)",
+                "Use getByRole with more specific attributes for delete button"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "good",
+              "organization": "good",
+              "best_practices_followed": [
+                "Proper async/await usage",
+                "Visibility assertions before interactions",
+                "URL verification after navigation"
+              ],
+              "best_practices_missing": [
+                "Missing error handling",
+                "No page object pattern",
+                "No test data setup/cleanup",
+                "Hard-coded category name 'Didem'"
+              ]
+            }
+          },
+          "strengths": [
+            "Good async/await implementation throughout the test",
+            "Proper use of visibility assertions before interactions",
+            "Clear step-by-step flow that mostly follows the scenario",
+            "Good use of role-based selectors for form fields"
+          ],
+          "weaknesses": [
+            "Missing delete confirmation step - assumes immediate deletion",
+            "Fragile selectors for critical elements (login button, delete button)",
+            "Hard-coded category name 'Didem' without verification it exists",
+            "Navigation flow differs from scenario description",
+            "No error handling for cases where elements might not be found"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": false,
+            "alignment_percentage": 65,
+            "main_alignment_issues": [
+              "Navigation flow inconsistency: scenario mentions direct URL navigation after login, but code clicks Categories link",
+              "Missing delete confirmation step",
+              "Assumes 'Didem' category exists and is in first position without verification"
+            ]
+          },
+          "error": null
+        },
+        "openai": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "deepseek",
+            "test_name": "delete_category",
+            "scenario": "Login app with username admin password admin1 then login then navigate to http://localhost:8001/admin/categories the go to Didem and delete it",
+            "log_file_path": "BLUEDT/deep_seek/delete_category/test_execution.log"
+          },
+          "overall_score": 4.2,
+          "criteria_scores": {
+            "scenario_code_alignment": 4,
+            "code_structure": 5,
+            "selector_quality": 4,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 7,
+              "implemented_steps": 7,
+              "missing_steps": [],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "css"
+              ],
+              "robustness_score": 4,
+              "specific_issues": [],
+              "recommendations": [
+                "Consider using 'data-testid' selectors for more robustness."
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "excellent",
+              "best_practices_followed": [
+                "Correct usage of async/await",
+                "Proper use of expect assertions"
+              ],
+              "best_practices_missing": [
+                "Use of 'data-testid' selectors"
+              ]
+            }
+          },
+          "strengths": [
+            "Excellent async/await usage",
+            "Correct implementation of scenario steps",
+            "Good use of role selectors"
+          ],
+          "weaknesses": [
+            "Lack of 'data-testid' selectors",
+            "Reliance on CSS selectors"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 100,
+            "main_alignment_issues": []
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "test_info": {
+        "app_name": "BLUEDT",
+        "model": "deepseek",
+        "test_name": "change_category_description",
+        "scenario": "Login app with username admin password admin1 then login then go to categories the go to Didem and write description and save it",
+        "log_file_path": "BLUEDT/deep_seek/change_category_description/test_execution.log"
+      },
+      "evaluations": {
+        "deepseek": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "deepseek",
+            "test_name": "change_category_description",
+            "scenario": "Login app with username admin password admin1 then login then go to categories the go to Didem and write description and save it",
+            "log_file_path": "BLUEDT/deep_seek/change_category_description/test_execution.log"
+          },
+          "overall_score": 3.5,
+          "criteria_scores": {
+            "scenario_code_alignment": 4,
+            "code_structure": 4,
+            "selector_quality": 3,
+            "best_practices": 3
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 6,
+              "implemented_steps": 6,
+              "missing_steps": [],
+              "incorrect_steps": [
+                "Assumes 'Didem' is always first row in categories table"
+              ]
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "css",
+                "text"
+              ],
+              "robustness_score": 3,
+              "specific_issues": [
+                "Fragile CSS selector for login button",
+                "Fragile nth(0) selector for Didem category",
+                "Generic URL assertions"
+              ],
+              "recommendations": [
+                "Use data-testid attributes for critical elements",
+                "Use more specific selectors for Didem category",
+                "Add specific URL assertions instead of regex patterns"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "good",
+              "best_practices_followed": [
+                "Proper async/await usage",
+                "Element visibility checks before interaction",
+                "Logical step sequencing"
+              ],
+              "best_practices_missing": [
+                "No page object model",
+                "No test data management",
+                "Generic assertions instead of specific ones"
+              ]
+            }
+          },
+          "strengths": [
+            "Complete scenario implementation with all steps in correct order",
+            "Good async/await usage and proper element interaction patterns",
+            "Role-based selectors for form fields improve accessibility and robustness",
+            "Proper visibility checks before interactions"
+          ],
+          "weaknesses": [
+            "Fragile selector for Didem category (nth(0)) assumes static table order",
+            "Generic URL assertions instead of specific URL verification",
+            "No verification that description was actually saved successfully",
+            "CSS-based selector for login button could be fragile"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 85,
+            "main_alignment_issues": [
+              "No verification of successful description save",
+              "Assumes static table ordering for category selection"
+            ]
+          },
+          "error": null
+        },
+        "openai": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "deepseek",
+            "test_name": "change_category_description",
+            "scenario": "Login app with username admin password admin1 then login then go to categories the go to Didem and write description and save it",
+            "log_file_path": "BLUEDT/deep_seek/change_category_description/test_execution.log"
+          },
+          "overall_score": 4.2,
+          "criteria_scores": {
+            "scenario_code_alignment": 5,
+            "code_structure": 4,
+            "selector_quality": 4,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 8,
+              "implemented_steps": 8,
+              "missing_steps": [],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "css"
+              ],
+              "robustness_score": 4,
+              "specific_issues": [
+                "Usage of CSS selectors can lead to fragile tests"
+              ],
+              "recommendations": [
+                "Consider using data-testid selectors for more robust tests"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "good",
+              "best_practices_followed": [
+                "Proper use of async/await",
+                "Good use of expect for assertions"
+              ],
+              "best_practices_missing": [
+                "Usage of data-testid selectors"
+              ]
+            }
+          },
+          "strengths": [
+            "Excellent scenario to code alignment",
+            "Proper use of async/await",
+            "Good use of expect for assertions"
+          ],
+          "weaknesses": [
+            "Usage of CSS selectors can lead to fragile tests",
+            "No usage of data-testid selectors"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 100,
+            "main_alignment_issues": []
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "test_info": {
+        "app_name": "BLUEDT",
+        "model": "deepseek",
+        "test_name": "create_content",
+        "scenario": "Login app with username admin password admin1 then login Go to create new content and write title 'How to write thesis' and then write something in content and save it",
+        "log_file_path": "BLUEDT/deep_seek/create_content/test_execution.log"
+      },
+      "evaluations": {
+        "deepseek": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "deepseek",
+            "test_name": "create_content",
+            "scenario": "Login app with username admin password admin1 then login Go to create new content and write title 'How to write thesis' and then write something in content and save it",
+            "log_file_path": "BLUEDT/deep_seek/create_content/test_execution.log"
+          },
+          "overall_score": 4.2,
+          "criteria_scores": {
+            "scenario_code_alignment": 5,
+            "code_structure": 4,
+            "selector_quality": 4,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 6,
+              "implemented_steps": 6,
+              "missing_steps": [],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "text",
+                "css",
+                "frameLocator"
+              ],
+              "robustness_score": 4,
+              "specific_issues": [
+                "Mixed selector strategies - some role-based, some CSS-based",
+                "CSS selector 'form button.btn' could be fragile if UI changes"
+              ],
+              "recommendations": [
+                "Use consistent role-based selectors throughout",
+                "Replace CSS selector with role-based selector for login button",
+                "Consider adding data-testid attributes for critical elements"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "good",
+              "best_practices_followed": [
+                "Proper async/await usage",
+                "URL verification after navigation",
+                "Element visibility and enabled state checks",
+                "Clear step-by-step organization"
+              ],
+              "best_practices_missing": [
+                "Missing error handling",
+                "No page object model usage",
+                "Hard-coded URLs and credentials"
+              ]
+            }
+          },
+          "strengths": [
+            "Perfect scenario implementation - all steps from the scenario are correctly implemented in the right order",
+            "Excellent use of async/await and proper Playwright patterns",
+            "Good use of role-based selectors for most elements",
+            "Proper verification of element states (visible, enabled) before interactions",
+            "URL verification after key navigation steps"
+          ],
+          "weaknesses": [
+            "Mixed selector strategies - inconsistent use of role vs CSS selectors",
+            "Hard-coded credentials and URLs in test code",
+            "No error handling or retry mechanisms",
+            "Test name is overly verbose and duplicates the scenario description",
+            "Missing assertions to verify content was actually saved successfully"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 100,
+            "main_alignment_issues": [
+              "None - the code perfectly implements the described scenario"
+            ]
+          },
+          "error": null
+        },
+        "openai": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "deepseek",
+            "test_name": "create_content",
+            "scenario": "Login app with username admin password admin1 then login Go to create new content and write title 'How to write thesis' and then write something in content and save it",
+            "log_file_path": "BLUEDT/deep_seek/create_content/test_execution.log"
+          },
+          "overall_score": 4.5,
+          "criteria_scores": {
+            "scenario_code_alignment": 5,
+            "code_structure": 4.5,
+            "selector_quality": 4.5,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 7,
+              "implemented_steps": 7,
+              "missing_steps": [],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "css"
+              ],
+              "robustness_score": 4.5,
+              "specific_issues": [],
+              "recommendations": [
+                "Consider using data-testid selectors for more robustness"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "excellent",
+              "best_practices_followed": [
+                "Proper use of async/await",
+                "Proper use of expect assertions",
+                "Good use of page object model"
+              ],
+              "best_practices_missing": [
+                "Could use more data-testid selectors"
+              ]
+            }
+          },
+          "strengths": [
+            "Excellent scenario-code alignment",
+            "Good use of async/await",
+            "Good use of role selectors"
+          ],
+          "weaknesses": [
+            "Could use more data-testid selectors",
+            "Some CSS selectors used which can be fragile"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 100,
+            "main_alignment_issues": []
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "test_info": {
+        "app_name": "BLUEDT",
+        "model": "deepseek",
+        "test_name": "add_new_category_with_save",
+        "scenario": "Login app with username admin password admin1 then login, Go to category and then add new category as Movie and save it",
+        "log_file_path": "BLUEDT/deep_seek/add_new_category_with_save/test_execution.log"
+      },
+      "evaluations": {
+        "deepseek": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "deepseek",
+            "test_name": "add_new_category_with_save",
+            "scenario": "Login app with username admin password admin1 then login, Go to category and then add new category as Movie and save it",
+            "log_file_path": "BLUEDT/deep_seek/add_new_category_with_save/test_execution.log"
+          },
+          "overall_score": 4.2,
+          "criteria_scores": {
+            "scenario_code_alignment": 5,
+            "code_structure": 4,
+            "selector_quality": 4,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 6,
+              "implemented_steps": 6,
+              "missing_steps": [],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "text",
+                "css"
+              ],
+              "robustness_score": 4,
+              "specific_issues": [
+                "CSS class selector for login button could be fragile",
+                "URL regex patterns are too generic"
+              ],
+              "recommendations": [
+                "Use data-testid attributes for critical elements",
+                "Use more specific URL assertions",
+                "Consider using getByRole with more specific attributes"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "good",
+              "best_practices_followed": [
+                "Proper async/await usage",
+                "Element visibility checks before interaction",
+                "URL navigation verification",
+                "Button state verification"
+              ],
+              "best_practices_missing": [
+                "No explicit waits for page transitions",
+                "Generic URL assertions",
+                "No test data cleanup"
+              ]
+            }
+          },
+          "strengths": [
+            "Perfect scenario-step alignment with all steps implemented in correct order",
+            "Excellent use of async/await pattern throughout the test",
+            "Good use of role-based selectors for accessibility and robustness",
+            "Proper element state verification before interactions",
+            "Clear navigation flow matching the business scenario"
+          ],
+          "weaknesses": [
+            "Generic URL assertions using regex patterns instead of specific URLs",
+            "CSS class selector for login button could be fragile if UI changes",
+            "No explicit waiting for page transitions between steps",
+            "Missing test data cleanup after category creation",
+            "Could benefit from more specific role attributes for better selector precision"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 100,
+            "main_alignment_issues": []
+          },
+          "error": null
+        },
+        "openai": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "deepseek",
+            "test_name": "add_new_category_with_save",
+            "scenario": "Login app with username admin password admin1 then login, Go to category and then add new category as Movie and save it",
+            "log_file_path": "BLUEDT/deep_seek/add_new_category_with_save/test_execution.log"
+          },
+          "overall_score": 4.5,
+          "criteria_scores": {
+            "scenario_code_alignment": 5,
+            "code_structure": 4,
+            "selector_quality": 5,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 7,
+              "implemented_steps": 7,
+              "missing_steps": [],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "css"
+              ],
+              "robustness_score": 4,
+              "specific_issues": [],
+              "recommendations": [
+                "Consider using data-testid selectors for more robustness"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "good",
+              "best_practices_followed": [
+                "Proper use of async/await",
+                "Good use of expect for assertions",
+                "Good use of role selectors"
+              ],
+              "best_practices_missing": [
+                "No use of data-testid selectors"
+              ]
+            }
+          },
+          "strengths": [
+            "Excellent scenario-code alignment",
+            "Good use of async/await",
+            "Good use of role selectors"
+          ],
+          "weaknesses": [
+            "Lack of data-testid selectors",
+            "Some code could be better organized"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 100,
+            "main_alignment_issues": []
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "test_info": {
+        "app_name": "BLUEDT",
+        "model": "deepseek",
+        "test_name": "add_new_category",
+        "scenario": "Login app with username admin password admin1 then login, Go to category and then add new category as Movies",
+        "log_file_path": "BLUEDT/deep_seek/add_new_category/test_execution.log"
+      },
+      "evaluations": {
+        "deepseek": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "deepseek",
+            "test_name": "add_new_category",
+            "scenario": "Login app with username admin password admin1 then login, Go to category and then add new category as Movies",
+            "log_file_path": "BLUEDT/deep_seek/add_new_category/test_execution.log"
+          },
+          "overall_score": 3.5,
+          "criteria_scores": {
+            "scenario_code_alignment": 4,
+            "code_structure": 4,
+            "selector_quality": 3,
+            "best_practices": 3
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 4,
+              "implemented_steps": 4,
+              "missing_steps": [
+                "Form submission for category creation"
+              ],
+              "incorrect_steps": [
+                "Final URL assertions are too generic"
+              ]
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "css"
+              ],
+              "robustness_score": 3,
+              "specific_issues": [
+                "Mixed selector strategies",
+                "CSS class selector for login button is fragile",
+                "Generic URL assertions"
+              ],
+              "recommendations": [
+                "Add data-testid attributes to critical elements",
+                "Use more specific URL assertions",
+                "Replace CSS class selector with role-based selector for login button"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "good",
+              "best_practices_followed": [
+                "Proper async/await usage",
+                "Element visibility/enabled checks before interaction",
+                "Variable declarations at top"
+              ],
+              "best_practices_missing": [
+                "Missing form submission verification",
+                "Generic URL assertions",
+                "No explicit wait for navigation"
+              ]
+            }
+          },
+          "strengths": [
+            "Excellent async/await implementation throughout the test",
+            "Good element state verification (visible, enabled) before interactions",
+            "Clear step-by-step flow that follows the scenario requirements",
+            "Proper variable organization at the beginning of the test"
+          ],
+          "weaknesses": [
+            "Missing form submission step after filling category name",
+            "Generic URL assertions (/.+/) that don't verify specific pages",
+            "Mixed selector strategies with some fragile CSS class selectors",
+            "No explicit verification that the category was actually created beyond visibility check"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 85,
+            "main_alignment_issues": [
+              "Category creation form is not submitted",
+              "Final verification only checks visibility, not actual creation"
+            ]
+          },
+          "error": null
+        },
+        "openai": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "deepseek",
+            "test_name": "add_new_category",
+            "scenario": "Login app with username admin password admin1 then login, Go to category and then add new category as Movies",
+            "log_file_path": "BLUEDT/deep_seek/add_new_category/test_execution.log"
+          },
+          "overall_score": 4.2,
+          "criteria_scores": {
+            "scenario_code_alignment": 4,
+            "code_structure": 5,
+            "selector_quality": 4,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 5,
+              "implemented_steps": 5,
+              "missing_steps": [],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role"
+              ],
+              "robustness_score": 4,
+              "specific_issues": [],
+              "recommendations": [
+                "Consider using data-testid selectors for more robustness"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "excellent",
+              "best_practices_followed": [
+                "Proper use of async/await",
+                "Good use of expect assertions",
+                "Proper use of role selectors"
+              ],
+              "best_practices_missing": [
+                "No use of data-testid selectors"
+              ]
+            }
+          },
+          "strengths": [
+            "Excellent use of async/await",
+            "Good scenario coverage",
+            "Proper use of role selectors"
+          ],
+          "weaknesses": [
+            "No use of data-testid selectors",
+            "No explicit wait after form submission",
+            "No verification of successful category creation"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 100,
+            "main_alignment_issues": [
+              "No explicit wait after form submission",
+              "No verification of successful category creation"
+            ]
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "test_info": {
+        "app_name": "BLUEDT",
+        "model": "deepseek",
+        "test_name": "add_editor",
+        "scenario": "Login app with username admin password admin1 then login Go to Users and then add one user role as Editor ",
+        "log_file_path": "BLUEDT/deep_seek/add_editor/test_execution.log"
+      },
+      "evaluations": {
+        "deepseek": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "deepseek",
+            "test_name": "add_editor",
+            "scenario": "Login app with username admin password admin1 then login Go to Users and then add one user role as Editor ",
+            "log_file_path": "BLUEDT/deep_seek/add_editor/test_execution.log"
+          },
+          "overall_score": 3.2,
+          "criteria_scores": {
+            "scenario_code_alignment": 3,
+            "code_structure": 4,
+            "selector_quality": 3,
+            "best_practices": 3
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 4,
+              "implemented_steps": 3,
+              "missing_steps": [
+                "Verification that the new editor user was successfully created"
+              ],
+              "incorrect_steps": [
+                "The scenario mentions adding 'one user role as Editor' but doesn't specify creating a new user with username/password/email - code adds significant additional steps"
+              ]
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "text",
+                "internal"
+              ],
+              "robustness_score": 3,
+              "specific_issues": [
+                "Mixed selector syntax - some use getByRole() as function, others use internal:role",
+                "Inconsistent selector patterns",
+                "Some selectors may be language-dependent (Turkish text)"
+              ],
+              "recommendations": [
+                "Standardize on page.getByRole() syntax throughout",
+                "Use data-testid attributes for critical elements",
+                "Consider language-independent selectors for better maintainability"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "good",
+              "organization": "good",
+              "best_practices_followed": [
+                "Proper async/await usage",
+                "Element visibility checks before interactions",
+                "URL verification at the end"
+              ],
+              "best_practices_missing": [
+                "No test data cleanup",
+                "No explicit wait conditions for page transitions",
+                "Hard-coded test data in the test"
+              ]
+            }
+          },
+          "strengths": [
+            "Good step-by-step flow following the scenario sequence",
+            "Proper use of async/await patterns throughout",
+            "Includes visibility checks before interacting with elements",
+            "Clear navigation through the user creation workflow"
+          ],
+          "weaknesses": [
+            "Missing verification that the editor user was actually created successfully",
+            "Inconsistent selector syntax and patterns",
+            "No test data cleanup - could leave test users in the system",
+            "Language-dependent selectors may break if UI language changes",
+            "Hard-coded test data makes tests less maintainable"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": false,
+            "alignment_percentage": 65,
+            "main_alignment_issues": [
+              "Scenario is vague about user creation details while code implements full user creation",
+              "Missing success verification step",
+              "Scenario doesn't specify the detailed user creation fields that the code implements"
+            ]
+          },
+          "error": null
+        },
+        "openai": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "deepseek",
+            "test_name": "add_editor",
+            "scenario": "Login app with username admin password admin1 then login Go to Users and then add one user role as Editor ",
+            "log_file_path": "BLUEDT/deep_seek/add_editor/test_execution.log"
+          },
+          "overall_score": 4.2,
+          "criteria_scores": {
+            "scenario_code_alignment": 5,
+            "code_structure": 4,
+            "selector_quality": 4,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 11,
+              "implemented_steps": 11,
+              "missing_steps": [],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "text",
+                "css"
+              ],
+              "robustness_score": 4,
+              "specific_issues": [],
+              "recommendations": [
+                "Consider using data-testid selectors for more robust tests"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "good",
+              "best_practices_followed": [
+                "Correct usage of async/await",
+                "Proper use of expect assertions",
+                "Good use of page.locator"
+              ],
+              "best_practices_missing": [
+                "Could use more data-testid selectors"
+              ]
+            }
+          },
+          "strengths": [
+            "All scenario steps are covered and in the correct order",
+            "Good use of async/await",
+            "Good use of role selectors"
+          ],
+          "weaknesses": [
+            "Could use more data-testid selectors for more robust tests",
+            "Some parts of the code could be better organized"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 100,
+            "main_alignment_issues": []
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "test_info": {
+        "app_name": "BLUEDT",
+        "model": "deepseek",
+        "test_name": "navigate_login",
+        "scenario": "Navigate to http://localhost:8001/admin and then go to admin panel username admin password admin1 ",
+        "log_file_path": "BLUEDT/deep_seek/navigate_login/test_execution.log"
+      },
+      "evaluations": {
+        "deepseek": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "deepseek",
+            "test_name": "navigate_login",
+            "scenario": "Navigate to http://localhost:8001/admin and then go to admin panel username admin password admin1 ",
+            "log_file_path": "BLUEDT/deep_seek/navigate_login/test_execution.log"
+          },
+          "overall_score": 2.5,
+          "criteria_scores": {
+            "scenario_code_alignment": 2,
+            "code_structure": 3,
+            "selector_quality": 3,
+            "best_practices": 3
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 3,
+              "implemented_steps": 2,
+              "missing_steps": [
+                "Successful login verification",
+                "Navigation to admin panel after login"
+              ],
+              "incorrect_steps": [
+                "Password field selector is incorrect (selects button instead of password input)",
+                "Login submission logic is flawed"
+              ]
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "css"
+              ],
+              "robustness_score": 3,
+              "specific_issues": [
+                "Password field uses incorrect selector (button instead of password input)",
+                "Mixed selector strategies with inconsistent quality"
+              ],
+              "recommendations": [
+                "Use page.getByLabel() or page.getByPlaceholder() for password field",
+                "Consider using data-testid attributes for better robustness",
+                "Use page.getByRole('button') for login button"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "good",
+              "organization": "good",
+              "best_practices_followed": [
+                "Proper async/await usage",
+                "URL navigation with page.goto()",
+                "Visibility assertions before interaction"
+              ],
+              "best_practices_missing": [
+                "Missing proper login verification",
+                "No error handling",
+                "Incorrect element selection for password field"
+              ]
+            }
+          },
+          "strengths": [
+            "Proper async/await usage throughout the test",
+            "Good use of visibility assertions before interacting with elements",
+            "Clear test structure with logical flow"
+          ],
+          "weaknesses": [
+            "Critical flaw: Password field selector targets a button instead of password input",
+            "Missing verification of successful login and admin panel access",
+            "Login submission logic is incorrect (clicking password field instead of login button)",
+            "URL assertion expects same URL instead of post-login destination"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": false,
+            "alignment_percentage": 40,
+            "main_alignment_issues": [
+              "Password field selection targets wrong element type",
+              "Missing login submission with proper button",
+              "No verification of successful login or admin panel navigation",
+              "URL assertion logic is incorrect"
+            ]
+          },
+          "error": null
+        },
+        "openai": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "deepseek",
+            "test_name": "navigate_login",
+            "scenario": "Navigate to http://localhost:8001/admin and then go to admin panel username admin password admin1 ",
+            "log_file_path": "BLUEDT/deep_seek/navigate_login/test_execution.log"
+          },
+          "overall_score": 3.5,
+          "criteria_scores": {
+            "scenario_code_alignment": 4,
+            "code_structure": 4,
+            "selector_quality": 3,
+            "best_practices": 3
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 3,
+              "implemented_steps": 3,
+              "missing_steps": [],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "css"
+              ],
+              "robustness_score": 3,
+              "specific_issues": [
+                "Password field locator is not accurate"
+              ],
+              "recommendations": [
+                "Use data-testid or semantic selectors for more robustness"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "good",
+              "best_practices_followed": [
+                "Async/await usage",
+                "Expectations"
+              ],
+              "best_practices_missing": [
+                "Use of data-testid selectors"
+              ]
+            }
+          },
+          "strengths": [
+            "Good async/await usage",
+            "Scenario steps are well implemented",
+            "Expectations are well used"
+          ],
+          "weaknesses": [
+            "Password field selector is not accurate",
+            "Does not use data-testid selectors",
+            "Does not check if navigation to admin panel is successful"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 90,
+            "main_alignment_issues": [
+              "Password field selector is not accurate"
+            ]
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "test_info": {
+        "app_name": "BLUEDT",
+        "model": "deepseek",
+        "test_name": "edit_content",
+        "scenario": "username admin password admin1 then login go to content edit click Inside Out and write some content about movie and save it",
+        "log_file_path": "BLUEDT/deep_seek/edit_content/test_execution.log"
+      },
+      "evaluations": {
+        "deepseek": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "deepseek",
+            "test_name": "edit_content",
+            "scenario": "username admin password admin1 then login go to content edit click Inside Out and write some content about movie and save it",
+            "log_file_path": "BLUEDT/deep_seek/edit_content/test_execution.log"
+          },
+          "overall_score": 3.5,
+          "criteria_scores": {
+            "scenario_code_alignment": 3,
+            "code_structure": 4,
+            "selector_quality": 4,
+            "best_practices": 3
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 6,
+              "implemented_steps": 5,
+              "missing_steps": [
+                "Specific selection of 'Inside Out' content item"
+              ],
+              "incorrect_steps": [
+                "Content edit selection uses nth(2) instead of targeting 'Inside Out' specifically"
+              ]
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "css",
+                "frameLocator"
+              ],
+              "robustness_score": 4,
+              "specific_issues": [
+                "Fragile nth(2) selector for edit link",
+                "CSS class selector for login button"
+              ],
+              "recommendations": [
+                "Use data-testid for edit links",
+                "Target 'Inside Out' specifically by text content",
+                "Improve login button selector"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "good",
+              "best_practices_followed": [
+                "Proper async/await usage",
+                "URL navigation checks",
+                "Element visibility assertions"
+              ],
+              "best_practices_missing": [
+                "No page object model",
+                "Missing error handling",
+                "Generic URL assertions instead of specific ones"
+              ]
+            }
+          },
+          "strengths": [
+            "Good use of role-based selectors for accessibility",
+            "Proper async/await implementation throughout",
+            "Comprehensive element visibility checks before interactions",
+            "Correct login flow implementation with proper field filling"
+          ],
+          "weaknesses": [
+            "Critical flaw: Does not specifically target 'Inside Out' content item as required by scenario",
+            "Uses fragile nth(2) selector which may break with content changes",
+            "Generic URL assertions instead of specific URL patterns",
+            "Missing specific content validation after save operation"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": false,
+            "alignment_percentage": 70,
+            "main_alignment_issues": [
+              "Does not specifically select 'Inside Out' movie content",
+              "Relies on position-based selector instead of content-based selection",
+              "Missing verification that correct content was edited"
+            ]
+          },
+          "error": null
+        },
+        "openai": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "deepseek",
+            "test_name": "edit_content",
+            "scenario": "username admin password admin1 then login go to content edit click Inside Out and write some content about movie and save it",
+            "log_file_path": "BLUEDT/deep_seek/edit_content/test_execution.log"
+          },
+          "overall_score": 4,
+          "criteria_scores": {
+            "scenario_code_alignment": 4,
+            "code_structure": 4,
+            "selector_quality": 4,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 9,
+              "implemented_steps": 8,
+              "missing_steps": [
+                "click Inside Out"
+              ],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "css"
+              ],
+              "robustness_score": 3,
+              "specific_issues": [
+                "Missing data-testid selectors"
+              ],
+              "recommendations": [
+                "Use data-testid selectors for more robustness"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "good",
+              "best_practices_followed": [
+                "Proper use of async/await",
+                "Good use of expect for assertions"
+              ],
+              "best_practices_missing": [
+                "Use of data-testid selectors"
+              ]
+            }
+          },
+          "strengths": [
+            "Proper use of async/await",
+            "Good use of expect for assertions",
+            "Scenario steps are well implemented"
+          ],
+          "weaknesses": [
+            "Missing step 'click Inside Out'",
+            "Lack of data-testid selectors",
+            "Could improve code organization"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 89,
+            "main_alignment_issues": [
+              "Missing step 'click Inside Out'"
+            ]
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "test_info": {
+        "app_name": "BLUEDT",
+        "model": "deepseek",
+        "test_name": "update_description",
+        "scenario": "Login app with username admin password admin1 then login then go to categories the go to Didem and write description and save it",
+        "log_file_path": "BLUEDT/deep_seek/update_description/test_execution.log"
+      },
+      "evaluations": {
+        "deepseek": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "deepseek",
+            "test_name": "update_description",
+            "scenario": "Login app with username admin password admin1 then login then go to categories the go to Didem and write description and save it",
+            "log_file_path": "BLUEDT/deep_seek/update_description/test_execution.log"
+          },
+          "overall_score": 3.5,
+          "criteria_scores": {
+            "scenario_code_alignment": 4,
+            "code_structure": 4,
+            "selector_quality": 3,
+            "best_practices": 3
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 6,
+              "implemented_steps": 6,
+              "missing_steps": [],
+              "incorrect_steps": [
+                "Assumes 'Didem' is always first row in categories table"
+              ]
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "css",
+                "text"
+              ],
+              "robustness_score": 3,
+              "specific_issues": [
+                "Fragile CSS selector for login button",
+                "Assumes 'Didem' is always first row",
+                "No data-testid selectors used"
+              ],
+              "recommendations": [
+                "Use data-testid attributes for critical elements",
+                "Implement more specific selectors for 'Didem' category",
+                "Use page.getByRole() consistently"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "good",
+              "best_practices_followed": [
+                "Proper async/await usage",
+                "Element visibility checks before interaction",
+                "URL verification after navigation"
+              ],
+              "best_practices_missing": [
+                "No explicit wait for navigation",
+                "No error handling",
+                "No test data cleanup",
+                "Generic URL assertions"
+              ]
+            }
+          },
+          "strengths": [
+            "Complete scenario implementation with all major steps covered",
+            "Good async/await usage and proper element interaction patterns",
+            "Element visibility verification before interactions",
+            "Clear step-by-step flow matching the scenario description"
+          ],
+          "weaknesses": [
+            "Fragile selectors that may break with UI changes",
+            "Assumes 'Didem' category is always first in the table",
+            "No explicit verification that description was actually saved",
+            "Generic URL assertions instead of specific URL verification"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 85,
+            "main_alignment_issues": [
+              "No verification of successful description update",
+              "Assumes static category position in table"
+            ]
+          },
+          "error": null
+        },
+        "openai": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "deepseek",
+            "test_name": "update_description",
+            "scenario": "Login app with username admin password admin1 then login then go to categories the go to Didem and write description and save it",
+            "log_file_path": "BLUEDT/deep_seek/update_description/test_execution.log"
+          },
+          "overall_score": 4.5,
+          "criteria_scores": {
+            "scenario_code_alignment": 5,
+            "code_structure": 4,
+            "selector_quality": 5,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 7,
+              "implemented_steps": 7,
+              "missing_steps": [],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "css"
+              ],
+              "robustness_score": 5,
+              "specific_issues": [],
+              "recommendations": []
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "good",
+              "best_practices_followed": [
+                "Proper use of async/await",
+                "Proper use of selectors",
+                "Proper use of assertions"
+              ],
+              "best_practices_missing": [
+                "Could improve code comments"
+              ]
+            }
+          },
+          "strengths": [
+            "Excellent scenario-code alignment",
+            "Robust selector usage",
+            "Good async/await usage"
+          ],
+          "weaknesses": [
+            "Lack of code comments",
+            "Could improve code organization"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 100,
+            "main_alignment_issues": []
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "test_info": {
+        "app_name": "BLUEDT",
+        "model": "deepseek",
+        "test_name": "add_new_content_with_category",
+        "scenario": "Login app with username admin password admin1 then login Go to create new content and write title 'How to write thesis' and then write something in content and select options then select category and save it",
+        "log_file_path": "BLUEDT/deep_seek/add_new_content_with_category/test_execution.log"
+      },
+      "evaluations": {
+        "deepseek": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "deepseek",
+            "test_name": "add_new_content_with_category",
+            "scenario": "Login app with username admin password admin1 then login Go to create new content and write title 'How to write thesis' and then write something in content and select options then select category and save it",
+            "log_file_path": "BLUEDT/deep_seek/add_new_content_with_category/test_execution.log"
+          },
+          "overall_score": 3.5,
+          "criteria_scores": {
+            "scenario_code_alignment": 4,
+            "code_structure": 4,
+            "selector_quality": 3,
+            "best_practices": 3
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 7,
+              "implemented_steps": 6,
+              "missing_steps": [
+                "Verification of successful content creation"
+              ],
+              "incorrect_steps": [
+                "URL assertion after save should verify content was created, not return to new-content page"
+              ]
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "css",
+                "frameLocator"
+              ],
+              "robustness_score": 3,
+              "specific_issues": [
+                "Mixed selector strategies",
+                "CSS class selector for login button is fragile",
+                "Generic option selection ('a category') may not work in real environment"
+              ],
+              "recommendations": [
+                "Use data-testid attributes for critical elements",
+                "Make category selection more specific",
+                "Add more specific role/text combinations for better reliability"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "good",
+              "organization": "good",
+              "best_practices_followed": [
+                "Proper async/await usage",
+                "URL assertions for navigation",
+                "Element visibility checks before interaction"
+              ],
+              "best_practices_missing": [
+                "Missing test data isolation",
+                "No error handling for failed operations",
+                "Hard-coded credentials in test"
+              ]
+            }
+          },
+          "strengths": [
+            "Excellent step-by-step implementation following scenario sequence",
+            "Good use of async/await patterns throughout",
+            "Proper element visibility and enabled state checks before interactions",
+            "Clear navigation flow with URL assertions",
+            "Comprehensive form filling including rich text editor handling"
+          ],
+          "weaknesses": [
+            "Missing verification that content was actually created successfully",
+            "Fragile CSS class selector for login button",
+            "Generic category selection may not work in actual BLUEDT CMS",
+            "Hard-coded credentials in test code",
+            "No error handling for potential failures"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 85,
+            "main_alignment_issues": [
+              "Missing success verification step",
+              "Incorrect URL assertion after save operation",
+              "Generic category selection may not match actual CMS categories"
+            ]
+          },
+          "error": null
+        },
+        "openai": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "deepseek",
+            "test_name": "add_new_content_with_category",
+            "scenario": "Login app with username admin password admin1 then login Go to create new content and write title 'How to write thesis' and then write something in content and select options then select category and save it",
+            "log_file_path": "BLUEDT/deep_seek/add_new_content_with_category/test_execution.log"
+          },
+          "overall_score": 4.2,
+          "criteria_scores": {
+            "scenario_code_alignment": 4,
+            "code_structure": 4,
+            "selector_quality": 5,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 8,
+              "implemented_steps": 7,
+              "missing_steps": [
+                "Option selection is not clear"
+              ],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role"
+              ],
+              "robustness_score": 5,
+              "specific_issues": [],
+              "recommendations": []
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "good",
+              "best_practices_followed": [
+                "Proper use of async/await",
+                "Good use of selectors"
+              ],
+              "best_practices_missing": [
+                "Could use more comments for clarity"
+              ]
+            }
+          },
+          "strengths": [
+            "Excellent use of async/await",
+            "Good use of selectors",
+            "Scenario steps are mostly covered"
+          ],
+          "weaknesses": [
+            "Option selection is not clear",
+            "Could use more comments for clarity"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 87.5,
+            "main_alignment_issues": [
+              "Option selection is not clear"
+            ]
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "test_info": {
+        "app_name": "BLUEDT",
+        "model": "deepseek",
+        "test_name": "remember_me",
+        "scenario": "Login app with username admin password admin1 and click remember me then login Go to create new content and write title 'How to write thesis' and then write something in content and select options then select category and save it",
+        "log_file_path": "BLUEDT/deep_seek/remember_me/test_execution.log"
+      },
+      "evaluations": {
+        "deepseek": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "deepseek",
+            "test_name": "remember_me",
+            "scenario": "Login app with username admin password admin1 and click remember me then login Go to create new content and write title 'How to write thesis' and then write something in content and select options then select category and save it",
+            "log_file_path": "BLUEDT/deep_seek/remember_me/test_execution.log"
+          },
+          "overall_score": 3.5,
+          "criteria_scores": {
+            "scenario_code_alignment": 4,
+            "code_structure": 4,
+            "selector_quality": 3,
+            "best_practices": 3
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 8,
+              "implemented_steps": 7,
+              "missing_steps": [
+                "Verify content creation success or confirmation"
+              ],
+              "incorrect_steps": [
+                "Category selection uses hardcoded 'a category' instead of actual category from BLUEDT CMS"
+              ]
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "text",
+                "css",
+                "frameLocator"
+              ],
+              "robustness_score": 3,
+              "specific_issues": [
+                "Mixed selector strategies",
+                "Hardcoded category value",
+                "CSS selector for login button ('form button.btn') may be fragile"
+              ],
+              "recommendations": [
+                "Use data-testid attributes for critical elements",
+                "Verify actual category names in BLUEDT CMS",
+                "Replace CSS selector with role-based selector for login button"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "good",
+              "best_practices_followed": [
+                "Proper async/await usage",
+                "Element visibility checks before interaction",
+                "URL verification after navigation"
+              ],
+              "best_practices_missing": [
+                "No test data cleanup",
+                "Missing error handling",
+                "No page object pattern"
+              ]
+            }
+          },
+          "strengths": [
+            "Excellent step-by-step implementation following scenario sequence",
+            "Proper async/await usage throughout the test",
+            "Good element visibility and state verification before interactions",
+            "Correct URL verification after key navigation steps"
+          ],
+          "weaknesses": [
+            "Hardcoded category selection that may not match actual BLUEDT CMS categories",
+            "Missing verification of content creation success",
+            "Mixed selector strategies with some potentially fragile CSS selectors",
+            "No test data cleanup or teardown"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 87.5,
+            "main_alignment_issues": [
+              "Category selection uses placeholder value",
+              "No success verification after content creation"
+            ]
+          },
+          "error": null
+        },
+        "openai": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "deepseek",
+            "test_name": "remember_me",
+            "scenario": "Login app with username admin password admin1 and click remember me then login Go to create new content and write title 'How to write thesis' and then write something in content and select options then select category and save it",
+            "log_file_path": "BLUEDT/deep_seek/remember_me/test_execution.log"
+          },
+          "overall_score": 4.3,
+          "criteria_scores": {
+            "scenario_code_alignment": 5,
+            "code_structure": 4,
+            "selector_quality": 4,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 10,
+              "implemented_steps": 10,
+              "missing_steps": [],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role"
+              ],
+              "robustness_score": 4,
+              "specific_issues": [],
+              "recommendations": [
+                "Consider using data-testid selectors for more robustness"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "good",
+              "best_practices_followed": [
+                "Proper use of async/await",
+                "Correct use of expect assertions",
+                "Proper use of role selectors"
+              ],
+              "best_practices_missing": [
+                "Use of data-testid selectors"
+              ]
+            }
+          },
+          "strengths": [
+            "Excellent scenario-code alignment",
+            "Proper use of async/await",
+            "Correct use of role selectors"
+          ],
+          "weaknesses": [
+            "Lack of data-testid selectors",
+            "Code could be broken down into smaller functions for better readability"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 100,
+            "main_alignment_issues": []
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "test_info": {
+        "app_name": "BLUEDT",
+        "model": "deepseek",
+        "test_name": "change_title",
+        "scenario": "Login app with username admin password admin1 then login then navigate to 'http://localhost:8001/admin/content' and Click edit and change the title",
+        "log_file_path": "BLUEDT/deep_seek/change_title/test_execution.log"
+      },
+      "evaluations": {
+        "deepseek": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "deepseek",
+            "test_name": "change_title",
+            "scenario": "Login app with username admin password admin1 then login then navigate to 'http://localhost:8001/admin/content' and Click edit and change the title",
+            "log_file_path": "BLUEDT/deep_seek/change_title/test_execution.log"
+          },
+          "overall_score": 3.8,
+          "criteria_scores": {
+            "scenario_code_alignment": 4,
+            "code_structure": 4,
+            "selector_quality": 4,
+            "best_practices": 3
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 6,
+              "implemented_steps": 6,
+              "missing_steps": [],
+              "incorrect_steps": [
+                "Navigation URL uses regex pattern instead of specific URL verification"
+              ]
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "css",
+                "text"
+              ],
+              "robustness_score": 4,
+              "specific_issues": [
+                "CSS selector for login button could be fragile",
+                "First row edit link selection may be inconsistent"
+              ],
+              "recommendations": [
+                "Add data-testid attributes to critical elements",
+                "Use more specific selectors for the edit link",
+                "Consider using page.getByRole('button', { name: 'Login' }) for login button"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "good",
+              "best_practices_followed": [
+                "Proper async/await usage",
+                "Element visibility checks before interaction",
+                "URL verification after actions",
+                "Clear step-by-step organization"
+              ],
+              "best_practices_missing": [
+                "No test isolation setup",
+                "No error handling",
+                "Hard-coded credentials in test",
+                "No page object pattern"
+              ]
+            }
+          },
+          "strengths": [
+            "Complete implementation of all scenario steps in correct order",
+            "Good use of role-based selectors for accessibility",
+            "Proper async/await usage throughout the test",
+            "Comprehensive verification of element visibility and enabled states",
+            "Includes validation of the title change at the end"
+          ],
+          "weaknesses": [
+            "Uses generic URL verification with regex instead of specific URL checks",
+            "First row edit link selection may fail if content order changes",
+            "No test data setup/cleanup for isolation",
+            "Hard-coded credentials in test code",
+            "CSS selector for login button could be fragile"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 90,
+            "main_alignment_issues": [
+              "URL verification too generic",
+              "Edit link selection assumes first row"
+            ]
+          },
+          "error": null
+        },
+        "openai": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "deepseek",
+            "test_name": "change_title",
+            "scenario": "Login app with username admin password admin1 then login then navigate to 'http://localhost:8001/admin/content' and Click edit and change the title",
+            "log_file_path": "BLUEDT/deep_seek/change_title/test_execution.log"
+          },
+          "overall_score": 4.5,
+          "criteria_scores": {
+            "scenario_code_alignment": 5,
+            "code_structure": 4.5,
+            "selector_quality": 4.5,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 7,
+              "implemented_steps": 7,
+              "missing_steps": [],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role"
+              ],
+              "robustness_score": 4.5,
+              "specific_issues": [],
+              "recommendations": [
+                "Consider using data-testid selectors for more robustness"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "good",
+              "best_practices_followed": [
+                "Proper use of async/await",
+                "Good use of expect assertions",
+                "Proper use of selectors"
+              ],
+              "best_practices_missing": [
+                "Use of data-testid selectors"
+              ]
+            }
+          },
+          "strengths": [
+            "Excellent alignment with the scenario",
+            "Good use of async/await",
+            "Good use of role selectors"
+          ],
+          "weaknesses": [
+            "Lack of data-testid selectors",
+            "Could improve code organization"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 100,
+            "main_alignment_issues": []
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "test_info": {
+        "app_name": "BLUEDT",
+        "model": "deepseek",
+        "test_name": "delete_content",
+        "scenario": "Login app with username admin password admin1 then login, Go to content and then delete how to Write Thesis content ",
+        "log_file_path": "BLUEDT/deep_seek/delete_content/test_execution.log"
+      },
+      "evaluations": {
+        "deepseek": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "deepseek",
+            "test_name": "delete_content",
+            "scenario": "Login app with username admin password admin1 then login, Go to content and then delete how to Write Thesis content ",
+            "log_file_path": "BLUEDT/deep_seek/delete_content/test_execution.log"
+          },
+          "overall_score": 2.8,
+          "criteria_scores": {
+            "scenario_code_alignment": 2,
+            "code_structure": 4,
+            "selector_quality": 3,
+            "best_practices": 3
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 4,
+              "implemented_steps": 3,
+              "missing_steps": [
+                "Specific content selection: 'how to Write Thesis' content is not specifically targeted for deletion"
+              ],
+              "incorrect_steps": [
+                "Delete operation targets first row (nth(0)) instead of specific 'how to Write Thesis' content"
+              ]
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "css"
+              ],
+              "robustness_score": 3,
+              "specific_issues": [
+                "Fragile CSS selector for login button: 'form').locator('button.btn')",
+                "Generic nth(0) selector for delete link instead of content-specific targeting"
+              ],
+              "recommendations": [
+                "Use data-testid attributes for critical elements",
+                "Implement content-specific selectors for delete operations",
+                "Use more specific role-based selectors"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "good",
+              "organization": "good",
+              "best_practices_followed": [
+                "Proper async/await usage",
+                "URL validation after navigation",
+                "Element visibility checks before interaction"
+              ],
+              "best_practices_missing": [
+                "No error handling",
+                "No page object model",
+                "Generic URL matching instead of specific validation"
+              ]
+            }
+          },
+          "strengths": [
+            "Proper async/await implementation throughout the test",
+            "Good use of visibility checks before interacting with elements",
+            "Clear step-by-step flow matching the login and navigation sequence"
+          ],
+          "weaknesses": [
+            "Critical scenario requirement missing: does not specifically target 'how to Write Thesis' content for deletion",
+            "Fragile selectors that may break with UI changes",
+            "No confirmation handling for delete operation",
+            "Generic URL validation instead of specific page verification"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": false,
+            "alignment_percentage": 60,
+            "main_alignment_issues": [
+              "Test deletes first content item instead of specifically targeting 'how to Write Thesis'",
+              "Missing content-specific selection logic",
+              "No delete confirmation handling"
+            ]
+          },
+          "error": null
+        },
+        "openai": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "deepseek",
+            "test_name": "delete_content",
+            "scenario": "Login app with username admin password admin1 then login, Go to content and then delete how to Write Thesis content ",
+            "log_file_path": "BLUEDT/deep_seek/delete_content/test_execution.log"
+          },
+          "overall_score": 3.8,
+          "criteria_scores": {
+            "scenario_code_alignment": 4,
+            "code_structure": 4,
+            "selector_quality": 4,
+            "best_practices": 3
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 4,
+              "implemented_steps": 4,
+              "missing_steps": [],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "css"
+              ],
+              "robustness_score": 4,
+              "specific_issues": [
+                "No usage of data-testid selectors"
+              ],
+              "recommendations": [
+                "Use data-testid selectors for more robustness"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "good",
+              "best_practices_followed": [
+                "Async/Await usage",
+                "Visibility checks before interactions"
+              ],
+              "best_practices_missing": [
+                "No error handling"
+              ]
+            }
+          },
+          "strengths": [
+            "Excellent async/await usage",
+            "Good use of role selectors",
+            "Visibility checks before interactions"
+          ],
+          "weaknesses": [
+            "No usage of data-testid selectors",
+            "No error handling",
+            "Code could be better organized"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 100,
+            "main_alignment_issues": []
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "test_info": {
+        "app_name": "BLUEDT",
+        "model": "openai",
+        "test_name": "change_language",
+        "scenario": "Login app with username admin password admin1 then login Go to general and then go to language tab and change language as Turkish",
+        "log_file_path": "BLUEDT/open_ai/change_language/test_execution.log"
+      },
+      "evaluations": {
+        "deepseek": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "openai",
+            "test_name": "change_language",
+            "scenario": "Login app with username admin password admin1 then login Go to general and then go to language tab and change language as Turkish",
+            "log_file_path": "BLUEDT/open_ai/change_language/test_execution.log"
+          },
+          "overall_score": 4.2,
+          "criteria_scores": {
+            "scenario_code_alignment": 5,
+            "code_structure": 4,
+            "selector_quality": 4,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 5,
+              "implemented_steps": 5,
+              "missing_steps": [],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "text",
+                "css"
+              ],
+              "robustness_score": 4,
+              "specific_issues": [
+                "CSS class selector for login button could be fragile",
+                "First button selector for save could be unreliable"
+              ],
+              "recommendations": [
+                "Use data-testid attributes for critical elements",
+                "Consider more specific selectors for form buttons",
+                "Add explicit waits for language change confirmation"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "good",
+              "best_practices_followed": [
+                "Proper async/await usage",
+                "URL verification after navigation",
+                "Element visibility and enabled state checks",
+                "Logical test grouping"
+              ],
+              "best_practices_missing": [
+                "Missing error handling",
+                "No page object pattern",
+                "No explicit waits for language change confirmation"
+              ]
+            }
+          },
+          "strengths": [
+            "Perfect scenario implementation with all steps in correct order",
+            "Excellent use of role-based selectors for accessibility and robustness",
+            "Proper async/await usage throughout the test",
+            "Good URL verification after key navigation steps",
+            "Comprehensive element state checks (visible, enabled)"
+          ],
+          "weaknesses": [
+            "Some CSS class selectors could be fragile if UI changes",
+            "No verification that language actually changed to Turkish",
+            "Missing error handling for failed operations",
+            "No explicit wait for language change to take effect",
+            "Could benefit from page object pattern for maintainability"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 100,
+            "main_alignment_issues": [
+              "No verification that language change was successful"
+            ]
+          },
+          "error": null
+        },
+        "openai": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "openai",
+            "test_name": "change_language",
+            "scenario": "Login app with username admin password admin1 then login Go to general and then go to language tab and change language as Turkish",
+            "log_file_path": "BLUEDT/open_ai/change_language/test_execution.log"
+          },
+          "overall_score": 4.5,
+          "criteria_scores": {
+            "scenario_code_alignment": 5,
+            "code_structure": 4,
+            "selector_quality": 5,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 7,
+              "implemented_steps": 7,
+              "missing_steps": [],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role"
+              ],
+              "robustness_score": 5,
+              "specific_issues": [],
+              "recommendations": []
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "good",
+              "best_practices_followed": [
+                "Proper use of async/await",
+                "Use of expect for assertions",
+                "Use of role selectors"
+              ],
+              "best_practices_missing": [
+                "Code could be broken down into smaller functions"
+              ]
+            }
+          },
+          "strengths": [
+            "Excellent scenario-code alignment",
+            "Robust selector strategy using role selectors",
+            "Good use of async/await"
+          ],
+          "weaknesses": [
+            "Code could be more modular",
+            "Lack of comments explaining the code"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 100,
+            "main_alignment_issues": []
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "test_info": {
+        "app_name": "BLUEDT",
+        "model": "openai",
+        "test_name": "change_role",
+        "scenario": "Login app with username admin password admin1 then login then go to users click on newuser user and change it role Editor to Admin and save it",
+        "log_file_path": "BLUEDT/open_ai/change_role/test_execution.log"
+      },
+      "evaluations": {
+        "deepseek": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "openai",
+            "test_name": "change_role",
+            "scenario": "Login app with username admin password admin1 then login then go to users click on newuser user and change it role Editor to Admin and save it",
+            "log_file_path": "BLUEDT/open_ai/change_role/test_execution.log"
+          },
+          "overall_score": 3.5,
+          "criteria_scores": {
+            "scenario_code_alignment": 4,
+            "code_structure": 4,
+            "selector_quality": 3,
+            "best_practices": 3
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 7,
+              "implemented_steps": 7,
+              "missing_steps": [],
+              "incorrect_steps": [
+                "Role change verification missing - no assertion to confirm role was actually changed from Editor to Admin"
+              ]
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "css",
+                "text"
+              ],
+              "robustness_score": 3,
+              "specific_issues": [
+                "Mixed selector strategies - some role-based selectors mixed with CSS class selectors",
+                "Form button selector uses CSS classes which could be fragile",
+                "No data-testid selectors used"
+              ],
+              "recommendations": [
+                "Use data-testid attributes for critical elements like login form, user links, and role dropdown",
+                "Standardize on role-based selectors where possible",
+                "Add more specific assertions for form elements"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "good",
+              "organization": "good",
+              "best_practices_followed": [
+                "Proper async/await usage",
+                "URL navigation checks",
+                "Element visibility and enabled state assertions",
+                "Logical step sequencing"
+              ],
+              "best_practices_missing": [
+                "Missing role change verification assertion",
+                "No explicit wait for navigation after critical actions",
+                "Generic URL pattern matching could be more specific"
+              ]
+            }
+          },
+          "strengths": [
+            "Complete implementation of all scenario steps in correct order",
+            "Good use of async/await pattern throughout the test",
+            "Proper element state verification (visibility, enabled state) before interactions",
+            "Logical flow that matches the business scenario exactly"
+          ],
+          "weaknesses": [
+            "Missing critical assertion to verify the role was actually changed from Editor to Admin",
+            "Mixed selector strategies with some fragile CSS class selectors",
+            "Generic URL assertions that don't verify specific page transitions",
+            "No data-testid selectors used for better test robustness"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 85,
+            "main_alignment_issues": [
+              "Missing role change verification - the test doesn't confirm the role was actually updated from Editor to Admin"
+            ]
+          },
+          "error": null
+        },
+        "openai": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "openai",
+            "test_name": "change_role",
+            "scenario": "Login app with username admin password admin1 then login then go to users click on newuser user and change it role Editor to Admin and save it",
+            "log_file_path": "BLUEDT/open_ai/change_role/test_execution.log"
+          },
+          "overall_score": 4.5,
+          "criteria_scores": {
+            "scenario_code_alignment": 5,
+            "code_structure": 4.5,
+            "selector_quality": 4.5,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 8,
+              "implemented_steps": 8,
+              "missing_steps": [],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "css"
+              ],
+              "robustness_score": 4.5,
+              "specific_issues": [],
+              "recommendations": [
+                "Consider using data-testid selectors for more robustness"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "excellent",
+              "best_practices_followed": [
+                "Proper use of async/await",
+                "Good use of expect for assertions",
+                "Proper use of roles for selectors"
+              ],
+              "best_practices_missing": [
+                "Lack of data-testid selectors"
+              ]
+            }
+          },
+          "strengths": [
+            "The code aligns perfectly with the scenario",
+            "Good use of async/await for handling promises",
+            "Effective use of Playwright's role-based selectors"
+          ],
+          "weaknesses": [
+            "Lack of data-testid selectors",
+            "Some selectors are based on CSS, which can be fragile"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 100,
+            "main_alignment_issues": []
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "test_info": {
+        "app_name": "BLUEDT",
+        "model": "openai",
+        "test_name": "navigate",
+        "scenario": "Navigate to http://localhost:8001/admin",
+        "log_file_path": "BLUEDT/open_ai/navigate/test_execution.log"
+      },
+      "evaluations": {
+        "deepseek": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "openai",
+            "test_name": "navigate",
+            "scenario": "Navigate to http://localhost:8001/admin",
+            "log_file_path": "BLUEDT/open_ai/navigate/test_execution.log"
+          },
+          "overall_score": 3.5,
+          "criteria_scores": {
+            "scenario_code_alignment": 4,
+            "code_structure": 4,
+            "selector_quality": 3,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 1,
+              "implemented_steps": 1,
+              "missing_steps": [],
+              "incorrect_steps": [
+                "The scenario specifies navigating directly to /admin, but code first navigates to root path then to /admin"
+              ]
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "url"
+              ],
+              "robustness_score": 3,
+              "specific_issues": [
+                "No element selectors used in this simple navigation test"
+              ],
+              "recommendations": [
+                "Consider adding page content verification after navigation to ensure page loaded correctly"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "good",
+              "best_practices_followed": [
+                "Proper async/await usage",
+                "URL verification with expect",
+                "Clean test structure"
+              ],
+              "best_practices_missing": [
+                "Unnecessary navigation step",
+                "No page content verification"
+              ]
+            }
+          },
+          "strengths": [
+            "Proper async/await implementation",
+            "URL verification ensures navigation completed successfully",
+            "Clean and readable code structure",
+            "Follows Playwright test pattern correctly"
+          ],
+          "weaknesses": [
+            "Unnecessary extra navigation to root path before target URL",
+            "No verification of page content after navigation",
+            "Simple test could be more concise with direct navigation",
+            "No error handling or timeout configuration"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 80,
+            "main_alignment_issues": [
+              "Extra navigation step not specified in scenario",
+              "Missing content verification after navigation"
+            ]
+          },
+          "error": null
+        },
+        "openai": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "openai",
+            "test_name": "navigate",
+            "scenario": "Navigate to http://localhost:8001/admin",
+            "log_file_path": "BLUEDT/open_ai/navigate/test_execution.log"
+          },
+          "overall_score": 4.5,
+          "criteria_scores": {
+            "scenario_code_alignment": 5,
+            "code_structure": 5,
+            "selector_quality": 4,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 1,
+              "implemented_steps": 1,
+              "missing_steps": [],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [],
+              "robustness_score": 4,
+              "specific_issues": [],
+              "recommendations": [
+                "Consider using selectors for improved robustness"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "excellent",
+              "best_practices_followed": [
+                "Proper use of async/await",
+                "Clear organization of test steps"
+              ],
+              "best_practices_missing": [
+                "Use of selectors"
+              ]
+            }
+          },
+          "strengths": [
+            "Test scenario and code are perfectly aligned",
+            "Excellent use of async/await",
+            "Clear organization of test steps"
+          ],
+          "weaknesses": [
+            "No selectors used in the test"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 100,
+            "main_alignment_issues": []
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "test_info": {
+        "app_name": "BLUEDT",
+        "model": "openai",
+        "test_name": "delete_category",
+        "scenario": "Login app with username admin password admin1 then login then navigate to http://localhost:8001/admin/categories the go to Didem and delete it",
+        "log_file_path": "BLUEDT/open_ai/delete_category/test_execution.log"
+      },
+      "evaluations": {
+        "deepseek": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "openai",
+            "test_name": "delete_category",
+            "scenario": "Login app with username admin password admin1 then login then navigate to http://localhost:8001/admin/categories the go to Didem and delete it",
+            "log_file_path": "BLUEDT/open_ai/delete_category/test_execution.log"
+          },
+          "overall_score": 3.5,
+          "criteria_scores": {
+            "scenario_code_alignment": 4,
+            "code_structure": 4,
+            "selector_quality": 3,
+            "best_practices": 3
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 5,
+              "implemented_steps": 5,
+              "missing_steps": [],
+              "incorrect_steps": [
+                "The scenario mentions 'go to Didem' but the code assumes Didem is always the first row, which may not be reliable"
+              ]
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "text",
+                "css"
+              ],
+              "robustness_score": 3,
+              "specific_issues": [
+                "Using nth(0) for Didem row is fragile",
+                "CSS selector 'form button.btn' may be too generic",
+                "Delete button selection with nth(0) is unreliable"
+              ],
+              "recommendations": [
+                "Use data-testid attributes for critical elements",
+                "Use more specific selectors for Didem (e.g., by text content)",
+                "Avoid nth() selectors for dynamic content"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "good",
+              "best_practices_followed": [
+                "Proper async/await usage",
+                "URL assertions after navigation",
+                "Element visibility and enabled state checks"
+              ],
+              "best_practices_missing": [
+                "Missing error handling",
+                "No page object pattern",
+                "Hard-coded test data"
+              ]
+            }
+          },
+          "strengths": [
+            "Complete implementation of all scenario steps in correct order",
+            "Good use of async/await and proper waiting for elements",
+            "URL validation after navigation steps provides good verification",
+            "Element state checks (visible, enabled) improve test reliability"
+          ],
+          "weaknesses": [
+            "Fragile selectors for locating Didem row and delete button",
+            "No error handling for cases where Didem doesn't exist",
+            "Hard-coded assumption that Didem is always the first row",
+            "Missing confirmation dialog handling for delete operation"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 85,
+            "main_alignment_issues": [
+              "Assumes Didem is always first row which may not match actual CMS behavior",
+              "May not handle delete confirmation dialogs if present"
+            ]
+          },
+          "error": null
+        },
+        "openai": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "openai",
+            "test_name": "delete_category",
+            "scenario": "Login app with username admin password admin1 then login then navigate to http://localhost:8001/admin/categories the go to Didem and delete it",
+            "log_file_path": "BLUEDT/open_ai/delete_category/test_execution.log"
+          },
+          "overall_score": 4.5,
+          "criteria_scores": {
+            "scenario_code_alignment": 5,
+            "code_structure": 4,
+            "selector_quality": 5,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 7,
+              "implemented_steps": 7,
+              "missing_steps": [],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "text"
+              ],
+              "robustness_score": 5,
+              "specific_issues": [],
+              "recommendations": []
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "good",
+              "best_practices_followed": [
+                "async/await usage",
+                "page object model"
+              ],
+              "best_practices_missing": [
+                "code comments"
+              ]
+            }
+          },
+          "strengths": [
+            "Scenario steps are fully implemented and in the correct order",
+            "Robust selector strategy using role and text selectors",
+            "Excellent async/await usage"
+          ],
+          "weaknesses": [
+            "Code lacks comments explaining the steps",
+            "The test does not handle potential errors or exceptions"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 100,
+            "main_alignment_issues": []
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "test_info": {
+        "app_name": "BLUEDT",
+        "model": "openai",
+        "test_name": "change_category_description",
+        "scenario": "Login app with username admin password admin1 then login then go to categories the go to Didem and write description and save it",
+        "log_file_path": "BLUEDT/open_ai/change_category_description/test_execution.log"
+      },
+      "evaluations": {
+        "deepseek": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "openai",
+            "test_name": "change_category_description",
+            "scenario": "Login app with username admin password admin1 then login then go to categories the go to Didem and write description and save it",
+            "log_file_path": "BLUEDT/open_ai/change_category_description/test_execution.log"
+          },
+          "overall_score": 3.5,
+          "criteria_scores": {
+            "scenario_code_alignment": 4,
+            "code_structure": 4,
+            "selector_quality": 3,
+            "best_practices": 3
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 6,
+              "implemented_steps": 6,
+              "missing_steps": [],
+              "incorrect_steps": [
+                "URL assumptions for /didem and /success endpoints may not match actual BLUEDT CMS routing"
+              ]
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "text",
+                "css"
+              ],
+              "robustness_score": 3,
+              "specific_issues": [
+                "Mixed selector strategies - some role-based, some CSS-based",
+                "Assumes specific button text 'Save' without fallback",
+                "Uses CSS class selector for login button which may be fragile"
+              ],
+              "recommendations": [
+                "Use data-testid attributes for critical elements",
+                "Add fallback selectors for important actions",
+                "Verify actual element structure in BLUEDT CMS"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "good",
+              "best_practices_followed": [
+                "Proper async/await usage",
+                "URL verification after navigation",
+                "Element visibility checks before interaction"
+              ],
+              "best_practices_missing": [
+                "No test data cleanup",
+                "No error handling for failed operations",
+                "No page object pattern usage"
+              ]
+            }
+          },
+          "strengths": [
+            "Complete step-by-step implementation of the scenario",
+            "Good async/await usage and proper waiting for elements",
+            "URL verification after key navigation steps",
+            "Clear logical flow matching the scenario description"
+          ],
+          "weaknesses": [
+            "Assumes specific URL patterns (/didem, /success) without verification",
+            "Mixed selector strategies with some fragile CSS selectors",
+            "No error handling for failed operations",
+            "Hardcoded test data without cleanup considerations"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 85,
+            "main_alignment_issues": [
+              "URL endpoint assumptions may not match actual BLUEDT CMS structure",
+              "Specific category 'Didem' existence not verified before interaction"
+            ]
+          },
+          "error": null
+        },
+        "openai": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "openai",
+            "test_name": "change_category_description",
+            "scenario": "Login app with username admin password admin1 then login then go to categories the go to Didem and write description and save it",
+            "log_file_path": "BLUEDT/open_ai/change_category_description/test_execution.log"
+          },
+          "overall_score": 4.5,
+          "criteria_scores": {
+            "scenario_code_alignment": 5,
+            "code_structure": 4.5,
+            "selector_quality": 4,
+            "best_practices": 4.5
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 7,
+              "implemented_steps": 7,
+              "missing_steps": [],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role"
+              ],
+              "robustness_score": 4,
+              "specific_issues": [],
+              "recommendations": [
+                "Consider using data-testid selectors for more robustness"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "excellent",
+              "best_practices_followed": [
+                "Proper use of async/await",
+                "Good use of Playwright's API"
+              ],
+              "best_practices_missing": [
+                "Use of data-testid selectors"
+              ]
+            }
+          },
+          "strengths": [
+            "Excellent alignment with the scenario",
+            "Good use of async/await",
+            "Good use of Playwright's API"
+          ],
+          "weaknesses": [
+            "Lack of data-testid selectors",
+            "Could improve on code comments"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 100,
+            "main_alignment_issues": []
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "test_info": {
+        "app_name": "BLUEDT",
+        "model": "openai",
+        "test_name": "create_content",
+        "scenario": "Login app with username admin password admin1 then login Go to create new content and write title 'How to write thesis' and then write something in content and save it",
+        "log_file_path": "BLUEDT/open_ai/create_content/test_execution.log"
+      },
+      "evaluations": {
+        "deepseek": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "openai",
+            "test_name": "create_content",
+            "scenario": "Login app with username admin password admin1 then login Go to create new content and write title 'How to write thesis' and then write something in content and save it",
+            "log_file_path": "BLUEDT/open_ai/create_content/test_execution.log"
+          },
+          "overall_score": 4.2,
+          "criteria_scores": {
+            "scenario_code_alignment": 5,
+            "code_structure": 4,
+            "selector_quality": 4,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 5,
+              "implemented_steps": 5,
+              "missing_steps": [],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "css",
+                "frameLocator"
+              ],
+              "robustness_score": 4,
+              "specific_issues": [
+                "Mixed selector strategies - some role-based, some CSS-based",
+                "CSS selector 'form button.btn' could be fragile if UI changes",
+                "Frame locator assumes specific editor implementation"
+              ],
+              "recommendations": [
+                "Use consistent role-based selectors throughout",
+                "Consider adding data-testid attributes for critical elements",
+                "Verify frame locator strategy matches actual BLUEDT CMS implementation"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "good",
+              "best_practices_followed": [
+                "Proper async/await usage",
+                "URL assertions after navigation",
+                "Element visibility checks before interaction",
+                "Clear step-by-step organization"
+              ],
+              "best_practices_missing": [
+                "No test data cleanup",
+                "No error handling for edge cases",
+                "No page object pattern implementation",
+                "Hard-coded test data"
+              ]
+            }
+          },
+          "strengths": [
+            "Perfect scenario implementation - all steps from the scenario are correctly implemented in proper order",
+            "Excellent use of async/await patterns and proper waiting strategies",
+            "Good use of role-based selectors for form fields and buttons",
+            "Proper navigation verification with URL assertions",
+            "Clear step-by-step organization matching the scenario flow"
+          ],
+          "weaknesses": [
+            "Mixed selector strategies - some role-based, some CSS-based, which may lead to maintenance issues",
+            "No test data cleanup after content creation",
+            "Hard-coded credentials and content data",
+            "Assumes specific frame structure for content editor without fallback",
+            "No error handling for potential failures in the content creation flow"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 100,
+            "main_alignment_issues": []
+          },
+          "error": null
+        },
+        "openai": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "openai",
+            "test_name": "create_content",
+            "scenario": "Login app with username admin password admin1 then login Go to create new content and write title 'How to write thesis' and then write something in content and save it",
+            "log_file_path": "BLUEDT/open_ai/create_content/test_execution.log"
+          },
+          "overall_score": 4.3,
+          "criteria_scores": {
+            "scenario_code_alignment": 5,
+            "code_structure": 4,
+            "selector_quality": 4,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 7,
+              "implemented_steps": 7,
+              "missing_steps": [],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "css"
+              ],
+              "robustness_score": 4,
+              "specific_issues": [],
+              "recommendations": [
+                "Consider using 'data-testid' selectors for more robust tests"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "good",
+              "best_practices_followed": [
+                "Async/await usage",
+                "Visibility checks before interactions",
+                "URL checks after navigation"
+              ],
+              "best_practices_missing": [
+                "Use of 'data-testid' selectors"
+              ]
+            }
+          },
+          "strengths": [
+            "Scenario steps are fully covered and in correct order",
+            "Good use of async/await for handling promises",
+            "Visibility checks before interactions ensure elements are ready"
+          ],
+          "weaknesses": [
+            "Lack of 'data-testid' selectors",
+            "Could improve code organization by grouping related steps into functions"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 100,
+            "main_alignment_issues": []
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "test_info": {
+        "app_name": "BLUEDT",
+        "model": "openai",
+        "test_name": "add_new_category_with_save",
+        "scenario": "Login app with username admin password admin1 then login, Go to category and then add new category as Movies and save it",
+        "log_file_path": "BLUEDT/open_ai/add_new_category_with_save/test_execution.log"
+      },
+      "evaluations": {
+        "deepseek": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "openai",
+            "test_name": "add_new_category_with_save",
+            "scenario": "Login app with username admin password admin1 then login, Go to category and then add new category as Movies and save it",
+            "log_file_path": "BLUEDT/open_ai/add_new_category_with_save/test_execution.log"
+          },
+          "overall_score": 4.2,
+          "criteria_scores": {
+            "scenario_code_alignment": 5,
+            "code_structure": 4,
+            "selector_quality": 4,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 5,
+              "implemented_steps": 5,
+              "missing_steps": [],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "text",
+                "css"
+              ],
+              "robustness_score": 4,
+              "specific_issues": [
+                "Mixed use of role-based and CSS selectors",
+                "CSS class selector for buttons could be fragile"
+              ],
+              "recommendations": [
+                "Use data-testid attributes for critical elements",
+                "Consider more specific role selectors for form buttons",
+                "Add explicit waits for navigation transitions"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "good",
+              "best_practices_followed": [
+                "Proper async/await usage",
+                "Explicit visibility and enabled checks",
+                "URL verification after navigation",
+                "Proper test isolation"
+              ],
+              "best_practices_missing": [
+                "Missing page object pattern",
+                "No explicit timeout configurations",
+                "Could benefit from helper functions for common actions"
+              ]
+            }
+          },
+          "strengths": [
+            "Perfect scenario-step alignment with all steps implemented in correct order",
+            "Excellent use of async/await pattern throughout the test",
+            "Good use of role-based selectors for accessibility and robustness",
+            "Proper verification of element states (visible, enabled) before interactions",
+            "URL validation after key navigation steps"
+          ],
+          "weaknesses": [
+            "Mixed selector strategies - some CSS class selectors could be fragile",
+            "No explicit error handling or timeout configurations",
+            "Missing page object pattern for better maintainability",
+            "Hard-coded URL could be extracted to configuration",
+            "No explicit waiting for network/idle states after form submissions"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 100,
+            "main_alignment_issues": []
+          },
+          "error": null
+        },
+        "openai": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "openai",
+            "test_name": "add_new_category_with_save",
+            "scenario": "Login app with username admin password admin1 then login, Go to category and then add new category as Movies and save it",
+            "log_file_path": "BLUEDT/open_ai/add_new_category_with_save/test_execution.log"
+          },
+          "overall_score": 4.5,
+          "criteria_scores": {
+            "scenario_code_alignment": 5,
+            "code_structure": 4,
+            "selector_quality": 5,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 7,
+              "implemented_steps": 7,
+              "missing_steps": [],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role"
+              ],
+              "robustness_score": 5,
+              "specific_issues": [],
+              "recommendations": [
+                "Consider using data-testid selectors for more robustness"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "good",
+              "best_practices_followed": [
+                "Proper use of async/await",
+                "Good use of selectors",
+                "Proper use of assertions"
+              ],
+              "best_practices_missing": [
+                "Could use more data-testid selectors"
+              ]
+            }
+          },
+          "strengths": [
+            "Excellent scenario-code alignment",
+            "Good use of async/await",
+            "Good use of role selectors"
+          ],
+          "weaknesses": [
+            "Could use more data-testid selectors for better robustness",
+            "Code could be more modular"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 100,
+            "main_alignment_issues": []
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "test_info": {
+        "app_name": "BLUEDT",
+        "model": "openai",
+        "test_name": "add_new_category",
+        "scenario": "Login app with username admin password admin1 then login, Go to category and then add new category as Books",
+        "log_file_path": "BLUEDT/open_ai/add_new_category/test_execution.log"
+      },
+      "evaluations": {
+        "deepseek": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "openai",
+            "test_name": "add_new_category",
+            "scenario": "Login app with username admin password admin1 then login, Go to category and then add new category as Books",
+            "log_file_path": "BLUEDT/open_ai/add_new_category/test_execution.log"
+          },
+          "overall_score": 4.2,
+          "criteria_scores": {
+            "scenario_code_alignment": 5,
+            "code_structure": 4,
+            "selector_quality": 4,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 4,
+              "implemented_steps": 4,
+              "missing_steps": [],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "text",
+                "css"
+              ],
+              "robustness_score": 4,
+              "specific_issues": [
+                "Mixed use of role-based and CSS selectors",
+                "CSS class selector for buttons could be fragile"
+              ],
+              "recommendations": [
+                "Use data-testid attributes for critical elements",
+                "Consider more specific role selectors for form buttons",
+                "Add explicit waits for navigation transitions"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "good",
+              "best_practices_followed": [
+                "Proper async/await usage",
+                "URL verification after navigation",
+                "Element visibility and enabled state checks",
+                "Clear step-by-step flow"
+              ],
+              "best_practices_missing": [
+                "No test data cleanup",
+                "No error handling for failed operations",
+                "Missing assertions for successful category creation"
+              ]
+            }
+          },
+          "strengths": [
+            "Perfect scenario implementation with all steps in correct order",
+            "Excellent use of async/await and proper element state verification",
+            "Good use of role-based selectors for accessibility",
+            "Clear navigation flow with URL verification at each step"
+          ],
+          "weaknesses": [
+            "Mixed selector strategies - some CSS class selectors could be fragile",
+            "No verification that the 'Books' category was actually created successfully",
+            "Missing test data cleanup for repeatable execution",
+            "No error handling for potential failures during category creation"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 100,
+            "main_alignment_issues": [
+              "No validation that category creation was successful"
+            ]
+          },
+          "error": null
+        },
+        "openai": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "openai",
+            "test_name": "add_new_category",
+            "scenario": "Login app with username admin password admin1 then login, Go to category and then add new category as Books",
+            "log_file_path": "BLUEDT/open_ai/add_new_category/test_execution.log"
+          },
+          "overall_score": 4.5,
+          "criteria_scores": {
+            "scenario_code_alignment": 5,
+            "code_structure": 5,
+            "selector_quality": 4,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 7,
+              "implemented_steps": 7,
+              "missing_steps": [],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "css"
+              ],
+              "robustness_score": 4,
+              "specific_issues": [
+                "CSS selectors can be fragile"
+              ],
+              "recommendations": [
+                "Consider using data-testid selectors for more robustness"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "excellent",
+              "best_practices_followed": [
+                "Proper use of async/await",
+                "Good use of expect for assertions",
+                "Proper use of role selectors"
+              ],
+              "best_practices_missing": [
+                "Use of data-testid selectors"
+              ]
+            }
+          },
+          "strengths": [
+            "Scenario steps are well covered and in correct order",
+            "Excellent use of async/await",
+            "Good use of role selectors for accessibility"
+          ],
+          "weaknesses": [
+            "Use of CSS selectors which can be fragile",
+            "Lack of data-testid selectors"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 100,
+            "main_alignment_issues": []
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "test_info": {
+        "app_name": "BLUEDT",
+        "model": "openai",
+        "test_name": "add_editor",
+        "scenario": "Login app with username admin password admin1 then login Go to Users and then add one user role as Editor ",
+        "log_file_path": "BLUEDT/open_ai/add_editor/test_execution.log"
+      },
+      "evaluations": {
+        "deepseek": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "openai",
+            "test_name": "add_editor",
+            "scenario": "Login app with username admin password admin1 then login Go to Users and then add one user role as Editor ",
+            "log_file_path": "BLUEDT/open_ai/add_editor/test_execution.log"
+          },
+          "overall_score": 3.5,
+          "criteria_scores": {
+            "scenario_code_alignment": 4,
+            "code_structure": 4,
+            "selector_quality": 3,
+            "best_practices": 3
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 4,
+              "implemented_steps": 4,
+              "missing_steps": [],
+              "incorrect_steps": [
+                "The scenario specifies adding 'one user role as Editor' but the code fills additional fields not mentioned in the scenario (username, password, email)"
+              ]
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "css",
+                "text"
+              ],
+              "robustness_score": 3,
+              "specific_issues": [
+                "Mixed use of role-based and CSS selectors",
+                "CSS selector 'form').locator('button.btn') is fragile",
+                "ID selector '#jsrole' is implementation-dependent"
+              ],
+              "recommendations": [
+                "Use data-testid attributes for critical elements",
+                "Consistently use role-based selectors",
+                "Avoid CSS class-based selectors for buttons"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "good",
+              "best_practices_followed": [
+                "Proper async/await usage",
+                "URL validation after navigation",
+                "Element visibility checks before interaction"
+              ],
+              "best_practices_missing": [
+                "No test isolation (shared state)",
+                "No error handling",
+                "Hard-coded credentials",
+                "No page object pattern"
+              ]
+            }
+          },
+          "strengths": [
+            "Complete implementation of the core scenario workflow",
+            "Good use of async/await pattern throughout",
+            "Proper element visibility checks before interactions",
+            "URL validation after key navigation steps"
+          ],
+          "weaknesses": [
+            "Test creates shared state (new user) without cleanup",
+            "Hard-coded credentials in test code",
+            "Mixed selector strategies with some fragile CSS selectors",
+            "Fills additional form fields not specified in the scenario",
+            "No error handling for form submissions"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 85,
+            "main_alignment_issues": [
+              "Scenario only mentions adding user with Editor role, but code fills all user creation form fields",
+              "No explicit verification that the created user actually has Editor role"
+            ]
+          },
+          "error": null
+        },
+        "openai": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "openai",
+            "test_name": "add_editor",
+            "scenario": "Login app with username admin password admin1 then login Go to Users and then add one user role as Editor ",
+            "log_file_path": "BLUEDT/open_ai/add_editor/test_execution.log"
+          },
+          "overall_score": 4.5,
+          "criteria_scores": {
+            "scenario_code_alignment": 5,
+            "code_structure": 4,
+            "selector_quality": 4.5,
+            "best_practices": 4.5
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 5,
+              "implemented_steps": 5,
+              "missing_steps": [],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "css"
+              ],
+              "robustness_score": 4.5,
+              "specific_issues": [],
+              "recommendations": [
+                "Consider using data-testid selectors for more robustness"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "good",
+              "best_practices_followed": [
+                "Proper use of async/await",
+                "Good use of expect assertions",
+                "Proper use of page objects"
+              ],
+              "best_practices_missing": [
+                "Use of data-testid selectors"
+              ]
+            }
+          },
+          "strengths": [
+            "Scenario steps are fully implemented and in correct order",
+            "Excellent use of async/await",
+            "Good use of role selectors"
+          ],
+          "weaknesses": [
+            "Lack of data-testid selectors",
+            "Code could be more modular"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 100,
+            "main_alignment_issues": []
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "test_info": {
+        "app_name": "BLUEDT",
+        "model": "openai",
+        "test_name": "navigate_login",
+        "scenario": "Navigate to http://localhost:8001/admin Login app with username admin password admin1 ",
+        "log_file_path": "BLUEDT/open_ai/navigate_login/test_execution.log"
+      },
+      "evaluations": {
+        "deepseek": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "openai",
+            "test_name": "navigate_login",
+            "scenario": "Navigate to http://localhost:8001/admin Login app with username admin password admin1 ",
+            "log_file_path": "BLUEDT/open_ai/navigate_login/test_execution.log"
+          },
+          "overall_score": 3.5,
+          "criteria_scores": {
+            "scenario_code_alignment": 4,
+            "code_structure": 4,
+            "selector_quality": 3,
+            "best_practices": 3
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 3,
+              "implemented_steps": 2,
+              "missing_steps": [
+                "Login form submission"
+              ],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role"
+              ],
+              "robustness_score": 3,
+              "specific_issues": [
+                "Assumes specific accessibility roles that may not be present",
+                "No fallback selectors provided"
+              ],
+              "recommendations": [
+                "Add data-testid attributes to login form elements",
+                "Include form submission step",
+                "Add error handling for failed login attempts"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "good",
+              "best_practices_followed": [
+                "Proper async/await usage",
+                "URL verification after navigation",
+                "Element visibility checks before interaction"
+              ],
+              "best_practices_missing": [
+                "Missing form submission",
+                "No error handling",
+                "No page object pattern"
+              ]
+            }
+          },
+          "strengths": [
+            "Correct navigation to the specified URL with verification",
+            "Proper async/await usage throughout the test",
+            "Good element interaction pattern with visibility checks before filling",
+            "Clear and readable code structure"
+          ],
+          "weaknesses": [
+            "Missing the actual login form submission step",
+            "Relies on specific role attributes that may not be stable",
+            "No verification of successful login or error handling",
+            "Assumes exact accessibility role names without fallbacks"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 67,
+            "main_alignment_issues": [
+              "Login process is incomplete without form submission",
+              "No verification that login was successful"
+            ]
+          },
+          "error": null
+        },
+        "openai": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "openai",
+            "test_name": "navigate_login",
+            "scenario": "Navigate to http://localhost:8001/admin Login app with username admin password admin1 ",
+            "log_file_path": "BLUEDT/open_ai/navigate_login/test_execution.log"
+          },
+          "overall_score": 4,
+          "criteria_scores": {
+            "scenario_code_alignment": 5,
+            "code_structure": 4,
+            "selector_quality": 4,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 2,
+              "implemented_steps": 2,
+              "missing_steps": [],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role"
+              ],
+              "robustness_score": 4,
+              "specific_issues": [],
+              "recommendations": [
+                "Consider using data-testid selectors for more robustness"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "good",
+              "best_practices_followed": [
+                "Proper use of async/await",
+                "Good use of expect for assertions"
+              ],
+              "best_practices_missing": [
+                "Could use more comments for clarity"
+              ]
+            }
+          },
+          "strengths": [
+            "Scenario steps are fully implemented",
+            "Good use of async/await",
+            "Good use of role selectors"
+          ],
+          "weaknesses": [
+            "Lack of comments in the code",
+            "Could use more robust selectors like data-testid"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 100,
+            "main_alignment_issues": []
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "test_info": {
+        "app_name": "BLUEDT",
+        "model": "openai",
+        "test_name": "edit_content",
+        "scenario": "username admin password admin1 then login go to content edit click Inside Out and write some content about movie and save it",
+        "log_file_path": "BLUEDT/open_ai/edit_content/test_execution.log"
+      },
+      "evaluations": {
+        "deepseek": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "openai",
+            "test_name": "edit_content",
+            "scenario": "username admin password admin1 then login go to content edit click Inside Out and write some content about movie and save it",
+            "log_file_path": "BLUEDT/open_ai/edit_content/test_execution.log"
+          },
+          "overall_score": 4.2,
+          "criteria_scores": {
+            "scenario_code_alignment": 4,
+            "code_structure": 5,
+            "selector_quality": 4,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 6,
+              "implemented_steps": 6,
+              "missing_steps": [],
+              "incorrect_steps": [
+                "The code assumes 'Inside Out' is the 3rd row (nth(2)) rather than specifically targeting 'Inside Out' content"
+              ]
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "text",
+                "css"
+              ],
+              "robustness_score": 4,
+              "specific_issues": [
+                "Using nth(2) for edit link is fragile and assumes specific table ordering",
+                "CSS selector 'form button.btn' could be more specific"
+              ],
+              "recommendations": [
+                "Use data-testid attributes for content items like 'Inside Out'",
+                "Replace nth(2) with a selector that specifically targets 'Inside Out' content",
+                "Consider using getByRole('button', { name: 'Login' }) instead of CSS selector"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "excellent",
+              "best_practices_followed": [
+                "Proper async/await usage",
+                "URL assertions after navigation",
+                "Element visibility checks before interaction",
+                "Clear step-by-step organization"
+              ],
+              "best_practices_missing": [
+                "No test data cleanup",
+                "No error handling for edge cases",
+                "Missing page.waitForLoadState() calls"
+              ]
+            }
+          },
+          "strengths": [
+            "Excellent step-by-step implementation following the scenario exactly",
+            "Proper async/await usage and clean code organization",
+            "Good use of role-based selectors for accessibility",
+            "URL assertions ensure proper navigation flow",
+            "Element visibility checks before interactions prevent flakiness"
+          ],
+          "weaknesses": [
+            "Fragile selector for edit link (nth(2)) assumes specific table ordering",
+            "No specific targeting of 'Inside Out' content by name",
+            "Missing test data cleanup after content modification",
+            "No verification that content was actually saved successfully",
+            "CSS selector for login button could be more robust"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 90,
+            "main_alignment_issues": [
+              "The code doesn't specifically target 'Inside Out' content by name, relying on table position instead",
+              "No verification that the content edit was actually saved and persisted"
+            ]
+          },
+          "error": null
+        },
+        "openai": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "openai",
+            "test_name": "edit_content",
+            "scenario": "username admin password admin1 then login go to content edit click Inside Out and write some content about movie and save it",
+            "log_file_path": "BLUEDT/open_ai/edit_content/test_execution.log"
+          },
+          "overall_score": 4.2,
+          "criteria_scores": {
+            "scenario_code_alignment": 5,
+            "code_structure": 4,
+            "selector_quality": 4,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 7,
+              "implemented_steps": 7,
+              "missing_steps": [],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "css"
+              ],
+              "robustness_score": 4,
+              "specific_issues": [
+                "CSS selectors can be fragile"
+              ],
+              "recommendations": [
+                "Consider using data-testid selectors for better robustness"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "good",
+              "best_practices_followed": [
+                "Proper use of async/await",
+                "Good use of expect for assertions"
+              ],
+              "best_practices_missing": [
+                "Use of data-testid selectors"
+              ]
+            }
+          },
+          "strengths": [
+            "Scenario steps fully covered",
+            "Good use of async/await",
+            "Good use of role selectors"
+          ],
+          "weaknesses": [
+            "Use of CSS selectors",
+            "Lack of data-testid selectors"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 100,
+            "main_alignment_issues": []
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "test_info": {
+        "app_name": "BLUEDT",
+        "model": "openai",
+        "test_name": "update_description",
+        "scenario": "Login app with username admin password admin1 then login then go to categories the go to Didem and write description and save it",
+        "log_file_path": "BLUEDT/open_ai/update_description/test_execution.log"
+      },
+      "evaluations": {
+        "deepseek": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "openai",
+            "test_name": "update_description",
+            "scenario": "Login app with username admin password admin1 then login then go to categories the go to Didem and write description and save it",
+            "log_file_path": "BLUEDT/open_ai/update_description/test_execution.log"
+          },
+          "overall_score": 4,
+          "criteria_scores": {
+            "scenario_code_alignment": 4,
+            "code_structure": 5,
+            "selector_quality": 4,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 6,
+              "implemented_steps": 6,
+              "missing_steps": [],
+              "incorrect_steps": [
+                "URL assertions may not match actual BLUEDT CMS patterns (/dashboard/, /categories/, /didem/, /success/)"
+              ]
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "text",
+                "css"
+              ],
+              "robustness_score": 4,
+              "specific_issues": [
+                "Mixed selector strategies (role-based and CSS class)",
+                "CSS class selector for login button may be fragile"
+              ],
+              "recommendations": [
+                "Use consistent role-based selectors throughout",
+                "Consider adding data-testid attributes for critical elements",
+                "Replace CSS class selector with role-based selector for login button"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "excellent",
+              "best_practices_followed": [
+                "Proper async/await usage",
+                "Explicit waits with expect()",
+                "Clear step-by-step organization",
+                "URL verification after navigation"
+              ],
+              "best_practices_missing": [
+                "No test data cleanup",
+                "No error handling for failed operations",
+                "Hard-coded URLs and credentials"
+              ]
+            }
+          },
+          "strengths": [
+            "Excellent step-by-step implementation following the exact scenario sequence",
+            "Proper use of async/await and explicit waits for element visibility",
+            "Good use of role-based selectors for most elements",
+            "Clear navigation flow with URL verification at key points",
+            "Complete coverage of all scenario steps in correct order"
+          ],
+          "weaknesses": [
+            "Mixed selector strategies - CSS class selector for login button is less robust",
+            "Hard-coded URL patterns may not match actual BLUEDT CMS routing",
+            "No error handling for failed login or save operations",
+            "Assumes specific URL patterns without validation",
+            "No test data cleanup after description update"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 90,
+            "main_alignment_issues": [
+              "URL pattern assumptions may not match actual application",
+              "Login button selector uses fragile CSS class instead of role-based approach"
+            ]
+          },
+          "error": null
+        },
+        "openai": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "openai",
+            "test_name": "update_description",
+            "scenario": "Login app with username admin password admin1 then login then go to categories the go to Didem and write description and save it",
+            "log_file_path": "BLUEDT/open_ai/update_description/test_execution.log"
+          },
+          "overall_score": 4.3,
+          "criteria_scores": {
+            "scenario_code_alignment": 5,
+            "code_structure": 4,
+            "selector_quality": 4,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 7,
+              "implemented_steps": 7,
+              "missing_steps": [],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role"
+              ],
+              "robustness_score": 4,
+              "specific_issues": [],
+              "recommendations": [
+                "Consider using data-testid selectors for more robustness"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "good",
+              "best_practices_followed": [
+                "Proper use of async/await",
+                "Good use of expect for assertions"
+              ],
+              "best_practices_missing": [
+                "Could use more data-testid selectors"
+              ]
+            }
+          },
+          "strengths": [
+            "Scenario steps fully covered",
+            "Good use of async/await",
+            "Proper use of assertions"
+          ],
+          "weaknesses": [
+            "Could use more robust selectors",
+            "Code could be better organized",
+            "Could follow some best practices more closely"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 100,
+            "main_alignment_issues": []
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "test_info": {
+        "app_name": "BLUEDT",
+        "model": "openai",
+        "test_name": "add_new_content_with_category",
+        "scenario": "Login app with username admin password admin1 and click remember me then login Go to create new content and write title 'How to write thesis' and then write something in content and select options then select books as a category and save it",
+        "log_file_path": "BLUEDT/open_ai/add_new_content_with_category/test_execution.log"
+      },
+      "evaluations": {
+        "deepseek": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "openai",
+            "test_name": "add_new_content_with_category",
+            "scenario": "Login app with username admin password admin1 and click remember me then login Go to create new content and write title 'How to write thesis' and then write something in content and select options then select books as a category and save it",
+            "log_file_path": "BLUEDT/open_ai/add_new_content_with_category/test_execution.log"
+          },
+          "overall_score": 4.2,
+          "criteria_scores": {
+            "scenario_code_alignment": 5,
+            "code_structure": 4,
+            "selector_quality": 4,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 7,
+              "implemented_steps": 7,
+              "missing_steps": [],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "css",
+                "frameLocator"
+              ],
+              "robustness_score": 4,
+              "specific_issues": [
+                "Mixed use of role-based and CSS selectors",
+                "CSS selector 'form button.btn' could be fragile",
+                "Frame locator uses ID which could change"
+              ],
+              "recommendations": [
+                "Use data-testid attributes for critical elements",
+                "Standardize on role-based selectors where possible",
+                "Consider using more specific role selectors for buttons"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "good",
+              "best_practices_followed": [
+                "Proper async/await usage",
+                "URL verification after navigation",
+                "Element visibility checks before interaction",
+                "Enabled state verification for buttons"
+              ],
+              "best_practices_missing": [
+                "Missing page object pattern",
+                "No test data separation",
+                "No error handling for failed operations"
+              ]
+            }
+          },
+          "strengths": [
+            "Perfect scenario implementation with all steps in correct order",
+            "Excellent async/await usage with proper waiting patterns",
+            "Good use of role-based selectors for accessibility",
+            "Comprehensive element state verification before interactions"
+          ],
+          "weaknesses": [
+            "Mixed selector strategies with some fragile CSS selectors",
+            "No page object pattern for better maintainability",
+            "Test data hardcoded in test logic",
+            "No explicit error handling for content creation failure"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 100,
+            "main_alignment_issues": []
+          },
+          "error": null
+        },
+        "openai": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "openai",
+            "test_name": "add_new_content_with_category",
+            "scenario": "Login app with username admin password admin1 and click remember me then login Go to create new content and write title 'How to write thesis' and then write something in content and select options then select books as a category and save it",
+            "log_file_path": "BLUEDT/open_ai/add_new_content_with_category/test_execution.log"
+          },
+          "overall_score": 4.5,
+          "criteria_scores": {
+            "scenario_code_alignment": 5,
+            "code_structure": 4,
+            "selector_quality": 5,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 9,
+              "implemented_steps": 9,
+              "missing_steps": [],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "css"
+              ],
+              "robustness_score": 5,
+              "specific_issues": [],
+              "recommendations": []
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "good",
+              "best_practices_followed": [
+                "Async/Await usage",
+                "Visibility checks",
+                "URL checks"
+              ],
+              "best_practices_missing": [
+                "Use of page context instead of global"
+              ]
+            }
+          },
+          "strengths": [
+            "The test code aligns perfectly with the scenario",
+            "The selectors used are robust and reliable",
+            "Async/Await is used properly ensuring that each step is completed before the next one begins"
+          ],
+          "weaknesses": [
+            "The test code could be better organized, for example by grouping related actions into functions",
+            "The global page context is used instead of a more specific context"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 100,
+            "main_alignment_issues": []
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "test_info": {
+        "app_name": "BLUEDT",
+        "model": "openai",
+        "test_name": "remember_me",
+        "scenario": "Login app with username admin password admin1 and click remember me then login",
+        "log_file_path": "BLUEDT/open_ai/remember_me/test_execution.log"
+      },
+      "evaluations": {
+        "deepseek": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "openai",
+            "test_name": "remember_me",
+            "scenario": "Login app with username admin password admin1 and click remember me then login",
+            "log_file_path": "BLUEDT/open_ai/remember_me/test_execution.log"
+          },
+          "overall_score": 4.2,
+          "criteria_scores": {
+            "scenario_code_alignment": 5,
+            "code_structure": 4,
+            "selector_quality": 4,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 4,
+              "implemented_steps": 4,
+              "missing_steps": [],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "css"
+              ],
+              "robustness_score": 4,
+              "specific_issues": [
+                "Login button uses fragile CSS selector (.btn class)"
+              ],
+              "recommendations": [
+                "Replace CSS selector for login button with role-based selector",
+                "Consider adding data-testid attributes for critical elements"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "good",
+              "best_practices_followed": [
+                "Proper async/await usage",
+                "Element visibility/enabled checks before interaction",
+                "URL verification after login"
+              ],
+              "best_practices_missing": [
+                "Missing page object pattern",
+                "No test data separation",
+                "No error handling for failed login"
+              ]
+            }
+          },
+          "strengths": [
+            "Perfect scenario implementation with all steps in correct order",
+            "Excellent use of role-based selectors for form fields and checkbox",
+            "Proper element state verification before interactions",
+            "Clear URL verification to confirm successful login"
+          ],
+          "weaknesses": [
+            "Login button selector uses fragile CSS class (.btn) instead of role-based selector",
+            "No handling for potential login failure scenarios",
+            "Hardcoded test data in the test body",
+            "Missing page object pattern for better maintainability"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 100,
+            "main_alignment_issues": []
+          },
+          "error": null
+        },
+        "openai": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "openai",
+            "test_name": "remember_me",
+            "scenario": "Login app with username admin password admin1 and click remember me then login",
+            "log_file_path": "BLUEDT/open_ai/remember_me/test_execution.log"
+          },
+          "overall_score": 4.5,
+          "criteria_scores": {
+            "scenario_code_alignment": 5,
+            "code_structure": 4.5,
+            "selector_quality": 4.5,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 5,
+              "implemented_steps": 5,
+              "missing_steps": [],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "css"
+              ],
+              "robustness_score": 4.5,
+              "specific_issues": [],
+              "recommendations": [
+                "Consider using data-testid selectors for more robustness"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "excellent",
+              "best_practices_followed": [
+                "Proper use of async/await",
+                "Good use of expect assertions"
+              ],
+              "best_practices_missing": [
+                "Could use more comments for clarity"
+              ]
+            }
+          },
+          "strengths": [
+            "Excellent alignment with the scenario",
+            "Good use of role selectors",
+            "Proper use of async/await"
+          ],
+          "weaknesses": [
+            "Lack of comments",
+            "Could use more robust selectors like data-testid"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 100,
+            "main_alignment_issues": []
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "test_info": {
+        "app_name": "BLUEDT",
+        "model": "openai",
+        "test_name": "change_title",
+        "scenario": "Login app with username admin password admin1 then login then navigate to 'http://localhost:8001/admin/content' and Click edit and change the title",
+        "log_file_path": "BLUEDT/open_ai/change_title/test_execution.log"
+      },
+      "evaluations": {
+        "deepseek": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "openai",
+            "test_name": "change_title",
+            "scenario": "Login app with username admin password admin1 then login then navigate to 'http://localhost:8001/admin/content' and Click edit and change the title",
+            "log_file_path": "BLUEDT/open_ai/change_title/test_execution.log"
+          },
+          "overall_score": 4.2,
+          "criteria_scores": {
+            "scenario_code_alignment": 5,
+            "code_structure": 4,
+            "selector_quality": 4,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 5,
+              "implemented_steps": 5,
+              "missing_steps": [],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "css",
+                "text"
+              ],
+              "robustness_score": 4,
+              "specific_issues": [
+                "CSS class selector for login button could be fragile",
+                "First row edit link selector assumes table structure"
+              ],
+              "recommendations": [
+                "Use data-testid for critical elements like login button and edit links",
+                "Consider more specific targeting for edit links beyond first row"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "good",
+              "best_practices_followed": [
+                "Proper async/await usage",
+                "URL verification after navigation",
+                "Element visibility and enabled state checks",
+                "Logical test flow organization"
+              ],
+              "best_practices_missing": [
+                "Missing page object pattern",
+                "No test data cleanup",
+                "Generic URL verification at the end"
+              ]
+            }
+          },
+          "strengths": [
+            "Perfect scenario implementation with all steps in correct order",
+            "Excellent use of async/await and proper element state verification",
+            "Good use of role-based selectors for accessibility and robustness",
+            "Proper navigation verification with URL checks"
+          ],
+          "weaknesses": [
+            "Some CSS class selectors could be fragile if UI changes",
+            "Edit link selection assumes first table row which may not always be correct",
+            "No explicit verification that title was actually changed successfully",
+            "Generic final URL verification doesn't confirm the save operation succeeded"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 100,
+            "main_alignment_issues": []
+          },
+          "error": null
+        },
+        "openai": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "openai",
+            "test_name": "change_title",
+            "scenario": "Login app with username admin password admin1 then login then navigate to 'http://localhost:8001/admin/content' and Click edit and change the title",
+            "log_file_path": "BLUEDT/open_ai/change_title/test_execution.log"
+          },
+          "overall_score": 4.5,
+          "criteria_scores": {
+            "scenario_code_alignment": 5,
+            "code_structure": 4.5,
+            "selector_quality": 4.5,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 6,
+              "implemented_steps": 6,
+              "missing_steps": [],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role"
+              ],
+              "robustness_score": 4.5,
+              "specific_issues": [],
+              "recommendations": [
+                "Consider using data-testid selectors for more robustness"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "excellent",
+              "best_practices_followed": [
+                "Using async/await correctly",
+                "Using expect for assertions",
+                "Using getByRole for accessibility"
+              ],
+              "best_practices_missing": [
+                "Could use more data-testid selectors"
+              ]
+            }
+          },
+          "strengths": [
+            "Excellent scenario-code alignment",
+            "Good use of async/await",
+            "Good use of role selectors"
+          ],
+          "weaknesses": [
+            "Could use more data-testid selectors for robustness"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 100,
+            "main_alignment_issues": []
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "test_info": {
+        "app_name": "BLUEDT",
+        "model": "openai",
+        "test_name": "delete_content",
+        "scenario": "Login app with username admin password admin1 then login Go to content and then delete how to Write Thesis content ",
+        "log_file_path": "BLUEDT/open_ai/delete_content/test_execution.log"
+      },
+      "evaluations": {
+        "deepseek": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "openai",
+            "test_name": "delete_content",
+            "scenario": "Login app with username admin password admin1 then login Go to content and then delete how to Write Thesis content ",
+            "log_file_path": "BLUEDT/open_ai/delete_content/test_execution.log"
+          },
+          "overall_score": 2.8,
+          "criteria_scores": {
+            "scenario_code_alignment": 2,
+            "code_structure": 4,
+            "selector_quality": 3,
+            "best_practices": 3
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 4,
+              "implemented_steps": 3,
+              "missing_steps": [
+                "Specific identification and deletion of 'how to Write Thesis' content"
+              ],
+              "incorrect_steps": [
+                "Assumes 'how to Write Thesis' is always at position 4 in the table"
+              ]
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "css",
+                "text"
+              ],
+              "robustness_score": 3,
+              "specific_issues": [
+                "Hard-coded table row index (nth(4)) is fragile",
+                "CSS selector 'form button.btn' may not be specific enough",
+                "No data-testid selectors used"
+              ],
+              "recommendations": [
+                "Use data-testid attributes for critical elements",
+                "Locate specific content by text rather than position",
+                "Add more specific selectors for form elements"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "good",
+              "organization": "good",
+              "best_practices_followed": [
+                "Proper async/await usage",
+                "URL validation after navigation",
+                "Element visibility and enabled state checks"
+              ],
+              "best_practices_missing": [
+                "No explicit wait for navigation after delete",
+                "No confirmation dialog handling",
+                "No error handling for failed operations"
+              ]
+            }
+          },
+          "strengths": [
+            "Good async/await implementation with proper waiting for elements",
+            "URL validation after navigation steps",
+            "Clear step-by-step organization matching the scenario flow",
+            "Proper element state verification (visible, enabled)"
+          ],
+          "weaknesses": [
+            "Critical flaw: Does not specifically identify 'how to Write Thesis' content - uses hard-coded position",
+            "No handling of delete confirmation dialog",
+            "Fragile selectors that may break with UI changes",
+            "Missing validation that content was actually deleted",
+            "No error handling for login failures or missing content"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": false,
+            "alignment_percentage": 60,
+            "main_alignment_issues": [
+              "The code does not specifically target 'how to Write Thesis' content as required by the scenario",
+              "Assumes content position rather than identifying by name",
+              "Missing delete confirmation step"
+            ]
+          },
+          "error": null
+        },
+        "openai": {
+          "success": true,
+          "test_info": {
+            "app_name": "BLUEDT",
+            "model": "openai",
+            "test_name": "delete_content",
+            "scenario": "Login app with username admin password admin1 then login Go to content and then delete how to Write Thesis content ",
+            "log_file_path": "BLUEDT/open_ai/delete_content/test_execution.log"
+          },
+          "overall_score": 4,
+          "criteria_scores": {
+            "scenario_code_alignment": 4,
+            "code_structure": 4,
+            "selector_quality": 4,
+            "best_practices": 4
+          },
+          "detailed_analysis": {
+            "scenario_steps_coverage": {
+              "total_scenario_steps": 5,
+              "implemented_steps": 5,
+              "missing_steps": [],
+              "incorrect_steps": []
+            },
+            "selector_analysis": {
+              "selector_types_used": [
+                "role",
+                "css"
+              ],
+              "robustness_score": 4,
+              "specific_issues": [
+                "Reliance on CSS selectors for button and table row can be fragile"
+              ],
+              "recommendations": [
+                "Use data-testid or semantic selectors for better robustness"
+              ]
+            },
+            "code_quality_analysis": {
+              "async_usage": "excellent",
+              "organization": "good",
+              "best_practices_followed": [
+                "Proper use of async/await",
+                "Visibility checks before interactions",
+                "Use of role selectors"
+              ],
+              "best_practices_missing": [
+                "Use of data-testid or semantic selectors"
+              ]
+            }
+          },
+          "strengths": [
+            "Scenario steps are fully implemented",
+            "Proper use of async/await",
+            "Visibility checks before interactions"
+          ],
+          "weaknesses": [
+            "Reliance on CSS selectors for button and table row",
+            "No explicit check for successful deletion of content",
+            "No explicit check for the correct content being deleted"
+          ],
+          "alignment_summary": {
+            "is_well_aligned": true,
+            "alignment_percentage": 90,
+            "main_alignment_issues": [
+              "No explicit check for successful deletion of content",
+              "No explicit check for the correct content being deleted"
+            ]
+          },
+          "error": null
+        }
+      }
+    }
+  ]
+}

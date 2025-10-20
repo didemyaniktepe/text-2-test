@@ -1,0 +1,9 @@
+﻿Application,Model,Total Scenarios,Successful Scenarios,Avg Step Match,Avg Execution,Success Rate (%)
+BLUDIT,DeepSeek,16,12,0.9792,0.8967,75.0
+BLUDIT,OpenAi,16,11,0.9521,0.9271,68.75
+Checkturio,DeepSeek,13,10,0.9707,0.8477,76.92
+Checkturio,OpenAi,13,11,0.993,0.9808,84.62
+SauceDemo,DeepSeek,10,9,0.9194,1.0,90.0
+SauceDemo,OpenAi,10,9,0.9639,1.0,90.0
+ToDo,DeepSeek,12,11,0.95,0.9444,91.67
+ToDo,OpenAi,12,10,0.8361,0.9,83.33

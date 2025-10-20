@@ -1,0 +1,3 @@
+﻿Model,Total Scenarios,Successful Scenarios,Total GT Steps,Total LLM Steps,Total Missing Steps,Total Hallucinations,Avg Step Match,Avg Missing Rate,Avg Hallucination Rate,Avg Execution Rate,Success Rate (%)
+DeepSeek,51,42,360,403,17,6,0.9584,0.0389,0.007,0.9157,82.35
+OpenAi,51,41,360,388,23,15,0.9375,0.0647,0.0241,0.9487,80.39
