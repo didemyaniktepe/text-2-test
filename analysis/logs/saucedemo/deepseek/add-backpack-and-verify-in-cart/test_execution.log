@@ -1,0 +1,270 @@
+{
+  "test_name": "Login_with_username_'standard_",
+  "original_scenario": "Login with username 'standard_user' and password 'secret_sauce'. From Products, add 'Sauce Labs Backpack' to cart. Open the cart and verify the item name and price are shown as $29.99.",
+  "remaining_scenario": "Verify the item name and price are shown as $29.99.",
+  "completed_steps": [
+    "Fill the username field with 'standard_user'",
+    "Fill the password field with 'secret_sauce'",
+    "Click the login button",
+    "Click the 'Add to cart' button for 'Sauce Labs Backpack'",
+    "Click the cart icon showing 1 item",
+    "Verify the item name 'Sauce Labs Backpack' and price '$29.99' are displayed on the cart page"
+  ],
+  "failed_attempts": [],
+  "steps": [
+    {
+      "step_number": 0,
+      "timestamp": "2025-10-11T18:05:50.831674",
+      "prompt": "Fill the username field with 'standard_user'",
+      "ai_response": "Selector: getByRole('textbox', {name: 'Username'})\nAction Type: fill",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('textbox', {name: 'Username'})",
+        "action_type": "fill",
+        "vision_analysis": "{\n  \"context\": \"Login page with username/password form\",\n  \"elements\": [\n    \"Username field: visible, empty\",\n    \"Password field: visible, empty\",\n    \"Login button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario mentions login: both fields present\"\n  ]\n}"
+      },
+      "remaining_scenario": "Login with username 'standard_user' and password 'secret_sauce'. From Products, add 'Sauce Labs Backpack' to cart. Open the cart and verify the item name and price are shown as $29.99.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/saucedemo/deepseek/add-backpack-and-verify-in-cart/step_1.png"
+    },
+    {
+      "step_number": 0,
+      "timestamp": "2025-10-11T18:05:51.987764",
+      "prompt": "Fill the username field with 'standard_user'",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('textbox', {name: 'Username'})",
+        "action_type": "fill",
+        "step_desc": "Fill the username field with 'standard_user'",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/'> selector='internal:role=textbox[name=\"Username\"i]'>",
+        "vision_analysis": "{\n  \"context\": \"Login page with username/password form\",\n  \"elements\": [\n    \"Username field: visible, empty\",\n    \"Password field: visible, empty\",\n    \"Login button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario mentions login: both fields present\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      },
+      "screenshot": "logs/saucedemo/deepseek/add-backpack-and-verify-in-cart/step_2.png"
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2025-10-11T18:06:09.255845",
+      "prompt": "Fill the password field with 'secret_sauce'",
+      "ai_response": "Selector: getByRole('textbox', {name: 'Password'})\nAction Type: fill",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('textbox', {name: 'Password'})",
+        "action_type": "fill",
+        "vision_analysis": "{\n  \"context\": \"Login page with username/password form\",\n  \"elements\": [\n    \"Username field: visible, filled with 'standard_user'\",\n    \"Password field: visible, empty\",\n    \"Login button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario mentions filling password: field is empty\"\n  ]\n}"
+      },
+      "remaining_scenario": "Fill the password field with 'secret_sauce' and click login. From Products, add 'Sauce Labs Backpack' to cart. Open the cart and verify the item name and price are shown as $29.99.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/saucedemo/deepseek/add-backpack-and-verify-in-cart/step_3.png"
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2025-10-11T18:06:10.333033",
+      "prompt": "Fill the password field with 'secret_sauce'",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('textbox', {name: 'Password'})",
+        "action_type": "fill",
+        "step_desc": "Fill the password field with 'secret_sauce'",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/'> selector='internal:role=textbox[name=\"Password\"i]'>",
+        "vision_analysis": "{\n  \"context\": \"Login page with username/password form\",\n  \"elements\": [\n    \"Username field: visible, filled with 'standard_user'\",\n    \"Password field: visible, empty\",\n    \"Login button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario mentions filling password: field is empty\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      },
+      "screenshot": "logs/saucedemo/deepseek/add-backpack-and-verify-in-cart/step_4.png"
+    },
+    {
+      "step_number": 2,
+      "timestamp": "2025-10-11T18:06:26.573428",
+      "prompt": "Click the login button",
+      "ai_response": "Selector: getByTestId('login-button')\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "getByTestId('login-button')",
+        "action_type": "click",
+        "vision_analysis": "{\n  \"context\": \"Login page with email/password form\",\n  \"elements\": [\n    \"Username field: visible, filled with 'standard_user'\",\n    \"Password field: visible, filled with 'secret_sauce'\",\n    \"Login button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario mentions login: both fields filled\"\n  ]\n}"
+      },
+      "remaining_scenario": "Click login. From Products, add 'Sauce Labs Backpack' to cart. Open the cart and verify the item name and price are shown as $29.99.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/saucedemo/deepseek/add-backpack-and-verify-in-cart/step_5.png"
+    },
+    {
+      "step_number": 2,
+      "timestamp": "2025-10-11T18:06:34.847464",
+      "prompt": "Click the login button",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "[data-test=\"login-button\"]",
+        "action_type": "click",
+        "step_desc": "Click the login button",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/inventory.html'> selector='[data-test=\"login-button\"]'>",
+        "vision_analysis": "{\n  \"context\": \"Login page with email/password form\",\n  \"elements\": [\n    \"Username field: visible, filled with 'standard_user'\",\n    \"Password field: visible, filled with 'secret_sauce'\",\n    \"Login button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario mentions login: both fields filled\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    },
+    {
+      "step_number": 3,
+      "timestamp": "2025-10-11T18:06:56.054115",
+      "prompt": "Click the 'Add to cart' button for 'Sauce Labs Backpack'",
+      "ai_response": "Selector: getByTestId('add-to-cart-sauce-labs-backpack')\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "getByTestId('add-to-cart-sauce-labs-backpack')",
+        "action_type": "click",
+        "vision_analysis": "{\n  \"context\": \"Products page with item listings\",\n  \"elements\": [\n    \"Sauce Labs Backpack: visible, price $29.99, Add to cart button: visible, enabled\",\n    \"Cart icon: visible\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario requires adding 'Sauce Labs Backpack' to cart: item visible\"\n  ]\n}"
+      },
+      "remaining_scenario": "From Products, add 'Sauce Labs Backpack' to cart. Open the cart and verify the item name and price are shown as $29.99.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 3,
+      "timestamp": "2025-10-11T18:07:00.190381",
+      "prompt": "Click the 'Add to cart' button for 'Sauce Labs Backpack'",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "locator('#add-to-cart-sauce-labs-backpack')",
+        "action_type": "click",
+        "step_desc": "Click the 'Add to cart' button for 'Sauce Labs Backpack'",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/inventory.html'> selector='#add-to-cart-sauce-labs-backpack'>",
+        "vision_analysis": "{\n  \"context\": \"Products page with item listings\",\n  \"elements\": [\n    \"Sauce Labs Backpack: visible, price $29.99, Add to cart button: visible, enabled\",\n    \"Cart icon: visible\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario requires adding 'Sauce Labs Backpack' to cart: item visible\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    },
+    {
+      "step_number": 4,
+      "timestamp": "2025-10-11T18:07:20.480642",
+      "prompt": "Click the cart icon showing 1 item",
+      "ai_response": "Selector: getByText('1')\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "getByText('1')",
+        "action_type": "click",
+        "vision_analysis": "{\n  \"context\": \"Products page with items listed\",\n  \"elements\": [\n    \"Sauce Labs Backpack: visible, price $29.99, Remove button visible\",\n    \"Cart icon: visible, shows 1 item\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Expected cart page: not visible\"\n  ]\n}"
+      },
+      "remaining_scenario": "Open the cart and verify the item name and price are shown as $29.99.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 4,
+      "timestamp": "2025-10-11T18:07:21.696050",
+      "prompt": "Click the cart icon showing 1 item",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByText('1')",
+        "action_type": "click",
+        "step_desc": "Click the cart icon showing 1 item",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/cart.html'> selector='internal:text=\"1\"i >> nth=0'>",
+        "vision_analysis": "{\n  \"context\": \"Products page with items listed\",\n  \"elements\": [\n    \"Sauce Labs Backpack: visible, price $29.99, Remove button visible\",\n    \"Cart icon: visible, shows 1 item\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Expected cart page: not visible\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    },
+    {
+      "step_number": 5,
+      "timestamp": "2025-10-11T18:07:40.905905",
+      "prompt": "Verify the item name 'Sauce Labs Backpack' and price '$29.99' are displayed on the cart page",
+      "ai_response": "Selector: getByRole('link', {name: 'Sauce Labs Backpack'})\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('link', {name: 'Sauce Labs Backpack'})",
+        "action_type": "click",
+        "vision_analysis": "{\n  \"context\": \"Cart page with item details\",\n  \"elements\": [\n    \"Item name 'Sauce Labs Backpack': visible\",\n    \"Item price '$29.99': visible\",\n    \"Remove button: visible, enabled\",\n    \"Checkout button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Item name and price match scenario requirements\"\n  ]\n}"
+      },
+      "remaining_scenario": "Verify the item name and price are shown as $29.99.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 5,
+      "timestamp": "2025-10-11T18:07:42.192598",
+      "prompt": "Verify the item name 'Sauce Labs Backpack' and price '$29.99' are displayed on the cart page",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('link', {name: 'Sauce Labs Backpack'})",
+        "action_type": "click",
+        "step_desc": "Verify the item name 'Sauce Labs Backpack' and price '$29.99' are displayed on the cart page",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/inventory-item.html?id=4'> selector='internal:role=link[name=\"Sauce Labs Backpack\"i]'>",
+        "vision_analysis": "{\n  \"context\": \"Cart page with item details\",\n  \"elements\": [\n    \"Item name 'Sauce Labs Backpack': visible\",\n    \"Item price '$29.99': visible\",\n    \"Remove button: visible, enabled\",\n    \"Checkout button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Item name and price match scenario requirements\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    }
+  ],
+  "generated_test": {
+    "code": "```javascript\nconst { test, expect } = require('@playwright/test');\n\ntest('Login with username \\'standard_user\\' and password \\'secret_sauce\\'. From Products, add \\'Sauce Labs Backpack\\' to cart. Open the cart and verify the item name and price are shown as $29.99.', async ({ page }) => {\n  await page.goto('https://www.saucedemo.com/');\n  \n  const usernameField = page.getByRole('textbox', { name: 'Username' });\n  await expect(usernameField).toBeVisible();\n  await usernameField.fill('standard_user');\n  \n  const passwordField = page.getByRole('textbox', { name: 'Password' });\n  await expect(passwordField).toBeVisible();\n  await passwordField.fill('secret_sauce');\n  \n  const loginButton = page.locator('[data-test=\"login-button\"]');\n  await expect(loginButton).toBeVisible();\n  await expect(loginButton).toBeEnabled();\n  await loginButton.click();\n  \n  await expect(page).toHaveURL(/.*inventory\\.html/);\n  \n  const addToCartButton = page.locator('#add-to-cart-sauce-labs-backpack');\n  await expect(addToCartButton).toBeVisible();\n  await expect(addToCartButton).toBeEnabled();\n  await addToCartButton.click();\n  \n  const cartIcon = page.getByText('1').first();\n  await expect(cartIcon).toBeVisible();\n  await cartIcon.click();\n  \n  await expect(page).toHaveURL(/.*cart\\.html/);\n  \n  const itemName = page.getByRole('link', { name: 'Sauce Labs Backpack' });\n  await expect(itemName).toBeVisible();\n  \n  const itemPrice = page.locator('.inventory_item_price');\n  await expect(itemPrice).toBeVisible();\n  await expect(itemPrice).toHaveText('$29.99');\n});\n```",
+    "scenario": "Login with username 'standard_user' and password 'secret_sauce'. From Products, add 'Sauce Labs Backpack' to cart. Open the cart and verify the item name and price are shown as $29.99.",
+    "url": "https://www.saucedemo.com/",
+    "timestamp": "2025-10-11T18:08:00.566491"
+  },
+  "end_time": "2025-10-11T18:08:00.567530",
+  "success": true,
+  "metrics": {
+    "total_steps": 6,
+    "completed_steps": 6,
+    "remaining_scenario": "Verify the item name and price are shown as $29.99.",
+    "total_selector_attempts": 6,
+    "successful_selectors": 6
+  }
+}

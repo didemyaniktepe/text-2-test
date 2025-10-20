@@ -1,0 +1,516 @@
+{
+  "test_name": "Login_with_'standard_user'_/_'",
+  "original_scenario": "Login with 'standard_user' / 'secret_sauce'. Add 'Sauce Labs Backpack' and navigate to the cart. Click CHECKOUT, fill First Name 'March', Last Name 'April', Zip '10115', continue to Overview, then click CANCEL and verify you return to the Products page.",
+  "remaining_scenario": "verify you return to the Products page.",
+  "completed_steps": [
+    "Fill the Username field with 'standard_user'",
+    "Fill the Password field with 'secret_sauce'",
+    "Click the Login button",
+    "Click the 'Add to cart' button for 'Sauce Labs Backpack'",
+    "Click the Cart icon to navigate to the cart page",
+    "Click the Checkout button",
+    "Fill the First Name field with 'March'",
+    "Fill the Last Name field with 'April'",
+    "Fill the Zip/Postal Code field with '10115'",
+    "Click the Continue button",
+    "Click the Cancel button to return to the Products page",
+    "Verify you are on the Products page by checking the visibility of the Sauce Labs Backpack item and the cart icon showing 1 item."
+  ],
+  "failed_attempts": [],
+  "steps": [
+    {
+      "step_number": 0,
+      "timestamp": "2025-10-11T17:55:01.463151",
+      "prompt": "Fill the Username field with 'standard_user'",
+      "ai_response": "Selector: getByRole('textbox',{ name:'Username' })\nAction Type: fill",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('textbox',{ name:'Username' })",
+        "action_type": "fill",
+        "vision_analysis": "{\n  \"context\": \"Login page with username/password form\",\n  \"elements\": [\n    \"Username field: visible, empty\",\n    \"Password field: visible, empty\",\n    \"Login button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario mentions login with 'standard_user' and 'secret_sauce': fields present\"\n  ]\n}"
+      },
+      "remaining_scenario": "Login with 'standard_user' / 'secret_sauce'. Add 'Sauce Labs Backpack' and navigate to the cart. Click CHECKOUT, fill First Name 'March', Last Name 'April', Zip '10115', continue to Overview, then click CANCEL and verify you return to the Products page.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/saucedemo/openai/checkout-cancel-from-overview-to-products/step_1.png"
+    },
+    {
+      "step_number": 0,
+      "timestamp": "2025-10-11T17:55:02.562366",
+      "prompt": "Fill the Username field with 'standard_user'",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('textbox',{ name:'Username' })",
+        "action_type": "fill",
+        "step_desc": "Fill the Username field with 'standard_user'",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/'> selector='internal:role=textbox[name=\"Username\"i]'>",
+        "vision_analysis": "{\n  \"context\": \"Login page with username/password form\",\n  \"elements\": [\n    \"Username field: visible, empty\",\n    \"Password field: visible, empty\",\n    \"Login button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario mentions login with 'standard_user' and 'secret_sauce': fields present\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      },
+      "screenshot": "logs/saucedemo/openai/checkout-cancel-from-overview-to-products/step_2.png"
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2025-10-11T17:55:13.040928",
+      "prompt": "Fill the Password field with 'secret_sauce'",
+      "ai_response": "Selector: getByRole('textbox', { name: 'Password' })\nAction Type: fill",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('textbox', { name: 'Password' })",
+        "action_type": "fill",
+        "vision_analysis": "{\n  \"context\": \"Login page with username/password form\",\n  \"elements\": [\n    \"Username field: visible, filled with 'standard_user'\",\n    \"Password field: visible, empty\",\n    \"Login button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario requires filling Password field: currently empty\"\n  ]\n}"
+      },
+      "remaining_scenario": "Fill the Password field with 'secret_sauce'",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/saucedemo/openai/checkout-cancel-from-overview-to-products/step_3.png"
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2025-10-11T17:55:14.133249",
+      "prompt": "Fill the Password field with 'secret_sauce'",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('textbox', { name: 'Password' })",
+        "action_type": "fill",
+        "step_desc": "Fill the Password field with 'secret_sauce'",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/'> selector='internal:role=textbox[name=\"Password\"i]'>",
+        "vision_analysis": "{\n  \"context\": \"Login page with username/password form\",\n  \"elements\": [\n    \"Username field: visible, filled with 'standard_user'\",\n    \"Password field: visible, empty\",\n    \"Login button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario requires filling Password field: currently empty\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      },
+      "screenshot": "logs/saucedemo/openai/checkout-cancel-from-overview-to-products/step_4.png"
+    },
+    {
+      "step_number": 2,
+      "timestamp": "2025-10-11T17:55:23.983665",
+      "prompt": "Click the Login button",
+      "ai_response": "Selector: getByTestId('login-button')\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "getByTestId('login-button')",
+        "action_type": "click",
+        "vision_analysis": "{\n  \"context\": \"Login page with email/password form\",\n  \"elements\": [\n    \"Username field: visible, filled with 'standard_user'\",\n    \"Password field: visible, filled with 'secret_sauce'\",\n    \"Login button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Expected login completion: not yet performed\"\n  ]\n}"
+      },
+      "remaining_scenario": "Add 'Sauce Labs Backpack' and navigate to the cart. Click CHECKOUT, fill First Name 'March', Last Name 'April', Zip '10115', continue to Overview, then click CANCEL and verify you return to the Products page.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/saucedemo/openai/checkout-cancel-from-overview-to-products/step_5.png"
+    },
+    {
+      "step_number": 2,
+      "timestamp": "2025-10-11T17:55:29.212886",
+      "prompt": "Click the Login button",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "locator('#login-button')",
+        "action_type": "click",
+        "step_desc": "Click the Login button",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/inventory.html'> selector='#login-button'>",
+        "vision_analysis": "{\n  \"context\": \"Login page with email/password form\",\n  \"elements\": [\n    \"Username field: visible, filled with 'standard_user'\",\n    \"Password field: visible, filled with 'secret_sauce'\",\n    \"Login button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Expected login completion: not yet performed\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      },
+      "screenshot": "logs/saucedemo/openai/checkout-cancel-from-overview-to-products/step_6.png"
+    },
+    {
+      "step_number": 3,
+      "timestamp": "2025-10-11T17:55:48.696537",
+      "prompt": "Click the 'Add to cart' button for 'Sauce Labs Backpack'",
+      "ai_response": "Selector: getByTestId('add-to-cart-sauce-labs-backpack')\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "getByTestId('add-to-cart-sauce-labs-backpack')",
+        "action_type": "click",
+        "vision_analysis": "{\n  \"context\": \"Products page with item listings\",\n  \"elements\": [\n    \"Sauce Labs Backpack: visible, Add to cart button enabled\",\n    \"Cart icon: visible, clickable\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario requires adding 'Sauce Labs Backpack': item visible\",\n    \"Expected cart navigation: cart icon present\"\n  ]\n}"
+      },
+      "remaining_scenario": "Add 'Sauce Labs Backpack' and navigate to the cart. Click CHECKOUT, fill First Name 'March', Last Name 'April', Zip '10115', continue to Overview, then click CANCEL and verify you return to the Products page.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/saucedemo/openai/checkout-cancel-from-overview-to-products/step_7.png"
+    },
+    {
+      "step_number": 3,
+      "timestamp": "2025-10-11T17:55:52.852996",
+      "prompt": "Click the 'Add to cart' button for 'Sauce Labs Backpack'",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "locator('#add-to-cart-sauce-labs-backpack')",
+        "action_type": "click",
+        "step_desc": "Click the 'Add to cart' button for 'Sauce Labs Backpack'",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/inventory.html'> selector='#add-to-cart-sauce-labs-backpack'>",
+        "vision_analysis": "{\n  \"context\": \"Products page with item listings\",\n  \"elements\": [\n    \"Sauce Labs Backpack: visible, Add to cart button enabled\",\n    \"Cart icon: visible, clickable\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario requires adding 'Sauce Labs Backpack': item visible\",\n    \"Expected cart navigation: cart icon present\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      },
+      "screenshot": "logs/saucedemo/openai/checkout-cancel-from-overview-to-products/step_8.png"
+    },
+    {
+      "step_number": 4,
+      "timestamp": "2025-10-11T17:56:03.632485",
+      "prompt": "Click the Cart icon to navigate to the cart page",
+      "ai_response": "Selector: getByTestId('shopping-cart-link')\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "getByTestId('shopping-cart-link')",
+        "action_type": "click",
+        "vision_analysis": "{\n  \"context\": \"Products page with items listed\",\n  \"elements\": [\n    \"Sauce Labs Backpack: Remove button visible\",\n    \"Cart icon: visible, shows 1 item\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Expected cart page: not visible\"\n  ]\n}"
+      },
+      "remaining_scenario": "Navigate to the cart. Click CHECKOUT, fill First Name 'March', Last Name 'April', Zip '10115', continue to Overview, then click CANCEL and verify you return to the Products page.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/saucedemo/openai/checkout-cancel-from-overview-to-products/step_9.png"
+    },
+    {
+      "step_number": 4,
+      "timestamp": "2025-10-11T17:56:10.849194",
+      "prompt": "Click the Cart icon to navigate to the cart page",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "[data-test=\"shopping-cart-link\"]",
+        "action_type": "click",
+        "step_desc": "Click the Cart icon to navigate to the cart page",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/cart.html'> selector='[data-test=\"shopping-cart-link\"]'>",
+        "vision_analysis": "{\n  \"context\": \"Products page with items listed\",\n  \"elements\": [\n    \"Sauce Labs Backpack: Remove button visible\",\n    \"Cart icon: visible, shows 1 item\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Expected cart page: not visible\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      },
+      "screenshot": "logs/saucedemo/openai/checkout-cancel-from-overview-to-products/step_10.png"
+    },
+    {
+      "step_number": 5,
+      "timestamp": "2025-10-11T17:56:20.815823",
+      "prompt": "Click the Checkout button",
+      "ai_response": "Selector: getByRole('button', {name:'Checkout'})\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('button', {name:'Checkout'})",
+        "action_type": "click",
+        "vision_analysis": "{\n  \"context\": \"Cart page with product list\",\n  \"elements\": [\n    \"Sauce Labs Backpack: visible, quantity 1\",\n    \"Checkout button: visible, enabled\",\n    \"Continue Shopping button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario requires clicking Checkout: button visible\"\n  ]\n}"
+      },
+      "remaining_scenario": "Click CHECKOUT, fill First Name 'March', Last Name 'April', Zip '10115', continue to Overview, then click CANCEL and verify you return to the Products page.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/saucedemo/openai/checkout-cancel-from-overview-to-products/step_11.png"
+    },
+    {
+      "step_number": 5,
+      "timestamp": "2025-10-11T17:56:22.108126",
+      "prompt": "Click the Checkout button",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('button', {name:'Checkout'})",
+        "action_type": "click",
+        "step_desc": "Click the Checkout button",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/checkout-step-one.html'> selector='internal:role=button[name=\"Checkout\"i]'>",
+        "vision_analysis": "{\n  \"context\": \"Cart page with product list\",\n  \"elements\": [\n    \"Sauce Labs Backpack: visible, quantity 1\",\n    \"Checkout button: visible, enabled\",\n    \"Continue Shopping button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario requires clicking Checkout: button visible\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    },
+    {
+      "step_number": 6,
+      "timestamp": "2025-10-11T17:56:33.326770",
+      "prompt": "Fill the First Name field with 'March'",
+      "ai_response": "Selector: getByRole('textbox', { name: 'First Name' })\nAction Type: fill",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('textbox', { name: 'First Name' })",
+        "action_type": "fill",
+        "vision_analysis": "{\n  \"context\": \"Checkout: Your Information page with form fields\",\n  \"elements\": [\n    \"First Name field: visible, empty\",\n    \"Last Name field: visible, empty\",\n    \"Zip/Postal Code field: visible, empty\",\n    \"Cancel button: visible, enabled\",\n    \"Continue button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario requires filling First Name, Last Name, and Zip fields\"\n  ]\n}"
+      },
+      "remaining_scenario": "Fill First Name 'March', Last Name 'April', Zip '10115', continue to Overview, then click CANCEL and verify you return to the Products page.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 6,
+      "timestamp": "2025-10-11T17:56:34.399038",
+      "prompt": "Fill the First Name field with 'March'",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('textbox', { name: 'First Name' })",
+        "action_type": "fill",
+        "step_desc": "Fill the First Name field with 'March'",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/checkout-step-one.html'> selector='internal:role=textbox[name=\"First Name\"i]'>",
+        "vision_analysis": "{\n  \"context\": \"Checkout: Your Information page with form fields\",\n  \"elements\": [\n    \"First Name field: visible, empty\",\n    \"Last Name field: visible, empty\",\n    \"Zip/Postal Code field: visible, empty\",\n    \"Cancel button: visible, enabled\",\n    \"Continue button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario requires filling First Name, Last Name, and Zip fields\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    },
+    {
+      "step_number": 7,
+      "timestamp": "2025-10-11T17:56:44.408473",
+      "prompt": "Fill the Last Name field with 'April'",
+      "ai_response": "Selector: getByRole('textbox',{ name:'Last Name' })\nAction Type: fill",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('textbox',{ name:'Last Name' })",
+        "action_type": "fill",
+        "vision_analysis": "{\n  \"context\": \"Checkout: Your Information page\",\n  \"elements\": [\n    \"First Name field: visible, filled with 'March'\",\n    \"Last Name field: visible, empty\",\n    \"Zip/Postal Code field: visible, empty\",\n    \"Continue button: visible, enabled\",\n    \"Cancel button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Expected Last Name and Zip fields: visible, empty\"\n  ]\n}"
+      },
+      "remaining_scenario": "Fill Last Name 'April', Zip '10115', continue to Overview, then click CANCEL and verify you return to the Products page.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 7,
+      "timestamp": "2025-10-11T17:56:45.488344",
+      "prompt": "Fill the Last Name field with 'April'",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('textbox',{ name:'Last Name' })",
+        "action_type": "fill",
+        "step_desc": "Fill the Last Name field with 'April'",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/checkout-step-one.html'> selector='internal:role=textbox[name=\"Last Name\"i]'>",
+        "vision_analysis": "{\n  \"context\": \"Checkout: Your Information page\",\n  \"elements\": [\n    \"First Name field: visible, filled with 'March'\",\n    \"Last Name field: visible, empty\",\n    \"Zip/Postal Code field: visible, empty\",\n    \"Continue button: visible, enabled\",\n    \"Cancel button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Expected Last Name and Zip fields: visible, empty\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    },
+    {
+      "step_number": 8,
+      "timestamp": "2025-10-11T17:56:57.186603",
+      "prompt": "Fill the Zip/Postal Code field with '10115'",
+      "ai_response": "Selector: getByRole('textbox', { name: 'Zip/Postal Code' })\nAction Type: fill",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('textbox', { name: 'Zip/Postal Code' })",
+        "action_type": "fill",
+        "vision_analysis": "{\n  \"context\": \"Checkout: Your Information page\",\n  \"elements\": [\n    \"First Name field: visible, filled with 'March'\",\n    \"Last Name field: visible, filled with 'April'\",\n    \"Zip/Postal Code field: visible, empty\",\n    \"Cancel button: visible, enabled\",\n    \"Continue button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Zip/Postal Code field: expected to be filled with '10115', currently empty\"\n  ]\n}"
+      },
+      "remaining_scenario": "Fill Zip '10115', continue to Overview, then click CANCEL and verify you return to the Products page.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 8,
+      "timestamp": "2025-10-11T17:56:58.290569",
+      "prompt": "Fill the Zip/Postal Code field with '10115'",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('textbox', { name: 'Zip/Postal Code' })",
+        "action_type": "fill",
+        "step_desc": "Fill the Zip/Postal Code field with '10115'",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/checkout-step-one.html'> selector='internal:role=textbox[name=\"Zip/Postal Code\"i]'>",
+        "vision_analysis": "{\n  \"context\": \"Checkout: Your Information page\",\n  \"elements\": [\n    \"First Name field: visible, filled with 'March'\",\n    \"Last Name field: visible, filled with 'April'\",\n    \"Zip/Postal Code field: visible, empty\",\n    \"Cancel button: visible, enabled\",\n    \"Continue button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Zip/Postal Code field: expected to be filled with '10115', currently empty\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    },
+    {
+      "step_number": 9,
+      "timestamp": "2025-10-11T17:57:09.275759",
+      "prompt": "Click the Continue button",
+      "ai_response": "Selector: getByTestId('continue')\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "getByTestId('continue')",
+        "action_type": "click",
+        "vision_analysis": "{\n  \"context\": \"Checkout: Your Information page\",\n  \"elements\": [\n    \"First Name field: visible, filled with 'March'\",\n    \"Last Name field: visible, filled with 'April'\",\n    \"Zip/Postal Code field: visible, filled with '10115'\",\n    \"Cancel button: visible, enabled\",\n    \"Continue button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Expected Overview page: not visible\"\n  ]\n}"
+      },
+      "remaining_scenario": "continue to Overview, then click CANCEL and verify you return to the Products page.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 9,
+      "timestamp": "2025-10-11T17:57:14.604992",
+      "prompt": "Click the Continue button",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "locator('#continue')",
+        "action_type": "click",
+        "step_desc": "Click the Continue button",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/checkout-step-two.html'> selector='#continue'>",
+        "vision_analysis": "{\n  \"context\": \"Checkout: Your Information page\",\n  \"elements\": [\n    \"First Name field: visible, filled with 'March'\",\n    \"Last Name field: visible, filled with 'April'\",\n    \"Zip/Postal Code field: visible, filled with '10115'\",\n    \"Cancel button: visible, enabled\",\n    \"Continue button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Expected Overview page: not visible\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    },
+    {
+      "step_number": 10,
+      "timestamp": "2025-10-11T17:57:24.940388",
+      "prompt": "Click the Cancel button to return to the Products page",
+      "ai_response": "Selector: getByRole('button', {name: 'Cancel'})\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('button', {name: 'Cancel'})",
+        "action_type": "click",
+        "vision_analysis": "{\n  \"context\": \"Checkout Overview page\",\n  \"elements\": [\n    \"Product: Sauce Labs Backpack, visible\",\n    \"Cancel button: visible, enabled\",\n    \"Finish button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Expected Checkout Overview page: visible\"\n  ]\n}"
+      },
+      "remaining_scenario": "click CANCEL and verify you return to the Products page.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 10,
+      "timestamp": "2025-10-11T17:57:26.272768",
+      "prompt": "Click the Cancel button to return to the Products page",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('button', {name: 'Cancel'})",
+        "action_type": "click",
+        "step_desc": "Click the Cancel button to return to the Products page",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/inventory.html'> selector='internal:role=button[name=\"Cancel\"i]'>",
+        "vision_analysis": "{\n  \"context\": \"Checkout Overview page\",\n  \"elements\": [\n    \"Product: Sauce Labs Backpack, visible\",\n    \"Cancel button: visible, enabled\",\n    \"Finish button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Expected Checkout Overview page: visible\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    },
+    {
+      "step_number": 11,
+      "timestamp": "2025-10-11T17:57:37.123364",
+      "prompt": "Verify you are on the Products page by checking the visibility of the Sauce Labs Backpack item and the cart icon showing 1 item.",
+      "ai_response": "Selector: getByRole('link',{ name:'Sauce Labs Backpack' })\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('link',{ name:'Sauce Labs Backpack' })",
+        "action_type": "click",
+        "vision_analysis": "{\n  \"context\": \"Products page with item listings\",\n  \"elements\": [\n    \"Sauce Labs Backpack: visible, Remove button enabled\",\n    \"Cart icon: visible, shows 1 item\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Expected Products page: visible\"\n  ]\n}"
+      },
+      "remaining_scenario": "verify you return to the Products page.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 11,
+      "timestamp": "2025-10-11T17:57:38.341516",
+      "prompt": "Verify you are on the Products page by checking the visibility of the Sauce Labs Backpack item and the cart icon showing 1 item.",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('link',{ name:'Sauce Labs Backpack' })",
+        "action_type": "click",
+        "step_desc": "Verify you are on the Products page by checking the visibility of the Sauce Labs Backpack item and the cart icon showing 1 item.",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/inventory-item.html?id=4'> selector='internal:role=link[name=\"Sauce Labs Backpack\"i] >> internal:has-text=/^\\\\s*Sauce\\\\ Labs\\\\ Backpack\\\\s*$/i >> nth=0'>",
+        "vision_analysis": "{\n  \"context\": \"Products page with item listings\",\n  \"elements\": [\n    \"Sauce Labs Backpack: visible, Remove button enabled\",\n    \"Cart icon: visible, shows 1 item\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Expected Products page: visible\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    }
+  ],
+  "generated_test": {
+    "code": "```javascript\nconst { test, expect } = require('@playwright/test');\n\ntest('Login with \"standard_user\" / \"secret_sauce\". Add \"Sauce Labs Backpack\" and navigate to the cart. Click CHECKOUT, fill First Name \"March\", Last Name \"April\", Zip \"10115\", continue to Overview, then click CANCEL and verify you return to the Products page.', async ({ page }) => {\n  await page.goto('https://www.saucedemo.com/');\n\n  // Step 1: Login\n  await expect(page.getByRole('textbox', { name: 'Username' })).toBeVisible();\n  await page.getByRole('textbox', { name: 'Username' }).fill('standard_user');\n  await expect(page.getByRole('textbox', { name: 'Password' })).toBeVisible();\n  await page.getByRole('textbox', { name: 'Password' }).fill('secret_sauce');\n  await expect(page.locator('#login-button')).toBeVisible();\n  await page.locator('#login-button').click();\n  await expect(page).toHaveURL(/inventory\\.html/);\n\n  // Step 4: Add to Cart\n  await expect(page.locator('#add-to-cart-sauce-labs-backpack')).toBeVisible();\n  await page.locator('#add-to-cart-sauce-labs-backpack').click();\n\n  // Step 5: Navigate to Cart\n  await expect(page.locator('[data-test=\"shopping-cart-link\"]')).toBeVisible();\n  await page.locator('[data-test=\"shopping-cart-link\"]').click();\n  await expect(page).toHaveURL(/cart\\.html/);\n\n  // Step 6: Checkout\n  await expect(page.getByRole('button', { name: 'Checkout' })).toBeVisible();\n  await page.getByRole('button', { name: 'Checkout' }).click();\n  await expect(page).toHaveURL(/checkout-step-one\\.html/);\n\n  // Step 7-9: Fill Checkout Information\n  await expect(page.getByRole('textbox', { name: 'First Name' })).toBeVisible();\n  await page.getByRole('textbox', { name: 'First Name' }).fill('March');\n  await expect(page.getByRole('textbox', { name: 'Last Name' })).toBeVisible();\n  await page.getByRole('textbox', { name: 'Last Name' }).fill('April');\n  await expect(page.getByRole('textbox', { name: 'Zip/Postal Code' })).toBeVisible();\n  await page.getByRole('textbox', { name: 'Zip/Postal Code' }).fill('10115');\n\n  // Step 10: Continue\n  await expect(page.locator('#continue')).toBeVisible();\n  await page.locator('#continue').click();\n  await expect(page).toHaveURL(/checkout-step-two\\.html/);\n\n  // Step 11: Cancel and return to Products page\n  await expect(page.getByRole('button', { name: 'Cancel' })).toBeVisible();\n  await page.getByRole('button', { name: 'Cancel' }).click();\n  await expect(page).toHaveURL(/inventory\\.html/);\n\n  // Step 12: Verify Products page\n  await expect(page.getByRole('link', { name: 'Sauce Labs Backpack' })).toBeVisible();\n  await expect(page.locator('[data-test=\"shopping-cart-link\"]')).toHaveText('1');\n});\n```",
+    "scenario": "Login with 'standard_user' / 'secret_sauce'. Add 'Sauce Labs Backpack' and navigate to the cart. Click CHECKOUT, fill First Name 'March', Last Name 'April', Zip '10115', continue to Overview, then click CANCEL and verify you return to the Products page.",
+    "url": "https://www.saucedemo.com/",
+    "timestamp": "2025-10-11T17:58:00.941931"
+  },
+  "end_time": "2025-10-11T17:58:00.943405",
+  "success": true,
+  "metrics": {
+    "total_steps": 12,
+    "completed_steps": 12,
+    "remaining_scenario": "verify you return to the Products page.",
+    "total_selector_attempts": 12,
+    "successful_selectors": 12
+  }
+}

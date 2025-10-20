@@ -1,0 +1,8 @@
+test_name,step_index,expected_step,prompt,planned_element,planned_action_type,planned_selector,execution_action_type,execution_selector,execution_status,execution_success,is_expected_step,selector_attempts,locator_mismatch,skipped_auto,suspected_hallucination
+Login_with_'standard_user'_/_',0,Fill the Username field with 'standard_user',Fill the username field with 'standard_user',textbox,fill,"getByRole('textbox', {name:'Username'})",fill,"getByRole('textbox', {name:'Username'})",success,True,True,1,False,False,False
+Login_with_'standard_user'_/_',1,Fill the Password field with 'secret_sauce',Fill the password field with 'secret_sauce',textbox,fill,"getByRole('textbox',{ name:'Password' })",fill,"getByRole('textbox',{ name:'Password' })",success,True,True,1,False,False,False
+Login_with_'standard_user'_/_',2,Click the Login button,Click Login button,button,click,getByTestId('login-button'),click,"[data-test=""login-button""]",success,True,True,1,True,False,True
+Login_with_'standard_user'_/_',3,Change the sort dropdown to 'Price (low to high)',Change the sort dropdown to 'Price (low to high)',combobox,select,getByRole('combobox'),select,getByRole('combobox'),success,True,True,1,False,False,False
+Login_with_'standard_user'_/_',4,Click the 'Add to cart' button for 'Sauce Labs Onesie',Click 'Add to cart' button for Sauce Labs Onesie,element,click,getByTestId('add-to-cart-sauce-labs-onesie'),click,locator('#add-to-cart-sauce-labs-onesie'),success,True,True,1,True,False,True
+,,Verify 'Sauce Labs Onesie' ($7.99),,,,,,,,,,,,,
+,,Verify the cart badge shows 1 ,,,,,,,,,,,,,

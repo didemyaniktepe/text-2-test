@@ -1,0 +1,4 @@
+test_name,step_index,expected steps,prompt,planned_element,planned_action_type,planned_selector,execution_action_type,execution_selector,execution_status,execution_success,is_expected_step,selector_attempts,locator_mismatch,skipped_auto,suspected_hallucination
+navigate,0,Navigate to http://localhost:8001 ,Navigate to http://localhost:8001 ,link,navigate,,,,,,,,,,
+navigate,1,Fill the username field with 'admin',Fill the username field with 'admin',textbox,fill,"getByRole('textbox', {name: 'Username'})",fill,"getByRole('textbox', {name: 'Username'})",success,True,True,1,False,False,True
+navigate,2,Fill the password field with 'admin1',Fill the password field with 'admin1' and click the login button,button,click,locator('form').locator('button.btn'),click,locator('form').locator('button.btn'),success,True,True,1,False,False,True

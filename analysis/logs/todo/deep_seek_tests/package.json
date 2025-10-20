@@ -1,0 +1,26 @@
+{
+  "name": "todo2-deepseek-tests",
+  "version": "1.0.0",
+  "description": "ToDo_2 testleri - DeepSeek ile oluşturulan testler",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "test:report": "playwright show-report",
+    "install-browsers": "playwright install"
+  },
+  "keywords": [
+    "playwright",
+    "testing",
+    "automation",
+    "todo",
+    "deepseek"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.40.0"
+  }
+}

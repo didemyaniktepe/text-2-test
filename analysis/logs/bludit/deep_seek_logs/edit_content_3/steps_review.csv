@@ -1,0 +1,8 @@
+test_name,step_index,expected_step,prompt,planned_element,planned_action_type,planned_selector,execution_action_type,execution_selector,execution_status,execution_success,is_expected_step,selector_attempts,locator_mismatch,skipped_auto,suspected_hallucination
+edit content,0,Fill the username field with 'admin',Fill the username field with 'admin',textbox,fill,"getByRole('textbox', {name: 'Username'})",fill,"getByRole('textbox', {name: 'Username'})",success,True,True,1,False,False,False
+edit content,1,Fill the password field with 'admin1',Fill the password field with 'admin1',textbox,fill,"getByRole('textbox', {name: 'Password'})",fill,"getByRole('textbox', {name: 'Password'})",success,True,True,1,False,False,False
+edit content,2,Click the 'Login' button,Click the 'Login' button,button,click,locator('form').locator('button.btn'),click,locator('form').locator('button.btn'),success,True,True,1,False,False,False
+edit content,3,Navigate to '.../content',Click the 'Content' link in the sidebar to navigate to the content management page.,text,click,"getByText('Content', {exact: true})",click,"internal:role=link[name=""Content""i]",success,True,True,1,True,False,False
+edit content,4,Click edit button,Fill the title field with 'New Title',textbox,fill,"getByRole('textbox', {name:'Enter title'})",fill,"getByRole('textbox', {name:'Enter title'})",success,True,True,1,True,False,False
+edit content,5,Fill the title field wth 'New Title',Click the 'Save' button to save the changes.,button,click,"getByRole('button', {name:'Save'})",click,"getByRole('button', {name:'Save'})",success,True,True,1,False,False,False
+edit content,6,"Click the 'Save"" button",,,,,,,,,,,,,

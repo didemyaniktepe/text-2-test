@@ -1,0 +1,9 @@
+test_name,step_index,expected_step,prompt,planned_element,planned_action_type,planned_selector,execution_action_type,execution_selector,execution_status,execution_success,is_expected_step,selector_attempts,locator_mismatch,skipped_auto,suspected_hallucination
+Login_with_'standard_user'_/_',0,Fill the Username field with 'standard_user',Fill the Username field with 'standard_user',textbox,fill,"getByRole('textbox', { name: 'Username' })",fill,"getByRole('textbox', { name: 'Username' })",success,True,True,1,False,False,False
+Login_with_'standard_user'_/_',1,Fill the Password field with 'secret_sauce',Fill the Password field with 'secret_sauce',textbox,fill,"getByRole('textbox', { name: 'Password' })",fill,"getByRole('textbox', { name: 'Password' })",success,True,True,1,False,False,False
+Login_with_'standard_user'_/_',2,Click the Login button,Click the Login button,button,click,getByTestId('login-button'),click,locator('#login-button'),success,True,True,1,True,False,True
+Login_with_'standard_user'_/_',3,Click the 'Add to cart' button for 'Sauce Labs Onesie',Click the 'Add to cart' button for 'Sauce Labs Onesie',element,click,getByTestId('add-to-cart-sauce-labs-onesie'),click,locator('#add-to-cart-sauce-labs-onesie'),success,True,True,1,True,False,True
+Login_with_'standard_user'_/_',4,Click the cart icon to open the cart page.,Click the cart icon to open the cart page.,link,click,getByTestId('shopping-cart-link'),click,"[data-test=""shopping-cart-link""]",success,True,True,1,True,False,True
+Login_with_'standard_user'_/_',5,Click the 'Remove' button for 'Sauce Labs Onesie',Click the 'Remove' button for 'Sauce Labs Onesie',button,click,"getByRole('button', {name:'Remove'})",click,"getByRole('button', {name:'Remove'})",success,True,True,1,False,False,False
+,,Verify the cart is empty,,,,,,,,,,,,,
+,,Verify the badge disappears ,,,,,,,,,,,,,

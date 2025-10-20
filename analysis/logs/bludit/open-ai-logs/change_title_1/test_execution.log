@@ -1,0 +1,606 @@
+{
+  "test_name": "Login_app_with_username_admin_",
+  "original_scenario": "Login app with username admin password admin1 then login then navigate to 'http://localhost:8001/admin/content' and Click edit and change the title",
+  "remaining_scenario": "then navigate to 'http://localhost:8001/admin/content' and Click edit and change the title",
+  "completed_steps": [
+    "Fill the username field with 'admin'",
+    "Fill the password field with 'admin1'",
+    "Click the 'Login' button",
+    "Click the 'Content' link in the sidebar to navigate to the content management page."
+  ],
+  "failed_attempts": [
+    {
+      "selector": "getByRole('link', {name: 'Content'})",
+      "action_type": "click"
+    },
+    {
+      "selector": "locator('a[href=\"/admin/content\"]')",
+      "action_type": "click"
+    },
+    {
+      "selector": "getByText('Content').filter({has: locator('.nav-link')})",
+      "action_type": "click"
+    },
+    {
+      "selector": "locator('.nav-link').nth(3)",
+      "action_type": "click"
+    },
+    {
+      "selector": "getByRole('link', {name: 'Content'})",
+      "action_type": "click"
+    },
+    {
+      "selector": "locator('a[href=\"/admin/content\"]')",
+      "action_type": "click"
+    },
+    {
+      "selector": "getByText('Content').filter({has: locator('.nav-link')})",
+      "action_type": "click"
+    },
+    {
+      "selector": "getByRole('navigation').getByText('Content')",
+      "action_type": "click"
+    },
+    {
+      "selector": "locator('.nav-link').nth(3)",
+      "action_type": "click"
+    },
+    {
+      "selector": "locator('.sidebar-nav').locator('a.nav-link').nth(3)",
+      "action_type": "click"
+    },
+    {
+      "selector": "locator('.sidebar-nav').getByRole('link', {name: 'Content'})",
+      "action_type": "click"
+    }
+  ],
+  "steps": [
+    {
+      "step_number": 0,
+      "timestamp": "2025-09-29T00:56:40.051923",
+      "prompt": "Fill the username field with 'admin'",
+      "ai_response": "Selector: getByRole('textbox', {name: 'Username'})\nAction Type: fill",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('textbox', {name: 'Username'})",
+        "action_type": "fill"
+      },
+      "remaining_scenario": "Login app with username admin password admin1 then login then navigate to 'http://localhost:8001/admin/content' and Click edit and change the title",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/test_Login_app_with_username_admin__20250929_005626/step_1.png"
+    },
+    {
+      "step_number": 0,
+      "timestamp": "2025-09-29T00:56:41.142783",
+      "prompt": "Fill the username field with 'admin'",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('textbox', {name: 'Username'})",
+        "action_type": "fill",
+        "step_desc": "Fill the username field with 'admin'"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      },
+      "screenshot": "logs/test_Login_app_with_username_admin__20250929_005626/step_2.png"
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2025-09-29T00:56:54.213849",
+      "prompt": "Fill the password field with 'admin1'",
+      "ai_response": "Selector: getByRole('textbox',{ name:'Password' })\nAction Type: fill",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('textbox',{ name:'Password' })",
+        "action_type": "fill"
+      },
+      "remaining_scenario": "Fill the password field with 'admin1' then login then navigate to 'http://localhost:8001/admin/content' and Click edit and change the title",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2025-09-29T00:56:55.250593",
+      "prompt": "Fill the password field with 'admin1'",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('textbox',{ name:'Password' })",
+        "action_type": "fill",
+        "step_desc": "Fill the password field with 'admin1'"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    },
+    {
+      "step_number": 2,
+      "timestamp": "2025-09-29T00:57:05.151377",
+      "prompt": "Click the 'Login' button",
+      "ai_response": "Selector: locator('form').locator('button.btn')\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "locator('form').locator('button.btn')",
+        "action_type": "click"
+      },
+      "remaining_scenario": "then login then navigate to 'http://localhost:8001/admin/content' and Click edit and change the title",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 2,
+      "timestamp": "2025-09-29T00:57:08.139478",
+      "prompt": "Click the 'Login' button",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "locator('form').locator('button.btn')",
+        "action_type": "click",
+        "step_desc": "Click the 'Login' button"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    },
+    {
+      "step_number": 3,
+      "timestamp": "2025-09-29T00:57:19.992430",
+      "prompt": "Click the 'Content' link in the sidebar to navigate to the content management page.",
+      "ai_response": "Selector: getByRole('link', {name: 'Content'})\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('link', {name: 'Content'})",
+        "action_type": "click"
+      },
+      "remaining_scenario": "then navigate to 'http://localhost:8001/admin/content' and Click edit and change the title",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/test_Login_app_with_username_admin__20250929_005626/step_7.png"
+    },
+    {
+      "step_number": 3,
+      "timestamp": "2025-09-29T00:57:45.462220",
+      "prompt": "Click the 'Content' link in the sidebar to navigate to the content management page.",
+      "ai_response": "Action failed: getByRole('link', {name: 'Content'})click",
+      "action": {
+        "type": "action",
+        "status": "failed",
+        "selector": "getByRole('link', {name: 'Content'})",
+        "action_type": "click"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": false
+      }
+    },
+    {
+      "step_number": 4,
+      "timestamp": "2025-09-29T00:57:51.740603",
+      "prompt": "Click the 'Content' link in the sidebar to navigate to the content management page.",
+      "ai_response": "Selector: locator('a[href=\"/admin/content\"]')\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "locator('a[href=\"/admin/content\"]')",
+        "action_type": "click"
+      },
+      "remaining_scenario": "then navigate to 'http://localhost:8001/admin/content' and Click edit and change the title",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 2,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 4,
+      "timestamp": "2025-09-29T00:58:04.061122",
+      "prompt": "Click the 'Content' link in the sidebar to navigate to the content management page.",
+      "ai_response": "Action failed: locator('a[href=\"/admin/content\"]')click",
+      "action": {
+        "type": "action",
+        "status": "failed",
+        "selector": "locator('a[href=\"/admin/content\"]')",
+        "action_type": "click"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": false
+      }
+    },
+    {
+      "step_number": 5,
+      "timestamp": "2025-09-29T00:58:11.602857",
+      "prompt": "Click the 'Content' link in the sidebar to navigate to the content management page.",
+      "ai_response": "Selector: getByText('Content').filter({has: locator('.nav-link')})\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "getByText('Content').filter({has: locator('.nav-link')})",
+        "action_type": "click"
+      },
+      "remaining_scenario": "then navigate to 'http://localhost:8001/admin/content' and Click edit and change the title",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 3,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 5,
+      "timestamp": "2025-09-29T00:58:37.012203",
+      "prompt": "Click the 'Content' link in the sidebar to navigate to the content management page.",
+      "ai_response": "Action failed: getByText('Content').filter({has: locator('.nav-link')})click",
+      "action": {
+        "type": "action",
+        "status": "failed",
+        "selector": "getByText('Content').filter({has: locator('.nav-link')})",
+        "action_type": "click"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": false
+      }
+    },
+    {
+      "step_number": 6,
+      "timestamp": "2025-09-29T00:58:43.627397",
+      "prompt": "Click the 'Content' link in the sidebar to navigate to the content management page.",
+      "ai_response": "Selector: locator('.nav-link').nth(3)\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "locator('.nav-link').nth(3)",
+        "action_type": "click"
+      },
+      "remaining_scenario": "then navigate to 'http://localhost:8001/admin/content' and Click edit and change the title",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 4,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 6,
+      "timestamp": "2025-09-29T00:58:52.077611",
+      "prompt": "Click the 'Content' link in the sidebar to navigate to the content management page.",
+      "ai_response": "Action failed: locator('.nav-link').nth(3)click",
+      "action": {
+        "type": "action",
+        "status": "failed",
+        "selector": "locator('.nav-link').nth(3)",
+        "action_type": "click"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": false
+      }
+    },
+    {
+      "step_number": 7,
+      "timestamp": "2025-09-29T00:58:59.524531",
+      "prompt": "Click the 'Content' link in the sidebar to navigate to the content management page.",
+      "ai_response": "Selector: locator('.sidebar').getByRole('link', {name: 'Content'})\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "locator('.sidebar').getByRole('link', {name: 'Content'})",
+        "action_type": "click"
+      },
+      "remaining_scenario": "then navigate to 'http://localhost:8001/admin/content' and Click edit and change the title",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 5,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 7,
+      "timestamp": "2025-09-29T00:59:00.635683",
+      "prompt": "Click the 'Content' link in the sidebar to navigate to the content management page.",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "locator('.sidebar') >> internal:role=link[name=\"Content\"]",
+        "action_type": "click",
+        "step_desc": "Click the 'Content' link in the sidebar to navigate to the content management page."
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    },
+    {
+      "step_number": 8,
+      "timestamp": "2025-09-29T00:59:12.856846",
+      "prompt": "Click the 'Content' link in the sidebar to navigate to the content management page.",
+      "ai_response": "Selector: getByRole('link', {name: 'Content'})\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('link', {name: 'Content'})",
+        "action_type": "click"
+      },
+      "remaining_scenario": "then navigate to 'http://localhost:8001/admin/content' and Click edit and change the title",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 5,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 8,
+      "timestamp": "2025-09-29T00:59:38.201397",
+      "prompt": "Click the 'Content' link in the sidebar to navigate to the content management page.",
+      "ai_response": "Action failed: getByRole('link', {name: 'Content'})click",
+      "action": {
+        "type": "action",
+        "status": "failed",
+        "selector": "getByRole('link', {name: 'Content'})",
+        "action_type": "click"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": false
+      }
+    },
+    {
+      "step_number": 9,
+      "timestamp": "2025-09-29T00:59:44.683656",
+      "prompt": "Click the 'Content' link in the sidebar to navigate to the content management page.",
+      "ai_response": "Selector: locator('a[href=\"/admin/content\"]')\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "locator('a[href=\"/admin/content\"]')",
+        "action_type": "click"
+      },
+      "remaining_scenario": "then navigate to 'http://localhost:8001/admin/content' and Click edit and change the title",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 6,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 9,
+      "timestamp": "2025-09-29T00:59:56.993380",
+      "prompt": "Click the 'Content' link in the sidebar to navigate to the content management page.",
+      "ai_response": "Action failed: locator('a[href=\"/admin/content\"]')click",
+      "action": {
+        "type": "action",
+        "status": "failed",
+        "selector": "locator('a[href=\"/admin/content\"]')",
+        "action_type": "click"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": false
+      }
+    },
+    {
+      "step_number": 10,
+      "timestamp": "2025-09-29T01:00:03.783522",
+      "prompt": "Click the 'Content' link in the sidebar to navigate to the content management page.",
+      "ai_response": "Selector: getByText('Content').filter({has: locator('.nav-link')})\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "getByText('Content').filter({has: locator('.nav-link')})",
+        "action_type": "click"
+      },
+      "remaining_scenario": "then navigate to 'http://localhost:8001/admin/content' and Click edit and change the title",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 7,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 10,
+      "timestamp": "2025-09-29T01:00:06.115433",
+      "prompt": "Click the 'Content' link in the sidebar to navigate to the content management page.",
+      "ai_response": "Action failed: getByText('Content').filter({has: locator('.nav-link')})click",
+      "action": {
+        "type": "action",
+        "status": "failed",
+        "selector": "getByText('Content').filter({has: locator('.nav-link')})",
+        "action_type": "click"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": false
+      }
+    },
+    {
+      "step_number": 11,
+      "timestamp": "2025-09-29T01:00:13.563681",
+      "prompt": "Click the 'Content' link in the sidebar to navigate to the content management page.",
+      "ai_response": "Selector: getByRole('navigation').getByText('Content')\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('navigation').getByText('Content')",
+        "action_type": "click"
+      },
+      "remaining_scenario": "then navigate to 'http://localhost:8001/admin/content' and Click edit and change the title",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 8,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 11,
+      "timestamp": "2025-09-29T01:00:38.862495",
+      "prompt": "Click the 'Content' link in the sidebar to navigate to the content management page.",
+      "ai_response": "Action failed: getByRole('navigation').getByText('Content')click",
+      "action": {
+        "type": "action",
+        "status": "failed",
+        "selector": "getByRole('navigation').getByText('Content')",
+        "action_type": "click"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": false
+      }
+    },
+    {
+      "step_number": 12,
+      "timestamp": "2025-09-29T01:00:47.238060",
+      "prompt": "Click the 'Content' link in the sidebar to navigate to the content management page.",
+      "ai_response": "Selector: locator('.nav-link').nth(3)\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "locator('.nav-link').nth(3)",
+        "action_type": "click"
+      },
+      "remaining_scenario": "then navigate to 'http://localhost:8001/admin/content' and Click edit and change the title",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 9,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 12,
+      "timestamp": "2025-09-29T01:00:55.544419",
+      "prompt": "Click the 'Content' link in the sidebar to navigate to the content management page.",
+      "ai_response": "Action failed: locator('.nav-link').nth(3)click",
+      "action": {
+        "type": "action",
+        "status": "failed",
+        "selector": "locator('.nav-link').nth(3)",
+        "action_type": "click"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": false
+      }
+    },
+    {
+      "step_number": 13,
+      "timestamp": "2025-09-29T01:01:06.007966",
+      "prompt": "Click the 'Content' link in the sidebar to navigate to the content management page.",
+      "ai_response": "Selector: locator('.sidebar-nav').locator('a.nav-link').nth(3)\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "locator('.sidebar-nav').locator('a.nav-link').nth(3)",
+        "action_type": "click"
+      },
+      "remaining_scenario": "then navigate to 'http://localhost:8001/admin/content' and Click edit and change the title",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 10,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 13,
+      "timestamp": "2025-09-29T01:01:14.193556",
+      "prompt": "Click the 'Content' link in the sidebar to navigate to the content management page.",
+      "ai_response": "Action failed: locator('.sidebar-nav').locator('a.nav-link').nth(3)click",
+      "action": {
+        "type": "action",
+        "status": "failed",
+        "selector": "locator('.sidebar-nav').locator('a.nav-link').nth(3)",
+        "action_type": "click"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": false
+      }
+    },
+    {
+      "step_number": 14,
+      "timestamp": "2025-09-29T01:01:21.189024",
+      "prompt": "Click the 'Content' link in the sidebar to navigate to the content management page.",
+      "ai_response": "Selector: locator('.sidebar-nav').getByRole('link', {name: 'Content'})\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "locator('.sidebar-nav').getByRole('link', {name: 'Content'})",
+        "action_type": "click"
+      },
+      "remaining_scenario": "then navigate to 'http://localhost:8001/admin/content' and Click edit and change the title",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 11,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 14,
+      "timestamp": "2025-09-29T01:01:29.780442",
+      "prompt": "Click the 'Content' link in the sidebar to navigate to the content management page.",
+      "ai_response": "Action failed: locator('.sidebar-nav').getByRole('link', {name: 'Content'})click",
+      "action": {
+        "type": "action",
+        "status": "failed",
+        "selector": "locator('.sidebar-nav').getByRole('link', {name: 'Content'})",
+        "action_type": "click"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": false
+      }
+    }
+  ],
+  "generated_test": {
+    "code": "const { test, expect } = require('@playwright/test');\n\ntest('Login app with username admin password admin1 then login then navigate to http://localhost:8001/admin/content and Click edit and change the title', async ({ page }) => {\n    test.use({ headless: false });\n    await page.goto('http://localhost:8001/admin');\n    \n    const usernameField = page.getByRole('textbox', {name: 'Username'});\n    await expect(usernameField).toBeVisible();\n    await usernameField.fill('admin');\n    \n    const passwordField = page.getByRole('textbox',{ name:'Password' });\n    await expect(passwordField).toBeVisible();\n    await passwordField.fill('admin1');\n    \n    const loginButton = page.locator('form').locator('button.btn');\n    await expect(loginButton).toBeEnabled();\n    await loginButton.click();\n    await expect(page).toHaveURL(/.+/);\n    \n    const contentLink = page.locator('.sidebar').locator({ role: 'link', name: 'Content' });\n    await expect(contentLink).toBeVisible();\n    await contentLink.click();\n    await expect(page).toHaveURL('http://localhost:8001/admin/content');\n});\n",
+    "scenario": "Login app with username admin password admin1 then login then navigate to 'http://localhost:8001/admin/content' and Click edit and change the title",
+    "url": "http://localhost:8001/admin",
+    "timestamp": "2025-09-29T01:01:36.573821"
+  },
+  "end_time": "2025-09-29T01:01:36.576311",
+  "success": false,
+  "metrics": {
+    "total_steps": 15,
+    "completed_steps": 4,
+    "remaining_scenario": "then navigate to 'http://localhost:8001/admin/content' and Click edit and change the title",
+    "total_selector_attempts": 180,
+    "successful_selectors": 4
+  }
+}

@@ -1,0 +1,455 @@
+{
+  "test_name": "Login_app_with_username_admin_",
+  "original_scenario": "Login app with username admin password admin1 and click remember me then login Go to create new content and write title 'How to write thesis' and then write something in content and select options then select books as a category and save it",
+  "remaining_scenario": "Select books as a category and save it",
+  "completed_steps": [
+    "Fill the username field with 'admin'",
+    "Fill the password field with 'admin1'",
+    "Check the 'Remember me' checkbox",
+    "Click the 'Login' button",
+    "Click the 'New content' link",
+    "Fill the title field with 'How to write thesis'",
+    "Write something in the content field within the rich text editor.",
+    "Click the 'Options' button.",
+    "Select 'Books' from the CATEGORY dropdown.",
+    "Click the 'Save' button."
+  ],
+  "failed_attempts": [
+    {
+      "selector": "getByRole('option', {name: 'Books'})",
+      "action_type": "select"
+    }
+  ],
+  "steps": [
+    {
+      "step_number": 0,
+      "timestamp": "2025-10-09T11:47:25.204509",
+      "prompt": "Fill the username field with 'admin'",
+      "ai_response": "Selector: getByRole('textbox', {name: 'Username'})\nAction Type: fill",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('textbox', {name: 'Username'})",
+        "action_type": "fill"
+      },
+      "remaining_scenario": "Login app with username admin password admin1 and click remember me then login Go to create new content and write title 'How to write thesis' and then write something in content and select options then select books as a category and save it",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/add_new_content_with_category_open_ai/step_1.png"
+    },
+    {
+      "step_number": 0,
+      "timestamp": "2025-10-09T11:47:26.357272",
+      "prompt": "Fill the username field with 'admin'",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('textbox', {name: 'Username'})",
+        "action_type": "fill",
+        "step_desc": "Fill the username field with 'admin'",
+        "resolved_locator": "<Locator frame=<Frame name= url='http://localhost:8001/admin/'> selector='internal:role=textbox[name=\"Username\"i]'>"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      },
+      "screenshot": "logs/add_new_content_with_category_open_ai/step_2.png"
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2025-10-09T11:47:40.344780",
+      "prompt": "Fill the password field with 'admin1'",
+      "ai_response": "Selector: getByRole('textbox', {name: 'Password'})\nAction Type: fill",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('textbox', {name: 'Password'})",
+        "action_type": "fill"
+      },
+      "remaining_scenario": "Fill the password field with 'admin1' and click remember me then login Go to create new content and write title 'How to write thesis' and then write something in content and select options then select books as a category and save it",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/add_new_content_with_category_open_ai/step_3.png"
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2025-10-09T11:47:41.412834",
+      "prompt": "Fill the password field with 'admin1'",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('textbox', {name: 'Password'})",
+        "action_type": "fill",
+        "step_desc": "Fill the password field with 'admin1'",
+        "resolved_locator": "<Locator frame=<Frame name= url='http://localhost:8001/admin/'> selector='internal:role=textbox[name=\"Password\"i]'>"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      },
+      "screenshot": "logs/add_new_content_with_category_open_ai/step_4.png"
+    },
+    {
+      "step_number": 2,
+      "timestamp": "2025-10-09T11:47:51.411770",
+      "prompt": "Check the 'Remember me' checkbox",
+      "ai_response": "Selector: getByRole('checkbox', {name: 'Remember me'})\nAction Type: check",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('checkbox', {name: 'Remember me'})",
+        "action_type": "check"
+      },
+      "remaining_scenario": "Click remember me then login Go to create new content and write title 'How to write thesis' and then write something in content and select options then select books as a category and save it",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/add_new_content_with_category_open_ai/step_5.png"
+    },
+    {
+      "step_number": 2,
+      "timestamp": "2025-10-09T11:47:52.487608",
+      "prompt": "Check the 'Remember me' checkbox",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('checkbox', {name: 'Remember me'})",
+        "action_type": "check",
+        "step_desc": "Check the 'Remember me' checkbox",
+        "resolved_locator": "<Locator frame=<Frame name= url='http://localhost:8001/admin/'> selector='internal:role=checkbox[name=\"Remember me\"i]'>"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      },
+      "screenshot": "logs/add_new_content_with_category_open_ai/step_6.png"
+    },
+    {
+      "step_number": 3,
+      "timestamp": "2025-10-09T11:48:03.696786",
+      "prompt": "Click the 'Login' button",
+      "ai_response": "Selector: locator('form').locator('button.btn')\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "locator('form').locator('button.btn')",
+        "action_type": "click"
+      },
+      "remaining_scenario": "Go to create new content and write title 'How to write thesis' and then write something in content and select options then select books as a category and save it",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/add_new_content_with_category_open_ai/step_7.png"
+    },
+    {
+      "step_number": 3,
+      "timestamp": "2025-10-09T11:48:06.683121",
+      "prompt": "Click the 'Login' button",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "locator('form').locator('button.btn')",
+        "action_type": "click",
+        "step_desc": "Click the 'Login' button",
+        "resolved_locator": "<Locator frame=<Frame name= url='http://localhost:8001/admin/dashboard'> selector='form >> button.btn'>"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    },
+    {
+      "step_number": 4,
+      "timestamp": "2025-10-09T11:48:21.319587",
+      "prompt": "Click the 'New content' link",
+      "ai_response": "Selector: getByRole('link', {name: 'New content'})\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('link', {name: 'New content'})",
+        "action_type": "click"
+      },
+      "remaining_scenario": "Go to create new content and write title 'How to write thesis' and then write something in content and select options then select books as a category and save it",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/add_new_content_with_category_open_ai/step_9.png"
+    },
+    {
+      "step_number": 4,
+      "timestamp": "2025-10-09T11:48:23.468718",
+      "prompt": "Click the 'New content' link",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('link', {name: 'New content'})",
+        "action_type": "click",
+        "step_desc": "Click the 'New content' link",
+        "resolved_locator": "<Locator frame=<Frame name= url='http://localhost:8001/admin/new-content'> selector='internal:role=link[name=\"New content\"i]'>"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      },
+      "screenshot": "logs/add_new_content_with_category_open_ai/step_10.png"
+    },
+    {
+      "step_number": 5,
+      "timestamp": "2025-10-09T11:48:46.271467",
+      "prompt": "Fill the title field with 'How to write thesis'",
+      "ai_response": "Selector: getByRole('textbox', {name: 'Enter title'})\nAction Type: fill",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('textbox', {name: 'Enter title'})",
+        "action_type": "fill"
+      },
+      "remaining_scenario": "Write title 'How to write thesis' and then write something in content and select options then select books as a category and save it",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 5,
+      "timestamp": "2025-10-09T11:48:47.349780",
+      "prompt": "Fill the title field with 'How to write thesis'",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('textbox', {name: 'Enter title'})",
+        "action_type": "fill",
+        "step_desc": "Fill the title field with 'How to write thesis'",
+        "resolved_locator": "<Locator frame=<Frame name= url='http://localhost:8001/admin/new-content'> selector='internal:role=textbox[name=\"Enter title\"i]'>"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    },
+    {
+      "step_number": 6,
+      "timestamp": "2025-10-09T11:49:34.237296",
+      "prompt": "Write something in the content field within the rich text editor.",
+      "ai_response": "Selector: locator('#jseditor_ifr').contentLocator('body')\nAction Type: richTextFill",
+      "action": {
+        "type": "selector",
+        "selector": "locator('#jseditor_ifr').contentLocator('body')",
+        "action_type": "richTextFill"
+      },
+      "remaining_scenario": "Write something in content and select options then select books as a category and save it",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 6,
+      "timestamp": "2025-10-09T11:49:35.378651",
+      "prompt": "Write something in the content field within the rich text editor.",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "locator('#jseditor_ifr').contentLocator('body')",
+        "action_type": "richTextFill",
+        "step_desc": "Write something in the content field within the rich text editor.",
+        "resolved_locator": "<Locator frame=<Frame name= url='http://localhost:8001/admin/new-content'> selector='#jseditor_ifr >> internal:control=enter-frame >> body'>"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    },
+    {
+      "step_number": 7,
+      "timestamp": "2025-10-09T11:49:59.661221",
+      "prompt": "Click the 'Options' button.",
+      "ai_response": "Selector: getByRole('button', {name: 'Options'})\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('button', {name: 'Options'})",
+        "action_type": "click"
+      },
+      "remaining_scenario": "Select options then select books as a category and save it",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 7,
+      "timestamp": "2025-10-09T11:50:00.772141",
+      "prompt": "Click the 'Options' button.",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('button', {name: 'Options'})",
+        "action_type": "click",
+        "step_desc": "Click the 'Options' button.",
+        "resolved_locator": "<Locator frame=<Frame name= url='http://localhost:8001/admin/new-content'> selector='internal:role=button[name=\"Options\"i]'>"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    },
+    {
+      "step_number": 8,
+      "timestamp": "2025-10-09T11:50:24.258010",
+      "prompt": "Select 'Books' from the CATEGORY dropdown.",
+      "ai_response": "Selector: getByRole('option', {name: 'Books'})\nAction Type: select",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('option', {name: 'Books'})",
+        "action_type": "select"
+      },
+      "remaining_scenario": "Select books as a category and save it",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 8,
+      "timestamp": "2025-10-09T11:50:38.969058",
+      "prompt": "Select 'Books' from the CATEGORY dropdown.",
+      "ai_response": "Action failed: getByRole('option', {name: 'Books'})select",
+      "action": {
+        "type": "action",
+        "status": "failed",
+        "selector": "getByRole('option', {name: 'Books'})",
+        "action_type": "select",
+        "resolved_locator": "<Locator frame=<Frame name= url='http://localhost:8001/admin/new-content'> selector='internal:role=option[name=\"Books\"]'>"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": false
+      }
+    },
+    {
+      "step_number": 9,
+      "timestamp": "2025-10-09T11:50:52.137744",
+      "prompt": "Select 'Books' from the CATEGORY dropdown.",
+      "ai_response": "Selector: locator('#jscategory').selectOption({ value: 'books' })\nAction Type: select",
+      "action": {
+        "type": "selector",
+        "selector": "locator('#jscategory').selectOption({ value: 'books' })",
+        "action_type": "select"
+      },
+      "remaining_scenario": "Select books as a category and save it",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 2,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 9,
+      "timestamp": "2025-10-09T11:50:53.260132",
+      "prompt": "Select 'Books' from the CATEGORY dropdown.",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "locator('#jscategory').selectOption({ value: 'books' })",
+        "action_type": "select",
+        "step_desc": "Select 'Books' from the CATEGORY dropdown.",
+        "resolved_locator": "<Locator frame=<Frame name= url='http://localhost:8001/admin/new-content'> selector='#jscategory'>"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    },
+    {
+      "step_number": 10,
+      "timestamp": "2025-10-09T11:51:13.785805",
+      "prompt": "Click the 'Save' button.",
+      "ai_response": "Selector: getByRole('button', {name: 'Save'})\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('button', {name: 'Save'})",
+        "action_type": "click"
+      },
+      "remaining_scenario": "Select books as a category and save it",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 2,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 10,
+      "timestamp": "2025-10-09T11:51:26.972593",
+      "prompt": "Click the 'Save' button.",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('button', {name: 'Save'})",
+        "action_type": "click",
+        "step_desc": "Click the 'Save' button.",
+        "resolved_locator": "<Locator frame=<Frame name= url='http://localhost:8001/admin/content#published'> selector='internal:role=button[name=\"Save\"i]'>"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    }
+  ],
+  "generated_test": {
+    "code": "```javascript\nconst { test, expect } = require('@playwright/test');\n\ntest('Login app with username admin password admin1 and click remember me then login Go to create new content and write title \"How to write thesis\" and then write something in content and select options then select books as a category and save it', async ({ page }) => {\n  await page.goto('http://localhost:8001/admin');\n  \n  const usernameField = page.getByRole('textbox', { name: 'Username' });\n  await expect(usernameField).toBeVisible();\n  await usernameField.fill('admin');\n\n  const passwordField = page.getByRole('textbox', { name: 'Password' });\n  await expect(passwordField).toBeVisible();\n  await passwordField.fill('admin1');\n\n  const rememberMeCheckbox = page.getByRole('checkbox', { name: 'Remember me' });\n  await expect(rememberMeCheckbox).toBeVisible();\n  await rememberMeCheckbox.check();\n\n  const loginButton = page.locator('form').locator('button.btn');\n  await expect(loginButton).toBeVisible();\n  await expect(loginButton).toBeEnabled();\n  await loginButton.click();\n\n  await expect(page).toHaveURL(/\\/admin\\/dashboard/);\n\n  const newContentLink = page.getByRole('link', { name: 'New content' });\n  await expect(newContentLink).toBeVisible();\n  await newContentLink.click();\n\n  await expect(page).toHaveURL(/\\/admin\\/new-content/);\n\n  const titleField = page.getByRole('textbox', { name: 'Enter title' });\n  await expect(titleField).toBeVisible();\n  await titleField.fill('How to write thesis');\n\n  const contentBody = page.frameLocator('#jseditor_ifr').locator('body');\n  await expect(contentBody).toBeVisible();\n  await contentBody.fill('This is the content for the thesis.');\n\n  const optionsButton = page.getByRole('button', { name: 'Options' });\n  await expect(optionsButton).toBeVisible();\n  await optionsButton.click();\n\n  const categoryDropdown = page.locator('#jscategory');\n  await expect(categoryDropdown).toBeVisible();\n  await categoryDropdown.selectOption({ value: 'books' });\n\n  const saveButton = page.getByRole('button', { name: 'Save' });\n  await expect(saveButton).toBeVisible();\n  await expect(saveButton).toBeEnabled();\n  await saveButton.click();\n\n  await expect(page).toHaveURL(/\\/admin\\/content#published/);\n});\n```",
+    "scenario": "Login app with username admin password admin1 and click remember me then login Go to create new content and write title 'How to write thesis' and then write something in content and select options then select books as a category and save it",
+    "url": "http://localhost:8001/admin",
+    "timestamp": "2025-10-09T11:51:33.152165"
+  },
+  "end_time": "2025-10-09T11:51:33.153207",
+  "success": true,
+  "metrics": {
+    "total_steps": 11,
+    "completed_steps": 10,
+    "remaining_scenario": "Select books as a category and save it",
+    "total_selector_attempts": 22,
+    "successful_selectors": 10
+  }
+}

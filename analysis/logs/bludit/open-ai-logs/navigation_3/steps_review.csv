@@ -1,0 +1,4 @@
+test_name,step_index,expected_steps,prompt,planned_element,planned_action_type,planned_selector,execution_action_type,execution_selector,execution_status,execution_success,is_expected_step,selector_attempts,locator_mismatch,skipped_auto,suspected_hallucination
+Navigate_to_http://localhost:8,0,Navigate to http://localhost:8001,Fill the username field with 'admin',textbox,fill,"getByRole('textbox', {name: 'Username'})",fill,"getByRole('textbox', {name: 'Username'})",success,True,True,1,False,False,False
+Navigate_to_http://localhost:8,1,Fill username admin,Fill the password field with 'admin1' and submit the form,textbox,fill,"getByRole('textbox', {name: 'Password'})",fill,"getByRole('textbox', {name: 'Password'})",success,True,True,1,False,False,False
+,,Fill password admin1,,,,,,,,,,,,,

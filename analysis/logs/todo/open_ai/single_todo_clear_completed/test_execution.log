@@ -1,0 +1,223 @@
+{
+  "test_name": "Add_a_todo_with_the_text_'One_",
+  "original_scenario": "Add a todo with the text 'One To', press enter after it, mark it as completed, then click 'Clear completed' and verify the list is empty.",
+  "remaining_scenario": "Mark it as completed, then click 'Clear completed' and verify the list is empty.",
+  "completed_steps": [
+    "Fill the 'What needs to be done?' input field with 'One To'",
+    "Press Enter to submit the todo",
+    "Check the checkbox next to the todo item 'One To' to mark it as completed.",
+    "Click the 'Clear completed' button"
+  ],
+  "failed_attempts": [
+    {
+      "selector": "locator('input[type=\"checkbox\"][value=\"on\"]')",
+      "action_type": "check"
+    }
+  ],
+  "steps": [
+    {
+      "step_number": 0,
+      "timestamp": "2025-10-09T14:38:16.724495",
+      "prompt": "Fill the 'What needs to be done?' input field with 'One To'",
+      "ai_response": "Selector: getByRole('textbox', {name: 'What needs to be done?'})\nAction Type: fill",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('textbox', {name: 'What needs to be done?'})",
+        "action_type": "fill"
+      },
+      "remaining_scenario": "Add a todo with the text 'One To', press enter after it, mark it as completed, then click 'Clear completed' and verify the list is empty.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/single_todo_clear_completed/step_1.png"
+    },
+    {
+      "step_number": 0,
+      "timestamp": "2025-10-09T14:38:17.802185",
+      "prompt": "Fill the 'What needs to be done?' input field with 'One To'",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('textbox', {name: 'What needs to be done?'})",
+        "action_type": "fill",
+        "step_desc": "Fill the 'What needs to be done?' input field with 'One To'",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://demo.playwright.dev/todomvc/#/'> selector='internal:role=textbox[name=\"What needs to be done?\"i]'>"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      },
+      "screenshot": "logs/single_todo_clear_completed/step_0.png"
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2025-10-09T14:38:29.290071",
+      "prompt": "Press Enter to submit the todo",
+      "ai_response": "Selector: getByRole('textbox', {name: 'What needs to be done?'})\nAction Type: press_key",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('textbox', {name: 'What needs to be done?'})",
+        "action_type": "press_key"
+      },
+      "remaining_scenario": "Press Enter to submit the todo, mark it as completed, then click 'Clear completed' and verify the list is empty.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/single_todo_clear_completed/step_3.png"
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2025-10-09T14:38:30.374224",
+      "prompt": "Press Enter to submit the todo",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('textbox', {name: 'What needs to be done?'})",
+        "action_type": "press_key",
+        "step_desc": "Press Enter to submit the todo",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://demo.playwright.dev/todomvc/#/'> selector='internal:role=textbox[name=\"What needs to be done?\"i]'>"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      },
+      "screenshot": "logs/single_todo_clear_completed/step_4.png"
+    },
+    {
+      "step_number": 2,
+      "timestamp": "2025-10-09T14:38:44.481962",
+      "prompt": "Check the checkbox next to the todo item 'One To' to mark it as completed.",
+      "ai_response": "Selector: locator('input[type=\"checkbox\"][value=\"on\"]')\nAction Type: check",
+      "action": {
+        "type": "selector",
+        "selector": "locator('input[type=\"checkbox\"][value=\"on\"]')",
+        "action_type": "check"
+      },
+      "remaining_scenario": "Mark it as completed, then click 'Clear completed' and verify the list is empty.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/single_todo_clear_completed/step_5.png"
+    },
+    {
+      "step_number": 2,
+      "timestamp": "2025-10-09T14:41:02.762816",
+      "prompt": "Check the checkbox next to the todo item 'One To' to mark it as completed.",
+      "ai_response": "Action failed: locator('input[type=\"checkbox\"][value=\"on\"]')check",
+      "action": {
+        "type": "action",
+        "status": "failed",
+        "selector": "locator('input[type=\"checkbox\"][value=\"on\"]')",
+        "action_type": "check",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://demo.playwright.dev/todomvc/#/'> selector='input[type=\"checkbox\"][value=\"on\"]'>"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": false
+      }
+    },
+    {
+      "step_number": 3,
+      "timestamp": "2025-10-09T14:41:07.978428",
+      "prompt": "Check the checkbox next to the todo item 'One To' to mark it as completed.",
+      "ai_response": "Selector: getByText('One To').locator('..').locator('input[type=\"checkbox\"]')\nAction Type: check",
+      "action": {
+        "type": "selector",
+        "selector": "getByText('One To').locator('..').locator('input[type=\"checkbox\"]')",
+        "action_type": "check"
+      },
+      "remaining_scenario": "Mark it as completed, then click 'Clear completed' and verify the list is empty.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 2,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 3,
+      "timestamp": "2025-10-09T14:41:12.067983",
+      "prompt": "Check the checkbox next to the todo item 'One To' to mark it as completed.",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "locator('input[type=\"checkbox\"]')",
+        "action_type": "check",
+        "step_desc": "Check the checkbox next to the todo item 'One To' to mark it as completed.",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://demo.playwright.dev/todomvc/#/'> selector='input[type=\"checkbox\"] >> nth=0'>"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    },
+    {
+      "step_number": 4,
+      "timestamp": "2025-10-09T14:41:21.404391",
+      "prompt": "Click the 'Clear completed' button",
+      "ai_response": "Selector: getByRole('button', {name: 'Clear completed'})\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('button', {name: 'Clear completed'})",
+        "action_type": "click"
+      },
+      "remaining_scenario": "Mark it as completed, then click 'Clear completed' and verify the list is empty.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 2,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 4,
+      "timestamp": "2025-10-09T14:41:22.511690",
+      "prompt": "Click the 'Clear completed' button",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('button', {name: 'Clear completed'})",
+        "action_type": "click",
+        "step_desc": "Click the 'Clear completed' button",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://demo.playwright.dev/todomvc/#/'> selector='internal:role=button[name=\"Clear completed\"i]'>"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    }
+  ],
+  "generated_test": {
+    "code": "```javascript\nconst { test, expect } = require('@playwright/test');\n\ntest(\"Add a todo with the text 'One To', press enter after it, mark it as completed, then click 'Clear completed' and verify the list is empty.\", async ({ page }) => {\n  await page.goto('https://demo.playwright.dev/todomvc/#/');\n  \n  const todoInput = page.getByRole('textbox', { name: 'What needs to be done?' });\n  await expect(todoInput).toBeVisible();\n  await todoInput.fill('One To');\n  await todoInput.press('Enter');\n\n  const todoCheckbox = page.locator('input[type=\"checkbox\"]').first();\n  await expect(todoCheckbox).toBeVisible();\n  await todoCheckbox.check();\n\n  const clearCompletedButton = page.getByRole('button', { name: 'Clear completed' });\n  await expect(clearCompletedButton).toBeVisible();\n  await expect(clearCompletedButton).toBeEnabled();\n  await clearCompletedButton.click();\n\n  const todoList = page.locator('.todo-list li');\n  await expect(todoList).toHaveCount(0);\n});\n```",
+    "scenario": "Add a todo with the text 'One To', press enter after it, mark it as completed, then click 'Clear completed' and verify the list is empty.",
+    "url": "https://demo.playwright.dev/todomvc/#/",
+    "timestamp": "2025-10-09T14:41:32.278266"
+  },
+  "end_time": "2025-10-09T14:41:32.279236",
+  "success": true,
+  "metrics": {
+    "total_steps": 5,
+    "completed_steps": 4,
+    "remaining_scenario": "Mark it as completed, then click 'Clear completed' and verify the list is empty.",
+    "total_selector_attempts": 10,
+    "successful_selectors": 4
+  }
+}

@@ -1,0 +1,557 @@
+{
+  "test_name": "Login_with_'standard_user'_/_'",
+  "original_scenario": "Login with 'standard_user' / 'secret_sauce'. From Products, add 'Sauce Labs Bike Light', open the cart and verify quantity shows '1'. Proceed through Checkout with First Name 'Test', Last Name 'User', Zip '52200', finish the order, then navigate back Home and confirm the cart badge is cleared.",
+  "remaining_scenario": "Confirm the cart badge is cleared.",
+  "completed_steps": [
+    "Fill the Username field with 'standard_user'",
+    "Fill the Password field with 'secret_sauce'",
+    "Click the Login button",
+    "Click the 'Add to cart' button next to 'Sauce Labs Bike Light'",
+    "Click the cart icon to open the cart and verify quantity shows '1'.",
+    "Click the 'Checkout' button to proceed to the checkout page.",
+    "Fill the First Name field with 'Test'",
+    "Fill the Last Name field with 'User'",
+    "Fill the Zip/Postal Code field with '52200'",
+    "Click the 'Continue' button to proceed to the next step in the checkout process",
+    "Click the 'Finish' button to complete the order",
+    "Click the 'Back Home' button",
+    "Confirm the cart badge is cleared."
+  ],
+  "failed_attempts": [],
+  "steps": [
+    {
+      "step_number": 0,
+      "timestamp": "2025-10-11T17:58:18.285901",
+      "prompt": "Fill the Username field with 'standard_user'",
+      "ai_response": "Selector: getByRole('textbox', { name: 'Username' })\nAction Type: fill",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('textbox', { name: 'Username' })",
+        "action_type": "fill",
+        "vision_analysis": "{\n  \"context\": \"Login page with username/password form\",\n  \"elements\": [\n    \"Username field: visible, empty\",\n    \"Password field: visible, empty\",\n    \"Login button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario mentions login with 'standard_user' and 'secret_sauce': fields present\"\n  ]\n}"
+      },
+      "remaining_scenario": "Login with 'standard_user' / 'secret_sauce'. From Products, add 'Sauce Labs Bike Light', open the cart and verify quantity shows '1'. Proceed through Checkout with First Name 'Test', Last Name 'User', Zip '52200', finish the order, then navigate back Home and confirm the cart badge is cleared.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/saucedemo/openai/bike-light-complete-checkout-and-clear-badge/step_1.png"
+    },
+    {
+      "step_number": 0,
+      "timestamp": "2025-10-11T17:58:19.392234",
+      "prompt": "Fill the Username field with 'standard_user'",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('textbox', { name: 'Username' })",
+        "action_type": "fill",
+        "step_desc": "Fill the Username field with 'standard_user'",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/'> selector='internal:role=textbox[name=\"Username\"i]'>",
+        "vision_analysis": "{\n  \"context\": \"Login page with username/password form\",\n  \"elements\": [\n    \"Username field: visible, empty\",\n    \"Password field: visible, empty\",\n    \"Login button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario mentions login with 'standard_user' and 'secret_sauce': fields present\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      },
+      "screenshot": "logs/saucedemo/openai/bike-light-complete-checkout-and-clear-badge/step_2.png"
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2025-10-11T17:58:34.571820",
+      "prompt": "Fill the Password field with 'secret_sauce'",
+      "ai_response": "Selector: getByRole('textbox', { name: 'Password' })\nAction Type: fill",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('textbox', { name: 'Password' })",
+        "action_type": "fill",
+        "vision_analysis": "{\n  \"context\": \"Login page with username/password form\",\n  \"elements\": [\n    \"Username field: visible, filled with 'standard_user'\",\n    \"Password field: visible, empty\",\n    \"Login button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario requires password entry: field is empty\"\n  ]\n}"
+      },
+      "remaining_scenario": "Fill the Password field with 'secret_sauce'. Click the Login button.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/saucedemo/openai/bike-light-complete-checkout-and-clear-badge/step_3.png"
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2025-10-11T17:58:35.652823",
+      "prompt": "Fill the Password field with 'secret_sauce'",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('textbox', { name: 'Password' })",
+        "action_type": "fill",
+        "step_desc": "Fill the Password field with 'secret_sauce'",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/'> selector='internal:role=textbox[name=\"Password\"i]'>",
+        "vision_analysis": "{\n  \"context\": \"Login page with username/password form\",\n  \"elements\": [\n    \"Username field: visible, filled with 'standard_user'\",\n    \"Password field: visible, empty\",\n    \"Login button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario requires password entry: field is empty\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      },
+      "screenshot": "logs/saucedemo/openai/bike-light-complete-checkout-and-clear-badge/step_4.png"
+    },
+    {
+      "step_number": 2,
+      "timestamp": "2025-10-11T17:58:49.000170",
+      "prompt": "Click the Login button",
+      "ai_response": "Selector: getByTestId('login-button')\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "getByTestId('login-button')",
+        "action_type": "click",
+        "vision_analysis": "{\n  \"context\": \"Login page with username/password form\",\n  \"elements\": [\n    \"Username field: visible, filled with 'standard_user'\",\n    \"Password field: visible, filled with 'secret_sauce'\",\n    \"Login button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario mentions clicking Login button: button is visible and enabled\"\n  ]\n}"
+      },
+      "remaining_scenario": "Click the Login button.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/saucedemo/openai/bike-light-complete-checkout-and-clear-badge/step_5.png"
+    },
+    {
+      "step_number": 2,
+      "timestamp": "2025-10-11T17:58:54.315267",
+      "prompt": "Click the Login button",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "locator('#login-button')",
+        "action_type": "click",
+        "step_desc": "Click the Login button",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/inventory.html'> selector='#login-button'>",
+        "vision_analysis": "{\n  \"context\": \"Login page with username/password form\",\n  \"elements\": [\n    \"Username field: visible, filled with 'standard_user'\",\n    \"Password field: visible, filled with 'secret_sauce'\",\n    \"Login button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario mentions clicking Login button: button is visible and enabled\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      },
+      "screenshot": "logs/saucedemo/openai/bike-light-complete-checkout-and-clear-badge/step_6.png"
+    },
+    {
+      "step_number": 3,
+      "timestamp": "2025-10-11T17:59:11.126399",
+      "prompt": "Click the 'Add to cart' button next to 'Sauce Labs Bike Light'",
+      "ai_response": "Selector: getByTestId('add-to-cart-sauce-labs-bike-light')\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "getByTestId('add-to-cart-sauce-labs-bike-light')",
+        "action_type": "click",
+        "vision_analysis": "{\n  \"context\": \"Products page with items listed\",\n  \"elements\": [\n    \"Sauce Labs Bike Light: visible, Add to cart button enabled\",\n    \"Cart icon: visible, no badge\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario requires adding 'Sauce Labs Bike Light' to cart: item visible\"\n  ]\n}"
+      },
+      "remaining_scenario": "From Products, add 'Sauce Labs Bike Light', open the cart and verify quantity shows '1'. Proceed through Checkout with First Name 'Test', Last Name 'User', Zip '52200', finish the order, then navigate back Home and confirm the cart badge is cleared.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/saucedemo/openai/bike-light-complete-checkout-and-clear-badge/step_7.png"
+    },
+    {
+      "step_number": 3,
+      "timestamp": "2025-10-11T17:59:16.263677",
+      "prompt": "Click the 'Add to cart' button next to 'Sauce Labs Bike Light'",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "locator('#add-to-cart-sauce-labs-bike-light')",
+        "action_type": "click",
+        "step_desc": "Click the 'Add to cart' button next to 'Sauce Labs Bike Light'",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/inventory.html'> selector='#add-to-cart-sauce-labs-bike-light'>",
+        "vision_analysis": "{\n  \"context\": \"Products page with items listed\",\n  \"elements\": [\n    \"Sauce Labs Bike Light: visible, Add to cart button enabled\",\n    \"Cart icon: visible, no badge\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario requires adding 'Sauce Labs Bike Light' to cart: item visible\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      },
+      "screenshot": "logs/saucedemo/openai/bike-light-complete-checkout-and-clear-badge/step_8.png"
+    },
+    {
+      "step_number": 4,
+      "timestamp": "2025-10-11T17:59:27.800842",
+      "prompt": "Click the cart icon to open the cart and verify quantity shows '1'.",
+      "ai_response": "Selector: getByTestId('shopping-cart-link')\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "getByTestId('shopping-cart-link')",
+        "action_type": "click",
+        "vision_analysis": "{\n  \"context\": \"Products page with items listed\",\n  \"elements\": [\n    \"Sauce Labs Bike Light: Remove button visible\",\n    \"Cart icon: visible, badge shows '1'\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Expected cart to be opened: not visible\"\n  ]\n}"
+      },
+      "remaining_scenario": "Open the cart and verify quantity shows '1'. Proceed through Checkout with First Name 'Test', Last Name 'User', Zip '52200', finish the order, then navigate back Home and confirm the cart badge is cleared.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/saucedemo/openai/bike-light-complete-checkout-and-clear-badge/step_9.png"
+    },
+    {
+      "step_number": 4,
+      "timestamp": "2025-10-11T17:59:32.014434",
+      "prompt": "Click the cart icon to open the cart and verify quantity shows '1'.",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "locator('[data-test=\"shopping-cart-link\"]')",
+        "action_type": "click",
+        "step_desc": "Click the cart icon to open the cart and verify quantity shows '1'.",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/cart.html'> selector='[data-test=\"shopping-cart-link\"]'>",
+        "vision_analysis": "{\n  \"context\": \"Products page with items listed\",\n  \"elements\": [\n    \"Sauce Labs Bike Light: Remove button visible\",\n    \"Cart icon: visible, badge shows '1'\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Expected cart to be opened: not visible\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      },
+      "screenshot": "logs/saucedemo/openai/bike-light-complete-checkout-and-clear-badge/step_10.png"
+    },
+    {
+      "step_number": 5,
+      "timestamp": "2025-10-11T17:59:42.692212",
+      "prompt": "Click the 'Checkout' button to proceed to the checkout page.",
+      "ai_response": "Selector: getByRole('button', {name:'Checkout'})\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('button', {name:'Checkout'})",
+        "action_type": "click",
+        "vision_analysis": "{\n  \"context\": \"Cart page with item listed\",\n  \"elements\": [\n    \"Cart item: Sauce Labs Bike Light, quantity 1\",\n    \"Checkout button: visible, enabled\",\n    \"Cart badge: visible, shows 1\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario requires proceeding through checkout: Checkout button visible\"\n  ]\n}"
+      },
+      "remaining_scenario": "Proceed through Checkout with First Name 'Test', Last Name 'User', Zip '52200', finish the order, then navigate back Home and confirm the cart badge is cleared.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/saucedemo/openai/bike-light-complete-checkout-and-clear-badge/step_11.png"
+    },
+    {
+      "step_number": 5,
+      "timestamp": "2025-10-11T17:59:43.911990",
+      "prompt": "Click the 'Checkout' button to proceed to the checkout page.",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('button', {name:'Checkout'})",
+        "action_type": "click",
+        "step_desc": "Click the 'Checkout' button to proceed to the checkout page.",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/checkout-step-one.html'> selector='internal:role=button[name=\"Checkout\"i]'>",
+        "vision_analysis": "{\n  \"context\": \"Cart page with item listed\",\n  \"elements\": [\n    \"Cart item: Sauce Labs Bike Light, quantity 1\",\n    \"Checkout button: visible, enabled\",\n    \"Cart badge: visible, shows 1\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario requires proceeding through checkout: Checkout button visible\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      },
+      "screenshot": "logs/saucedemo/openai/bike-light-complete-checkout-and-clear-badge/step_12.png"
+    },
+    {
+      "step_number": 6,
+      "timestamp": "2025-10-11T17:59:56.022799",
+      "prompt": "Fill the First Name field with 'Test'",
+      "ai_response": "Selector: getByRole('textbox', { name: 'First Name' })\nAction Type: fill",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('textbox', { name: 'First Name' })",
+        "action_type": "fill",
+        "vision_analysis": "{\n  \"context\": \"Checkout: Your Information page\",\n  \"elements\": [\n    \"First Name field: visible, empty\",\n    \"Last Name field: visible, empty\",\n    \"Zip/Postal Code field: visible, empty\",\n    \"Continue button: visible, enabled\",\n    \"Cancel button: visible, enabled\",\n    \"Cart badge: visible, shows '1'\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Expected fields for First Name, Last Name, and Zip: visible, empty\"\n  ]\n}"
+      },
+      "remaining_scenario": "Proceed through Checkout with First Name 'Test', Last Name 'User', Zip '52200', finish the order, then navigate back Home and confirm the cart badge is cleared.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 6,
+      "timestamp": "2025-10-11T17:59:57.171089",
+      "prompt": "Fill the First Name field with 'Test'",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('textbox', { name: 'First Name' })",
+        "action_type": "fill",
+        "step_desc": "Fill the First Name field with 'Test'",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/checkout-step-one.html'> selector='internal:role=textbox[name=\"First Name\"i]'>",
+        "vision_analysis": "{\n  \"context\": \"Checkout: Your Information page\",\n  \"elements\": [\n    \"First Name field: visible, empty\",\n    \"Last Name field: visible, empty\",\n    \"Zip/Postal Code field: visible, empty\",\n    \"Continue button: visible, enabled\",\n    \"Cancel button: visible, enabled\",\n    \"Cart badge: visible, shows '1'\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Expected fields for First Name, Last Name, and Zip: visible, empty\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    },
+    {
+      "step_number": 7,
+      "timestamp": "2025-10-11T18:00:08.677024",
+      "prompt": "Fill the Last Name field with 'User'",
+      "ai_response": "Selector: getByRole('textbox', { name: 'Last Name' })\nAction Type: fill",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('textbox', { name: 'Last Name' })",
+        "action_type": "fill",
+        "vision_analysis": "{\n  \"context\": \"Checkout: Your Information page\",\n  \"elements\": [\n    \"First Name field: visible, filled with 'Test'\",\n    \"Last Name field: visible, empty\",\n    \"Zip/Postal Code field: visible, empty\",\n    \"Continue button: visible, enabled\",\n    \"Cancel button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Expected Last Name and Zip fields: visible, empty\",\n    \"Cart badge shows '1': visible\"\n  ]\n}"
+      },
+      "remaining_scenario": "Fill the Last Name field with 'User', Zip '52200', finish the order, then navigate back Home and confirm the cart badge is cleared.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 7,
+      "timestamp": "2025-10-11T18:00:09.736185",
+      "prompt": "Fill the Last Name field with 'User'",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('textbox', { name: 'Last Name' })",
+        "action_type": "fill",
+        "step_desc": "Fill the Last Name field with 'User'",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/checkout-step-one.html'> selector='internal:role=textbox[name=\"Last Name\"i]'>",
+        "vision_analysis": "{\n  \"context\": \"Checkout: Your Information page\",\n  \"elements\": [\n    \"First Name field: visible, filled with 'Test'\",\n    \"Last Name field: visible, empty\",\n    \"Zip/Postal Code field: visible, empty\",\n    \"Continue button: visible, enabled\",\n    \"Cancel button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Expected Last Name and Zip fields: visible, empty\",\n    \"Cart badge shows '1': visible\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    },
+    {
+      "step_number": 8,
+      "timestamp": "2025-10-11T18:00:26.058378",
+      "prompt": "Fill the Zip/Postal Code field with '52200'",
+      "ai_response": "Selector: getByRole('textbox', { name: 'Zip/Postal Code' })\nAction Type: fill",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('textbox', { name: 'Zip/Postal Code' })",
+        "action_type": "fill",
+        "vision_analysis": "{\n  \"context\": \"Checkout: Your Information page\",\n  \"elements\": [\n    \"First Name field: visible, filled with 'Test'\",\n    \"Last Name field: visible, filled with 'User'\",\n    \"Zip/Postal Code field: visible, empty\",\n    \"Continue button: visible, enabled\",\n    \"Cancel button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Zip field: visible, empty as expected\"\n  ]\n}"
+      },
+      "remaining_scenario": "Fill the Zip field with '52200', finish the order, then navigate back Home and confirm the cart badge is cleared.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 8,
+      "timestamp": "2025-10-11T18:00:27.123651",
+      "prompt": "Fill the Zip/Postal Code field with '52200'",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('textbox', { name: 'Zip/Postal Code' })",
+        "action_type": "fill",
+        "step_desc": "Fill the Zip/Postal Code field with '52200'",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/checkout-step-one.html'> selector='internal:role=textbox[name=\"Zip/Postal Code\"i]'>",
+        "vision_analysis": "{\n  \"context\": \"Checkout: Your Information page\",\n  \"elements\": [\n    \"First Name field: visible, filled with 'Test'\",\n    \"Last Name field: visible, filled with 'User'\",\n    \"Zip/Postal Code field: visible, empty\",\n    \"Continue button: visible, enabled\",\n    \"Cancel button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Zip field: visible, empty as expected\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    },
+    {
+      "step_number": 9,
+      "timestamp": "2025-10-11T18:00:42.036047",
+      "prompt": "Click the 'Continue' button to proceed to the next step in the checkout process",
+      "ai_response": "Selector: getByTestId('continue')\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "getByTestId('continue')",
+        "action_type": "click",
+        "vision_analysis": "{\n  \"context\": \"Checkout: Your Information page\",\n  \"elements\": [\n    \"First Name field: visible, filled with 'Test'\",\n    \"Last Name field: visible, filled with 'User'\",\n    \"Zip/Postal Code field: visible, filled with '52200'\",\n    \"Continue button: visible, enabled\",\n    \"Cancel button: visible, enabled\",\n    \"Cart badge: visible, showing '1'\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Expected Checkout page: visible with filled fields\",\n    \"Cart badge shows '1', expected to be cleared after order completion\"\n  ]\n}"
+      },
+      "remaining_scenario": "Finish the order, then navigate back Home and confirm the cart badge is cleared.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 9,
+      "timestamp": "2025-10-11T18:00:47.367714",
+      "prompt": "Click the 'Continue' button to proceed to the next step in the checkout process",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "locator('#continue')",
+        "action_type": "click",
+        "step_desc": "Click the 'Continue' button to proceed to the next step in the checkout process",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/checkout-step-two.html'> selector='#continue'>",
+        "vision_analysis": "{\n  \"context\": \"Checkout: Your Information page\",\n  \"elements\": [\n    \"First Name field: visible, filled with 'Test'\",\n    \"Last Name field: visible, filled with 'User'\",\n    \"Zip/Postal Code field: visible, filled with '52200'\",\n    \"Continue button: visible, enabled\",\n    \"Cancel button: visible, enabled\",\n    \"Cart badge: visible, showing '1'\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Expected Checkout page: visible with filled fields\",\n    \"Cart badge shows '1', expected to be cleared after order completion\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    },
+    {
+      "step_number": 10,
+      "timestamp": "2025-10-11T18:00:58.850167",
+      "prompt": "Click the 'Finish' button to complete the order",
+      "ai_response": "Selector: getByRole('button', {name:'Finish'})\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('button', {name:'Finish'})",
+        "action_type": "click",
+        "vision_analysis": "{\n  \"context\": \"Checkout Overview page\",\n  \"elements\": [\n    \"Cart item 'Sauce Labs Bike Light': visible, quantity 1\",\n    \"Finish button: visible, enabled\",\n    \"Cart badge: visible, shows 1\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Expected Checkout Overview page: visible\",\n    \"Cart badge should be cleared after finishing order\"\n  ]\n}"
+      },
+      "remaining_scenario": "Finish the order, then navigate back Home and confirm the cart badge is cleared.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 10,
+      "timestamp": "2025-10-11T18:01:00.035016",
+      "prompt": "Click the 'Finish' button to complete the order",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('button', {name:'Finish'})",
+        "action_type": "click",
+        "step_desc": "Click the 'Finish' button to complete the order",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/checkout-complete.html'> selector='internal:role=button[name=\"Finish\"i]'>",
+        "vision_analysis": "{\n  \"context\": \"Checkout Overview page\",\n  \"elements\": [\n    \"Cart item 'Sauce Labs Bike Light': visible, quantity 1\",\n    \"Finish button: visible, enabled\",\n    \"Cart badge: visible, shows 1\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Expected Checkout Overview page: visible\",\n    \"Cart badge should be cleared after finishing order\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    },
+    {
+      "step_number": 11,
+      "timestamp": "2025-10-11T18:01:11.230673",
+      "prompt": "Click the 'Back Home' button",
+      "ai_response": "Selector: getByRole('button', {name:'Back Home'})\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('button', {name:'Back Home'})",
+        "action_type": "click",
+        "vision_analysis": "{\n  \"context\": \"Order confirmation page\",\n  \"elements\": [\n    \"Order confirmation message: visible\",\n    \"Back Home button: visible, enabled\",\n    \"Cart icon: visible\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Expected cart badge: not visible\"\n  ]\n}"
+      },
+      "remaining_scenario": "Navigate back Home and confirm the cart badge is cleared.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 11,
+      "timestamp": "2025-10-11T18:01:12.446049",
+      "prompt": "Click the 'Back Home' button",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('button', {name:'Back Home'})",
+        "action_type": "click",
+        "step_desc": "Click the 'Back Home' button",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/inventory.html'> selector='internal:role=button[name=\"Back Home\"i]'>",
+        "vision_analysis": "{\n  \"context\": \"Order confirmation page\",\n  \"elements\": [\n    \"Order confirmation message: visible\",\n    \"Back Home button: visible, enabled\",\n    \"Cart icon: visible\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Expected cart badge: not visible\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    },
+    {
+      "step_number": 12,
+      "timestamp": "2025-10-11T18:01:25.905560",
+      "prompt": "Confirm the cart badge is cleared.",
+      "ai_response": "Selector: getByTestId('shopping-cart-link')\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "getByTestId('shopping-cart-link')",
+        "action_type": "click",
+        "vision_analysis": "{\n  \"context\": \"Products page with multiple items listed\",\n  \"elements\": [\n    \"Cart icon: visible, no badge\",\n    \"Product list: visible, multiple items with 'Add to cart' buttons\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Cart badge expected to be cleared: confirmed, no badge visible\"\n  ]\n}"
+      },
+      "remaining_scenario": "Confirm the cart badge is cleared.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 12,
+      "timestamp": "2025-10-11T18:01:30.213543",
+      "prompt": "Confirm the cart badge is cleared.",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "locator('.shopping_cart_link')",
+        "action_type": "click",
+        "step_desc": "Confirm the cart badge is cleared.",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/cart.html'> selector='.shopping_cart_link'>",
+        "vision_analysis": "{\n  \"context\": \"Products page with multiple items listed\",\n  \"elements\": [\n    \"Cart icon: visible, no badge\",\n    \"Product list: visible, multiple items with 'Add to cart' buttons\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Cart badge expected to be cleared: confirmed, no badge visible\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    }
+  ],
+  "generated_test": {
+    "code": "```javascript\nconst { test, expect } = require('@playwright/test');\n\ntest('Login with standard_user / secret_sauce. From Products, add Sauce Labs Bike Light, open the cart and verify quantity shows 1. Proceed through Checkout with First Name Test, Last Name User, Zip 52200, finish the order, then navigate back Home and confirm the cart badge is cleared.', async ({ page }) => {\n  await page.goto('https://www.saucedemo.com/');\n  \n  await expect(page.getByRole('textbox', { name: 'Username' })).toBeVisible();\n  await page.getByRole('textbox', { name: 'Username' }).fill('standard_user');\n  \n  await expect(page.getByRole('textbox', { name: 'Password' })).toBeVisible();\n  await page.getByRole('textbox', { name: 'Password' }).fill('secret_sauce');\n  \n  await expect(page.locator('#login-button')).toBeVisible();\n  await page.locator('#login-button').click();\n  \n  await expect(page).toHaveURL(/inventory.html/);\n  \n  await expect(page.locator('#add-to-cart-sauce-labs-bike-light')).toBeVisible();\n  await page.locator('#add-to-cart-sauce-labs-bike-light').click();\n  \n  await expect(page.locator('[data-test=\"shopping-cart-link\"]')).toBeVisible();\n  await page.locator('[data-test=\"shopping-cart-link\"]').click();\n  \n  await expect(page).toHaveURL(/cart.html/);\n  await expect(page.locator('.cart_quantity')).toHaveText('1');\n  \n  await expect(page.getByRole('button', { name: 'Checkout' })).toBeVisible();\n  await page.getByRole('button', { name: 'Checkout' }).click();\n  \n  await expect(page).toHaveURL(/checkout-step-one.html/);\n  \n  await expect(page.getByRole('textbox', { name: 'First Name' })).toBeVisible();\n  await page.getByRole('textbox', { name: 'First Name' }).fill('Test');\n  \n  await expect(page.getByRole('textbox', { name: 'Last Name' })).toBeVisible();\n  await page.getByRole('textbox', { name: 'Last Name' }).fill('User');\n  \n  await expect(page.getByRole('textbox', { name: 'Zip/Postal Code' })).toBeVisible();\n  await page.getByRole('textbox', { name: 'Zip/Postal Code' }).fill('52200');\n  \n  await expect(page.locator('#continue')).toBeVisible();\n  await page.locator('#continue').click();\n  \n  await expect(page).toHaveURL(/checkout-step-two.html/);\n  \n  await expect(page.getByRole('button', { name: 'Finish' })).toBeVisible();\n  await page.getByRole('button', { name: 'Finish' }).click();\n  \n  await expect(page).toHaveURL(/checkout-complete.html/);\n  \n  await expect(page.getByRole('button', { name: 'Back Home' })).toBeVisible();\n  await page.getByRole('button', { name: 'Back Home' }).click();\n  \n  await expect(page).toHaveURL(/inventory.html/);\n  \n  await expect(page.locator('.shopping_cart_link')).toBeVisible();\n  await expect(page.locator('.shopping_cart_link .shopping_cart_badge')).not.toBeVisible();\n});\n```",
+    "scenario": "Login with 'standard_user' / 'secret_sauce'. From Products, add 'Sauce Labs Bike Light', open the cart and verify quantity shows '1'. Proceed through Checkout with First Name 'Test', Last Name 'User', Zip '52200', finish the order, then navigate back Home and confirm the cart badge is cleared.",
+    "url": "https://www.saucedemo.com/",
+    "timestamp": "2025-10-11T18:01:38.882137"
+  },
+  "end_time": "2025-10-11T18:01:38.885417",
+  "success": true,
+  "metrics": {
+    "total_steps": 13,
+    "completed_steps": 13,
+    "remaining_scenario": "Confirm the cart badge is cleared.",
+    "total_selector_attempts": 13,
+    "successful_selectors": 13
+  }
+}

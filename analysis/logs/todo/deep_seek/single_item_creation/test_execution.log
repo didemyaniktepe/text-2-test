@@ -1,0 +1,103 @@
+{
+  "test_name": "Add_single_item_as_To_Do_and_p",
+  "original_scenario": "Add single item as To Do and press Enter",
+  "remaining_scenario": "Press Enter to submit the todo",
+  "completed_steps": [
+    "Fill the 'What needs to be done?' input field with 'Buy groceries'",
+    "Press Enter to submit the todo"
+  ],
+  "failed_attempts": [],
+  "steps": [
+    {
+      "step_number": 0,
+      "timestamp": "2025-10-09T15:57:09.244457",
+      "prompt": "Fill the 'What needs to be done?' input field with 'Buy groceries'",
+      "ai_response": "Selector: getByRole('textbox', {name: 'What needs to be done?'})\nAction Type: fill",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('textbox', {name: 'What needs to be done?'})",
+        "action_type": "fill"
+      },
+      "remaining_scenario": "Add single item as To Do and press Enter",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/single_item_creation/step_1.png"
+    },
+    {
+      "step_number": 0,
+      "timestamp": "2025-10-09T15:57:10.329035",
+      "prompt": "Fill the 'What needs to be done?' input field with 'Buy groceries'",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('textbox', {name: 'What needs to be done?'})",
+        "action_type": "fill",
+        "step_desc": "Fill the 'What needs to be done?' input field with 'Buy groceries'",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://demo.playwright.dev/todomvc/#/'> selector='internal:role=textbox[name=\"What needs to be done?\"i]'>"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      },
+      "screenshot": "logs/single_item_creation/step_0.png"
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2025-10-09T15:57:21.312207",
+      "prompt": "Press Enter to submit the todo",
+      "ai_response": "Selector: getByRole('textbox', {name: 'What needs to be done?'})\nAction Type: press_key",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('textbox', {name: 'What needs to be done?'})",
+        "action_type": "press_key"
+      },
+      "remaining_scenario": "Press Enter to submit the todo",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2025-10-09T15:57:22.390840",
+      "prompt": "Press Enter to submit the todo",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('textbox', {name: 'What needs to be done?'})",
+        "action_type": "press_key",
+        "step_desc": "Press Enter to submit the todo",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://demo.playwright.dev/todomvc/#/'> selector='internal:role=textbox[name=\"What needs to be done?\"i]'>"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    }
+  ],
+  "generated_test": {
+    "code": "const { test, expect } = require('@playwright/test');\n\ntest('Add single item as To Do and press Enter', async ({ page }) => {\n  await page.goto('https://demo.playwright.dev/todomvc/#/');\n  await expect(page).toHaveURL(/.+/);\n\n  const inputField = page.getByRole('textbox', { name: 'What needs to be done?' });\n  await expect(inputField).toBeVisible();\n  await expect(inputField).toBeEnabled();\n  await inputField.fill('Buy groceries');\n  await inputField.press('Enter');\n\n  const todoItem = page.getByRole('listitem');\n  await expect(todoItem).toHaveText('Buy groceries');\n});",
+    "scenario": "Add single item as To Do and press Enter",
+    "url": "https://demo.playwright.dev/todomvc/#/",
+    "timestamp": "2025-10-09T15:57:29.418587"
+  },
+  "end_time": "2025-10-09T15:57:29.419007",
+  "success": true,
+  "metrics": {
+    "total_steps": 2,
+    "completed_steps": 2,
+    "remaining_scenario": "Press Enter to submit the todo",
+    "total_selector_attempts": 2,
+    "successful_selectors": 2
+  }
+}

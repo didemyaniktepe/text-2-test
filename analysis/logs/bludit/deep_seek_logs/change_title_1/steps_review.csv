@@ -1,0 +1,16 @@
+test_name,step_index,expected_steps,prompt,planned_element,planned_action_type,planned_selector,execution_action_type,execution_selector,execution_status,execution_success,is_expected_step,selector_attempts,locator_mismatch,skipped_auto,suspected_hallucination
+change title,0,Fill the username field with 'admin',Fill the username field with 'admin',textbox,fill,"getByRole('textbox', {name: 'Username'})",fill,"getByRole('textbox', {name: 'Username'})",success,True,True,1,False,False,False
+change title,1,Fill the password field with 'admin1',Fill the password field with 'admin1',textbox,fill,"getByRole('textbox', {name:'Password'})",fill,"getByRole('textbox', {name:'Password'})",success,True,True,1,False,False,False
+change title,2,Click the 'Login' button,Click the 'Login' button,button,click,locator('form').locator('button.btn'),click,locator('form').locator('button.btn'),success,True,True,1,False,False,False
+change title,3,Click the 'Content' link,Click the 'Content' link,link,click,"getByRole('link', {name: 'Content'})",click,"getByRole('link', {name: 'Content'})",failed,False,True,1,False,False,True
+change title,4,Fill the title field with 'Updated Title',Click the 'Content' link,element,click,"locator('a[href=""/admin/content""]')",click,"locator('a[href=""/admin/content""]')",failed,False,True,2,False,False,True
+change title,5,Click the 'Save' button,Click the 'Content' link,link,click,getByText('Content').filter({has: locator('.nav-link')}),click,getByText('Content').filter({has: locator('.nav-link')}),failed,False,True,3,False,False,True
+change title,6,,Click the 'Content' link,link,click,"locator('.nav-link:has-text(""Content"")')",click,"locator('.nav-link:has-text(""Content"")')",failed,False,True,4,False,False,True
+change title,7,,Click the 'Content' link,link,click,locator('.nav-link').nth(3),click,locator('.nav-link').nth(3),failed,False,True,5,False,False,True
+change title,8,,Click the 'Content' link,link,click,locator('a.nav-link').nth(3),click,locator('a.nav-link').nth(3),failed,False,True,6,False,False,True
+change title,9,,Click the 'Content' link,link,click,locator('a.nav-link').nth(3),click,locator('a.nav-link').nth(3),failed,False,True,7,False,False,True
+change title,10,,Click the 'Content' link,link,click,locator('.nav-link').nth(3),click,locator('.nav-link').nth(3),failed,False,True,8,False,False,True
+change title,11,,Click the 'Content' link,link,click,locator('a.nav-link').nth(3),click,locator('a.nav-link').nth(3),failed,False,True,9,False,False,True
+change title,12,,Click the 'Content' link,navigation,click,getByRole('navigation').getByRole('link').nth(3),click,getByRole('navigation').getByRole('link').nth(3),failed,False,True,10,False,False,True
+change title,13,,Click the 'Content' link,navigation,click,getByRole('navigation').getByText('Content'),click,getByRole('navigation').getByText('Content'),failed,False,True,11,False,False,True
+change title,14,,Click the 'Content' link,link,click,locator('.nav-link').nth(3),click,locator('.nav-link').nth(3),failed,False,True,12,False,False,True

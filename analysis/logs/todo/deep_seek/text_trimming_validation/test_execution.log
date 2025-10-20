@@ -1,0 +1,65 @@
+{
+  "test_name": "Fill_and_press_enter_after_a_t",
+  "original_scenario": "Fill and press enter after a todo with leading and trailing spaces '   Trim me   ' verify the saved item text is trimmed to 'Trim me'.",
+  "remaining_scenario": "Fill and press enter after a todo with leading and trailing spaces '   Trim me   ' verify the saved item text is trimmed to 'Trim me'.",
+  "completed_steps": [
+    "Fill the 'What needs to be done?' input field with '   Trim me   '"
+  ],
+  "failed_attempts": [],
+  "steps": [
+    {
+      "step_number": 0,
+      "timestamp": "2025-10-09T15:49:42.711770",
+      "prompt": "Fill the 'What needs to be done?' input field with '   Trim me   '",
+      "ai_response": "Selector: getByRole('textbox', {name: 'What needs to be done?'})\nAction Type: fill",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('textbox', {name: 'What needs to be done?'})",
+        "action_type": "fill"
+      },
+      "remaining_scenario": "Fill and press enter after a todo with leading and trailing spaces '   Trim me   ' verify the saved item text is trimmed to 'Trim me'.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/text_trimming_validation/step_1.png"
+    },
+    {
+      "step_number": 0,
+      "timestamp": "2025-10-09T15:49:43.780225",
+      "prompt": "Fill the 'What needs to be done?' input field with '   Trim me   '",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('textbox', {name: 'What needs to be done?'})",
+        "action_type": "fill",
+        "step_desc": "Fill the 'What needs to be done?' input field with '   Trim me   '",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://demo.playwright.dev/todomvc/#/'> selector='internal:role=textbox[name=\"What needs to be done?\"i]'>"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      },
+      "screenshot": "logs/text_trimming_validation/step_0.png"
+    }
+  ],
+  "generated_test": {
+    "code": "```javascript\nconst { test, expect } = require('@playwright/test');\n\ntest('Fill and press enter after a todo with leading and trailing spaces \\'   Trim me   \\' verify the saved item text is trimmed to \\'Trim me\\'.', async ({ page }) => {\n  await page.goto('https://demo.playwright.dev/todomvc/#/');\n  await expect(page.getByRole('textbox', { name: 'What needs to be done?' })).toBeVisible();\n  await page.getByRole('textbox', { name: 'What needs to be done?' }).fill('   Trim me   ');\n  await page.getByRole('textbox', { name: 'What needs to be done?' }).press('Enter');\n  await expect(page.getByText('Trim me')).toBeVisible();\n});\n```",
+    "scenario": "Fill and press enter after a todo with leading and trailing spaces '   Trim me   ' verify the saved item text is trimmed to 'Trim me'.",
+    "url": "https://demo.playwright.dev/todomvc/#/",
+    "timestamp": "2025-10-09T15:49:53.635468"
+  },
+  "end_time": "2025-10-09T15:49:53.636020",
+  "success": true,
+  "metrics": {
+    "total_steps": 1,
+    "completed_steps": 1,
+    "remaining_scenario": "Fill and press enter after a todo with leading and trailing spaces '   Trim me   ' verify the saved item text is trimmed to 'Trim me'.",
+    "total_selector_attempts": 1,
+    "successful_selectors": 1
+  }
+}

@@ -1,0 +1,396 @@
+{
+  "test_name": "Login_with_'standard_user'_/_'",
+  "original_scenario": "Login with 'standard_user' / 'secret_sauce'. On Products, add 'Sauce Labs Bike Light' and 'Sauce Labs Fleece Jacket'. Click the REMOVE button on the Backpack tile if present so only 2 items remain. Open the cart and verify Bike Light and Fleece Jacket are listed.",
+  "remaining_scenario": "Verify Fleece Jacket is listed in the cart",
+  "completed_steps": [
+    "Fill the Username field with 'standard_user'",
+    "Fill the Password field with 'secret_sauce'",
+    "Click the login button",
+    "Click the 'Add to cart' button for the 'Sauce Labs Bike Light'",
+    "Click the 'Add to cart' button for the 'Sauce Labs Fleece Jacket'",
+    "Click the REMOVE button on the Sauce Labs Backpack tile",
+    "Click the Cart icon to open the cart",
+    "Verify the 'Sauce Labs Bike Light' is listed in the cart"
+  ],
+  "failed_attempts": [
+    {
+      "selector": "getByText('Sauce Labs Fleece Jacket')",
+      "action_type": "smart_click"
+    }
+  ],
+  "steps": [
+    {
+      "step_number": 0,
+      "timestamp": "2025-10-11T17:40:32.848930",
+      "prompt": "Fill the Username field with 'standard_user'",
+      "ai_response": "Selector: getByRole('textbox', { name: 'Username' })\nAction Type: fill",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('textbox', { name: 'Username' })",
+        "action_type": "fill",
+        "vision_analysis": "{\n  \"context\": \"Login page with email/password form\",\n  \"elements\": [\n    \"Username field: visible, empty\",\n    \"Password field: visible, empty\",\n    \"Login button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario mentions login: both fields present\"\n  ]\n}"
+      },
+      "remaining_scenario": "Login with 'standard_user' / 'secret_sauce'. On Products, add 'Sauce Labs Bike Light' and 'Sauce Labs Fleece Jacket'. Click the REMOVE button on the Backpack tile if present so only 2 items remain. Open the cart and verify Bike Light and Fleece Jacket are listed.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/saucedemo/openai/add-two-items-remove-backpack/step_1.png"
+    },
+    {
+      "step_number": 0,
+      "timestamp": "2025-10-11T17:40:33.960599",
+      "prompt": "Fill the Username field with 'standard_user'",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('textbox', { name: 'Username' })",
+        "action_type": "fill",
+        "step_desc": "Fill the Username field with 'standard_user'",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/'> selector='internal:role=textbox[name=\"Username\"i]'>",
+        "vision_analysis": "{\n  \"context\": \"Login page with email/password form\",\n  \"elements\": [\n    \"Username field: visible, empty\",\n    \"Password field: visible, empty\",\n    \"Login button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario mentions login: both fields present\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      },
+      "screenshot": "logs/saucedemo/openai/add-two-items-remove-backpack/step_2.png"
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2025-10-11T17:40:44.201115",
+      "prompt": "Fill the Password field with 'secret_sauce'",
+      "ai_response": "Selector: getByRole('textbox', { name: 'Password' })\nAction Type: fill",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('textbox', { name: 'Password' })",
+        "action_type": "fill",
+        "vision_analysis": "{\n  \"context\": \"Login page with username/password form\",\n  \"elements\": [\n    \"Username field: visible, filled with 'standard_user'\",\n    \"Password field: visible, empty\",\n    \"Login button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario mentions filling password: field is empty\"\n  ]\n}"
+      },
+      "remaining_scenario": "Fill the password field with 'secret_sauce'. Click the login button. On Products, add 'Sauce Labs Bike Light' and 'Sauce Labs Fleece Jacket'. Click the REMOVE button on the Backpack tile if present so only 2 items remain. Open the cart and verify Bike Light and Fleece Jacket are listed.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/saucedemo/openai/add-two-items-remove-backpack/step_3.png"
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2025-10-11T17:40:45.273260",
+      "prompt": "Fill the Password field with 'secret_sauce'",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('textbox', { name: 'Password' })",
+        "action_type": "fill",
+        "step_desc": "Fill the Password field with 'secret_sauce'",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/'> selector='internal:role=textbox[name=\"Password\"i]'>",
+        "vision_analysis": "{\n  \"context\": \"Login page with username/password form\",\n  \"elements\": [\n    \"Username field: visible, filled with 'standard_user'\",\n    \"Password field: visible, empty\",\n    \"Login button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario mentions filling password: field is empty\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      },
+      "screenshot": "logs/saucedemo/openai/add-two-items-remove-backpack/step_4.png"
+    },
+    {
+      "step_number": 2,
+      "timestamp": "2025-10-11T17:40:57.024147",
+      "prompt": "Click the login button",
+      "ai_response": "Selector: getByTestId('login-button')\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "getByTestId('login-button')",
+        "action_type": "click",
+        "vision_analysis": "{\n  \"context\": \"Login page with username/password form\",\n  \"elements\": [\n    \"Username field: visible, filled with 'standard_user'\",\n    \"Password field: visible, filled with 'secret_sauce'\",\n    \"Login button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario mentions clicking login: login button is visible and enabled\"\n  ]\n}"
+      },
+      "remaining_scenario": "Click the login button. On Products, add 'Sauce Labs Bike Light' and 'Sauce Labs Fleece Jacket'. Click the REMOVE button on the Backpack tile if present so only 2 items remain. Open the cart and verify Bike Light and Fleece Jacket are listed.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/saucedemo/openai/add-two-items-remove-backpack/step_5.png"
+    },
+    {
+      "step_number": 2,
+      "timestamp": "2025-10-11T17:41:02.353860",
+      "prompt": "Click the login button",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "locator('#login-button')",
+        "action_type": "click",
+        "step_desc": "Click the login button",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/inventory.html'> selector='#login-button'>",
+        "vision_analysis": "{\n  \"context\": \"Login page with username/password form\",\n  \"elements\": [\n    \"Username field: visible, filled with 'standard_user'\",\n    \"Password field: visible, filled with 'secret_sauce'\",\n    \"Login button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario mentions clicking login: login button is visible and enabled\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      },
+      "screenshot": "logs/saucedemo/openai/add-two-items-remove-backpack/step_6.png"
+    },
+    {
+      "step_number": 3,
+      "timestamp": "2025-10-11T17:41:14.546425",
+      "prompt": "Click the 'Add to cart' button for the 'Sauce Labs Bike Light'",
+      "ai_response": "Selector: getByTestId('add-to-cart-sauce-labs-bike-light')\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "getByTestId('add-to-cart-sauce-labs-bike-light')",
+        "action_type": "click",
+        "vision_analysis": "{\n  \"context\": \"Products page with item listings\",\n  \"elements\": [\n    \"Sauce Labs Backpack: visible, Add to cart button visible\",\n    \"Sauce Labs Bike Light: visible, Add to cart button visible\",\n    \"Sauce Labs Fleece Jacket: visible, Add to cart button visible\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario requires adding Bike Light and Fleece Jacket to cart\",\n    \"Scenario requires removing Backpack if present\"\n  ]\n}"
+      },
+      "remaining_scenario": "On Products, add 'Sauce Labs Bike Light' and 'Sauce Labs Fleece Jacket'. Click the REMOVE button on the Backpack tile if present so only 2 items remain. Open the cart and verify Bike Light and Fleece Jacket are listed.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/saucedemo/openai/add-two-items-remove-backpack/step_7.png"
+    },
+    {
+      "step_number": 3,
+      "timestamp": "2025-10-11T17:41:18.678270",
+      "prompt": "Click the 'Add to cart' button for the 'Sauce Labs Bike Light'",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "locator('[data-test=\"add-to-cart-sauce-labs-bike-light\"]')",
+        "action_type": "click",
+        "step_desc": "Click the 'Add to cart' button for the 'Sauce Labs Bike Light'",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/inventory.html'> selector='[data-test=\"add-to-cart-sauce-labs-bike-light\"]'>",
+        "vision_analysis": "{\n  \"context\": \"Products page with item listings\",\n  \"elements\": [\n    \"Sauce Labs Backpack: visible, Add to cart button visible\",\n    \"Sauce Labs Bike Light: visible, Add to cart button visible\",\n    \"Sauce Labs Fleece Jacket: visible, Add to cart button visible\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario requires adding Bike Light and Fleece Jacket to cart\",\n    \"Scenario requires removing Backpack if present\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      },
+      "screenshot": "logs/saucedemo/openai/add-two-items-remove-backpack/step_8.png"
+    },
+    {
+      "step_number": 4,
+      "timestamp": "2025-10-11T17:41:31.738205",
+      "prompt": "Click the 'Add to cart' button for the 'Sauce Labs Fleece Jacket'",
+      "ai_response": "Selector: getByRole('button',{ name:'Add to cart' })\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('button',{ name:'Add to cart' })",
+        "action_type": "click",
+        "vision_analysis": "{\n  \"context\": \"Products page with item listings\",\n  \"elements\": [\n    \"Sauce Labs Backpack: visible, 'Add to cart' button visible\",\n    \"Sauce Labs Bike Light: visible, 'Remove' button visible\",\n    \"Sauce Labs Fleece Jacket: visible, 'Add to cart' button visible\",\n    \"Cart icon: visible, shows 1 item\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario requires 'Sauce Labs Fleece Jacket' to be added: 'Add to cart' button visible\",\n    \"Scenario requires 'Sauce Labs Backpack' to be removed if present: 'Add to cart' button visible\"\n  ]\n}"
+      },
+      "remaining_scenario": "Add 'Sauce Labs Fleece Jacket' to cart. Click the REMOVE button on the Backpack tile if present so only 2 items remain. Open the cart and verify Bike Light and Fleece Jacket are listed.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 4,
+      "timestamp": "2025-10-11T17:41:32.876190",
+      "prompt": "Click the 'Add to cart' button for the 'Sauce Labs Fleece Jacket'",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('button',{ name:'Add to cart' })",
+        "action_type": "click",
+        "step_desc": "Click the 'Add to cart' button for the 'Sauce Labs Fleece Jacket'",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/inventory.html'> selector='internal:role=button[name=\"Add to cart\"i] >> internal:has-text=/^\\\\s*Add\\\\ to\\\\ cart\\\\s*$/i >> nth=0'>",
+        "vision_analysis": "{\n  \"context\": \"Products page with item listings\",\n  \"elements\": [\n    \"Sauce Labs Backpack: visible, 'Add to cart' button visible\",\n    \"Sauce Labs Bike Light: visible, 'Remove' button visible\",\n    \"Sauce Labs Fleece Jacket: visible, 'Add to cart' button visible\",\n    \"Cart icon: visible, shows 1 item\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario requires 'Sauce Labs Fleece Jacket' to be added: 'Add to cart' button visible\",\n    \"Scenario requires 'Sauce Labs Backpack' to be removed if present: 'Add to cart' button visible\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    },
+    {
+      "step_number": 5,
+      "timestamp": "2025-10-11T17:41:48.204274",
+      "prompt": "Click the REMOVE button on the Sauce Labs Backpack tile",
+      "ai_response": "Selector: getByTestId('remove-sauce-labs-backpack')\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "getByTestId('remove-sauce-labs-backpack')",
+        "action_type": "click",
+        "vision_analysis": "{\n  \"context\": \"Products page with item tiles\",\n  \"elements\": [\n    \"Sauce Labs Backpack: visible, Remove button visible\",\n    \"Sauce Labs Bike Light: visible, Remove button visible\",\n    \"Sauce Labs Fleece Jacket: visible, Add to cart button visible\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Expected Backpack Remove button: visible\",\n    \"Expected Bike Light and Fleece Jacket in cart: not verified\"\n  ]\n}"
+      },
+      "remaining_scenario": "Click the REMOVE button on the Backpack tile if present so only 2 items remain. Open the cart and verify Bike Light and Fleece Jacket are listed.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 5,
+      "timestamp": "2025-10-11T17:41:52.411974",
+      "prompt": "Click the REMOVE button on the Sauce Labs Backpack tile",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "locator('#remove-sauce-labs-backpack')",
+        "action_type": "click",
+        "step_desc": "Click the REMOVE button on the Sauce Labs Backpack tile",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/inventory.html'> selector='#remove-sauce-labs-backpack'>",
+        "vision_analysis": "{\n  \"context\": \"Products page with item tiles\",\n  \"elements\": [\n    \"Sauce Labs Backpack: visible, Remove button visible\",\n    \"Sauce Labs Bike Light: visible, Remove button visible\",\n    \"Sauce Labs Fleece Jacket: visible, Add to cart button visible\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Expected Backpack Remove button: visible\",\n    \"Expected Bike Light and Fleece Jacket in cart: not verified\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    },
+    {
+      "step_number": 6,
+      "timestamp": "2025-10-11T17:42:10.422894",
+      "prompt": "Click the Cart icon to open the cart",
+      "ai_response": "Selector: getByTestId('shopping-cart-link')\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "getByTestId('shopping-cart-link')",
+        "action_type": "click",
+        "vision_analysis": "{\n  \"context\": \"Products page with items listed\",\n  \"elements\": [\n    \"Sauce Labs Bike Light: visible, Remove button\",\n    \"Sauce Labs Fleece Jacket: visible, Add to cart button\",\n    \"Cart icon: visible, 2 items\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Expected cart to be open: not visible\"\n  ]\n}"
+      },
+      "remaining_scenario": "Open the cart and verify Bike Light and Fleece Jacket are listed.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 6,
+      "timestamp": "2025-10-11T17:42:17.636829",
+      "prompt": "Click the Cart icon to open the cart",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "[data-test=\"shopping-cart-link\"]",
+        "action_type": "click",
+        "step_desc": "Click the Cart icon to open the cart",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/cart.html'> selector='[data-test=\"shopping-cart-link\"]'>",
+        "vision_analysis": "{\n  \"context\": \"Products page with items listed\",\n  \"elements\": [\n    \"Sauce Labs Bike Light: visible, Remove button\",\n    \"Sauce Labs Fleece Jacket: visible, Add to cart button\",\n    \"Cart icon: visible, 2 items\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Expected cart to be open: not visible\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    },
+    {
+      "step_number": 7,
+      "timestamp": "2025-10-11T17:42:27.742758",
+      "prompt": "Verify the 'Sauce Labs Bike Light' is listed in the cart",
+      "ai_response": "Selector: getByRole('link', {name: 'Sauce Labs Bike Light'})\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('link', {name: 'Sauce Labs Bike Light'})",
+        "action_type": "click",
+        "vision_analysis": "{\n  \"context\": \"Cart page with item list\",\n  \"elements\": [\n    \"Sauce Labs Bike Light: visible, quantity 1\",\n    \"Remove button for Bike Light: visible, enabled\",\n    \"Checkout button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Expected Sauce Labs Fleece Jacket: not visible\"\n  ]\n}"
+      },
+      "remaining_scenario": "Verify Bike Light and Fleece Jacket are listed in the cart",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 7,
+      "timestamp": "2025-10-11T17:42:28.984059",
+      "prompt": "Verify the 'Sauce Labs Bike Light' is listed in the cart",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('link', {name: 'Sauce Labs Bike Light'})",
+        "action_type": "click",
+        "step_desc": "Verify the 'Sauce Labs Bike Light' is listed in the cart",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/inventory-item.html?id=0'> selector='internal:role=link[name=\"Sauce Labs Bike Light\"i]'>",
+        "vision_analysis": "{\n  \"context\": \"Cart page with item list\",\n  \"elements\": [\n    \"Sauce Labs Bike Light: visible, quantity 1\",\n    \"Remove button for Bike Light: visible, enabled\",\n    \"Checkout button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Expected Sauce Labs Fleece Jacket: not visible\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    },
+    {
+      "step_number": 8,
+      "timestamp": "2025-10-11T17:42:40.730176",
+      "prompt": "Verify the 'Sauce Labs Fleece Jacket' is listed in the cart",
+      "ai_response": "Selector: getByText('Sauce Labs Fleece Jacket')\nAction Type: smart_click",
+      "action": {
+        "type": "selector",
+        "selector": "getByText('Sauce Labs Fleece Jacket')",
+        "action_type": "smart_click",
+        "vision_analysis": "{\n  \"context\": \"Cart page with product details\",\n  \"elements\": [\n    \"Sauce Labs Bike Light: visible, listed\",\n    \"Remove button for Bike Light: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Expected Fleece Jacket in cart: not visible\"\n  ]\n}"
+      },
+      "remaining_scenario": "Verify Fleece Jacket is listed in the cart",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 8,
+      "timestamp": "2025-10-11T17:42:42.593735",
+      "prompt": "Verify the 'Sauce Labs Fleece Jacket' is listed in the cart",
+      "ai_response": "Action failed: getByText('Sauce Labs Fleece Jacket')smart_click",
+      "action": {
+        "type": "action",
+        "status": "failed",
+        "selector": "getByText('Sauce Labs Fleece Jacket')",
+        "action_type": "smart_click",
+        "resolved_locator": "",
+        "vision_analysis": "{\n  \"context\": \"Cart page with product details\",\n  \"elements\": [\n    \"Sauce Labs Bike Light: visible, listed\",\n    \"Remove button for Bike Light: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Expected Fleece Jacket in cart: not visible\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": false
+      }
+    }
+  ],
+  "generated_test": {
+    "code": "```javascript\nconst { test, expect } = require('@playwright/test');\n\ntest('Login with standard_user / secret_sauce. On Products, add Sauce Labs Bike Light and Sauce Labs Fleece Jacket. Click the REMOVE button on the Backpack tile if present so only 2 items remain. Open the cart and verify Bike Light and Fleece Jacket are listed.', async ({ page }) => {\n  await page.goto('https://www.saucedemo.com/');\n  const usernameLocator = page.getByRole('textbox', { name: 'Username' });\n  await expect(usernameLocator).toBeVisible();\n  await usernameLocator.fill('standard_user');\n\n  const passwordLocator = page.getByRole('textbox', { name: 'Password' });\n  await expect(passwordLocator).toBeVisible();\n  await passwordLocator.fill('secret_sauce');\n\n  const loginButton = page.locator('#login-button');\n  await expect(loginButton).toBeEnabled();\n  await loginButton.click();\n  await expect(page).toHaveURL(/inventory\\.html/);\n\n  const bikeLightAddButton = page.locator('[data-test=\"add-to-cart-sauce-labs-bike-light\"]');\n  await expect(bikeLightAddButton).toBeVisible();\n  await bikeLightAddButton.click();\n\n  const fleeceJacketAddButton = page.getByRole('button', { name: 'Add to cart' }).nth(0);\n  await expect(fleeceJacketAddButton).toBeVisible();\n  await fleeceJacketAddButton.click();\n\n  const backpackRemoveButton = page.locator('#remove-sauce-labs-backpack');\n  const backpackRemoveButtonVisible = await backpackRemoveButton.isVisible();\n  if (backpackRemoveButtonVisible) {\n    await backpackRemoveButton.click();\n  }\n\n  const cartIcon = page.locator('[data-test=\"shopping-cart-link\"]');\n  await expect(cartIcon).toBeVisible();\n  await cartIcon.click();\n  await expect(page).toHaveURL(/cart\\.html/);\n\n  const bikeLightInCart = page.getByRole('link', { name: 'Sauce Labs Bike Light' });\n  await expect(bikeLightInCart).toBeVisible();\n\n  const fleeceJacketInCart = page.getByRole('link', { name: 'Sauce Labs Fleece Jacket' });\n  await expect(fleeceJacketInCart).toBeVisible();\n});\n```",
+    "scenario": "Login with 'standard_user' / 'secret_sauce'. On Products, add 'Sauce Labs Bike Light' and 'Sauce Labs Fleece Jacket'. Click the REMOVE button on the Backpack tile if present so only 2 items remain. Open the cart and verify Bike Light and Fleece Jacket are listed.",
+    "url": "https://www.saucedemo.com/",
+    "timestamp": "2025-10-11T17:42:50.319713"
+  },
+  "end_time": "2025-10-11T17:42:50.320794",
+  "success": false,
+  "metrics": {
+    "total_steps": 9,
+    "completed_steps": 8,
+    "remaining_scenario": "Verify Fleece Jacket is listed in the cart",
+    "total_selector_attempts": 18,
+    "successful_selectors": 8
+  }
+}

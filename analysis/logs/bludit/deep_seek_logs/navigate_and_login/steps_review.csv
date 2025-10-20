@@ -1,0 +1,5 @@
+test_name,step_index,expected_step,prompt,planned_element,planned_action_type,planned_selector,execution_action_type,execution_selector,execution_status,execution_success,is_expected_step,selector_attempts,locator_mismatch,skipped_auto,suspected_hallucination
+navigate,0,Navigate to 'url',Click on the 'admin panel' link to navigate to the login page.,link,navigate,"getByRole('link', {name: 'admin panel'})",click,"getByRole('link', {name: 'admin panel'})",success,True,False,1,False,False,True
+navigate,1,Fill the username field with 'admin',Fill the username field with 'admin',textbox,fill,"getByRole('textbox', {name: 'Username'})",fill,"getByRole('textbox', {name: 'Username'})",success,True,True,1,False,False,False
+navigate,2,Fill the password field with 'admin1',Fill the password field with 'admin1',textbox,fill,"getByRole('textbox', {name: 'Password'})",fill,"getByRole('textbox', {name: 'Password'})",success,True,True,1,False,False,False
+navigate,3,Click the login button,,,,,,,,,,,,,

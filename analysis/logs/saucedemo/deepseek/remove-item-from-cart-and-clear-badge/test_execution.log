@@ -1,0 +1,311 @@
+{
+  "test_name": "Login_with_'standard_user'_/_'",
+  "original_scenario": "Login with 'standard_user' / 'secret_sauce'. Add 'Sauce Labs Onesie' to cart from Products, open the cart, click REMOVE, and verify the cart is empty and the badge disappears.",
+  "remaining_scenario": "Verify the cart is empty and the badge disappears",
+  "completed_steps": [
+    "Fill the username field with 'standard_user'",
+    "Fill the password field with 'secret_sauce'",
+    "Click the Login button",
+    "Click the 'Add to cart' button for 'Sauce Labs Onesie'",
+    "Click the cart icon with badge '1'",
+    "Click the Remove button for 'Sauce Labs Onesie'",
+    "Click the Continue Shopping button"
+  ],
+  "failed_attempts": [],
+  "steps": [
+    {
+      "step_number": 0,
+      "timestamp": "2025-10-11T18:20:07.136217",
+      "prompt": "Fill the username field with 'standard_user'",
+      "ai_response": "Selector: getByRole('textbox', {name:'Username'})\nAction Type: fill",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('textbox', {name:'Username'})",
+        "action_type": "fill",
+        "vision_analysis": "{\n  \"context\": \"Login page with username/password form\",\n  \"elements\": [\n    \"Username field: visible, empty\",\n    \"Password field: visible, empty\",\n    \"Login button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario mentions login: both fields present\"\n  ]\n}"
+      },
+      "remaining_scenario": "Login with 'standard_user' / 'secret_sauce'. Add 'Sauce Labs Onesie' to cart from Products, open the cart, click REMOVE, and verify the cart is empty and the badge disappears.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/saucedemo/deepseek/remove-item-from-cart-and-clear-badge/step_1.png"
+    },
+    {
+      "step_number": 0,
+      "timestamp": "2025-10-11T18:20:08.247789",
+      "prompt": "Fill the username field with 'standard_user'",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('textbox', {name:'Username'})",
+        "action_type": "fill",
+        "step_desc": "Fill the username field with 'standard_user'",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/'> selector='internal:role=textbox[name=\"Username\"i]'>",
+        "vision_analysis": "{\n  \"context\": \"Login page with username/password form\",\n  \"elements\": [\n    \"Username field: visible, empty\",\n    \"Password field: visible, empty\",\n    \"Login button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario mentions login: both fields present\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      },
+      "screenshot": "logs/saucedemo/deepseek/remove-item-from-cart-and-clear-badge/step_2.png"
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2025-10-11T18:20:24.611633",
+      "prompt": "Fill the password field with 'secret_sauce'",
+      "ai_response": "Selector: getByRole('textbox',{ name:'Password' })\nAction Type: fill",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('textbox',{ name:'Password' })",
+        "action_type": "fill",
+        "vision_analysis": "{\n  \"context\": \"Login page with username/password form\",\n  \"elements\": [\n    \"Username field: visible, filled with 'standard_user'\",\n    \"Password field: visible, empty\",\n    \"Login button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario mentions filling password field: password field is empty\"\n  ]\n}"
+      },
+      "remaining_scenario": "Fill the password field with 'secret_sauce', click Login, add 'Sauce Labs Onesie' to cart from Products, open the cart, click REMOVE, and verify the cart is empty and the badge disappears.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/saucedemo/deepseek/remove-item-from-cart-and-clear-badge/step_3.png"
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2025-10-11T18:20:25.672626",
+      "prompt": "Fill the password field with 'secret_sauce'",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('textbox',{ name:'Password' })",
+        "action_type": "fill",
+        "step_desc": "Fill the password field with 'secret_sauce'",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/'> selector='internal:role=textbox[name=\"Password\"i]'>",
+        "vision_analysis": "{\n  \"context\": \"Login page with username/password form\",\n  \"elements\": [\n    \"Username field: visible, filled with 'standard_user'\",\n    \"Password field: visible, empty\",\n    \"Login button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario mentions filling password field: password field is empty\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      },
+      "screenshot": "logs/saucedemo/deepseek/remove-item-from-cart-and-clear-badge/step_4.png"
+    },
+    {
+      "step_number": 2,
+      "timestamp": "2025-10-11T18:20:41.570654",
+      "prompt": "Click the Login button",
+      "ai_response": "Selector: getByTestId('login-button')\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "getByTestId('login-button')",
+        "action_type": "click",
+        "vision_analysis": "{\n  \"context\": \"Login page with username/password form\",\n  \"elements\": [\n    \"Username field: visible, filled with 'standard_user'\",\n    \"Password field: visible, filled with 'secret_sauce'\",\n    \"Login button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario mentions login: all fields filled and login button enabled\"\n  ]\n}"
+      },
+      "remaining_scenario": "Click Login, add 'Sauce Labs Onesie' to cart from Products, open the cart, click REMOVE, and verify the cart is empty and the badge disappears.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/saucedemo/deepseek/remove-item-from-cart-and-clear-badge/step_5.png"
+    },
+    {
+      "step_number": 2,
+      "timestamp": "2025-10-11T18:20:49.866462",
+      "prompt": "Click the Login button",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "[data-test=\"login-button\"]",
+        "action_type": "click",
+        "step_desc": "Click the Login button",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/inventory.html'> selector='[data-test=\"login-button\"]'>",
+        "vision_analysis": "{\n  \"context\": \"Login page with username/password form\",\n  \"elements\": [\n    \"Username field: visible, filled with 'standard_user'\",\n    \"Password field: visible, filled with 'secret_sauce'\",\n    \"Login button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario mentions login: all fields filled and login button enabled\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      },
+      "screenshot": "logs/saucedemo/deepseek/remove-item-from-cart-and-clear-badge/step_6.png"
+    },
+    {
+      "step_number": 3,
+      "timestamp": "2025-10-11T18:21:10.167315",
+      "prompt": "Click the 'Add to cart' button for 'Sauce Labs Onesie'",
+      "ai_response": "Selector: getByTestId('add-to-cart-sauce-labs-onesie')\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "getByTestId('add-to-cart-sauce-labs-onesie')",
+        "action_type": "click",
+        "vision_analysis": "{\n  \"context\": \"Products page with items listed\",\n  \"elements\": [\n    \"Sauce Labs Onesie: visible, Add to cart button visible\",\n    \"Cart icon: visible, no badge\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario requires adding 'Sauce Labs Onesie' to cart: item visible\"\n  ]\n}"
+      },
+      "remaining_scenario": "Add 'Sauce Labs Onesie' to cart from Products, open the cart, click REMOVE, and verify the cart is empty and the badge disappears.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 3,
+      "timestamp": "2025-10-11T18:21:14.270656",
+      "prompt": "Click the 'Add to cart' button for 'Sauce Labs Onesie'",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "locator('#add-to-cart-sauce-labs-onesie')",
+        "action_type": "click",
+        "step_desc": "Click the 'Add to cart' button for 'Sauce Labs Onesie'",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/inventory.html'> selector='#add-to-cart-sauce-labs-onesie'>",
+        "vision_analysis": "{\n  \"context\": \"Products page with items listed\",\n  \"elements\": [\n    \"Sauce Labs Onesie: visible, Add to cart button visible\",\n    \"Cart icon: visible, no badge\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario requires adding 'Sauce Labs Onesie' to cart: item visible\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    },
+    {
+      "step_number": 4,
+      "timestamp": "2025-10-11T18:21:33.624356",
+      "prompt": "Click the cart icon with badge '1'",
+      "ai_response": "Selector: getByText('1')\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "getByText('1')",
+        "action_type": "click",
+        "vision_analysis": "{\n  \"context\": \"Products page with items listed\",\n  \"elements\": [\n    \"Cart icon: visible, badge shows '1'\",\n    \"Sauce Labs Onesie: visible, Remove button visible\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Expected cart page: not visible\"\n  ]\n}"
+      },
+      "remaining_scenario": "Open the cart, click REMOVE, and verify the cart is empty and the badge disappears.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 4,
+      "timestamp": "2025-10-11T18:21:34.819196",
+      "prompt": "Click the cart icon with badge '1'",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByText('1')",
+        "action_type": "click",
+        "step_desc": "Click the cart icon with badge '1'",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/cart.html'> selector='internal:text=\"1\"i >> nth=0'>",
+        "vision_analysis": "{\n  \"context\": \"Products page with items listed\",\n  \"elements\": [\n    \"Cart icon: visible, badge shows '1'\",\n    \"Sauce Labs Onesie: visible, Remove button visible\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Expected cart page: not visible\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    },
+    {
+      "step_number": 5,
+      "timestamp": "2025-10-11T18:21:52.747699",
+      "prompt": "Click the Remove button for 'Sauce Labs Onesie'",
+      "ai_response": "Selector: getByRole('button', {name:'Remove'})\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('button', {name:'Remove'})",
+        "action_type": "click",
+        "vision_analysis": "{\n  \"context\": \"Cart page with item listed\",\n  \"elements\": [\n    \"Cart item: 'Sauce Labs Onesie', visible\",\n    \"Remove button: visible, enabled\",\n    \"Cart badge: visible, showing '1'\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario requires clicking REMOVE and verifying cart is empty\"\n  ]\n}"
+      },
+      "remaining_scenario": "Click REMOVE, and verify the cart is empty and the badge disappears.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 5,
+      "timestamp": "2025-10-11T18:21:53.882983",
+      "prompt": "Click the Remove button for 'Sauce Labs Onesie'",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('button', {name:'Remove'})",
+        "action_type": "click",
+        "step_desc": "Click the Remove button for 'Sauce Labs Onesie'",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/cart.html'> selector='internal:role=button[name=\"Remove\"i]'>",
+        "vision_analysis": "{\n  \"context\": \"Cart page with item listed\",\n  \"elements\": [\n    \"Cart item: 'Sauce Labs Onesie', visible\",\n    \"Remove button: visible, enabled\",\n    \"Cart badge: visible, showing '1'\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario requires clicking REMOVE and verifying cart is empty\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    },
+    {
+      "step_number": 6,
+      "timestamp": "2025-10-11T18:22:09.761295",
+      "prompt": "Click the Continue Shopping button",
+      "ai_response": "Selector: getByRole('button', {name:'Continue Shopping'})\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('button', {name:'Continue Shopping'})",
+        "action_type": "click",
+        "vision_analysis": "{\n  \"context\": \"Cart page with no items listed\",\n  \"elements\": [\n    \"Cart icon: visible, no badge\",\n    \"Continue Shopping button: visible, enabled\",\n    \"Checkout button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Cart is empty as expected\",\n    \"Badge is not visible as expected\"\n  ]\n}"
+      },
+      "remaining_scenario": "Verify the cart is empty and the badge disappears",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 6,
+      "timestamp": "2025-10-11T18:22:12.313722",
+      "prompt": "Click the Continue Shopping button",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('button', {name:'Continue Shopping'})",
+        "action_type": "click",
+        "step_desc": "Click the Continue Shopping button",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/inventory.html'> selector='internal:role=button[name=\"Continue Shopping\"i]'>",
+        "vision_analysis": "{\n  \"context\": \"Cart page with no items listed\",\n  \"elements\": [\n    \"Cart icon: visible, no badge\",\n    \"Continue Shopping button: visible, enabled\",\n    \"Checkout button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Cart is empty as expected\",\n    \"Badge is not visible as expected\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    }
+  ],
+  "generated_test": {
+    "code": "```javascript\nconst { test, expect } = require('@playwright/test');\n\ntest('Login with \\'standard_user\\' / \\'secret_sauce\\'. Add \\'Sauce Labs Onesie\\' to cart from Products, open the cart, click REMOVE, and verify the cart is empty and the badge disappears.', async ({ page }) => {\n  await page.goto('https://www.saucedemo.com/');\n  \n  await expect(page.getByRole('textbox', {name:'Username'})).toBeVisible();\n  await page.getByRole('textbox', {name:'Username'}).fill('standard_user');\n  \n  await expect(page.getByRole('textbox', {name:'Password'})).toBeVisible();\n  await page.getByRole('textbox', {name:'Password'}).fill('secret_sauce');\n  \n  await expect(page.locator('[data-test=\"login-button\"]')).toBeVisible();\n  await expect(page.locator('[data-test=\"login-button\"]')).toBeEnabled();\n  await page.locator('[data-test=\"login-button\"]').click();\n  await expect(page).toHaveURL(/.*inventory\\.html/);\n  \n  await expect(page.locator('#add-to-cart-sauce-labs-onesie')).toBeVisible();\n  await page.locator('#add-to-cart-sauce-labs-onesie').click();\n  \n  await expect(page.getByText('1').first()).toBeVisible();\n  await page.getByText('1').first().click();\n  await expect(page).toHaveURL(/.*cart\\.html/);\n  \n  await expect(page.getByRole('button', {name:'Remove'})).toBeVisible();\n  await page.getByRole('button', {name:'Remove'}).click();\n  \n  await expect(page.locator('.cart_item')).toHaveCount(0);\n  await expect(page.locator('.shopping_cart_badge')).toHaveCount(0);\n  \n  await expect(page.getByRole('button', {name:'Continue Shopping'})).toBeVisible();\n  await page.getByRole('button', {name:'Continue Shopping'}).click();\n  await expect(page).toHaveURL(/.*inventory\\.html/);\n});\n```",
+    "scenario": "Login with 'standard_user' / 'secret_sauce'. Add 'Sauce Labs Onesie' to cart from Products, open the cart, click REMOVE, and verify the cart is empty and the badge disappears.",
+    "url": "https://www.saucedemo.com/",
+    "timestamp": "2025-10-11T18:22:32.878204"
+  },
+  "end_time": "2025-10-11T18:22:32.879035",
+  "success": true,
+  "metrics": {
+    "total_steps": 7,
+    "completed_steps": 7,
+    "remaining_scenario": "Verify the cart is empty and the badge disappears",
+    "total_selector_attempts": 7,
+    "successful_selectors": 7
+  }
+}

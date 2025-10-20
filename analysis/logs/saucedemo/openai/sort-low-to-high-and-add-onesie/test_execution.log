@@ -1,0 +1,230 @@
+{
+  "test_name": "Login_with_'standard_user'_/_'",
+  "original_scenario": "Login with 'standard_user' / 'secret_sauce'. From Products, change the sort dropdown to 'Price (low to high)'. Verify 'Sauce Labs Onesie' ($7.99) appears before higher-priced items. Add it to cart and verify the cart badge shows 1.",
+  "remaining_scenario": "Verify 'Sauce Labs Onesie' ($7.99) appears before higher-priced items. Add it to cart and verify the cart badge shows 1.",
+  "completed_steps": [
+    "Fill the Username field with 'standard_user'",
+    "Fill the Password field with 'secret_sauce'",
+    "Click the Login button",
+    "Change the sort dropdown to 'Price (low to high)'",
+    "Click the 'Add to cart' button for 'Sauce Labs Onesie'"
+  ],
+  "failed_attempts": [],
+  "steps": [
+    {
+      "step_number": 0,
+      "timestamp": "2025-10-11T17:49:56.034906",
+      "prompt": "Fill the Username field with 'standard_user'",
+      "ai_response": "Selector: getByRole('textbox', { name: 'Username' })\nAction Type: fill",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('textbox', { name: 'Username' })",
+        "action_type": "fill",
+        "vision_analysis": "{\n  \"context\": \"Login page with username/password form\",\n  \"elements\": [\n    \"Username field: visible, empty\",\n    \"Password field: visible, empty\",\n    \"Login button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario mentions login: both fields present\"\n  ]\n}"
+      },
+      "remaining_scenario": "Login with 'standard_user' / 'secret_sauce'. From Products, change the sort dropdown to 'Price (low to high)'. Verify 'Sauce Labs Onesie' ($7.99) appears before higher-priced items. Add it to cart and verify the cart badge shows 1.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/saucedemo/openai/sort-low-to-high-and-add-onesie/step_1.png"
+    },
+    {
+      "step_number": 0,
+      "timestamp": "2025-10-11T17:49:57.119837",
+      "prompt": "Fill the Username field with 'standard_user'",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('textbox', { name: 'Username' })",
+        "action_type": "fill",
+        "step_desc": "Fill the Username field with 'standard_user'",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/'> selector='internal:role=textbox[name=\"Username\"i]'>",
+        "vision_analysis": "{\n  \"context\": \"Login page with username/password form\",\n  \"elements\": [\n    \"Username field: visible, empty\",\n    \"Password field: visible, empty\",\n    \"Login button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario mentions login: both fields present\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      },
+      "screenshot": "logs/saucedemo/openai/sort-low-to-high-and-add-onesie/step_2.png"
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2025-10-11T17:50:06.425854",
+      "prompt": "Fill the Password field with 'secret_sauce'",
+      "ai_response": "Selector: getByRole('textbox', { name: 'Password' })\nAction Type: fill",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('textbox', { name: 'Password' })",
+        "action_type": "fill",
+        "vision_analysis": "{\n  \"context\": \"Login page with username/password form\",\n  \"elements\": [\n    \"Username field: visible, filled with 'standard_user'\",\n    \"Password field: visible, empty\",\n    \"Login button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario requires filling Password field with 'secret_sauce'\"\n  ]\n}"
+      },
+      "remaining_scenario": "Fill the Password field with 'secret_sauce'.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/saucedemo/openai/sort-low-to-high-and-add-onesie/step_3.png"
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2025-10-11T17:50:07.485948",
+      "prompt": "Fill the Password field with 'secret_sauce'",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('textbox', { name: 'Password' })",
+        "action_type": "fill",
+        "step_desc": "Fill the Password field with 'secret_sauce'",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/'> selector='internal:role=textbox[name=\"Password\"i]'>",
+        "vision_analysis": "{\n  \"context\": \"Login page with username/password form\",\n  \"elements\": [\n    \"Username field: visible, filled with 'standard_user'\",\n    \"Password field: visible, empty\",\n    \"Login button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario requires filling Password field with 'secret_sauce'\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      },
+      "screenshot": "logs/saucedemo/openai/sort-low-to-high-and-add-onesie/step_4.png"
+    },
+    {
+      "step_number": 2,
+      "timestamp": "2025-10-11T17:50:17.676079",
+      "prompt": "Click the Login button",
+      "ai_response": "Selector: getByTestId('login-button')\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "getByTestId('login-button')",
+        "action_type": "click",
+        "vision_analysis": "{\n  \"context\": \"Login page with email/password form\",\n  \"elements\": [\n    \"Username field: visible, filled with 'standard_user'\",\n    \"Password field: visible, filled with 'secret_sauce'\",\n    \"Login button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Expected Products page: not visible\"\n  ]\n}"
+      },
+      "remaining_scenario": "From Products, change the sort dropdown to 'Price (low to high)'. Verify 'Sauce Labs Onesie' ($7.99) appears before higher-priced items. Add it to cart and verify the cart badge shows 1.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/saucedemo/openai/sort-low-to-high-and-add-onesie/step_5.png"
+    },
+    {
+      "step_number": 2,
+      "timestamp": "2025-10-11T17:50:22.931546",
+      "prompt": "Click the Login button",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "locator('#login-button')",
+        "action_type": "click",
+        "step_desc": "Click the Login button",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/inventory.html'> selector='#login-button'>",
+        "vision_analysis": "{\n  \"context\": \"Login page with email/password form\",\n  \"elements\": [\n    \"Username field: visible, filled with 'standard_user'\",\n    \"Password field: visible, filled with 'secret_sauce'\",\n    \"Login button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Expected Products page: not visible\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    },
+    {
+      "step_number": 3,
+      "timestamp": "2025-10-11T17:50:37.462649",
+      "prompt": "Change the sort dropdown to 'Price (low to high)'",
+      "ai_response": "Selector: getByRole('combobox')\nAction Type: select",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('combobox')",
+        "action_type": "select",
+        "vision_analysis": "{\n  \"context\": \"Products page with item listings\",\n  \"elements\": [\n    \"Sort dropdown: visible, set to 'Name (A to Z)'\",\n    \"Sauce Labs Onesie: visible, price $7.99, 'Add to cart' button visible\",\n    \"Cart badge: visible, showing 0\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario requires sort dropdown to be 'Price (low to high)': currently set to 'Name (A to Z)'\",\n    \"Sauce Labs Onesie: visible, correctly priced at $7.99\"\n  ]\n}"
+      },
+      "remaining_scenario": "From Products, change the sort dropdown to 'Price (low to high)'. Verify 'Sauce Labs Onesie' ($7.99) appears before higher-priced items. Add it to cart and verify the cart badge shows 1.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 3,
+      "timestamp": "2025-10-11T17:50:38.563537",
+      "prompt": "Change the sort dropdown to 'Price (low to high)'",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('combobox')",
+        "action_type": "select",
+        "step_desc": "Change the sort dropdown to 'Price (low to high)'",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/inventory.html'> selector='internal:role=combobox'>",
+        "vision_analysis": "{\n  \"context\": \"Products page with item listings\",\n  \"elements\": [\n    \"Sort dropdown: visible, set to 'Name (A to Z)'\",\n    \"Sauce Labs Onesie: visible, price $7.99, 'Add to cart' button visible\",\n    \"Cart badge: visible, showing 0\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario requires sort dropdown to be 'Price (low to high)': currently set to 'Name (A to Z)'\",\n    \"Sauce Labs Onesie: visible, correctly priced at $7.99\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    },
+    {
+      "step_number": 4,
+      "timestamp": "2025-10-11T17:50:55.462111",
+      "prompt": "Click the 'Add to cart' button for 'Sauce Labs Onesie'",
+      "ai_response": "Selector: getByRole('button', {name: 'Add to cart'})\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('button', {name: 'Add to cart'})",
+        "action_type": "click",
+        "vision_analysis": "{\n  \"context\": \"Products page with items listed\",\n  \"elements\": [\n    \"Sort dropdown: visible, set to 'Price (low to high)'\",\n    \"Sauce Labs Onesie: visible, price $7.99, Add to cart button visible\",\n    \"Cart badge: visible, showing 0\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Sauce Labs Onesie appears before higher-priced items\",\n    \"Cart badge expected to show 1 after adding item\"\n  ]\n}"
+      },
+      "remaining_scenario": "Verify 'Sauce Labs Onesie' ($7.99) appears before higher-priced items. Add it to cart and verify the cart badge shows 1.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 4,
+      "timestamp": "2025-10-11T17:50:56.574032",
+      "prompt": "Click the 'Add to cart' button for 'Sauce Labs Onesie'",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('button', {name: 'Add to cart'})",
+        "action_type": "click",
+        "step_desc": "Click the 'Add to cart' button for 'Sauce Labs Onesie'",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/inventory.html'> selector='internal:role=button[name=\"Add to cart\"i] >> internal:has-text=/^\\\\s*Add\\\\ to\\\\ cart\\\\s*$/i >> nth=0'>",
+        "vision_analysis": "{\n  \"context\": \"Products page with items listed\",\n  \"elements\": [\n    \"Sort dropdown: visible, set to 'Price (low to high)'\",\n    \"Sauce Labs Onesie: visible, price $7.99, Add to cart button visible\",\n    \"Cart badge: visible, showing 0\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Sauce Labs Onesie appears before higher-priced items\",\n    \"Cart badge expected to show 1 after adding item\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    }
+  ],
+  "generated_test": {
+    "code": "```javascript\nconst { test, expect } = require('@playwright/test');\n\ntest('Login with standard_user / secret_sauce. From Products, change the sort dropdown to Price (low to high). Verify Sauce Labs Onesie ($7.99) appears before higher-priced items. Add it to cart and verify the cart badge shows 1.', async ({ page }) => {\n  await page.goto('https://www.saucedemo.com/');\n  \n  const usernameLocator = page.getByRole('textbox', { name: 'Username' });\n  await expect(usernameLocator).toBeVisible();\n  await usernameLocator.fill('standard_user');\n\n  const passwordLocator = page.getByRole('textbox', { name: 'Password' });\n  await expect(passwordLocator).toBeVisible();\n  await passwordLocator.fill('secret_sauce');\n\n  const loginButton = page.locator('#login-button');\n  await expect(loginButton).toBeVisible();\n  await expect(loginButton).toBeEnabled();\n  await loginButton.click();\n  await expect(page).toHaveURL(/.*inventory.html/);\n\n  const sortDropdown = page.getByRole('combobox');\n  await expect(sortDropdown).toBeVisible();\n  await sortDropdown.selectOption('lohi');\n\n  const itemLocator = page.getByText('Sauce Labs Onesie');\n  await expect(itemLocator).toBeVisible();\n  const priceLocator = page.getByText('$7.99');\n  await expect(priceLocator).toBeVisible();\n\n  const addToCartButton = page.getByRole('button', { name: 'Add to cart' }).first();\n  await expect(addToCartButton).toBeVisible();\n  await addToCartButton.click();\n\n  const cartBadge = page.locator('.shopping_cart_badge');\n  await expect(cartBadge).toBeVisible();\n  await expect(cartBadge).toHaveText('1');\n});\n```",
+    "scenario": "Login with 'standard_user' / 'secret_sauce'. From Products, change the sort dropdown to 'Price (low to high)'. Verify 'Sauce Labs Onesie' ($7.99) appears before higher-priced items. Add it to cart and verify the cart badge shows 1.",
+    "url": "https://www.saucedemo.com/",
+    "timestamp": "2025-10-11T17:51:09.910764"
+  },
+  "end_time": "2025-10-11T17:51:09.911724",
+  "success": true,
+  "metrics": {
+    "total_steps": 5,
+    "completed_steps": 5,
+    "remaining_scenario": "Verify 'Sauce Labs Onesie' ($7.99) appears before higher-priced items. Add it to cart and verify the cart badge shows 1.",
+    "total_selector_attempts": 5,
+    "successful_selectors": 5
+  }
+}

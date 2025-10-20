@@ -1,0 +1,12 @@
+test_name,step_index,prompt,planned_element,planned_action_type,planned_selector,execution_action_type,execution_selector,execution_status,execution_success,is_expected_step,selector_attempts,locator_mismatch,skipped_auto,suspected_hallucination
+Login_app_with_username_admin_,0,Fill the username field with 'admin',textbox,fill,"getByRole('textbox', {name: 'Username'})",fill,"getByRole('textbox', {name: 'Username'})",success,True,True,1,False,False,False
+Login_app_with_username_admin_,1,Fill the password field with 'admin1',textbox,fill,"getByRole('textbox', {name: 'Password'})",fill,"getByRole('textbox', {name: 'Password'})",success,True,True,1,False,False,False
+Login_app_with_username_admin_,2,Click the 'Login' button,button,click,locator('form').locator('button.btn'),click,locator('form').locator('button.btn'),success,True,True,1,False,False,False
+Login_app_with_username_admin_,3,Click the 'New content' link,link,click,"getByRole('link', {name: 'New content'})",click,"getByRole('link', {name: 'New content'})",success,True,True,1,False,False,False
+Login_app_with_username_admin_,4,Fill the title field with 'How to write thesis',textbox,fill,"getByRole('textbox', {name:'Enter title'})",fill,"getByRole('textbox', {name:'Enter title'})",success,True,True,1,False,False,False
+Login_app_with_username_admin_,5,Write 'This is the content body.' in the content editor.,frame_body,fill,locator('#jseditor_ifr').contentLocator('body'),fill,locator('#jseditor_ifr').contentLocator('body'),success,True,True,1,False,False,False
+Login_app_with_username_admin_,6,Click the 'Options' button,button,click,"getByRole('button', { name:'Options' })",click,"getByRole('button', { name:'Options' })",success,True,True,1,False,False,False
+Login_app_with_username_admin_,7,Select a category from the 'CATEGORY' dropdown,combobox,select,"getByRole('combobox', {name: 'CATEGORY'})",select,"getByRole('combobox', {name: 'CATEGORY'})",failed,False,True,1,False,False,True
+Login_app_with_username_admin_,8,Select a category from the 'CATEGORY' dropdown,select,select,"locator('select[name=""category""]')",select,"locator('select[name=""category""]')",failed,False,True,2,False,False,True
+Login_app_with_username_admin_,9,Select a category from the 'CATEGORY' dropdown,select,select,locator('#jscategory'),select,locator('#jscategory'),success,True,True,3,False,False,True
+Login_app_with_username_admin_,10,Click the 'Save' button,button,click,"getByRole('button',{ name:'Save' })",click,"getByRole('button',{ name:'Save' })",success,True,True,3,False,False,True

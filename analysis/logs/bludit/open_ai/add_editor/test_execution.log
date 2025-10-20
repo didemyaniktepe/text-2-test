@@ -1,0 +1,482 @@
+{
+  "test_name": "Login_app_with_username_admin_",
+  "original_scenario": "Login app with username admin password admin1 then login Go to Users and then add one user role as Editor ",
+  "remaining_scenario": "Click the 'Save' button",
+  "completed_steps": [
+    "Fill the username field with 'admin'",
+    "Fill the password field with 'admin1'",
+    "Click the 'Login' button",
+    "Click the 'Users' link in the sidebar",
+    "Click the 'Add a new user' link",
+    "Select 'Editor' from the Role dropdown",
+    "Fill the Username field with 'new_user'",
+    "Fill the Password field with 'password123'",
+    "Fill the Confirm Password field with 'password123'",
+    "Fill the Email field with 'user@example.com'",
+    "Click the 'Save' button"
+  ],
+  "failed_attempts": [
+    {
+      "selector": "getByRole('option', { name: 'Editor' })",
+      "action_type": "select"
+    }
+  ],
+  "steps": [
+    {
+      "step_number": 0,
+      "timestamp": "2025-10-04T18:11:53.046964",
+      "prompt": "Fill the username field with 'admin'",
+      "ai_response": "Selector: getByRole('textbox', {name: 'Username'})\nAction Type: fill",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('textbox', {name: 'Username'})",
+        "action_type": "fill"
+      },
+      "remaining_scenario": "Login app with username admin password admin1 then login Go to Users and then add one user role as Editor ",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/test_Login_app_with_username_admin__20251004_181135/step_1.png"
+    },
+    {
+      "step_number": 0,
+      "timestamp": "2025-10-04T18:11:54.149950",
+      "prompt": "Fill the username field with 'admin'",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('textbox', {name: 'Username'})",
+        "action_type": "fill",
+        "step_desc": "Fill the username field with 'admin'"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      },
+      "screenshot": "logs/test_Login_app_with_username_admin__20251004_181135/step_2.png"
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2025-10-04T18:12:07.141698",
+      "prompt": "Fill the password field with 'admin1'",
+      "ai_response": "Selector: getByRole('textbox', {name: 'Password'})\nAction Type: fill",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('textbox', {name: 'Password'})",
+        "action_type": "fill"
+      },
+      "remaining_scenario": "Login app with username admin password admin1 then login Go to Users and then add one user role as Editor ",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/test_Login_app_with_username_admin__20251004_181135/step_3.png"
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2025-10-04T18:12:08.192042",
+      "prompt": "Fill the password field with 'admin1'",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('textbox', {name: 'Password'})",
+        "action_type": "fill",
+        "step_desc": "Fill the password field with 'admin1'"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      },
+      "screenshot": "logs/test_Login_app_with_username_admin__20251004_181135/step_4.png"
+    },
+    {
+      "step_number": 2,
+      "timestamp": "2025-10-04T18:12:22.818179",
+      "prompt": "Click the 'Login' button",
+      "ai_response": "Selector: locator('form').locator('button.btn')\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "locator('form').locator('button.btn')",
+        "action_type": "click"
+      },
+      "remaining_scenario": "then login Go to Users and then add one user role as Editor",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 2,
+      "timestamp": "2025-10-04T18:12:25.709025",
+      "prompt": "Click the 'Login' button",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "locator('form').locator('button.btn')",
+        "action_type": "click",
+        "step_desc": "Click the 'Login' button"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      },
+      "screenshot": "logs/test_Login_app_with_username_admin__20251004_181135/step_6.png"
+    },
+    {
+      "step_number": 3,
+      "timestamp": "2025-10-04T18:12:38.332746",
+      "prompt": "Click the 'Users' link in the sidebar",
+      "ai_response": "Selector: getByRole('link', {name: 'Users'})\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('link', {name: 'Users'})",
+        "action_type": "click"
+      },
+      "remaining_scenario": "Go to Users and then add one user role as Editor",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/test_Login_app_with_username_admin__20251004_181135/step_7.png"
+    },
+    {
+      "step_number": 3,
+      "timestamp": "2025-10-04T18:12:40.137090",
+      "prompt": "Click the 'Users' link in the sidebar",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('link', {name: 'Users'})",
+        "action_type": "click",
+        "step_desc": "Click the 'Users' link in the sidebar"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      },
+      "screenshot": "logs/test_Login_app_with_username_admin__20251004_181135/step_8.png"
+    },
+    {
+      "step_number": 4,
+      "timestamp": "2025-10-04T18:12:53.875784",
+      "prompt": "Click the 'Add a new user' link",
+      "ai_response": "Selector: getByRole('link', {name: 'Add a new user'})\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('link', {name: 'Add a new user'})",
+        "action_type": "click"
+      },
+      "remaining_scenario": "Add one user role as Editor",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/test_Login_app_with_username_admin__20251004_181135/step_9.png"
+    },
+    {
+      "step_number": 4,
+      "timestamp": "2025-10-04T18:12:55.662797",
+      "prompt": "Click the 'Add a new user' link",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('link', {name: 'Add a new user'})",
+        "action_type": "click",
+        "step_desc": "Click the 'Add a new user' link"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      },
+      "screenshot": "logs/test_Login_app_with_username_admin__20251004_181135/step_10.png"
+    },
+    {
+      "step_number": 5,
+      "timestamp": "2025-10-04T18:13:12.503639",
+      "prompt": "Select 'Editor' from the Role dropdown",
+      "ai_response": "Selector: getByRole('option', { name: 'Editor' })\nAction Type: select",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('option', { name: 'Editor' })",
+        "action_type": "select"
+      },
+      "remaining_scenario": "Add one user role as Editor",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/test_Login_app_with_username_admin__20251004_181135/step_11.png"
+    },
+    {
+      "step_number": 5,
+      "timestamp": "2025-10-04T18:13:31.502196",
+      "prompt": "Select 'Editor' from the Role dropdown",
+      "ai_response": "Action failed: getByRole('option', { name: 'Editor' })select",
+      "action": {
+        "type": "action",
+        "status": "failed",
+        "selector": "getByRole('option', { name: 'Editor' })",
+        "action_type": "select"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": false
+      }
+    },
+    {
+      "step_number": 6,
+      "timestamp": "2025-10-04T18:13:36.976385",
+      "prompt": "Select 'Editor' from the Role dropdown",
+      "ai_response": "Selector: locator('#jsrole').selectOption('editor')\nAction Type: select",
+      "action": {
+        "type": "selector",
+        "selector": "locator('#jsrole').selectOption('editor')",
+        "action_type": "select"
+      },
+      "remaining_scenario": "Add one user role as Editor",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 2,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 6,
+      "timestamp": "2025-10-04T18:13:38.038183",
+      "prompt": "Select 'Editor' from the Role dropdown",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "locator('#jsrole').selectOption('editor')",
+        "action_type": "select",
+        "step_desc": "Select 'Editor' from the Role dropdown"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    },
+    {
+      "step_number": 7,
+      "timestamp": "2025-10-04T18:13:54.799935",
+      "prompt": "Fill the Username field with 'new_user'",
+      "ai_response": "Selector: getByRole('textbox', {name: 'Username'})\nAction Type: fill",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('textbox', {name: 'Username'})",
+        "action_type": "fill"
+      },
+      "remaining_scenario": "Add one user role as Editor",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 2,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 7,
+      "timestamp": "2025-10-04T18:13:55.865768",
+      "prompt": "Fill the Username field with 'new_user'",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('textbox', {name: 'Username'})",
+        "action_type": "fill",
+        "step_desc": "Fill the Username field with 'new_user'"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    },
+    {
+      "step_number": 8,
+      "timestamp": "2025-10-04T18:14:07.341487",
+      "prompt": "Fill the Password field with 'password123'",
+      "ai_response": "Selector: getByRole('textbox', {name: 'Password'})\nAction Type: fill",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('textbox', {name: 'Password'})",
+        "action_type": "fill"
+      },
+      "remaining_scenario": "Fill the Password field with 'password123' -> Fill the Confirm Password field with 'password123' -> Fill the Email field with 'user@example.com' -> Click the 'Save' button",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 2,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 8,
+      "timestamp": "2025-10-04T18:14:08.430809",
+      "prompt": "Fill the Password field with 'password123'",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('textbox', {name: 'Password'})",
+        "action_type": "fill",
+        "step_desc": "Fill the Password field with 'password123'"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    },
+    {
+      "step_number": 9,
+      "timestamp": "2025-10-04T18:14:22.757126",
+      "prompt": "Fill the Confirm Password field with 'password123'",
+      "ai_response": "Selector: getByRole('textbox', {name: 'Confirm Password'})\nAction Type: fill",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('textbox', {name: 'Confirm Password'})",
+        "action_type": "fill"
+      },
+      "remaining_scenario": "Fill the Confirm Password field with 'password123' -> Fill the Email field with 'user@example.com' -> Click the 'Save' button",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 2,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 9,
+      "timestamp": "2025-10-04T18:14:23.816934",
+      "prompt": "Fill the Confirm Password field with 'password123'",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('textbox', {name: 'Confirm Password'})",
+        "action_type": "fill",
+        "step_desc": "Fill the Confirm Password field with 'password123'"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    },
+    {
+      "step_number": 10,
+      "timestamp": "2025-10-04T18:14:35.796130",
+      "prompt": "Fill the Email field with 'user@example.com'",
+      "ai_response": "Selector: getByRole('textbox', {name: 'Email'})\nAction Type: fill",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('textbox', {name: 'Email'})",
+        "action_type": "fill"
+      },
+      "remaining_scenario": "Fill the Email field with 'user@example.com' -> Click the 'Save' button",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 2,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 10,
+      "timestamp": "2025-10-04T18:14:36.857912",
+      "prompt": "Fill the Email field with 'user@example.com'",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('textbox', {name: 'Email'})",
+        "action_type": "fill",
+        "step_desc": "Fill the Email field with 'user@example.com'"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    },
+    {
+      "step_number": 11,
+      "timestamp": "2025-10-04T18:14:47.323942",
+      "prompt": "Click the 'Save' button",
+      "ai_response": "Selector: locator('form').locator('button.btn')\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "locator('form').locator('button.btn')",
+        "action_type": "click"
+      },
+      "remaining_scenario": "Click the 'Save' button",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 2,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 11,
+      "timestamp": "2025-10-04T18:14:49.106595",
+      "prompt": "Click the 'Save' button",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "locator('form').locator('button.btn')",
+        "action_type": "click",
+        "step_desc": "Click the 'Save' button"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    }
+  ],
+  "generated_test": {
+    "code": "```javascript\nconst { test, expect } = require('@playwright/test');\n\ntest('Login app with username admin password admin1 then login Go to Users and then add one user role as Editor ', async ({ page }) => {\n  await page.goto('http://localhost:8001/admin');\n\n  const usernameField = page.getByRole('textbox', { name: 'Username' });\n  await expect(usernameField).toBeVisible();\n  await usernameField.fill('admin');\n\n  const passwordField = page.getByRole('textbox', { name: 'Password' });\n  await expect(passwordField).toBeVisible();\n  await passwordField.fill('admin1');\n\n  const loginButton = page.locator('form').locator('button.btn');\n  await expect(loginButton).toBeVisible();\n  await loginButton.click();\n\n  await expect(page).toHaveURL(/\\/admin_dashboard/);\n\n  const usersLink = page.getByRole('link', { name: 'Users' });\n  await expect(usersLink).toBeVisible();\n  await usersLink.click();\n\n  await expect(page).toHaveURL(/\\/admin\\/users/);\n\n  const addUserLink = page.getByRole('link', { name: 'Add a new user' });\n  await expect(addUserLink).toBeVisible();\n  await addUserLink.click();\n\n  const roleDropdown = page.locator('#jsrole');\n  await roleDropdown.selectOption('editor');\n\n  const newUsernameField = page.getByRole('textbox', { name: 'Username' });\n  await expect(newUsernameField).toBeVisible();\n  await newUsernameField.fill('new_user');\n\n  const newPasswordField = page.getByRole('textbox', { name: 'Password' });\n  await expect(newPasswordField).toBeVisible();\n  await newPasswordField.fill('password123');\n\n  const confirmPasswordField = page.getByRole('textbox', { name: 'Confirm Password' });\n  await expect(confirmPasswordField).toBeVisible();\n  await confirmPasswordField.fill('password123');\n\n  const emailField = page.getByRole('textbox', { name: 'Email' });\n  await expect(emailField).toBeVisible();\n  await emailField.fill('user@example.com');\n\n  const saveButton = page.locator('form').locator('button.btn');\n  await expect(saveButton).toBeVisible();\n  await saveButton.click();\n\n  await expect(page).toHaveURL(/\\/admin\\/users/);\n  const newUserRow = page.getByRole('row', { name: 'new_user' });\n  await expect(newUserRow).toBeVisible();\n});\n```",
+    "scenario": "Login app with username admin password admin1 then login Go to Users and then add one user role as Editor ",
+    "url": "http://localhost:8001/admin",
+    "timestamp": "2025-10-04T18:14:55.890337"
+  },
+  "end_time": "2025-10-04T18:14:55.891540",
+  "success": true,
+  "metrics": {
+    "total_steps": 12,
+    "completed_steps": 11,
+    "remaining_scenario": "Click the 'Save' button",
+    "total_selector_attempts": 24,
+    "successful_selectors": 11
+  }
+}

@@ -1,0 +1,261 @@
+{
+  "test_name": "Add_two_todos_'Buy_eggs'_and_'",
+  "original_scenario": "Add two todos 'Buy eggs' and 'Clean room' and press enter after each one of them, mark the first as completed, then unmark it and verify style reverts.",
+  "remaining_scenario": "Verify style reverts.",
+  "completed_steps": [
+    "Fill the 'What needs to be done?' input field with 'Buy eggs'",
+    "Press Enter to submit the todo",
+    "Fill the 'What needs to be done?' input field with 'Clean room'",
+    "Mark the 'Buy eggs' todo as completed by checking its checkbox.",
+    "Unmark the 'Buy eggs' todo by unchecking its checkbox."
+  ],
+  "failed_attempts": [
+    {
+      "selector": "getByRole('textbox', {name: 'Edit'})",
+      "action_type": "click"
+    }
+  ],
+  "steps": [
+    {
+      "step_number": 0,
+      "timestamp": "2025-10-09T15:45:40.640638",
+      "prompt": "Fill the 'What needs to be done?' input field with 'Buy eggs'",
+      "ai_response": "Selector: getByRole('textbox', {name: 'What needs to be done?'})\nAction Type: fill",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('textbox', {name: 'What needs to be done?'})",
+        "action_type": "fill"
+      },
+      "remaining_scenario": "Add two todos 'Buy eggs' and 'Clean room' and press enter after each one of them, mark the first as completed, then unmark it and verify style reverts.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/unmark_completion_functionality/step_1.png"
+    },
+    {
+      "step_number": 0,
+      "timestamp": "2025-10-09T15:45:41.734939",
+      "prompt": "Fill the 'What needs to be done?' input field with 'Buy eggs'",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('textbox', {name: 'What needs to be done?'})",
+        "action_type": "fill",
+        "step_desc": "Fill the 'What needs to be done?' input field with 'Buy eggs'",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://demo.playwright.dev/todomvc/#/'> selector='internal:role=textbox[name=\"What needs to be done?\"i]'>"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      },
+      "screenshot": "logs/unmark_completion_functionality/step_2.png"
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2025-10-09T15:45:54.029263",
+      "prompt": "Press Enter to submit the todo",
+      "ai_response": "Selector: getByRole('textbox', {name: 'What needs to be done?'})\nAction Type: press_key",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('textbox', {name: 'What needs to be done?'})",
+        "action_type": "press_key"
+      },
+      "remaining_scenario": "Press Enter to submit the todo",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/unmark_completion_functionality/step_3.png"
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2025-10-09T15:45:55.126622",
+      "prompt": "Press Enter to submit the todo",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('textbox', {name: 'What needs to be done?'})",
+        "action_type": "press_key",
+        "step_desc": "Press Enter to submit the todo",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://demo.playwright.dev/todomvc/#/'> selector='internal:role=textbox[name=\"What needs to be done?\"i]'>"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      },
+      "screenshot": "logs/unmark_completion_functionality/step_4.png"
+    },
+    {
+      "step_number": 2,
+      "timestamp": "2025-10-09T15:46:10.653774",
+      "prompt": "Fill the 'What needs to be done?' input field with 'Clean room'",
+      "ai_response": "Selector: getByRole('textbox', {name: 'What needs to be done?'})\nAction Type: fill",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('textbox', {name: 'What needs to be done?'})",
+        "action_type": "fill"
+      },
+      "remaining_scenario": "Add todo 'Clean room' and press enter, mark the first as completed, then unmark it and verify style reverts.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/unmark_completion_functionality/step_5.png"
+    },
+    {
+      "step_number": 2,
+      "timestamp": "2025-10-09T15:46:11.711165",
+      "prompt": "Fill the 'What needs to be done?' input field with 'Clean room'",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('textbox', {name: 'What needs to be done?'})",
+        "action_type": "fill",
+        "step_desc": "Fill the 'What needs to be done?' input field with 'Clean room'",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://demo.playwright.dev/todomvc/#/'> selector='internal:role=textbox[name=\"What needs to be done?\"i]'>"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    },
+    {
+      "step_number": 3,
+      "timestamp": "2025-10-09T15:46:27.429251",
+      "prompt": "Mark the 'Buy eggs' todo as completed by checking its checkbox.",
+      "ai_response": "Selector: getByRole('checkbox', {name: 'Toggle Todo'})\nAction Type: check",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('checkbox', {name: 'Toggle Todo'})",
+        "action_type": "check"
+      },
+      "remaining_scenario": "Press Enter to submit the todo, mark the first as completed, then unmark it and verify style reverts.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 3,
+      "timestamp": "2025-10-09T15:46:28.515116",
+      "prompt": "Mark the 'Buy eggs' todo as completed by checking its checkbox.",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('checkbox', {name: 'Toggle Todo'})",
+        "action_type": "check",
+        "step_desc": "Mark the 'Buy eggs' todo as completed by checking its checkbox.",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://demo.playwright.dev/todomvc/#/'> selector='internal:role=checkbox[name=\"Toggle Todo\"i]'>"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    },
+    {
+      "step_number": 4,
+      "timestamp": "2025-10-09T15:46:43.220283",
+      "prompt": "Unmark the 'Buy eggs' todo by unchecking its checkbox.",
+      "ai_response": "Selector: getByRole('checkbox', {name: 'Toggle Todo'})\nAction Type: uncheck",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('checkbox', {name: 'Toggle Todo'})",
+        "action_type": "uncheck"
+      },
+      "remaining_scenario": "Unmark the first todo and verify style reverts.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 4,
+      "timestamp": "2025-10-09T15:46:44.316674",
+      "prompt": "Unmark the 'Buy eggs' todo by unchecking its checkbox.",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('checkbox', {name: 'Toggle Todo'})",
+        "action_type": "uncheck",
+        "step_desc": "Unmark the 'Buy eggs' todo by unchecking its checkbox.",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://demo.playwright.dev/todomvc/#/'> selector='internal:role=checkbox[name=\"Toggle Todo\"i]'>"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    },
+    {
+      "step_number": 5,
+      "timestamp": "2025-10-09T15:47:02.050169",
+      "prompt": "Verify that the style of the 'Buy eggs' todo has reverted to its original state after being unchecked.",
+      "ai_response": "Selector: getByRole('textbox', {name: 'Edit'})\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('textbox', {name: 'Edit'})",
+        "action_type": "click"
+      },
+      "remaining_scenario": "Verify style reverts.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 5,
+      "timestamp": "2025-10-09T15:47:30.167006",
+      "prompt": "Verify that the style of the 'Buy eggs' todo has reverted to its original state after being unchecked.",
+      "ai_response": "Action failed: getByRole('textbox', {name: 'Edit'})click",
+      "action": {
+        "type": "action",
+        "status": "failed",
+        "selector": "getByRole('textbox', {name: 'Edit'})",
+        "action_type": "click",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://demo.playwright.dev/todomvc/#/'> selector='internal:role=textbox[name=\"Edit\"i]'>"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": false
+      }
+    }
+  ],
+  "generated_test": {
+    "code": "```javascript\nconst { test, expect } = require('@playwright/test');\n\ntest('Add two todos \"Buy eggs\" and \"Clean room\" and press enter after each one of them, mark the first as completed, then unmark it and verify style reverts.', async ({ page }) => {\n  await page.goto('https://demo.playwright.dev/todomvc/#/');\n  await expect(page).toHaveURL(/.+/);\n\n  const todoInput = page.getByRole('textbox', { name: 'What needs to be done?' });\n\n  await expect(todoInput).toBeVisible();\n  await todoInput.fill('Buy eggs');\n  await todoInput.press('Enter');\n\n  await expect(page.getByText('Buy eggs')).toBeVisible();\n\n  await expect(todoInput).toBeVisible();\n  await todoInput.fill('Clean room');\n  await todoInput.press('Enter');\n\n  await expect(page.getByText('Clean room')).toBeVisible();\n\n  const firstTodoCheckbox = page.getByRole('checkbox', { name: 'Toggle Todo' }).first();\n\n  await expect(firstTodoCheckbox).toBeVisible();\n  await firstTodoCheckbox.check();\n\n  await expect(page.getByText('Buy eggs').first()).toHaveClass(/completed/);\n\n  await firstTodoCheckbox.uncheck();\n\n  await expect(page.getByText('Buy eggs').first()).not.toHaveClass(/completed/);\n});\n```",
+    "scenario": "Add two todos 'Buy eggs' and 'Clean room' and press enter after each one of them, mark the first as completed, then unmark it and verify style reverts.",
+    "url": "https://demo.playwright.dev/todomvc/#/",
+    "timestamp": "2025-10-09T15:47:33.592502"
+  },
+  "end_time": "2025-10-09T15:47:33.594067",
+  "success": false,
+  "metrics": {
+    "total_steps": 6,
+    "completed_steps": 5,
+    "remaining_scenario": "Verify style reverts.",
+    "total_selector_attempts": 12,
+    "successful_selectors": 5
+  }
+}

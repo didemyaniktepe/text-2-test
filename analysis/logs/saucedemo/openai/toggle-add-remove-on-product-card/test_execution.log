@@ -1,0 +1,270 @@
+{
+  "test_name": "Login_with_'standard_user'_/_'",
+  "original_scenario": "Login with 'standard_user' / 'secret_sauce'. Add 'Sauce Labs Backpack' from Products. Verify the button label toggles from 'ADD TO CART' to 'REMOVE'. Click 'REMOVE' and confirm the button returns to 'ADD TO CART' and the cart badge decrements.",
+  "remaining_scenario": "Confirm the button returns to 'ADD TO CART' and the cart badge decrements.",
+  "completed_steps": [
+    "Fill the username field with 'standard_user'",
+    "Fill the password field with 'secret_sauce'",
+    "Click the login button to attempt logging in",
+    "Click the 'Add to cart' button for 'Sauce Labs Backpack'",
+    "Click the 'Remove' button for 'Sauce Labs Backpack'",
+    "Verify the button returns to 'ADD TO CART' for 'Sauce Labs Backpack' and the cart badge decrements to '0'"
+  ],
+  "failed_attempts": [],
+  "steps": [
+    {
+      "step_number": 0,
+      "timestamp": "2025-10-11T17:53:28.602159",
+      "prompt": "Fill the username field with 'standard_user'",
+      "ai_response": "Selector: getByRole('textbox',{ name:'Username' })\nAction Type: fill",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('textbox',{ name:'Username' })",
+        "action_type": "fill",
+        "vision_analysis": "{\n  \"context\": \"Login page with username/password form\",\n  \"elements\": [\n    \"Username field: visible, empty\",\n    \"Password field: visible, empty\",\n    \"Login button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario mentions login: both fields present\"\n  ]\n}"
+      },
+      "remaining_scenario": "Login with 'standard_user' / 'secret_sauce'. Add 'Sauce Labs Backpack' from Products. Verify the button label toggles from 'ADD TO CART' to 'REMOVE'. Click 'REMOVE' and confirm the button returns to 'ADD TO CART' and the cart badge decrements.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/saucedemo/openai/toggle-add-remove-on-product-card/step_1.png"
+    },
+    {
+      "step_number": 0,
+      "timestamp": "2025-10-11T17:53:29.685212",
+      "prompt": "Fill the username field with 'standard_user'",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('textbox',{ name:'Username' })",
+        "action_type": "fill",
+        "step_desc": "Fill the username field with 'standard_user'",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/'> selector='internal:role=textbox[name=\"Username\"i]'>",
+        "vision_analysis": "{\n  \"context\": \"Login page with username/password form\",\n  \"elements\": [\n    \"Username field: visible, empty\",\n    \"Password field: visible, empty\",\n    \"Login button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario mentions login: both fields present\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      },
+      "screenshot": "logs/saucedemo/openai/toggle-add-remove-on-product-card/step_2.png"
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2025-10-11T17:53:42.016713",
+      "prompt": "Fill the password field with 'secret_sauce'",
+      "ai_response": "Selector: getByRole('textbox',{ name:'Password' })\nAction Type: fill",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('textbox',{ name:'Password' })",
+        "action_type": "fill",
+        "vision_analysis": "{\n  \"context\": \"Login page with username/password form\",\n  \"elements\": [\n    \"Username field: visible, filled with 'standard_user'\",\n    \"Password field: visible, empty\",\n    \"Login button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario requires password field to be filled\"\n  ]\n}"
+      },
+      "remaining_scenario": "Fill the password field with 'secret_sauce'.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/saucedemo/openai/toggle-add-remove-on-product-card/step_3.png"
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2025-10-11T17:53:43.068737",
+      "prompt": "Fill the password field with 'secret_sauce'",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('textbox',{ name:'Password' })",
+        "action_type": "fill",
+        "step_desc": "Fill the password field with 'secret_sauce'",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/'> selector='internal:role=textbox[name=\"Password\"i]'>",
+        "vision_analysis": "{\n  \"context\": \"Login page with username/password form\",\n  \"elements\": [\n    \"Username field: visible, filled with 'standard_user'\",\n    \"Password field: visible, empty\",\n    \"Login button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario requires password field to be filled\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      },
+      "screenshot": "logs/saucedemo/openai/toggle-add-remove-on-product-card/step_4.png"
+    },
+    {
+      "step_number": 2,
+      "timestamp": "2025-10-11T17:53:54.698107",
+      "prompt": "Click the login button to attempt logging in",
+      "ai_response": "Selector: getByTestId('login-button')\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "getByTestId('login-button')",
+        "action_type": "click",
+        "vision_analysis": "{\n  \"context\": \"Login page with email/password form\",\n  \"elements\": [\n    \"Username field: visible, filled with 'standard_user'\",\n    \"Password field: visible, filled with 'secret_sauce'\",\n    \"Login button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario mentions login: both fields filled\",\n    \"Expected transition to Products page: not visible\"\n  ]\n}"
+      },
+      "remaining_scenario": "Add 'Sauce Labs Backpack' from Products. Verify the button label toggles from 'ADD TO CART' to 'REMOVE'. Click 'REMOVE' and confirm the button returns to 'ADD TO CART' and the cart badge decrements.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/saucedemo/openai/toggle-add-remove-on-product-card/step_5.png"
+    },
+    {
+      "step_number": 2,
+      "timestamp": "2025-10-11T17:53:59.939440",
+      "prompt": "Click the login button to attempt logging in",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "locator('#login-button')",
+        "action_type": "click",
+        "step_desc": "Click the login button to attempt logging in",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/inventory.html'> selector='#login-button'>",
+        "vision_analysis": "{\n  \"context\": \"Login page with email/password form\",\n  \"elements\": [\n    \"Username field: visible, filled with 'standard_user'\",\n    \"Password field: visible, filled with 'secret_sauce'\",\n    \"Login button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario mentions login: both fields filled\",\n    \"Expected transition to Products page: not visible\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    },
+    {
+      "step_number": 3,
+      "timestamp": "2025-10-11T17:54:11.382545",
+      "prompt": "Click the 'Add to cart' button for 'Sauce Labs Backpack'",
+      "ai_response": "Selector: getByRole('button', {name: 'Add to cart'}).nth(0)\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('button', {name: 'Add to cart'}).nth(0)",
+        "action_type": "click",
+        "vision_analysis": "{\n  \"context\": \"Products page with item listings\",\n  \"elements\": [\n    \"Sauce Labs Backpack: visible, 'Add to cart' button visible\",\n    \"Cart icon: visible, no badge\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario mentions 'Sauce Labs Backpack': visible with 'Add to cart' button\"\n  ]\n}"
+      },
+      "remaining_scenario": "Add 'Sauce Labs Backpack' from Products. Verify the button label toggles from 'ADD TO CART' to 'REMOVE'. Click 'REMOVE' and confirm the button returns to 'ADD TO CART' and the cart badge decrements.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 3,
+      "timestamp": "2025-10-11T17:54:12.490891",
+      "prompt": "Click the 'Add to cart' button for 'Sauce Labs Backpack'",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('button', {name: 'Add to cart'}).nth(0)",
+        "action_type": "click",
+        "step_desc": "Click the 'Add to cart' button for 'Sauce Labs Backpack'",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/inventory.html'> selector='internal:role=button[name=\"Add to cart\"i] >> nth=0'>",
+        "vision_analysis": "{\n  \"context\": \"Products page with item listings\",\n  \"elements\": [\n    \"Sauce Labs Backpack: visible, 'Add to cart' button visible\",\n    \"Cart icon: visible, no badge\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario mentions 'Sauce Labs Backpack': visible with 'Add to cart' button\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    },
+    {
+      "step_number": 4,
+      "timestamp": "2025-10-11T17:54:25.005590",
+      "prompt": "Click the 'Remove' button for 'Sauce Labs Backpack'",
+      "ai_response": "Selector: getByRole('button',{ name:'Remove' })\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('button',{ name:'Remove' })",
+        "action_type": "click",
+        "vision_analysis": "{\n  \"context\": \"Products page with item listings\",\n  \"elements\": [\n    \"'Sauce Labs Backpack' button: visible, label 'Remove'\",\n    \"Cart badge: visible, count 1\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Button label for 'Sauce Labs Backpack' is 'Remove', as expected\",\n    \"Cart badge count is 1, indicating item added\"\n  ]\n}"
+      },
+      "remaining_scenario": "Verify the button label toggles from 'ADD TO CART' to 'REMOVE'. Click 'REMOVE' and confirm the button returns to 'ADD TO CART' and the cart badge decrements.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 4,
+      "timestamp": "2025-10-11T17:54:26.101038",
+      "prompt": "Click the 'Remove' button for 'Sauce Labs Backpack'",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('button',{ name:'Remove' })",
+        "action_type": "click",
+        "step_desc": "Click the 'Remove' button for 'Sauce Labs Backpack'",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/inventory.html'> selector='internal:role=button[name=\"Remove\"i]'>",
+        "vision_analysis": "{\n  \"context\": \"Products page with item listings\",\n  \"elements\": [\n    \"'Sauce Labs Backpack' button: visible, label 'Remove'\",\n    \"Cart badge: visible, count 1\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Button label for 'Sauce Labs Backpack' is 'Remove', as expected\",\n    \"Cart badge count is 1, indicating item added\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    },
+    {
+      "step_number": 5,
+      "timestamp": "2025-10-11T17:54:40.174975",
+      "prompt": "Verify the button returns to 'ADD TO CART' for 'Sauce Labs Backpack' and the cart badge decrements to '0'",
+      "ai_response": "Selector: getByRole('button', {name:'Add to cart'}).nth(0)\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('button', {name:'Add to cart'}).nth(0)",
+        "action_type": "click",
+        "vision_analysis": "{\n  \"context\": \"Products page with item listings\",\n  \"elements\": [\n    \"Sauce Labs Backpack button: visible, labeled 'Add to cart'\",\n    \"Cart badge: visible, showing '0'\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Expected 'Add to cart' button for Sauce Labs Backpack: visible\",\n    \"Cart badge decrement confirmed: badge shows '0'\"\n  ]\n}"
+      },
+      "remaining_scenario": "Confirm the button returns to 'ADD TO CART' and the cart badge decrements.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 5,
+      "timestamp": "2025-10-11T17:54:41.291947",
+      "prompt": "Verify the button returns to 'ADD TO CART' for 'Sauce Labs Backpack' and the cart badge decrements to '0'",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('button', {name:'Add to cart'}).nth(0)",
+        "action_type": "click",
+        "step_desc": "Verify the button returns to 'ADD TO CART' for 'Sauce Labs Backpack' and the cart badge decrements to '0'",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/inventory.html'> selector='internal:role=button[name=\"Add to cart\"i] >> nth=0'>",
+        "vision_analysis": "{\n  \"context\": \"Products page with item listings\",\n  \"elements\": [\n    \"Sauce Labs Backpack button: visible, labeled 'Add to cart'\",\n    \"Cart badge: visible, showing '0'\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Expected 'Add to cart' button for Sauce Labs Backpack: visible\",\n    \"Cart badge decrement confirmed: badge shows '0'\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    }
+  ],
+  "generated_test": {
+    "code": "const { test, expect } = require('@playwright/test');\n\ntest('Login with \"standard_user\" / \"secret_sauce\". Add \"Sauce Labs Backpack\" from Products. Verify the button label toggles from \"ADD TO CART\" to \"REMOVE\". Click \"REMOVE\" and confirm the button returns to \"ADD TO CART\" and the cart badge decrements.', async ({ page }) => {\n  await page.goto('https://www.saucedemo.com/');\n  \n  const usernameField = page.getByRole('textbox', { name: 'Username' });\n  await expect(usernameField).toBeVisible();\n  await usernameField.fill('standard_user');\n  \n  const passwordField = page.getByRole('textbox', { name: 'Password' });\n  await expect(passwordField).toBeVisible();\n  await passwordField.fill('secret_sauce');\n  \n  const loginButton = page.locator('#login-button');\n  await expect(loginButton).toBeVisible();\n  await expect(loginButton).toBeEnabled();\n  await loginButton.click();\n  \n  await expect(page).toHaveURL(/inventory\\.html/);\n  \n  const addToCartButton = page.getByRole('button', { name: 'Add to cart' }).nth(0);\n  await expect(addToCartButton).toBeVisible();\n  await addToCartButton.click();\n  \n  const removeButton = page.getByRole('button', { name: 'Remove' });\n  await expect(removeButton).toBeVisible();\n  await removeButton.click();\n  \n  const addToCartButtonAgain = page.getByRole('button', { name: 'Add to cart' }).nth(0);\n  await expect(addToCartButtonAgain).toBeVisible();\n  \n  const cartBadge = page.locator('.shopping_cart_badge');\n  await expect(cartBadge).not.toBeVisible();\n});",
+    "scenario": "Login with 'standard_user' / 'secret_sauce'. Add 'Sauce Labs Backpack' from Products. Verify the button label toggles from 'ADD TO CART' to 'REMOVE'. Click 'REMOVE' and confirm the button returns to 'ADD TO CART' and the cart badge decrements.",
+    "url": "https://www.saucedemo.com/",
+    "timestamp": "2025-10-11T17:54:46.304810"
+  },
+  "end_time": "2025-10-11T17:54:46.305705",
+  "success": true,
+  "metrics": {
+    "total_steps": 6,
+    "completed_steps": 6,
+    "remaining_scenario": "Confirm the button returns to 'ADD TO CART' and the cart badge decrements.",
+    "total_selector_attempts": 6,
+    "successful_selectors": 6
+  }
+}

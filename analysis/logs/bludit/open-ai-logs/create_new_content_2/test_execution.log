@@ -1,0 +1,486 @@
+{
+  "test_name": "Login_app_with_username_admin_",
+  "original_scenario": "Login app with username admin password admin1 then login Go to create new content and write title 'How to write thesis' and then write something in content and save it",
+  "remaining_scenario": "write something in content and save it",
+  "completed_steps": [
+    "Fill the username field with 'admin'",
+    "Fill the password field with 'admin1'",
+    "Click the 'Login' button",
+    "Click the 'New content' link",
+    "Fill the title field with 'How to write thesis'",
+    "Fill the content field with 'This is the content of the thesis.'",
+    "Click the 'Save' button"
+  ],
+  "failed_attempts": [
+    {
+      "selector": "locator('#jseditor_ifr').contentLocator('body')",
+      "action_type": "fill"
+    },
+    {
+      "selector": "getByRole('textbox').filter({has: page.locator('[role=\"application\"]')})",
+      "action_type": "fill"
+    },
+    {
+      "selector": "getByRole('textbox', {name:'Rich Text Area'})",
+      "action_type": "fill"
+    },
+    {
+      "selector": "locator('.tox-edit-area iframe').contentLocator('body')",
+      "action_type": "fill"
+    },
+    {
+      "selector": "locator('.tox-edit-area').locator('iframe').contentLocator('body')",
+      "action_type": "fill"
+    }
+  ],
+  "steps": [
+    {
+      "step_number": 0,
+      "timestamp": "2025-09-30T17:09:54.913709",
+      "prompt": "Fill the username field with 'admin'",
+      "ai_response": "Selector: getByRole('textbox', {name: 'Username'})\nAction Type: fill",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('textbox', {name: 'Username'})",
+        "action_type": "fill"
+      },
+      "remaining_scenario": "Login app with username admin password admin1 then login Go to create new content and write title 'How to write thesis' and then write something in content and save it",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/test_Login_app_with_username_admin__20250930_170934/step_1.png"
+    },
+    {
+      "step_number": 0,
+      "timestamp": "2025-09-30T17:09:56.029501",
+      "prompt": "Fill the username field with 'admin'",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('textbox', {name: 'Username'})",
+        "action_type": "fill",
+        "step_desc": "Fill the username field with 'admin'"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      },
+      "screenshot": "logs/test_Login_app_with_username_admin__20250930_170934/step_2.png"
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2025-09-30T17:10:13.598317",
+      "prompt": "Fill the password field with 'admin1'",
+      "ai_response": "Selector: getByRole('textbox',{name:'Password'})\nAction Type: fill",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('textbox',{name:'Password'})",
+        "action_type": "fill"
+      },
+      "remaining_scenario": "Fill the password field with 'admin1' then login Go to create new content and write title 'How to write thesis' and then write something in content and save it",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/test_Login_app_with_username_admin__20250930_170934/step_3.png"
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2025-09-30T17:10:14.634259",
+      "prompt": "Fill the password field with 'admin1'",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('textbox',{name:'Password'})",
+        "action_type": "fill",
+        "step_desc": "Fill the password field with 'admin1'"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      },
+      "screenshot": "logs/test_Login_app_with_username_admin__20250930_170934/step_4.png"
+    },
+    {
+      "step_number": 2,
+      "timestamp": "2025-09-30T17:10:43.275953",
+      "prompt": "Click the 'Login' button",
+      "ai_response": "Selector: locator('form').locator('button.btn')\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "locator('form').locator('button.btn')",
+        "action_type": "click"
+      },
+      "remaining_scenario": "then login Go to create new content and write title 'How to write thesis' and then write something in content and save it",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 2,
+      "timestamp": "2025-09-30T17:10:46.315239",
+      "prompt": "Click the 'Login' button",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "locator('form').locator('button.btn')",
+        "action_type": "click",
+        "step_desc": "Click the 'Login' button"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    },
+    {
+      "step_number": 3,
+      "timestamp": "2025-09-30T17:11:01.808082",
+      "prompt": "Click the 'New content' link",
+      "ai_response": "Selector: getByRole('link', {name: 'New content'})\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('link', {name: 'New content'})",
+        "action_type": "click"
+      },
+      "remaining_scenario": "Go to create new content and write title 'How to write thesis' and then write something in content and save it",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 3,
+      "timestamp": "2025-09-30T17:11:03.800167",
+      "prompt": "Click the 'New content' link",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('link', {name: 'New content'})",
+        "action_type": "click",
+        "step_desc": "Click the 'New content' link"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    },
+    {
+      "step_number": 4,
+      "timestamp": "2025-09-30T17:12:08.408695",
+      "prompt": "Fill the title field with 'How to write thesis'",
+      "ai_response": "Selector: getByRole('textbox', {name:'Enter title'})\nAction Type: fill",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('textbox', {name:'Enter title'})",
+        "action_type": "fill"
+      },
+      "remaining_scenario": "Write title 'How to write thesis' and then write something in content and save it",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 4,
+      "timestamp": "2025-09-30T17:12:09.446520",
+      "prompt": "Fill the title field with 'How to write thesis'",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('textbox', {name:'Enter title'})",
+        "action_type": "fill",
+        "step_desc": "Fill the title field with 'How to write thesis'"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      },
+      "screenshot": "logs/test_Login_app_with_username_admin__20250930_170934/step_10.png"
+    },
+    {
+      "step_number": 5,
+      "timestamp": "2025-09-30T17:12:37.772127",
+      "prompt": "Fill the content field with 'This is the content of the thesis.'",
+      "ai_response": "Selector: locator('#jseditor_ifr').contentLocator('body')\nAction Type: fill",
+      "action": {
+        "type": "selector",
+        "selector": "locator('#jseditor_ifr').contentLocator('body')",
+        "action_type": "fill"
+      },
+      "remaining_scenario": "write something in content and save it",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/test_Login_app_with_username_admin__20250930_170934/step_11.png"
+    },
+    {
+      "step_number": 5,
+      "timestamp": "2025-09-30T17:12:42.443046",
+      "prompt": "Fill the content field with 'This is the content of the thesis.'",
+      "ai_response": "Action failed: locator('#jseditor_ifr').contentLocator('body')fill",
+      "action": {
+        "type": "action",
+        "status": "failed",
+        "selector": "locator('#jseditor_ifr').contentLocator('body')",
+        "action_type": "fill"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": false
+      }
+    },
+    {
+      "step_number": 6,
+      "timestamp": "2025-09-30T17:12:58.020814",
+      "prompt": "Fill the content field with 'This is the content of the thesis.'",
+      "ai_response": "Selector: getByRole('textbox').filter({has: page.locator('[role=\"application\"]')})\nAction Type: fill",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('textbox').filter({has: page.locator('[role=\"application\"]')})",
+        "action_type": "fill"
+      },
+      "remaining_scenario": "write something in content and save it",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 2,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 6,
+      "timestamp": "2025-09-30T17:13:05.628655",
+      "prompt": "Fill the content field with 'This is the content of the thesis.'",
+      "ai_response": "Action failed: getByRole('textbox').filter({has: page.locator('[role=\"application\"]')})fill",
+      "action": {
+        "type": "action",
+        "status": "failed",
+        "selector": "getByRole('textbox').filter({has: page.locator('[role=\"application\"]')})",
+        "action_type": "fill"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": false
+      }
+    },
+    {
+      "step_number": 7,
+      "timestamp": "2025-09-30T17:13:19.147358",
+      "prompt": "Fill the content field with 'This is the content of the thesis.'",
+      "ai_response": "Selector: getByRole('textbox', {name:'Rich Text Area'})\nAction Type: fill",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('textbox', {name:'Rich Text Area'})",
+        "action_type": "fill"
+      },
+      "remaining_scenario": "write something in content and save it",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 3,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 7,
+      "timestamp": "2025-09-30T17:13:26.980834",
+      "prompt": "Fill the content field with 'This is the content of the thesis.'",
+      "ai_response": "Action failed: getByRole('textbox', {name:'Rich Text Area'})fill",
+      "action": {
+        "type": "action",
+        "status": "failed",
+        "selector": "getByRole('textbox', {name:'Rich Text Area'})",
+        "action_type": "fill"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": false
+      }
+    },
+    {
+      "step_number": 8,
+      "timestamp": "2025-09-30T17:13:43.672903",
+      "prompt": "Fill the content field with 'This is the content of the thesis.'",
+      "ai_response": "Selector: locator('.tox-edit-area iframe').contentLocator('body')\nAction Type: fill",
+      "action": {
+        "type": "selector",
+        "selector": "locator('.tox-edit-area iframe').contentLocator('body')",
+        "action_type": "fill"
+      },
+      "remaining_scenario": "write something in content and save it",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 4,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 8,
+      "timestamp": "2025-09-30T17:13:48.885292",
+      "prompt": "Fill the content field with 'This is the content of the thesis.'",
+      "ai_response": "Action failed: locator('.tox-edit-area iframe').contentLocator('body')fill",
+      "action": {
+        "type": "action",
+        "status": "failed",
+        "selector": "locator('.tox-edit-area iframe').contentLocator('body')",
+        "action_type": "fill"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": false
+      }
+    },
+    {
+      "step_number": 9,
+      "timestamp": "2025-09-30T17:14:03.056685",
+      "prompt": "Fill the content field with 'This is the content of the thesis.'",
+      "ai_response": "Selector: locator('.tox-edit-area').locator('iframe').contentLocator('body')\nAction Type: fill",
+      "action": {
+        "type": "selector",
+        "selector": "locator('.tox-edit-area').locator('iframe').contentLocator('body')",
+        "action_type": "fill"
+      },
+      "remaining_scenario": "write something in content and save it",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 5,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 9,
+      "timestamp": "2025-09-30T17:14:08.814020",
+      "prompt": "Fill the content field with 'This is the content of the thesis.'",
+      "ai_response": "Action failed: locator('.tox-edit-area').locator('iframe').contentLocator('body')fill",
+      "action": {
+        "type": "action",
+        "status": "failed",
+        "selector": "locator('.tox-edit-area').locator('iframe').contentLocator('body')",
+        "action_type": "fill"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": false
+      }
+    },
+    {
+      "step_number": 10,
+      "timestamp": "2025-09-30T17:14:20.328799",
+      "prompt": "Fill the content field with 'This is the content of the thesis.'",
+      "ai_response": "Selector: getByPlaceholder('Enter title')\nAction Type: fill",
+      "action": {
+        "type": "selector",
+        "selector": "getByPlaceholder('Enter title')",
+        "action_type": "fill"
+      },
+      "remaining_scenario": "write something in content and save it",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 6,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 10,
+      "timestamp": "2025-09-30T17:14:21.366024",
+      "prompt": "Fill the content field with 'This is the content of the thesis.'",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByPlaceholder('Enter title')",
+        "action_type": "fill",
+        "step_desc": "Fill the content field with 'This is the content of the thesis.'"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    },
+    {
+      "step_number": 11,
+      "timestamp": "2025-09-30T17:14:53.830693",
+      "prompt": "Click the 'Save' button",
+      "ai_response": "Selector: getByRole('button', {name:'Save'})\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('button', {name:'Save'})",
+        "action_type": "click"
+      },
+      "remaining_scenario": "write something in content and save it",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 6,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 11,
+      "timestamp": "2025-09-30T17:14:55.706002",
+      "prompt": "Click the 'Save' button",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('button', {name:'Save'})",
+        "action_type": "click",
+        "step_desc": "Click the 'Save' button"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    }
+  ],
+  "generated_test": {
+    "code": "const { test, expect } = require('@playwright/test');\n\ntest('Login app with username admin password admin1 then login Go to create new content and write title \\'How to write thesis\\' and then write something in content and save it', async ({ page }) => {\n    test.use({ headless: false });\n    await page.goto('http://localhost:8001/admin/');\n\n    const usernameInput = page.getByRole('textbox', {name: 'Username'});\n    await expect(usernameInput).toBeVisible();\n    await usernameInput.fill('admin');\n\n    const passwordInput = page.getByRole('textbox',{name:'Password'});\n    await expect(passwordInput).toBeVisible();\n    await passwordInput.fill('admin1');\n\n    const loginButton = page.locator('form').locator('button.btn');\n    await expect(loginButton).toBeVisible();\n    await expect(loginButton).toBeEnabled();\n    await loginButton.click();\n\n    await expect(page).toHaveURL('/admin/dashboard');\n\n    const newContentLink = page.getByRole('link', {name: 'New content'});\n    await expect(newContentLink).toBeVisible();\n    await newContentLink.click();\n    \n    await expect(page).toHaveURL('/admin/newContent');\n\n    const titleInput = page.getByRole('textbox', {name:'Enter title'});\n    await expect(titleInput).toBeVisible();\n    await titleInput.fill('How to write thesis');\n\n    const contentInput = page.getByPlaceholder('Enter title');\n    await expect(contentInput).toBeVisible();\n    await contentInput.fill('This is the content of the thesis.');\n\n    const saveButton = page.getByRole('button', {name:'Save'});\n    await expect(saveButton).toBeVisible();\n    await expect(saveButton).toBeEnabled();\n    await saveButton.click();\n\n    await expect(page).toHaveURL('/admin/contentList');\n    const newContent = page.getByText('How to write thesis');\n    await expect(newContent).toBeVisible();\n});",
+    "scenario": "Login app with username admin password admin1 then login Go to create new content and write title 'How to write thesis' and then write something in content and save it",
+    "url": "http://localhost:8001/admin/",
+    "timestamp": "2025-09-30T17:15:14.130628"
+  },
+  "end_time": "2025-09-30T17:15:14.133584",
+  "success": true,
+  "metrics": {
+    "total_steps": 12,
+    "completed_steps": 7,
+    "remaining_scenario": "write something in content and save it",
+    "total_selector_attempts": 72,
+    "successful_selectors": 7
+  }
+}

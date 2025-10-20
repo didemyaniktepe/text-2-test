@@ -1,0 +1,290 @@
+{
+  "test_name": "Login_app_with_username_admin_",
+  "original_scenario": "Login app with username admin password admin1 then login then navigate to 'http://localhost:8001/admin/content' and Click edit and change the title",
+  "remaining_scenario": "Click the 'Save' button",
+  "completed_steps": [
+    "Fill the username field with 'admin'",
+    "Fill the password field with 'admin1'",
+    "Click the 'Login' button",
+    "Click the 'Content' link in the sidebar to navigate to the content management page.",
+    "Click the 'Edit' link for the first content item titled 'New Title'.",
+    "Fill the title field with 'Updated Title'",
+    "Click the 'Save' button"
+  ],
+  "failed_attempts": [],
+  "steps": [
+    {
+      "step_number": 0,
+      "timestamp": "2025-09-29T01:23:59.368052",
+      "prompt": "Fill the username field with 'admin'",
+      "ai_response": "Selector: getByRole('textbox', {name: 'Username'})\nAction Type: fill",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('textbox', {name: 'Username'})",
+        "action_type": "fill"
+      },
+      "remaining_scenario": "Login app with username admin password admin1 then login then navigate to 'http://localhost:8001/admin/content' and Click edit and change the title",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/test_Login_app_with_username_admin__20250929_012347/step_1.png"
+    },
+    {
+      "step_number": 0,
+      "timestamp": "2025-09-29T01:24:00.444496",
+      "prompt": "Fill the username field with 'admin'",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('textbox', {name: 'Username'})",
+        "action_type": "fill",
+        "step_desc": "Fill the username field with 'admin'"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      },
+      "screenshot": "logs/test_Login_app_with_username_admin__20250929_012347/step_2.png"
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2025-09-29T01:24:11.758191",
+      "prompt": "Fill the password field with 'admin1'",
+      "ai_response": "Selector: getByRole('textbox', {name: 'Password'})\nAction Type: fill",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('textbox', {name: 'Password'})",
+        "action_type": "fill"
+      },
+      "remaining_scenario": "Login app with username admin password admin1 then login then navigate to 'http://localhost:8001/admin/content' and Click edit and change the title",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/test_Login_app_with_username_admin__20250929_012347/step_3.png"
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2025-09-29T01:24:12.797907",
+      "prompt": "Fill the password field with 'admin1'",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('textbox', {name: 'Password'})",
+        "action_type": "fill",
+        "step_desc": "Fill the password field with 'admin1'"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      },
+      "screenshot": "logs/test_Login_app_with_username_admin__20250929_012347/step_4.png"
+    },
+    {
+      "step_number": 2,
+      "timestamp": "2025-09-29T01:24:22.097229",
+      "prompt": "Click the 'Login' button",
+      "ai_response": "Selector: locator('form').locator('button.btn')\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "locator('form').locator('button.btn')",
+        "action_type": "click"
+      },
+      "remaining_scenario": "Login then navigate to 'http://localhost:8001/admin/content' and Click edit and change the title",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/test_Login_app_with_username_admin__20250929_012347/step_5.png"
+    },
+    {
+      "step_number": 2,
+      "timestamp": "2025-09-29T01:24:24.951749",
+      "prompt": "Click the 'Login' button",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "locator('form').locator('button.btn')",
+        "action_type": "click",
+        "step_desc": "Click the 'Login' button"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      },
+      "screenshot": "logs/test_Login_app_with_username_admin__20250929_012347/step_6.png"
+    },
+    {
+      "step_number": 3,
+      "timestamp": "2025-09-29T01:24:38.585123",
+      "prompt": "Click the 'Content' link in the sidebar to navigate to the content management page.",
+      "ai_response": "Selector: getByRole('link', {name: 'Content'})\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('link', {name: 'Content'})",
+        "action_type": "click"
+      },
+      "remaining_scenario": "Navigate to 'http://localhost:8001/admin/content' and Click edit and change the title",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 3,
+      "timestamp": "2025-09-29T01:24:44.730235",
+      "prompt": "Click the 'Content' link in the sidebar to navigate to the content management page.",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('link', {name: 'Content'})",
+        "action_type": "click",
+        "step_desc": "Click the 'Content' link in the sidebar to navigate to the content management page."
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    },
+    {
+      "step_number": 4,
+      "timestamp": "2025-09-29T01:24:58.526453",
+      "prompt": "Click the 'Edit' link for the first content item titled 'New Title'.",
+      "ai_response": "Selector: locator('tbody tr').nth(0).getByRole('link', { name: 'Edit' })\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "locator('tbody tr').nth(0).getByRole('link', { name: 'Edit' })",
+        "action_type": "click"
+      },
+      "remaining_scenario": "Click edit and change the title",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 4,
+      "timestamp": "2025-09-29T01:25:00.537749",
+      "prompt": "Click the 'Edit' link for the first content item titled 'New Title'.",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "locator('tbody tr').nth(0).getByRole('link', { name: 'Edit' })",
+        "action_type": "click",
+        "step_desc": "Click the 'Edit' link for the first content item titled 'New Title'."
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    },
+    {
+      "step_number": 5,
+      "timestamp": "2025-09-29T01:25:16.886753",
+      "prompt": "Fill the title field with 'Updated Title'",
+      "ai_response": "Selector: getByRole('textbox',{ name:'Enter title' })\nAction Type: fill",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('textbox',{ name:'Enter title' })",
+        "action_type": "fill"
+      },
+      "remaining_scenario": "Change the title",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 5,
+      "timestamp": "2025-09-29T01:25:17.932967",
+      "prompt": "Fill the title field with 'Updated Title'",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('textbox',{ name:'Enter title' })",
+        "action_type": "fill",
+        "step_desc": "Fill the title field with 'Updated Title'"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    },
+    {
+      "step_number": 6,
+      "timestamp": "2025-09-29T01:25:38.565719",
+      "prompt": "Click the 'Save' button",
+      "ai_response": "Selector: getByRole('button', {name:'Save'})\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('button', {name:'Save'})",
+        "action_type": "click"
+      },
+      "remaining_scenario": "Click the 'Save' button",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 6,
+      "timestamp": "2025-09-29T01:25:40.573434",
+      "prompt": "Click the 'Save' button",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('button', {name:'Save'})",
+        "action_type": "click",
+        "step_desc": "Click the 'Save' button"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    }
+  ],
+  "generated_test": {
+    "code": "const { test, expect } = require('@playwright/test');\n\ntest('Login app with username admin password admin1 then login then navigate to http://localhost:8001/admin/content and Click edit and change the title', async ({ page }) => {\n    test.use({ headless: false });\n    await page.goto('http://localhost:8001/admin');\n\n    const usernameField = page.getByRole('textbox', {name: 'Username'});\n    await expect(usernameField).toBeVisible();\n    await usernameField.fill('admin');\n\n    const passwordField = page.getByRole('textbox', {name: 'Password'});\n    await expect(passwordField).toBeVisible();\n    await passwordField.fill('admin1');\n\n    const loginButton = page.locator('form').locator('button.btn');\n    await expect(loginButton).toBeEnabled();\n    await loginButton.click();\n\n    await expect(page).toHaveURL(/.+/);\n\n    const contentLink = page.getByRole('link', {name: 'Content'});\n    await expect(contentLink).toBeVisible();\n    await contentLink.click();\n\n    await expect(page).toHaveURL(/.+/);\n\n    const editLink = page.locator('tbody tr').nth(0).getByRole('link', { name: 'Edit' });\n    await expect(editLink).toBeVisible();\n    await editLink.click();\n\n    await expect(page).toHaveURL(/.+/);\n\n    const titleField = page.getByRole('textbox',{ name:'Enter title' });\n    await expect(titleField).toBeVisible();\n    await titleField.fill('Updated Title');\n\n    const saveButton = page.getByRole('button', {name:'Save'});\n    await expect(saveButton).toBeEnabled();\n    await saveButton.click();\n\n    await expect(page).toHaveURL(/.+/);\n\n    const updatedTitle = page.getByRole('textbox',{ name:'Enter title' });\n    await expect(updatedTitle).toBeVisible();\n    expect(await updatedTitle.inputValue()).toBe('Updated Title');\n});",
+    "scenario": "Login app with username admin password admin1 then login then navigate to 'http://localhost:8001/admin/content' and Click edit and change the title",
+    "url": "http://localhost:8001/admin",
+    "timestamp": "2025-09-29T01:25:53.060101"
+  },
+  "end_time": "2025-09-29T01:25:53.061151",
+  "success": true,
+  "metrics": {
+    "total_steps": 7,
+    "completed_steps": 7,
+    "remaining_scenario": "Click the 'Save' button",
+    "total_selector_attempts": 7,
+    "successful_selectors": 7
+  }
+}

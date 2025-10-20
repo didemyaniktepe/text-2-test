@@ -1,0 +1,101 @@
+{
+  "test_name": "Navigate_to_http://localhost:8",
+  "original_scenario": "Navigate to http://localhost:8001 and then go to admin panel username admin password admin1 ",
+  "remaining_scenario": "Fill the password field with 'admin1' and click the login button",
+  "completed_steps": [
+    "Fill the username field with 'admin'",
+    "Fill the password field with 'admin1' and click the login button"
+  ],
+  "failed_attempts": [],
+  "steps": [
+    {
+      "step_number": 0,
+      "timestamp": "2025-10-03T23:51:51.632313",
+      "prompt": "Fill the username field with 'admin'",
+      "ai_response": "Selector: getByRole('textbox', {name: 'Username'})\nAction Type: fill",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('textbox', {name: 'Username'})",
+        "action_type": "fill"
+      },
+      "remaining_scenario": "Navigate to http://localhost:8001 and then go to admin panel username admin password admin1 ",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/test_Navigate_to_http:/localhost:8_20251003_235137/step_1.png"
+    },
+    {
+      "step_number": 0,
+      "timestamp": "2025-10-03T23:51:52.741499",
+      "prompt": "Fill the username field with 'admin'",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('textbox', {name: 'Username'})",
+        "action_type": "fill",
+        "step_desc": "Fill the username field with 'admin'"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      },
+      "screenshot": "logs/test_Navigate_to_http:/localhost:8_20251003_235137/step_0.png"
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2025-10-03T23:52:09.285195",
+      "prompt": "Fill the password field with 'admin1' and click the login button",
+      "ai_response": "Selector: locator('form').locator('button.btn')\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "locator('form').locator('button.btn')",
+        "action_type": "click"
+      },
+      "remaining_scenario": "Fill the password field with 'admin1' and click the login button",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2025-10-03T23:52:12.085076",
+      "prompt": "Fill the password field with 'admin1' and click the login button",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "locator('form').locator('button.btn')",
+        "action_type": "click",
+        "step_desc": "Fill the password field with 'admin1' and click the login button"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    }
+  ],
+  "generated_test": {
+    "code": "const { test, expect } = require('@playwright/test');\n\ntest('Navigate to http://localhost:8001 and then go to admin panel username admin password admin1 ', async ({ page }) => {\n  await page.goto('http://localhost:8001/admin');\n\n  const usernameInput = page.getByRole('textbox', { name: 'Username' });\n  await expect(usernameInput).toBeVisible();\n  await usernameInput.fill('admin');\n\n  const submitButton = page.locator('form').locator('button.btn');\n  await expect(submitButton).toBeVisible();\n  await submitButton.click();\n\n  await expect(page).toHaveURL('http://localhost:8001/admin');\n});",
+    "scenario": "Navigate to http://localhost:8001 and then go to admin panel username admin password admin1 ",
+    "url": "http://localhost:8001/admin",
+    "timestamp": "2025-10-03T23:52:17.580010"
+  },
+  "end_time": "2025-10-03T23:52:17.580485",
+  "success": true,
+  "metrics": {
+    "total_steps": 2,
+    "completed_steps": 2,
+    "remaining_scenario": "Fill the password field with 'admin1' and click the login button",
+    "total_selector_attempts": 2,
+    "successful_selectors": 2
+  }
+}

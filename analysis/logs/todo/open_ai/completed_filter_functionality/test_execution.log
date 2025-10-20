@@ -1,0 +1,376 @@
+{
+  "test_name": "Add_three_todos_after_each_one",
+  "original_scenario": "Add three todos after each one of them, mark two as completed, then switch to 'Completed' filter and verify only completed todos are displayed.",
+  "remaining_scenario": "Switch to 'Completed' filter and verify only completed todos are displayed.",
+  "completed_steps": [
+    "Fill the 'What needs to be done?' input field with 'Todo 1'",
+    "Press Enter to submit the todo",
+    "Fill the 'What needs to be done?' input field with 'Todo 2'",
+    "Press Enter to submit the todo",
+    "Fill the 'What needs to be done?' input field with 'Todo 3'",
+    "Press Enter to submit the todo",
+    "Check the checkbox next to 'Todo 1' to mark it as completed",
+    "Check the checkbox next to 'Todo 2' to mark it as completed",
+    "Click on the 'Completed' filter link."
+  ],
+  "failed_attempts": [],
+  "steps": [
+    {
+      "step_number": 0,
+      "timestamp": "2025-10-09T14:35:36.645283",
+      "prompt": "Fill the 'What needs to be done?' input field with 'Todo 1'",
+      "ai_response": "Selector: getByRole('textbox', {name: 'What needs to be done?'})\nAction Type: fill",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('textbox', {name: 'What needs to be done?'})",
+        "action_type": "fill"
+      },
+      "remaining_scenario": "Add three todos after each one of them, mark two as completed, then switch to 'Completed' filter and verify only completed todos are displayed.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/completed_filter_functionality/step_1.png"
+    },
+    {
+      "step_number": 0,
+      "timestamp": "2025-10-09T14:35:37.721665",
+      "prompt": "Fill the 'What needs to be done?' input field with 'Todo 1'",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('textbox', {name: 'What needs to be done?'})",
+        "action_type": "fill",
+        "step_desc": "Fill the 'What needs to be done?' input field with 'Todo 1'",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://demo.playwright.dev/todomvc/#/'> selector='internal:role=textbox[name=\"What needs to be done?\"i]'>"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      },
+      "screenshot": "logs/completed_filter_functionality/step_2.png"
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2025-10-09T14:35:50.181834",
+      "prompt": "Press Enter to submit the todo",
+      "ai_response": "Selector: getByRole('textbox', {name: 'What needs to be done?'})\nAction Type: press_key",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('textbox', {name: 'What needs to be done?'})",
+        "action_type": "press_key"
+      },
+      "remaining_scenario": "Press Enter to submit the todo",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/completed_filter_functionality/step_3.png"
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2025-10-09T14:35:51.273128",
+      "prompt": "Press Enter to submit the todo",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('textbox', {name: 'What needs to be done?'})",
+        "action_type": "press_key",
+        "step_desc": "Press Enter to submit the todo",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://demo.playwright.dev/todomvc/#/'> selector='internal:role=textbox[name=\"What needs to be done?\"i]'>"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      },
+      "screenshot": "logs/completed_filter_functionality/step_4.png"
+    },
+    {
+      "step_number": 2,
+      "timestamp": "2025-10-09T14:36:15.756800",
+      "prompt": "Fill the 'What needs to be done?' input field with 'Todo 2'",
+      "ai_response": "Selector: getByRole('textbox', {name: 'What needs to be done?'})\nAction Type: fill",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('textbox', {name: 'What needs to be done?'})",
+        "action_type": "fill"
+      },
+      "remaining_scenario": "Add three todos after each one of them, mark two as completed, then switch to 'Completed' filter and verify only completed todos are displayed.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/completed_filter_functionality/step_5.png"
+    },
+    {
+      "step_number": 2,
+      "timestamp": "2025-10-09T14:36:16.825104",
+      "prompt": "Fill the 'What needs to be done?' input field with 'Todo 2'",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('textbox', {name: 'What needs to be done?'})",
+        "action_type": "fill",
+        "step_desc": "Fill the 'What needs to be done?' input field with 'Todo 2'",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://demo.playwright.dev/todomvc/#/'> selector='internal:role=textbox[name=\"What needs to be done?\"i]'>"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      },
+      "screenshot": "logs/completed_filter_functionality/step_6.png"
+    },
+    {
+      "step_number": 3,
+      "timestamp": "2025-10-09T14:36:28.330865",
+      "prompt": "Press Enter to submit the todo",
+      "ai_response": "Selector: getByRole('textbox', {name: 'What needs to be done?'})\nAction Type: press_key",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('textbox', {name: 'What needs to be done?'})",
+        "action_type": "press_key"
+      },
+      "remaining_scenario": "Press Enter to submit the todo",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/completed_filter_functionality/step_7.png"
+    },
+    {
+      "step_number": 3,
+      "timestamp": "2025-10-09T14:36:29.366531",
+      "prompt": "Press Enter to submit the todo",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('textbox', {name: 'What needs to be done?'})",
+        "action_type": "press_key",
+        "step_desc": "Press Enter to submit the todo",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://demo.playwright.dev/todomvc/#/'> selector='internal:role=textbox[name=\"What needs to be done?\"i]'>"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      },
+      "screenshot": "logs/completed_filter_functionality/step_8.png"
+    },
+    {
+      "step_number": 4,
+      "timestamp": "2025-10-09T14:36:41.257876",
+      "prompt": "Fill the 'What needs to be done?' input field with 'Todo 3'",
+      "ai_response": "Selector: getByRole('textbox', {name: 'What needs to be done?'})\nAction Type: fill",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('textbox', {name: 'What needs to be done?'})",
+        "action_type": "fill"
+      },
+      "remaining_scenario": "Fill the 'What needs to be done?' input field with 'Todo 3'",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/completed_filter_functionality/step_9.png"
+    },
+    {
+      "step_number": 4,
+      "timestamp": "2025-10-09T14:36:42.319631",
+      "prompt": "Fill the 'What needs to be done?' input field with 'Todo 3'",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('textbox', {name: 'What needs to be done?'})",
+        "action_type": "fill",
+        "step_desc": "Fill the 'What needs to be done?' input field with 'Todo 3'",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://demo.playwright.dev/todomvc/#/'> selector='internal:role=textbox[name=\"What needs to be done?\"i]'>"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    },
+    {
+      "step_number": 5,
+      "timestamp": "2025-10-09T14:36:57.546963",
+      "prompt": "Press Enter to submit the todo",
+      "ai_response": "Selector: getByRole('textbox', {name: 'What needs to be done?'})\nAction Type: press_key",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('textbox', {name: 'What needs to be done?'})",
+        "action_type": "press_key"
+      },
+      "remaining_scenario": "Press Enter to submit the todo",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 5,
+      "timestamp": "2025-10-09T14:36:58.581106",
+      "prompt": "Press Enter to submit the todo",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('textbox', {name: 'What needs to be done?'})",
+        "action_type": "press_key",
+        "step_desc": "Press Enter to submit the todo",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://demo.playwright.dev/todomvc/#/'> selector='internal:role=textbox[name=\"What needs to be done?\"i]'>"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    },
+    {
+      "step_number": 6,
+      "timestamp": "2025-10-09T14:37:13.105762",
+      "prompt": "Check the checkbox next to 'Todo 1' to mark it as completed",
+      "ai_response": "Selector: getByRole('checkbox', {name: 'Toggle Todo'}).nth(0)\nAction Type: check",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('checkbox', {name: 'Toggle Todo'}).nth(0)",
+        "action_type": "check"
+      },
+      "remaining_scenario": "Mark two as completed, then switch to 'Completed' filter and verify only completed todos are displayed.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 6,
+      "timestamp": "2025-10-09T14:37:14.192739",
+      "prompt": "Check the checkbox next to 'Todo 1' to mark it as completed",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('checkbox', {name: 'Toggle Todo'}).nth(0)",
+        "action_type": "check",
+        "step_desc": "Check the checkbox next to 'Todo 1' to mark it as completed",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://demo.playwright.dev/todomvc/#/'> selector='internal:role=checkbox[name=\"Toggle Todo\"i] >> nth=0'>"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    },
+    {
+      "step_number": 7,
+      "timestamp": "2025-10-09T14:37:31.131535",
+      "prompt": "Check the checkbox next to 'Todo 2' to mark it as completed",
+      "ai_response": "Selector: getByRole('checkbox', {name: 'Toggle Todo'}).nth(1)\nAction Type: check",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('checkbox', {name: 'Toggle Todo'}).nth(1)",
+        "action_type": "check"
+      },
+      "remaining_scenario": "Mark one more todo as completed, then switch to 'Completed' filter and verify only completed todos are displayed.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 7,
+      "timestamp": "2025-10-09T14:37:32.220395",
+      "prompt": "Check the checkbox next to 'Todo 2' to mark it as completed",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('checkbox', {name: 'Toggle Todo'}).nth(1)",
+        "action_type": "check",
+        "step_desc": "Check the checkbox next to 'Todo 2' to mark it as completed",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://demo.playwright.dev/todomvc/#/'> selector='internal:role=checkbox[name=\"Toggle Todo\"i] >> nth=1'>"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    },
+    {
+      "step_number": 8,
+      "timestamp": "2025-10-09T14:37:43.999167",
+      "prompt": "Click on the 'Completed' filter link.",
+      "ai_response": "Selector: getByRole('link', {name: 'Completed'})\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('link', {name: 'Completed'})",
+        "action_type": "click"
+      },
+      "remaining_scenario": "Switch to 'Completed' filter and verify only completed todos are displayed.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 8,
+      "timestamp": "2025-10-09T14:37:45.256840",
+      "prompt": "Click on the 'Completed' filter link.",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('link', {name: 'Completed'})",
+        "action_type": "click",
+        "step_desc": "Click on the 'Completed' filter link.",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://demo.playwright.dev/todomvc/#/completed'> selector='internal:role=link[name=\"Completed\"i]'>"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    }
+  ],
+  "generated_test": {
+    "code": "```javascript\nconst { test, expect } = require('@playwright/test');\n\ntest('Add three todos after each one of them, mark two as completed, then switch to Completed filter and verify only completed todos are displayed.', async ({ page }) => {\n  await page.goto('https://demo.playwright.dev/todomvc/#/');\n  \n  const todoInput = page.getByRole('textbox', { name: 'What needs to be done?' });\n  \n  await expect(todoInput).toBeVisible();\n  await todoInput.fill('Todo 1');\n  await todoInput.press('Enter');\n\n  await expect(todoInput).toBeVisible();\n  await todoInput.fill('Todo 2');\n  await todoInput.press('Enter');\n\n  await expect(todoInput).toBeVisible();\n  await todoInput.fill('Todo 3');\n  await todoInput.press('Enter');\n  \n  const todoCheckbox1 = page.getByRole('checkbox', { name: 'Toggle Todo' }).nth(0);\n  await expect(todoCheckbox1).toBeVisible();\n  await todoCheckbox1.check();\n  \n  const todoCheckbox2 = page.getByRole('checkbox', { name: 'Toggle Todo' }).nth(1);\n  await expect(todoCheckbox2).toBeVisible();\n  await todoCheckbox2.check();\n  \n  const completedFilter = page.getByRole('link', { name: 'Completed' });\n  await expect(completedFilter).toBeVisible();\n  await completedFilter.click();\n  \n  await expect(page).toHaveURL(/#\\/completed/);\n  \n  const completedTodos = page.locator('.todo-list li');\n  await expect(completedTodos).toHaveCount(2);\n});\n```",
+    "scenario": "Add three todos after each one of them, mark two as completed, then switch to 'Completed' filter and verify only completed todos are displayed.",
+    "url": "https://demo.playwright.dev/todomvc/#/",
+    "timestamp": "2025-10-09T14:37:58.701464"
+  },
+  "end_time": "2025-10-09T14:37:58.702403",
+  "success": true,
+  "metrics": {
+    "total_steps": 9,
+    "completed_steps": 9,
+    "remaining_scenario": "Switch to 'Completed' filter and verify only completed todos are displayed.",
+    "total_selector_attempts": 9,
+    "successful_selectors": 9
+  }
+}

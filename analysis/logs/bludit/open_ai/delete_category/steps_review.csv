@@ -1,0 +1,8 @@
+test_name,step_index,expected_steps,prompt,planned_element,planned_action_type,planned_selector,execution_action_type,execution_selector,execution_status,execution_success,is_expected_step,selector_attempts,locator_mismatch,skipped_auto,suspected_hallucination
+delete_category,0,Fill the username field with 'admin',Fill the username field with 'admin',textbox,fill,"getByRole('textbox', {name: 'Username'})",fill,"getByRole('textbox', {name: 'Username'})",success,True,True,1,False,False,False
+delete_category,1,Fill the password field with 'admin1',Fill the password field with 'admin1',textbox,fill,"getByRole('textbox', {name: 'Password'})",fill,"getByRole('textbox', {name: 'Password'})",success,True,True,1,False,False,False
+delete_category,2,Click the 'Login' button,Click the 'Login' button,button,click,locator('form').locator('button.btn'),click,locator('form').locator('button.btn'),success,True,True,1,False,False,False
+delete_category,3,Click the 'Categories' link,Click the 'Categories' link,link,click,"getByRole('link', {name: 'Categories'})",click,"getByRole('link', {name: 'Categories'})",success,True,True,1,False,False,False
+delete_category,4,Click the 'Didem' link,Click the 'Didem' link,link,click,"locator('tbody tr').nth(0).getByRole('link', { name: 'Didem' })",click,"locator('tbody tr').nth(0).getByRole('link', { name: 'Didem' })",success,True,True,1,False,False,False
+delete_category,5,Click the 'Delete' button,Click the 'Delete' button,button,click,"getByRole('button', {name: 'Delete'}).nth(0)",click,"getByRole('button', {name: 'Delete'}).nth(0)",success,True,True,1,False,False,False
+delete_category,6,Click the save button,,,,,,,,,,,,,

@@ -1,0 +1,352 @@
+{
+  "test_name": "Login_with_'standard_user'_/_'",
+  "original_scenario": "Login with 'standard_user' / 'secret_sauce'. Add 'Sauce Labs Bolt T-Shirt' then open the cart and proceed to Checkout. On 'Your Information', click CANCEL and verify you are returned to the cart without losing the item.",
+  "remaining_scenario": "Verify you are returned to the cart without losing the item",
+  "completed_steps": [
+    "Fill the username field with 'standard_user'",
+    "Fill the password field with 'secret_sauce'",
+    "Click the Login button",
+    "Click 'Add to cart' button for 'Sauce Labs Bolt T-Shirt'",
+    "Click the cart icon showing 1 item",
+    "Click the Checkout button",
+    "Click the Cancel button",
+    "Verify the cart contains 'Sauce Labs Bolt T-Shirt' with quantity 1"
+  ],
+  "failed_attempts": [],
+  "steps": [
+    {
+      "step_number": 0,
+      "timestamp": "2025-10-11T18:25:29.662793",
+      "prompt": "Fill the username field with 'standard_user'",
+      "ai_response": "Selector: getByRole('textbox', {name:'Username'})\nAction Type: fill",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('textbox', {name:'Username'})",
+        "action_type": "fill",
+        "vision_analysis": "{\n  \"context\": \"Login page with username/password form\",\n  \"elements\": [\n    \"Username field: visible, empty\",\n    \"Password field: visible, empty\",\n    \"Login button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario mentions login: both fields present\"\n  ]\n}"
+      },
+      "remaining_scenario": "Login with 'standard_user' / 'secret_sauce'. Add 'Sauce Labs Bolt T-Shirt' then open the cart and proceed to Checkout. On 'Your Information', click CANCEL and verify you are returned to the cart without losing the item.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/saucedemo/deepseek/checkout-cancel-returns-to-cart/step_1.png"
+    },
+    {
+      "step_number": 0,
+      "timestamp": "2025-10-11T18:25:30.756961",
+      "prompt": "Fill the username field with 'standard_user'",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('textbox', {name:'Username'})",
+        "action_type": "fill",
+        "step_desc": "Fill the username field with 'standard_user'",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/'> selector='internal:role=textbox[name=\"Username\"i]'>",
+        "vision_analysis": "{\n  \"context\": \"Login page with username/password form\",\n  \"elements\": [\n    \"Username field: visible, empty\",\n    \"Password field: visible, empty\",\n    \"Login button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario mentions login: both fields present\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      },
+      "screenshot": "logs/saucedemo/deepseek/checkout-cancel-returns-to-cart/step_2.png"
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2025-10-11T18:25:47.380346",
+      "prompt": "Fill the password field with 'secret_sauce'",
+      "ai_response": "Selector: getByRole('textbox', { name: 'Password' })\nAction Type: fill",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('textbox', { name: 'Password' })",
+        "action_type": "fill",
+        "vision_analysis": "{\n  \"context\": \"Login page with username/password form\",\n  \"elements\": [\n    \"Username field: visible, filled with 'standard_user'\",\n    \"Password field: visible, empty\",\n    \"Login button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario requires password entry: field is empty\"\n  ]\n}"
+      },
+      "remaining_scenario": "Fill the password field with 'secret_sauce' then click Login. Add 'Sauce Labs Bolt T-Shirt' then open the cart and proceed to Checkout. On 'Your Information', click CANCEL and verify you are returned to the cart without losing the item.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/saucedemo/deepseek/checkout-cancel-returns-to-cart/step_3.png"
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2025-10-11T18:25:48.439008",
+      "prompt": "Fill the password field with 'secret_sauce'",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('textbox', { name: 'Password' })",
+        "action_type": "fill",
+        "step_desc": "Fill the password field with 'secret_sauce'",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/'> selector='internal:role=textbox[name=\"Password\"i]'>",
+        "vision_analysis": "{\n  \"context\": \"Login page with username/password form\",\n  \"elements\": [\n    \"Username field: visible, filled with 'standard_user'\",\n    \"Password field: visible, empty\",\n    \"Login button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario requires password entry: field is empty\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      },
+      "screenshot": "logs/saucedemo/deepseek/checkout-cancel-returns-to-cart/step_4.png"
+    },
+    {
+      "step_number": 2,
+      "timestamp": "2025-10-11T18:26:04.312942",
+      "prompt": "Click the Login button",
+      "ai_response": "Selector: getByTestId('login-button')\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "getByTestId('login-button')",
+        "action_type": "click",
+        "vision_analysis": "{\n  \"context\": \"Login page with email/password form\",\n  \"elements\": [\n    \"Username field: visible, filled with 'standard_user'\",\n    \"Password field: visible, filled with 'secret_sauce'\",\n    \"Login button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario mentions login: both fields filled\"\n  ]\n}"
+      },
+      "remaining_scenario": "Click Login. Add 'Sauce Labs Bolt T-Shirt' then open the cart and proceed to Checkout. On 'Your Information', click CANCEL and verify you are returned to the cart without losing the item.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/saucedemo/deepseek/checkout-cancel-returns-to-cart/step_5.png"
+    },
+    {
+      "step_number": 2,
+      "timestamp": "2025-10-11T18:26:12.550388",
+      "prompt": "Click the Login button",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "[data-test=\"login-button\"]",
+        "action_type": "click",
+        "step_desc": "Click the Login button",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/inventory.html'> selector='[data-test=\"login-button\"]'>",
+        "vision_analysis": "{\n  \"context\": \"Login page with email/password form\",\n  \"elements\": [\n    \"Username field: visible, filled with 'standard_user'\",\n    \"Password field: visible, filled with 'secret_sauce'\",\n    \"Login button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario mentions login: both fields filled\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      },
+      "screenshot": "logs/saucedemo/deepseek/checkout-cancel-returns-to-cart/step_6.png"
+    },
+    {
+      "step_number": 3,
+      "timestamp": "2025-10-11T18:26:32.312784",
+      "prompt": "Click 'Add to cart' button for 'Sauce Labs Bolt T-Shirt'",
+      "ai_response": "Selector: getByTestId('add-to-cart-sauce-labs-bolt-t-shirt')\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "getByTestId('add-to-cart-sauce-labs-bolt-t-shirt')",
+        "action_type": "click",
+        "vision_analysis": "{\n  \"context\": \"Product listing page\",\n  \"elements\": [\n    \"Sauce Labs Bolt T-Shirt: visible, Add to cart button visible\",\n    \"Cart icon: visible\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario requires adding 'Sauce Labs Bolt T-Shirt': item visible\"\n  ]\n}"
+      },
+      "remaining_scenario": "Add 'Sauce Labs Bolt T-Shirt' then open the cart and proceed to Checkout. On 'Your Information', click CANCEL and verify you are returned to the cart without losing the item.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      },
+      "screenshot": "logs/saucedemo/deepseek/checkout-cancel-returns-to-cart/step_7.png"
+    },
+    {
+      "step_number": 3,
+      "timestamp": "2025-10-11T18:26:36.419700",
+      "prompt": "Click 'Add to cart' button for 'Sauce Labs Bolt T-Shirt'",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "locator('#add-to-cart-sauce-labs-bolt-t-shirt')",
+        "action_type": "click",
+        "step_desc": "Click 'Add to cart' button for 'Sauce Labs Bolt T-Shirt'",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/inventory.html'> selector='#add-to-cart-sauce-labs-bolt-t-shirt'>",
+        "vision_analysis": "{\n  \"context\": \"Product listing page\",\n  \"elements\": [\n    \"Sauce Labs Bolt T-Shirt: visible, Add to cart button visible\",\n    \"Cart icon: visible\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario requires adding 'Sauce Labs Bolt T-Shirt': item visible\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    },
+    {
+      "step_number": 4,
+      "timestamp": "2025-10-11T18:26:55.640253",
+      "prompt": "Click the cart icon showing 1 item",
+      "ai_response": "Selector: getByText('1')\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "getByText('1')",
+        "action_type": "click",
+        "vision_analysis": "{\n  \"context\": \"Products page with items listed\",\n  \"elements\": [\n    \"Sauce Labs Bolt T-Shirt: Remove button visible\",\n    \"Cart icon: visible, shows 1 item\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Expected cart page: not visible\"\n  ]\n}"
+      },
+      "remaining_scenario": "Open the cart and proceed to Checkout. On 'Your Information', click CANCEL and verify you are returned to the cart without losing the item.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 4,
+      "timestamp": "2025-10-11T18:26:56.841098",
+      "prompt": "Click the cart icon showing 1 item",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByText('1')",
+        "action_type": "click",
+        "step_desc": "Click the cart icon showing 1 item",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/cart.html'> selector='internal:text=\"1\"i >> nth=0'>",
+        "vision_analysis": "{\n  \"context\": \"Products page with items listed\",\n  \"elements\": [\n    \"Sauce Labs Bolt T-Shirt: Remove button visible\",\n    \"Cart icon: visible, shows 1 item\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Expected cart page: not visible\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    },
+    {
+      "step_number": 5,
+      "timestamp": "2025-10-11T18:27:11.844084",
+      "prompt": "Click the Checkout button",
+      "ai_response": "Selector: getByRole('button', {name:'Checkout'})\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('button', {name:'Checkout'})",
+        "action_type": "click",
+        "vision_analysis": "{\n  \"context\": \"Cart page with item listed\",\n  \"elements\": [\n    \"Sauce Labs Bolt T-Shirt: visible, quantity 1\",\n    \"Remove button: visible, enabled\",\n    \"Checkout button: visible, enabled\",\n    \"Continue Shopping button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Expected 'Your Information' page: not visible\"\n  ]\n}"
+      },
+      "remaining_scenario": "Proceed to Checkout. On 'Your Information', click CANCEL and verify you are returned to the cart without losing the item.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 5,
+      "timestamp": "2025-10-11T18:27:13.039319",
+      "prompt": "Click the Checkout button",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('button', {name:'Checkout'})",
+        "action_type": "click",
+        "step_desc": "Click the Checkout button",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/checkout-step-one.html'> selector='internal:role=button[name=\"Checkout\"i]'>",
+        "vision_analysis": "{\n  \"context\": \"Cart page with item listed\",\n  \"elements\": [\n    \"Sauce Labs Bolt T-Shirt: visible, quantity 1\",\n    \"Remove button: visible, enabled\",\n    \"Checkout button: visible, enabled\",\n    \"Continue Shopping button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Expected 'Your Information' page: not visible\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    },
+    {
+      "step_number": 6,
+      "timestamp": "2025-10-11T18:27:33.049289",
+      "prompt": "Click the Cancel button",
+      "ai_response": "Selector: getByRole('button', {name:'Cancel'})\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('button', {name:'Cancel'})",
+        "action_type": "click",
+        "vision_analysis": "{\n  \"context\": \"Checkout: Your Information page\",\n  \"elements\": [\n    \"First Name field: visible, empty\",\n    \"Last Name field: visible, empty\",\n    \"Zip/Postal Code field: visible, empty\",\n    \"Cancel button: visible, enabled\",\n    \"Continue button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario requires clicking Cancel to verify return to cart\"\n  ]\n}"
+      },
+      "remaining_scenario": "On 'Your Information', click CANCEL and verify you are returned to the cart without losing the item.",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 6,
+      "timestamp": "2025-10-11T18:27:34.256180",
+      "prompt": "Click the Cancel button",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('button', {name:'Cancel'})",
+        "action_type": "click",
+        "step_desc": "Click the Cancel button",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/cart.html'> selector='internal:role=button[name=\"Cancel\"i]'>",
+        "vision_analysis": "{\n  \"context\": \"Checkout: Your Information page\",\n  \"elements\": [\n    \"First Name field: visible, empty\",\n    \"Last Name field: visible, empty\",\n    \"Zip/Postal Code field: visible, empty\",\n    \"Cancel button: visible, enabled\",\n    \"Continue button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Scenario requires clicking Cancel to verify return to cart\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    },
+    {
+      "step_number": 7,
+      "timestamp": "2025-10-11T18:27:52.119545",
+      "prompt": "Verify the cart contains 'Sauce Labs Bolt T-Shirt' with quantity 1",
+      "ai_response": "Selector: getByRole('link', {name: 'Sauce Labs Bolt T-Shirt'})\nAction Type: click",
+      "action": {
+        "type": "selector",
+        "selector": "getByRole('link', {name: 'Sauce Labs Bolt T-Shirt'})",
+        "action_type": "click",
+        "vision_analysis": "{\n  \"context\": \"Cart page with item listed\",\n  \"elements\": [\n    \"Sauce Labs Bolt T-Shirt: visible, quantity 1\",\n    \"Remove button: visible, enabled\",\n    \"Continue Shopping button: visible, enabled\",\n    \"Checkout button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Returned to cart with item still present\"\n  ]\n}"
+      },
+      "remaining_scenario": "Verify you are returned to the cart without losing the item",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 7,
+      "timestamp": "2025-10-11T18:27:53.329013",
+      "prompt": "Verify the cart contains 'Sauce Labs Bolt T-Shirt' with quantity 1",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": "getByRole('link', {name: 'Sauce Labs Bolt T-Shirt'})",
+        "action_type": "click",
+        "step_desc": "Verify the cart contains 'Sauce Labs Bolt T-Shirt' with quantity 1",
+        "resolved_locator": "<Locator frame=<Frame name= url='https://www.saucedemo.com/inventory-item.html?id=1'> selector='internal:role=link[name=\"Sauce Labs Bolt T-Shirt\"i]'>",
+        "vision_analysis": "{\n  \"context\": \"Cart page with item listed\",\n  \"elements\": [\n    \"Sauce Labs Bolt T-Shirt: visible, quantity 1\",\n    \"Remove button: visible, enabled\",\n    \"Continue Shopping button: visible, enabled\",\n    \"Checkout button: visible, enabled\"\n  ],\n  \"errors\": [],\n  \"modal\": \"none\",\n  \"scenario_notes\": [\n    \"Returned to cart with item still present\"\n  ]\n}"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      }
+    }
+  ],
+  "generated_test": {
+    "code": "```javascript\nconst { test, expect } = require('@playwright/test');\n\ntest('Login with \\'standard_user\\' / \\'secret_sauce\\'. Add \\'Sauce Labs Bolt T-Shirt\\' then open the cart and proceed to Checkout. On \\'Your Information\\', click CANCEL and verify you are returned to the cart without losing the item.', async ({ page }) => {\n  await page.goto('https://www.saucedemo.com/');\n  \n  await expect(page.getByRole('textbox', {name:'Username'})).toBeVisible();\n  await page.getByRole('textbox', {name:'Username'}).fill('standard_user');\n  \n  await expect(page.getByRole('textbox', { name: 'Password' })).toBeVisible();\n  await page.getByRole('textbox', { name: 'Password' }).fill('secret_sauce');\n  \n  await expect(page.locator('[data-test=\"login-button\"]')).toBeVisible();\n  await page.locator('[data-test=\"login-button\"]').click();\n  await expect(page).toHaveURL(/.*inventory\\.html/);\n  \n  await expect(page.locator('#add-to-cart-sauce-labs-bolt-t-shirt')).toBeVisible();\n  await page.locator('#add-to-cart-sauce-labs-bolt-t-shirt').click();\n  \n  await expect(page.getByText('1').first()).toBeVisible();\n  await page.getByText('1').first().click();\n  await expect(page).toHaveURL(/.*cart\\.html/);\n  \n  await expect(page.getByRole('button', {name:'Checkout'})).toBeVisible();\n  await page.getByRole('button', {name:'Checkout'}).click();\n  await expect(page).toHaveURL(/.*checkout-step-one\\.html/);\n  \n  await expect(page.getByRole('button', {name:'Cancel'})).toBeVisible();\n  await page.getByRole('button', {name:'Cancel'}).click();\n  await expect(page).toHaveURL(/.*cart\\.html/);\n  \n  await expect(page.getByRole('link', {name: 'Sauce Labs Bolt T-Shirt'})).toBeVisible();\n  await expect(page.locator('.cart_quantity')).toHaveText('1');\n});\n```",
+    "scenario": "Login with 'standard_user' / 'secret_sauce'. Add 'Sauce Labs Bolt T-Shirt' then open the cart and proceed to Checkout. On 'Your Information', click CANCEL and verify you are returned to the cart without losing the item.",
+    "url": "https://www.saucedemo.com/",
+    "timestamp": "2025-10-11T18:28:14.180778"
+  },
+  "end_time": "2025-10-11T18:28:14.182843",
+  "success": true,
+  "metrics": {
+    "total_steps": 8,
+    "completed_steps": 8,
+    "remaining_scenario": "Verify you are returned to the cart without losing the item",
+    "total_selector_attempts": 8,
+    "successful_selectors": 8
+  }
+}

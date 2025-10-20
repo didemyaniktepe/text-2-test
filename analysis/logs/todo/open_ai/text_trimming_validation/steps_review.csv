@@ -1,0 +1,2 @@
+test_name,step_index,expected_step,prompt,planned_element,planned_action_type,planned_selector,execution_action_type,execution_selector,execution_status,execution_success,is_expected_step,selector_attempts,locator_mismatch,skipped_auto,suspected_hallucination
+Fill_and_press_enter_after_a_t,0,,Fill the 'What needs to be done?' input field with '   Trim me   ',textbox,fill,"getByRole('textbox', {name: 'What needs to be done?'})",fill,"getByRole('textbox', {name: 'What needs to be done?'})",success,True,True,1,False,False,False

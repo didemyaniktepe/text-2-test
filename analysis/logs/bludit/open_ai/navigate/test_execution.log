@@ -1,0 +1,63 @@
+{
+  "test_name": "Navigate_to_http://localhost:8",
+  "original_scenario": "Navigate to http://localhost:8001/admin",
+  "remaining_scenario": "Navigate to http://localhost:8001/admin",
+  "completed_steps": [
+    "Navigate to http://localhost:8001/admin"
+  ],
+  "failed_attempts": [],
+  "steps": [
+    {
+      "step_number": 0,
+      "timestamp": "2025-10-04T19:01:21.603524",
+      "prompt": "Navigate to http://localhost:8001/admin",
+      "ai_response": "Selector: 'http://localhost:8001/admin'\nAction Type: navigate",
+      "action": {
+        "type": "selector",
+        "selector": "'http://localhost:8001/admin'",
+        "action_type": "navigate"
+      },
+      "remaining_scenario": "Navigate to http://localhost:8001/admin",
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 1,
+        "execution_success": null
+      }
+    },
+    {
+      "step_number": 0,
+      "timestamp": "2025-10-04T19:01:23.377664",
+      "prompt": "Navigate to http://localhost:8001/admin",
+      "ai_response": "Action performed successfully",
+      "action": {
+        "type": "action",
+        "status": "success",
+        "selector": null,
+        "action_type": "navigate",
+        "step_desc": "Navigate to http://localhost:8001/admin"
+      },
+      "remaining_scenario": null,
+      "metrics": {
+        "is_expected_step": true,
+        "selector_attempts": 0,
+        "execution_success": true
+      },
+      "screenshot": "logs/test_Navigate_to_http:/localhost:8_20251004_190105/step_0.png"
+    }
+  ],
+  "generated_test": {
+    "code": "```javascript\nconst { test, expect } = require('@playwright/test');\n\ntest('Navigate to http://localhost:8001/admin', async ({ page }) => {\n  await page.goto('http://localhost:8001');\n  await page.goto('http://localhost:8001/admin');\n  await expect(page).toHaveURL('http://localhost:8001/admin');\n});\n```",
+    "scenario": "Navigate to http://localhost:8001/admin",
+    "url": "http://localhost:8001",
+    "timestamp": "2025-10-04T19:01:27.678010"
+  },
+  "end_time": "2025-10-04T19:01:27.678475",
+  "success": true,
+  "metrics": {
+    "total_steps": 1,
+    "completed_steps": 1,
+    "remaining_scenario": "Navigate to http://localhost:8001/admin",
+    "total_selector_attempts": 1,
+    "successful_selectors": 1
+  }
+}
