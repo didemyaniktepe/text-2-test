@@ -9,7 +9,7 @@ text-to-test/
 ├── backend/                   # FastAPI backend + core engine
 │   ├── src/infrastructure/    # OpenAI/DeepSeek clients, settings
 │   ├── src/services/          # Orchestrator, planners, DOM extractor, performer
-│   └── src/utils/             # JSON/locator/logger helpers
+│  
 ```
 
 ## Key Capabilities ✨
